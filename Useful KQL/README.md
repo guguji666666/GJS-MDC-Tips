@@ -114,4 +114,5 @@ Find `POLICY-DEFINITION-ID` from recommendation
 
 ![image](https://user-images.githubusercontent.com/96930989/210167491-c93bf905-d9f9-41b4-a95c-ab2eb77f9e54.png)
 
+Copy the last part of the `Definition ID`
 ![image](https://user-images.githubusercontent.com/96930989/210167501-18c46574-1d14-4f58-8a60-5d24ebedd3bc.png)
