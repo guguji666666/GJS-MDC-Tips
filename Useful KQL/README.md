@@ -34,7 +34,7 @@ securityresources
 | mv-expand initiatives
 | extend initiativeName = initiatives.policyInitiativeName
 | extend statusInMdc = initiatives.assessmentStatus.code
-| project initiativeName, statusInMdc![image](https://user-images.githubusercontent.com/96930989/210159638-9f2f9210-81f7-415f-bcf4-4ee494eba072.png)
+| project initiativeName, statusInMdc
 
   
   
@@ -60,4 +60,4 @@ policyresources
 | project resourceName, statusInPolicy
 ) on resourceName
 | project resourceName, statusInMdc, statusInPolicy
-![image](https://user-images.githubusercontent.com/96930989/210159630-d95309f9-c336-4571-985e-6f0474bc2c85.png)
+
