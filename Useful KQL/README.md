@@ -63,7 +63,21 @@ securityresources
 | where statusInMdc == "Unhealthy"
 | project initiativeName, statusInMdc, RecommendationName, ResourceName
 ```
-  
+
+# ARG check relevant initiatives assigned and exemption
+
+```kusto
+policyresources
+| where type == "microsoft.policyinsights/policystates"
+| where id contains "<RESOURCE-NAME>"
+| where subscriptionId == "<SUBSCRIPTION-ID>"
+| where properties.policyDefinitionId contains "<POLICY-DEFINITION-ID>"
+| extend policySetDefinitionId = extract("policySetDefinitions/(.*)", 1, tostring(properties.policySetDefinitionId))
+| extend status = properties.complianceState
+| project policySetDefinitionId, status
+| summarize statuses = make_set(status) by policySetDefinitionId
+```
+
 #  ARG compare results between MDC and Azure Policy
 
 ```kusto
