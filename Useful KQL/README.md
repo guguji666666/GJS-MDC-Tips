@@ -19,7 +19,7 @@ resourcecontainers
 resourcecontainers
 | where type == 'microsoft.resources/subscriptions'
 | mv-expand managementGroupParent = properties.managementGroupAncestorsChain
-| where managementGroupParent.name =~ '<name of management group>'
+| where managementGroupParent.name =~ '`name of management group`'
 | project name, id
 | sort by name asc
 ```
@@ -38,9 +38,9 @@ SecurityResources
 ```kusto
 securityresources
 | where type == "microsoft.security/assessments"
-| where id contains "<RESOURCE-NAME>"
-| where subscriptionId == "<SUBSCRIPTION-ID>"
-| where name == "<ASSESSMENT-KEY>"
+| where id contains "`RESOURCE-NAME`"
+| where subscriptionId == "`SUBSCRIPTION-ID`"
+| where name == "`ASSESSMENT-KEY`"
 | extend initiatives = properties.statusPerInitiative
 | mv-expand initiatives
 | extend initiativeName = initiatives.policyInitiativeName
@@ -53,8 +53,8 @@ securityresources
 ```kusto
 securityresources
 | where type == "microsoft.security/assessments"
-| where id contains "<resource id>"
-| where subscriptionId == "<subscription id>"
+| where id contains "`resource id`"
+| where subscriptionId == "`subscription id`"
 | extend initiatives = properties.statusPerInitiative
 | extend  RecommendationName = properties.displayName
 | extend  ResourceName = split(id, "/")[8]
@@ -70,9 +70,9 @@ securityresources
 ```kusto
 policyresources
 | where type == "microsoft.policyinsights/policystates"
-| where id contains "<RESOURCE-NAME>"
-| where subscriptionId == "<SUBSCRIPTION-ID>"
-| where properties.policyDefinitionId contains "<POLICY-DEFINITION-ID>"
+| where id contains "`RESOURCE-NAME`"
+| where subscriptionId == "`SUBSCRIPTION-ID`"
+| where properties.policyDefinitionId contains "`POLICY-DEFINITION-ID`"
 | extend policySetDefinitionId = extract("policySetDefinitions/(.*)", 1, tostring(properties.policySetDefinitionId))
 | extend status = properties.complianceState
 | project policySetDefinitionId, status
@@ -84,9 +84,9 @@ policyresources
 ```kusto
 securityresources
 | where type == "microsoft.security/assessments"
-| where subscriptionId == "<ADD-HERE-SUBSCRIPTION-ID>"
-| where name == "ADD-HERE-ASSESSMENT-KEY" 
-| where id contains "<ADD-HERE-RESOURCE-NAME>"
+| where subscriptionId == "`ADD-HERE-SUBSCRIPTION-ID`"
+| where name == "`ADD-HERE-ASSESSMENT-KEY`" 
+| where id contains "`ADD-HERE-RESOURCE-NAME`"
 | extend resourceName = tostring(split(tolower(extract("(.*)/providers/Microsoft.Security",1, id)),"/")[-1])
 | extend statusInMdc = properties.status.code
 | project resourceName, statusInMdc
@@ -94,9 +94,9 @@ securityresources
 (
 policyresources
 | where type == "microsoft.policyinsights/policystates"
-| where subscriptionId == "<ADD-HERE-SUBSCRIPTION-ID>"
-| where * contains "ADD-HERE-POLICY-DEFINITION-ID"
-| where id contains "<ADD-HERE-RESOURCE-NAME>"
+| where subscriptionId == "`ADD-HERE-SUBSCRIPTION-ID`"
+| where * contains "`ADD-HERE-POLICY-DEFINITION-ID`"
+| where id contains "`ADD-HERE-RESOURCE-NAME`"
 | extend resourceName = tostring(split(tolower(extract("(.*)/providers/microsoft.policyinsights",1, id)),"/")[-1])
 | extend statusInPolicy = properties.complianceState
 | project resourceName, statusInPolicy
