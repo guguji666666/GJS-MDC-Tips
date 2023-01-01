@@ -1,3 +1,9 @@
+# Use ARG - Resource Graph Explorer
+
+![image](https://user-images.githubusercontent.com/96930989/210159757-b875ba41-6946-4ee7-a604-92183cf9f58b.png)
+
+
+
 # ARG list all subscriptions under your tenant
 
 ```kusto
