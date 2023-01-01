@@ -1,30 +1,34 @@
 # ARG list all subscriptions
 
+```kusto
 resourcecontainers
 | where type == "microsoft.resources/subscriptions"
 | project name, id
-
+```
 
 # ARG list all subscriptions under specified management group
 
+```kusto
 resourcecontainers
 | where type == 'microsoft.resources/subscriptions'
 | mv-expand managementGroupParent = properties.managementGroupAncestorsChain
 | where managementGroupParent.name =~ '<name of management group>'
 | project name, id
 | sort by name asc
-
+```
 
 # ARG list secure score of all subscriptions
-  
+
+```kusto
 SecurityResources 
 | where type == 'microsoft.security/securescores' 
 | extend current = properties.score.current, max = todouble(properties.score.max)
 | project subscriptionId, current, max, percentage = ((current / max)*100)
-
+```
   
 # ARG check relevant initiatives in subscription(basic)
-  
+
+```kusto
 securityresources
 | where type == "microsoft.security/assessments"
 | where id contains "<RESOURCE-NAME>"
@@ -35,10 +39,11 @@ securityresources
 | extend initiativeName = initiatives.policyInitiativeName
 | extend statusInMdc = initiatives.assessmentStatus.code
 | project initiativeName, statusInMdc
-
+```
 
 # ARG check relevant initiatives in subscription(advanced)
 
+```kusto
 securityresources
 | where type == "microsoft.security/assessments"
 | where id contains "<resource id>"
@@ -51,10 +56,11 @@ securityresources
 | extend statusInMdc = initiatives.assessmentStatus.code
 | where statusInMdc == "Unhealthy"
 | project initiativeName, statusInMdc, RecommendationName, ResourceName
-
+```
   
 #  ARG compare results between MDC and Azure Policy
 
+```kusto
 securityresources
 | where type == "microsoft.security/assessments"
 | where subscriptionId == "<ADD-HERE-SUBSCRIPTION-ID>"
@@ -75,4 +81,4 @@ policyresources
 | project resourceName, statusInPolicy
 ) on resourceName
 | project resourceName, statusInMdc, statusInPolicy
-
+```
