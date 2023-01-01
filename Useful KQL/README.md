@@ -5,7 +5,7 @@ Navigate to Azure portal, and search it in the top bar
 
 
 
-# ARG list all subscriptions under your tenant
+## ARG list all subscriptions under your tenant
 
 ```kusto
 resourcecontainers
@@ -13,7 +13,7 @@ resourcecontainers
 | project name, id
 ```
 
-# ARG list all subscriptions under specified management group
+## ARG list all subscriptions under specified management group
 
 ```kusto
 resourcecontainers
@@ -24,7 +24,7 @@ resourcecontainers
 | sort by name asc
 ```
 
-# ARG list secure score of all subscriptions
+## ARG list secure score of all subscriptions
 
 ```kusto
 SecurityResources 
@@ -33,7 +33,7 @@ SecurityResources
 | project subscriptionId, current, max, percentage = ((current / max)*100)
 ```
   
-# ARG check relevant initiatives in subscription(basic)
+## ARG check relevant initiatives in subscription(basic)
 
 ```kusto
 securityresources
@@ -48,7 +48,7 @@ securityresources
 | project initiativeName, statusInMdc
 ```
 
-# ARG check relevant initiatives in subscription(advanced)
+## ARG check relevant initiatives in subscription(advanced)
 
 ```kusto
 securityresources
@@ -65,7 +65,7 @@ securityresources
 | project initiativeName, statusInMdc, RecommendationName, ResourceName
 ```
 
-# ARG check relevant initiatives assigned and exemption
+## ARG check relevant initiatives assigned and exemption
 
 ```kusto
 policyresources
@@ -79,7 +79,7 @@ policyresources
 | summarize statuses = make_set(status) by policySetDefinitionId
 ```
 
-#  ARG compare results between MDC and Azure Policy
+##  ARG compare results between MDC and Azure Policy
 
 ```kusto
 securityresources
