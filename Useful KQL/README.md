@@ -14,7 +14,7 @@ resourcecontainers
 | project name, id
 | sort by name asc
 
-  
+
 # ARG list secure score of all subscriptions
   
 SecurityResources 
@@ -23,7 +23,7 @@ SecurityResources
 | project subscriptionId, current, max, percentage = ((current / max)*100)
 
   
-# ARG check relevant initiatives in subscription
+# ARG check relevant initiatives in subscription(basic)
   
 securityresources
 | where type == "microsoft.security/assessments"
@@ -36,7 +36,22 @@ securityresources
 | extend statusInMdc = initiatives.assessmentStatus.code
 | project initiativeName, statusInMdc
 
-  
+
+# ARG check relevant initiatives in subscription(advanced)
+
+securityresources
+| where type == "microsoft.security/assessments"
+| where id contains "<resource id>"
+| where subscriptionId == "<subscription id>"
+| extend initiatives = properties.statusPerInitiative
+| extend  RecommendationName = properties.displayName
+| extend  ResourceName = split(id, "/")[8]
+| mv-expand initiatives
+| extend initiativeName = initiatives.policyInitiativeName
+| extend statusInMdc = initiatives.assessmentStatus.code
+| where statusInMdc == "Unhealthy"
+| project initiativeName, statusInMdc, RecommendationName, ResourceName
+
   
 #  ARG compare results between MDC and Azure Policy
 
