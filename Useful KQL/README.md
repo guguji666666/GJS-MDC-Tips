@@ -1,4 +1,4 @@
-# ARG list all subscriptions
+# ARG list all subscriptions under your tenant
 
 ```kusto
 resourcecontainers
