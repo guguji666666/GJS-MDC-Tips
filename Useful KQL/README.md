@@ -104,13 +104,13 @@ policyresources
 | project resourceName, statusInMdc, statusInPolicy
 ```
 
-Find `ASSESSMENT-KEY`
+Find `ASSESSMENT-KEY` from recommendation
 
 ![image](https://user-images.githubusercontent.com/96930989/210167530-9396be11-ec9e-4119-afae-61161651ecc8.png)
 
 ![image](https://user-images.githubusercontent.com/96930989/210167541-5f485618-02c5-4328-81bc-53312a216b31.png)
 
-Find `POLICY-DEFINITION-ID`
+Find `POLICY-DEFINITION-ID` from recommendation
 
 ![image](https://user-images.githubusercontent.com/96930989/210167491-c93bf905-d9f9-41b4-a95c-ab2eb77f9e54.png)
 
