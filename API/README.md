@@ -1,4 +1,4 @@
-# Quickly get user token
+# Quickly get user token and call API
 
 ## 1. Install the Azure Az PowerShell module
 https://learn.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-8.3.0
