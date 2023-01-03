@@ -17,3 +17,32 @@ $token.Token | clip
 
 ## 2. Call API with postman
 Download postman from https://www.postman.com/downloads/
+
+# Manually install ASA
+## Azure VM running Windows
+1. Get the user token as mentioned above
+2. Launch postman
+
+`Binding`:PUT
+
+`URL` https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/providers/Microsoft.Compute/virtualMachines/<vmname>/extensions/AzureSecurityWindowsAgent?api-version=2019-03-01
+
+`Body`
+{
+  "name":"AzureSecurityWindowsAgent", 
+  "type":"Microsoft.Compute/virtualmachines/extensions", 
+  "location":"<vmlocation>", 
+  "properties":{ 
+    "autoUpgradeMinorVersion":true, 
+    "publisher":"Microsoft.Azure.Security.Monitoring", 
+    "type":"AzureSecurityWindowsAgent", 
+    "typeHandlerVersion":"1.0",
+    "settings":{ },
+    "protectedsettings": {}
+}
+}
+
+3. Paste the user token in https://jwt.ms/ to verify the format.
+4. Insert the user token here
+![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
+5. Send the request
