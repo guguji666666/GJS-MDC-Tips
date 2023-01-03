@@ -47,9 +47,6 @@ https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/prov
 }
 }
 ```
-
-
 ### 4. Insert the user token here
 ![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
-
 ### 5. Send the request
