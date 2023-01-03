@@ -20,9 +20,9 @@ Download postman from https://www.postman.com/downloads/
 
 # Manually install ASA
 ## Azure VM running Windows
-### 1. Get the user token as mentioned above
-### 2. Paste the user token in https://jwt.ms/ , modify the token to until the format becomes correct
-### 3. Launch postman
+1. Get the user token as mentioned above
+2. Paste the user token in https://jwt.ms/ , modify the token to until the format becomes correct
+3. Launch postman
 
 `Binding`: Put
 
@@ -47,6 +47,8 @@ https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/prov
 }
 }
 ```
-### 4. Insert the user token here
+4. Insert the user token here
+
 ![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
-### 5. Send the request
+
+5. Send the request
