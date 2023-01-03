@@ -6,14 +6,14 @@ https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-intr
 Find and remediate vulnerabilities in your Azure SQL databases
 https://learn.microsoft.com/en-us/azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?tabs=express
 ```
-## SQL managed instance - Define the Storage account before enabling defender for SQL plan
+## SQL managed instance - Define Storage account before enabling defender for SQL plan (server side) 
 
 ```
 Reference for powershell commands
 https://learn.microsoft.com/en-us/powershell/module/az.sql/enable-azsqlinstanceadvanceddatasecurity?view=azps-9.2.0
 https://learn.microsoft.com/en-us/powershell/module/az.sql/update-azsqlinstancedatabasevulnerabilityassessmentsetting?view=azps-9.2.0
 ```
-#### Symptom : Can not perform manual scan after enabling the plan at subscription level
+#### Symptom : User can not perform manual scan after enabling the plan at subscription level
 ![image](https://user-images.githubusercontent.com/96930989/210368162-e3c1e76a-74a8-4aa7-b223-67d83a639502.png)
 ![image](https://user-images.githubusercontent.com/96930989/210368172-241a74de-d04f-4dec-a175-3b9c559cacb3.png)
 ![image](https://user-images.githubusercontent.com/96930989/210368184-cbf9c2db-d944-4154-a269-4c8303e40c3f.png)
@@ -57,4 +57,8 @@ Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting `
 #### Check if the VA results are updated in the storage account
 ![image](https://user-images.githubusercontent.com/96930989/210369397-91ebc999-4ae7-4eaa-bf3f-966cfb7ca4a4.png)
 
-
+```
+Note
+If the defender for SQL plan is enabled at instance side (not in subscription level),
+The powershell commands above could also define the storage account before enabling the plan at instance side
+```
