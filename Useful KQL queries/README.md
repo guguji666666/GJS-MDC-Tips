@@ -1,6 +1,6 @@
 # Use ARG - Resource Graph Explorer
 
-Navigate to Azure portal, and search it in the top bar
+## Navigate to Azure portal, and search it in the top bar
 ![image](https://user-images.githubusercontent.com/96930989/210159757-b875ba41-6946-4ee7-a604-92183cf9f58b.png)
 
 
