@@ -19,7 +19,13 @@ $token.Token | clip
 Download postman from https://www.postman.com/downloads/
 
 # Manually install ASA
-## Azure VM running Windows
+https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent#additional-extensions-for-defender-for-cloud
+```
+The Azure Monitor Agent requires additional extensions. 
+The ASA extension, which supports endpoint protection recommendations, fileless attack detection, and Adaptive Application controls, is automatically installed when you auto-provision the Azure Monitor Agent.
+```
+
+## Install ASA on Azure VM running Windows
 #### 1. Get the user token as mentioned above
 #### 2. Paste the user token in https://jwt.ms/ , modify the token to until the format becomes correct
 #### 3. Launch postman
