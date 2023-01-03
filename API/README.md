@@ -30,7 +30,7 @@ The ASA extension, which supports endpoint protection recommendations, fileless 
 #### 2. Paste the user token in https://jwt.ms/ , modify the token to until the format becomes correct
 #### 3. Launch postman
 
-`Binding`: Put
+`Binding`: PUT
 
 `URL`
 ```
