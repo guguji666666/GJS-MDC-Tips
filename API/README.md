@@ -23,11 +23,15 @@ Download postman from https://www.postman.com/downloads/
 1. Get the user token as mentioned above
 2. Launch postman
 
-`Binding`:PUT
+`Binding`: PUT
 
-`URL` https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/providers/Microsoft.Compute/virtualMachines/<vmname>/extensions/AzureSecurityWindowsAgent?api-version=2019-03-01
+`URL`
+```
+https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/providers/Microsoft.Compute/virtualMachines/<vmname>/extensions/AzureSecurityWindowsAgent?api-version=2019-03-01
+```
 
 `Body`
+```
 {
   "name":"AzureSecurityWindowsAgent", 
   "type":"Microsoft.Compute/virtualmachines/extensions", 
@@ -41,6 +45,7 @@ Download postman from https://www.postman.com/downloads/
     "protectedsettings": {}
 }
 }
+```
 
 3. Paste the user token in https://jwt.ms/ to verify the format.
 4. Insert the user token here
