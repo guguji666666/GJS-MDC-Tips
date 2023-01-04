@@ -155,7 +155,8 @@ Resources
 
 Then download the csv file, let's name it `table2`
 
-### Join two tables together via the column `id (resource id)`
+### Join two tables together via the column `id (resource id)` using `VLOOKUP`
+https://www.ablebits.com/office-addins-blog/excel-merge-tables-matching-columns/
 
 
 
