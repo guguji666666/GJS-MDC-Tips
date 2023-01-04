@@ -115,7 +115,10 @@ policyresources
 ### Copy the last part of the `Definition ID`
 ![image](https://user-images.githubusercontent.com/96930989/210167501-18c46574-1d14-4f58-8a60-5d24ebedd3bc.png)
 
-##  8. ARG list all unpatched the VM along with OS information
+##  8. ARG list all unpatched the VM along with OS information 
+```
+MDC Recommendation: System updates should be installed on your machines
+```
 ### ARG Table 1 : Unpatched VM with resource id
 ```kusto
 securityresources
