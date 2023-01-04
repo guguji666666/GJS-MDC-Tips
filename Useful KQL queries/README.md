@@ -116,7 +116,7 @@ policyresources
 ![image](https://user-images.githubusercontent.com/96930989/210167501-18c46574-1d14-4f58-8a60-5d24ebedd3bc.png)
 
 ##  8. ARG list all unpatched the VM along with OS information
-### ARG Table 1 : Status in recommendation along with the VM resource id
+### ARG Table 1 : Unpatched VM with resource id
 ```kusto
 securityresources
         | where type == "microsoft.security/assessments"
@@ -138,7 +138,7 @@ securityresources
 ```
 ![image](https://user-images.githubusercontent.com/96930989/210491477-5eff6f65-1010-4e22-8764-05f50686ccc4.png)
 
-### ARG Table 2 : Detailed information of Azure VMs
+### ARG Table 2 : Detailed information of all Azure VMs
 ```kusto
 Resources
 | where type == "microsoft.compute/virtualmachines"
