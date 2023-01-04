@@ -149,7 +149,7 @@ Resources
 | extend osSku = properties.storageProfile.imageReference.sku
 | extend osName = properties.extended.instanceView.osName
 | extend osVersion = properties.extended.instanceView.osVersion
-| project name, resourceGroup, location, vmName, osOffer, osSku, osName, osVersion
+| project name, id, resourceGroup, location, vmName, osOffer, osSku, osName, osVersion
 ```
 ![image](https://user-images.githubusercontent.com/96930989/210491550-1fb70f3f-b279-4459-bd7d-4428b8f73eed.png)
 
