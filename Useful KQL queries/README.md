@@ -3,9 +3,7 @@
 ## Navigate to Azure portal, and search `Resource Graph Explorer` in the top bar
 ![image](https://user-images.githubusercontent.com/96930989/210159757-b875ba41-6946-4ee7-a604-92183cf9f58b.png)
 
-
-
-## ARG list all subscriptions under your tenant
+## 1. ARG list all subscriptions under your tenant
 
 ```kusto
 resourcecontainers
@@ -13,7 +11,7 @@ resourcecontainers
 | project name, id
 ```
 
-## ARG list all subscriptions under specified management group
+## 2. ARG list all subscriptions under specified management group
 
 ```kusto
 resourcecontainers
@@ -24,7 +22,7 @@ resourcecontainers
 | sort by name asc
 ```
 
-## ARG list secure score of all subscriptions
+## 3. ARG list secure score of all subscriptions
 
 ```kusto
 SecurityResources 
@@ -33,7 +31,7 @@ SecurityResources
 | project subscriptionId, current, max, percentage = ((current / max)*100)
 ```
   
-## ARG check relevant initiatives in subscription(basic)
+## 4. ARG check relevant initiatives in subscription(basic)
 
 ```kusto
 securityresources
@@ -48,7 +46,7 @@ securityresources
 | project initiativeName, statusInMdc
 ```
 
-## ARG check relevant initiatives in subscription(advanced)
+## 5. ARG check relevant initiatives in subscription(advanced)
 
 ```kusto
 securityresources
@@ -65,7 +63,7 @@ securityresources
 | project initiativeName, statusInMdc, RecommendationName, ResourceName
 ```
 
-## ARG check relevant initiatives assigned and exemption
+## 6. ARG check relevant initiatives assigned and exemption
 
 ```kusto
 policyresources
@@ -79,7 +77,7 @@ policyresources
 | summarize statuses = make_set(status) by policySetDefinitionId
 ```
 
-##  ARG compare results between MDC and Azure Policy
+##  7. ARG compare results between MDC and Azure Policy
 
 ```kusto
 securityresources
@@ -116,3 +114,44 @@ policyresources
 
 ### Copy the last part of the `Definition ID`
 ![image](https://user-images.githubusercontent.com/96930989/210167501-18c46574-1d14-4f58-8a60-5d24ebedd3bc.png)
+
+##  8. ARG list all unpatched the VM along with OS information
+### ARG Table 1 : Status in recommendation along with the VM resource id
+```kusto
+securityresources
+        | where type == "microsoft.security/assessments"
+        | extend source = trim(' ', tolower(tostring(properties.resourceDetails.Source)))
+                                          | extend resourceId = trim(' ', tolower(tostring(case(
+                                                                                    source =~ "azure", properties.resourceDetails.Id,
+                                                                                    source =~ "aws" and isnotempty(tostring(properties.resourceDetails.ConnectorId)), properties.resourceDetails.Id,
+                                                                                    source =~ "gcp" and isnotempty(tostring(properties.resourceDetails.ConnectorId)), properties.resourceDetails.Id,
+                                                                                    source =~ 'aws', properties.resourceDetails.AzureResourceId,
+                                                                                    source =~ 'gcp', properties.resourceDetails.AzureResourceId,
+                                                                                    extract('^(.+)/providers/Microsoft.Security/assessments/.+$',1,id)
+                                                                                    ))))
+        | extend status = trim(" ", tostring(properties.status.code))
+        | extend cause = trim(" ", tostring(properties.status.cause))
+        | extend assessmentKey = tostring(name)
+        | where assessmentKey == "4ab6e3c5-74dd-8b35-9ab9-f61b30875b27"
+        | where status == "Unhealthy" or status == "NotApplicable" 
+        | project subscriptionId, id=resourceId, status, assessmentKey, cause 
+```
+![image](https://user-images.githubusercontent.com/96930989/210491477-5eff6f65-1010-4e22-8764-05f50686ccc4.png)
+
+### ARG Table 2 : Detailed information of Azure VMs
+```kusto
+Resources
+| where type == "microsoft.compute/virtualmachines"
+| extend vmName = properties.osProfile.computerName
+| extend osOffer = properties.storageProfile.imageReference.offer
+| extend osSku = properties.storageProfile.imageReference.sku
+| extend osName = properties.extended.instanceView.osName
+| extend osVersion = properties.extended.instanceView.osVersion
+| project name, resourceGroup, location, vmName, osOffer, osSku, osName, osVersion
+```
+![image](https://user-images.githubusercontent.com/96930989/210491550-1fb70f3f-b279-4459-bd7d-4428b8f73eed.png)
+
+### Join two tables together via the column `id (resource id)`
+
+
+
