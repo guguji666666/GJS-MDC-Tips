@@ -185,7 +185,7 @@ https://www.youtube.com/watch?v=xjrZ4kwbh6w
 #### 4. Go back to `table1`, select `C3`, input `=VLOOKUP($B3,table_ingestion,C$1,FALSE`, press enter, a value should be filled automatically
 ![image](https://user-images.githubusercontent.com/96930989/210542709-2c182991-cd22-442e-ac0d-02a256aa4412.png)
 
-#### 5. Expand the rest of the column, the vauls are supposed to be filled automatically
+#### 5. Expand the rest of the column, the values are supposed to be filled automatically
 
 ![image](https://user-images.githubusercontent.com/96930989/210542776-3f20b878-e4cd-4c0a-ad8a-b8914a4a3bdc.png)
 
