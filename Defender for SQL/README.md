@@ -44,7 +44,7 @@ Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting `
             -ScanResultsContainerName "sql-vulnerability-assessment" `
             -RecurringScansInterval Weekly `
             -EmailAdmins $true `
-            -NotificationEmail @("<mailbox>")![image](https://user-images.githubusercontent.com/96930989/210368489-678c1995-da8d-431f-930f-9845020eb586.png)
+            -NotificationEmail @("<mailbox>")
 ```
 
 #### Sample
