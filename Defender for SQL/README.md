@@ -60,5 +60,5 @@ Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting `
 ```
 Note:
 If the defender for SQL plan is enabled at instance side (not in subscription level),
-The powershell commands above could also define the storage account before enabling the plan at instance side
+The powershell commands above could also be used to define the storage account before enabling the plan at instance side
 ```
