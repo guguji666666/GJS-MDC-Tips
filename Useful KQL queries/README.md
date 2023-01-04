@@ -151,6 +151,18 @@ Resources
 | extend osVersion = properties.extended.instanceView.osVersion
 | project name, id, resourceGroup, location, vmName, osOffer, osSku, osName, osVersion
 ```
+Or the one with less columns
+
+```kusto
+Resources
+| where type == "microsoft.compute/virtualmachines"
+| extend vmName = properties.osProfile.computerName
+| extend osOffer = properties.storageProfile.imageReference.offer
+| extend osSku = properties.storageProfile.imageReference.sku
+| extend osName = properties.extended.instanceView.osName
+| extend osVersion = properties.extended.instanceView.osVersion
+| project name, id, resourceGroup, location, osOffer, osSku
+```
 ![image](https://user-images.githubusercontent.com/96930989/210491550-1fb70f3f-b279-4459-bd7d-4428b8f73eed.png)
 
 Then download the csv file, let's name it `table2`
