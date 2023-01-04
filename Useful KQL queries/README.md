@@ -165,10 +165,26 @@ Resources
 ```
 ![image](https://user-images.githubusercontent.com/96930989/210491550-1fb70f3f-b279-4459-bd7d-4428b8f73eed.png)
 
-Then download the csv file, let's name it `table2`
+Then download the csv file(from the query with more columns), let's name it `table2`
 
-### Join two tables together by matching data in the `id (resource id)` column  using `VLOOKUP`
-https://www.ablebits.com/office-addins-blog/excel-merge-tables-matching-columns/
+### Join two tables together by matching data in the `id (resource id)` column  using `VLOOKUP` in excel
+https://www.youtube.com/watch?v=xjrZ4kwbh6w
+
+#### 1. Create a new excel file, paste `table1` and `table2` to the sheets in the same file.
+#### 2. In `table1`, insert a new column C named `OSSKU` ; then insert a new `row` on the top, input `5` above it
+![image](https://user-images.githubusercontent.com/96930989/210538609-8ad0d2ec-5dd9-4f24-98b1-17b988dd9083.png)
+
+#### 3. Navigate to `table2`, delete the first `Name` column, select all, and type a name in the section below, then press enter
+* In this test i use the name `table_ingestion`
+![image](https://user-images.githubusercontent.com/96930989/210542537-eb63b0c9-a728-4bc2-82c5-b88cb98c1d4d.png)
+
+
+#### 4. Go back to `table1`, select `C3`, input `=VLOOKUP($B3,table_ingestion,C$1,FALSE`, press enter, a value should be filled automatically
+![image](https://user-images.githubusercontent.com/96930989/210542709-2c182991-cd22-442e-ac0d-02a256aa4412.png)
+
+#### 5. Expand the rest of the column, the vauls are supposed to be filled automatically
+
+![image](https://user-images.githubusercontent.com/96930989/210542776-3f20b878-e4cd-4c0a-ad8a-b8914a4a3bdc.png)
 
 
 
