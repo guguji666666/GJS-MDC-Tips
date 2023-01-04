@@ -138,6 +138,8 @@ securityresources
 ```
 ![image](https://user-images.githubusercontent.com/96930989/210491477-5eff6f65-1010-4e22-8764-05f50686ccc4.png)
 
+Then download the csv file, let's name it `table1`
+
 ### ARG Table 2 : Detailed information of all Azure VMs
 ```kusto
 Resources
@@ -150,6 +152,8 @@ Resources
 | project name, resourceGroup, location, vmName, osOffer, osSku, osName, osVersion
 ```
 ![image](https://user-images.githubusercontent.com/96930989/210491550-1fb70f3f-b279-4459-bd7d-4428b8f73eed.png)
+
+Then download the csv file, let's name it `table2`
 
 ### Join two tables together via the column `id (resource id)`
 
