@@ -82,4 +82,4 @@ https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/prov
 }
 ```
 
-#### 5. Send the request
+#### 5. Send the request and check the results in the portal
