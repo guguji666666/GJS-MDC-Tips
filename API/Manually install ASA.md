@@ -5,7 +5,7 @@ The Azure Monitor Agent requires additional extensions.
 The ASA extension, which supports endpoint protection recommendations, fileless attack detection, and Adaptive Application controls, is automatically installed when you auto-provision the Azure Monitor Agent.
 ```
 
-### Install ASA on Azure VM running Windows
+### Install ASA on Azure VM running `Windows`
 #### 1. Get postman
 Download postman from https://www.postman.com/downloads/ and launch it.
 #### 2. Get user token via https://github.com/guguji666666/GJS-MDC-Tips/blob/main/API/README.md
@@ -47,7 +47,7 @@ The state of extension will be transitioning, then succeeded
 
 
 
-### Install ASA on Azure VM running Linux
+### Install ASA on Azure VM running `Linux`
 #### 1. Get postman
 Download postman from https://www.postman.com/downloads/ and launch it.
 #### 2. Get user token via https://github.com/guguji666666/GJS-MDC-Tips/blob/main/API/README.md
