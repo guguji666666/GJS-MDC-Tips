@@ -10,7 +10,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
 ```
 
-## 2. Get user token
+## 2. Get AAD user token （recommend owner or contributor role on the subscription)
 
 ```powershell
 Connect-AzAccount -Subscription <subscription id>
