@@ -17,7 +17,7 @@ Download postman from https://www.postman.com/downloads/ and launch it.
 
 `Binding`: PUT
 
-`URL`
+`request URL`
 ```
 https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/providers/Microsoft.Compute/virtualMachines/<vmname>/extensions/AzureSecurityWindowsAgent?api-version=2019-03-01
 ```
@@ -59,7 +59,7 @@ Download postman from https://www.postman.com/downloads/ and launch it.
 
 `Binding`: PUT
 
-`URL`
+`request URL`
 ```
 https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/providers/Microsoft.Compute/virtualMachines/<vmname>/extensions/AzureSecurityLinuxAgent?api-version=2019-03-01
 ```
