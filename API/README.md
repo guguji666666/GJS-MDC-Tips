@@ -6,6 +6,8 @@ https://learn.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-8.3.0
 $PSVersionTable.PSVersion
 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
 ```
 
 ## 2. Get user token
