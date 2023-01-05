@@ -21,7 +21,7 @@ $token.Token | clip
 ```
 ![image](https://user-images.githubusercontent.com/96930989/210188454-74d8a6f2-9941-48b3-88d9-8b16bcc138dd.png)
 
-## 3. Retrive user token and correct the format
+## 3. Retrieve user token and correct the format
 
 Paste the user token in https://jwt.ms/ and correct the format
 
