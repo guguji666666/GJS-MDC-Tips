@@ -23,6 +23,8 @@ $token.Token | clip
 
 ## 3. Retrieve user token and correct the format
 
+The user token has already been copied to clipboard via previous powershell commands
+
 Paste the user token in https://jwt.ms/ and correct the format
 
 
