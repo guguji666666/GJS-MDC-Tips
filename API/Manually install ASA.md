@@ -62,20 +62,20 @@ Download postman from https://www.postman.com/downloads/ and launch it.
 
 `URL`
 ```
-https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/providers/Microsoft.Compute/virtualMachines/<vmname>/extensions/AzureSecurityWindowsAgent?api-version=2019-03-01
+https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/providers/Microsoft.Compute/virtualMachines/<vmname>/extensions/AzureSecurityLinuxAgent?api-version=2019-03-01
 ```
 
 `Body`
 ```
 {
-  "name":"AzureSecurityWindowsAgent", 
+  "name":"AzureSecurityLinuxAgent", 
   "type":"Microsoft.Compute/virtualmachines/extensions", 
   "location":"<vmlocation>", 
   "properties":{ 
-    "autoUpgradeMinorVersion":true, 
+    "autoUpgradeMinorVersion":?true, 
     "publisher":"Microsoft.Azure.Security.Monitoring", 
-    "type":"AzureSecurityWindowsAgent", 
-    "typeHandlerVersion":"1.0",
+    "type":"AzureSecurityLinuxAgent", 
+    "typeHandlerVersion":"2.0",
     "settings":{ },
     "protectedsettings": {}
 }
