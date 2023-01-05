@@ -6,7 +6,11 @@ https://learn.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-8.3.0
 $PSVersionTable.PSVersion
 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
+## 2. Get user token
+
+```powershell
 Connect-AzAccount -Subscription <subscription id>
 
 $token = Get-AzAccessToken
@@ -14,6 +18,12 @@ $token = Get-AzAccessToken
 $token.Token | clip
 ```
 ![image](https://user-images.githubusercontent.com/96930989/210188454-74d8a6f2-9941-48b3-88d9-8b16bcc138dd.png)
+
+## 3. Retrive user token and correct the format
+
+Paste the user token in https://jwt.ms/ and correct the format
+
+
 
 ## 2. Call API with postman
 Download postman from https://www.postman.com/downloads/
@@ -27,8 +37,7 @@ The ASA extension, which supports endpoint protection recommendations, fileless 
 
 ## Install ASA on Azure VM running Windows
 #### 1. Get the user token as mentioned above
-#### 2. Paste the user token in https://jwt.ms/ , modify the token to until the format becomes correct
-#### 3. Launch postman
+#### 2. Launch postman
 
 `Binding`: PUT
 
