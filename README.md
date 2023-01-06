@@ -17,10 +17,13 @@ To recover, remove the Log Analytics agent on the VMs connected to the deleted w
 ### 4. What if the Log Analytics agent was already installed as an extension on the VM?
 [Extension already installed before enabling auto-provisioning?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#what-if-the-log-analytics-agent-was-already-installed-as-an-extension-on-the-vm-)
 
-### 5. Delete and recover Azure Log Analytics workspace (Azure monitoring team)
+### 5. Billing once after enable defender for server on subscription and workspace level?
+[Billing for defender for server](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-on-the-subscription-and-workspace-)
+
+### 6. Delete and recover Azure Log Analytics workspace (Azure monitoring team)
 [Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
 
-## Useful Azure initiatives/policies
+## [Scaling auto-provisioning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-scale#scaling-auto-provisioning)
 [Auto provisioing - Deploy MMA extension and report to default workspace](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F6df2fee6-a9ed-4fef-bced-e13be1b25f1c)
 
 [Auto provisioing - Deploy MMA extension and report to custom workspace](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F8e7da0a5-0a0e-4bbc-bfc0-7773c018b616)
