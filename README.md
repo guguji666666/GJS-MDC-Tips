@@ -17,7 +17,7 @@ To recover, remove the Log Analytics agent on the VMs connected to the deleted w
 ### 4. What if the Log Analytics agent was already installed as an extension on the VM?
 [Extension already installed before enabling auto-provisioning?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#what-if-the-log-analytics-agent-was-already-installed-as-an-extension-on-the-vm-)
 
-### 5. Delete and recover Azure Log Analytics workspace
+### 5. Delete and recover Azure Log Analytics workspace (Azure monitoring team)
 [Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
 
 ## Useful Azure initiatives/policies
