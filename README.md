@@ -36,6 +36,20 @@ To recover, remove the Log Analytics agent on the VMs connected to the deleted w
 ### 5. Billing once after enable defender for server on subscription and workspace level?
 [Billing for defender for server](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-on-the-subscription-and-workspace-)
 
+When you enable the Servers plan on the subscription level, Defender for Cloud automatically enables the plan on your default workspaces automatically. 
+
+If you're using a custom workspace, you need to select it to enable the plan manually. 
+![image](https://user-images.githubusercontent.com/96930989/211142147-1d9f5d8c-4bd8-4ba5-bd9f-37c065e20fe1.png)
+
+![image](https://user-images.githubusercontent.com/96930989/211142168-0fddb5ae-3321-4a2a-98ad-1475cc4ce73b.png)
+
+Note that:
+If you turn on Defender for Servers for a subscription and for a connected custom workspace, you `aren't charged` for both. The system identifies `unique VMs`.
+
+If you enable Defender for Servers on cross-subscription workspaces:
+* For the `Log Analytics agent`, connected machines from all subscriptions are billed, including subscriptions that don't have the servers plan enabled.
+* For the `Azure Monitor agent`, billing and feature coverage for Defender for Servers depends only on the plan being enabled in the subscription.
+
 ### 6. Delete and recover Azure Log Analytics workspace (Azure monitoring team)
 [Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
 
