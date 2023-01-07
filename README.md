@@ -71,7 +71,7 @@ If you enable Defender for Servers on cross-subscription workspaces:
 ### 6. Delete and recover Azure Log Analytics workspace (Azure monitoring team)
 [Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
 
-## Deploy Auto-provisioning 
+### Deploy Auto-provisioning 
 
 #### [Scaling auto-provisioning using Azure policy](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-scale#scaling-auto-provisioning)
 
@@ -87,7 +87,7 @@ If you enable Defender for Servers on cross-subscription workspaces:
 
 [[Preview]: Configure machines to create the Microsoft Defender for Cloud user-defined pipeline using AMA](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fc15c5978-ab6e-4599-a1c3-90a7918f5371)
 
-## Manually deploy MMA/AMA extension via Powershell/Azure CLI
+### Manually deploy MMA/AMA extension via Powershell/Azure CLI
 [Deploy MMA extension on Windows machines](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/oms-windows?toc=%2Fazure%2Fazure-monitor%2Ftoc.json#powershell-deployment)
 
 [Deploy MMA extension on Linux machines](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/oms-linux?toc=%2Fazure%2Fazure-monitor%2Ftoc.json#azure-cli-deployment)
