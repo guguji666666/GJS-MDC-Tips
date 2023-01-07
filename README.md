@@ -25,9 +25,11 @@ For VMs in Australia, the workspace location is Australia
 ### 3. Can I delete the default workspaces created by Defender for Cloud?
 [Delete default workspaces?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#can-i-delete-the-default-workspaces-created-by-defender-for-cloud-)
 
-Deleting the default workspace is not recommended. Defender for Cloud uses the default workspaces to store security data from your VMs. If you delete a workspace, Defender for Cloud is unable to collect this data and some security recommendations and alerts are unavailable.
+Deleting the default workspace is not recommended if you don't have custom workspace. 
 
-To recover, remove the Log Analytics agent on the VMs connected to the deleted workspace. Defender for Cloud reinstalls the agent and creates new default workspaces.
+If Defender for cloud is using default workspace but you delete it accidently, Defender for Cloud is unable to collect this data and some security recommendations and alerts are unavailable.
+
+To recover, `remove the Log Analytics agent` on the VMs connected to the deleted workspace. Defender for Cloud `reinstalls the agent` and `creates new default workspaces`. You can also define `custom workspace` in `auto-provisioning` configuration if you don't want MDC to use default workspaces.
 ![image](https://user-images.githubusercontent.com/96930989/210910915-7ee87ba4-bfc7-442b-8863-5963ca7aa6dc.png)
 
 ### 4. What if the Log Analytics agent was already installed as an extension on the VM?
@@ -36,14 +38,15 @@ To recover, remove the Log Analytics agent on the VMs connected to the deleted w
 ### 5. Billing once after enable defender for server on subscription and workspace level?
 [Billing for defender for server](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-on-the-subscription-and-workspace-)
 
-When you enable the Servers plan on the subscription level, Defender for Cloud automatically enables the plan on your default workspaces automatically. 
+When you enable the Servers plan on the `subscription level`, Defender for Cloud enables the plan on your `default workspaces` automatically. 
 
-If you're using a custom workspace, you need to select it to enable the plan manually. 
+If you're using a `custom workspace`, you need to select it to enable the plan manually. 
 ![image](https://user-images.githubusercontent.com/96930989/211142147-1d9f5d8c-4bd8-4ba5-bd9f-37c065e20fe1.png)
 
 ![image](https://user-images.githubusercontent.com/96930989/211142168-0fddb5ae-3321-4a2a-98ad-1475cc4ce73b.png)
 
 Note that:
+
 If you turn on Defender for Servers for a subscription and for a connected custom workspace, you `aren't charged` for both. The system identifies `unique VMs`.
 
 If you enable Defender for Servers on cross-subscription workspaces:
