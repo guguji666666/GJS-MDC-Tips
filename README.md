@@ -42,6 +42,14 @@ Move to `on`
 ### 4. What if the Log Analytics agent was already installed as an extension on the VM?
 [Extension already installed before enabling auto-provisioning?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#what-if-the-log-analytics-agent-was-already-installed-as-an-extension-on-the-vm-)
 
+When the Monitoring Agent is `installed as an extension`, the extension configuration allows reporting to `only a single workspace`. 
+
+Defender for Cloud `does not` override `existing connections` to user workspaces. 
+
+Defender for Cloud will store security data from a VM in a workspace that is `already connected`, provided that the "Security" or "SecurityCenterFree" solution has been installed on it. 
+
+Defender for Cloud may `upgrade the extension version` to the latest version in this process.
+
 ### 5. Billing once after enable defender for server on subscription and workspace level?
 [Billing for defender for server](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-on-the-subscription-and-workspace-)
 
