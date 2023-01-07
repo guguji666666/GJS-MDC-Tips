@@ -3,8 +3,24 @@
 ### 1. The behavior that defender for cloud create workspaces
 [Defender for server creates workspaces](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#default-workspace)
 
+By default, when you onboard for the first time Defender for Cloud creates a new resource group and default workspace in the region of each subscription with Defender for Cloud enabled.
+
+If you have `VMs` in `multiple locations`, Defender for Cloud creates `multiple workspaces` accordingly, to ensure data compliance.
+
 ### 2. Where is the default Log Analytics workspace created?
 [Locations of default workspaces](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#where-is-the-default-log-analytics-workspace-created-)
+```
+For VMs in the United States and Brazil the workspace location is the United States
+For VMs in Canada, the workspace location is Canada
+For VMs in Europe the workspace location is Europe
+For VMs in the UK the workspace location is the UK
+For VMs in East Asia and Southeast Asia the workspace location is Asia
+For VMs in Korea, the workspace location is Korea
+For VMs in India, the workspace location is India
+For VMs in Japan, the workspace location is Japan
+For VMs in China, the workspace location is China
+For VMs in Australia, the workspace location is Australia
+```
 
 ### 3. Can I delete the default workspaces created by Defender for Cloud?
 [Delete default workspaces?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#can-i-delete-the-default-workspaces-created-by-defender-for-cloud-)
