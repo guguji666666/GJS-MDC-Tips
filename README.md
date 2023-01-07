@@ -1,4 +1,4 @@
-# MDC- useful information about workspaces and agents
+  # MDC- FAQ about workspaces and agents
 ## Defender for servers - workspaces and agents
 ### 1. The behavior that defender for cloud create workspaces
 [Defender for server creates workspaces](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#default-workspace)
