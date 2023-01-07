@@ -42,7 +42,7 @@ Move to `on`
 ### 4. What if the Log Analytics agent was already installed as an extension on the VM?
 [Extension already installed before enabling auto-provisioning?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#what-if-the-log-analytics-agent-was-already-installed-as-an-extension-on-the-vm-)
 
-When the Monitoring Agent has already been `installed as an extension`(such as manual installation via API), the extension configuration allows reporting to `only a single workspace`. 
+When the Monitoring Agent has already been `installed as an extension`(such as manual installation via `API`), the extension configuration allows reporting to `only a single workspace`. 
 
 Defender for Cloud `does not` override `existing connections` to user workspaces. 
 
