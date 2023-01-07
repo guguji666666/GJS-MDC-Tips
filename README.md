@@ -30,7 +30,14 @@ Deleting the default workspace is not recommended if you don't have custom works
 If Defender for cloud is using default workspace but you delete it accidently, Defender for Cloud is unable to collect this data and some security recommendations and alerts are unavailable.
 
 To recover, `remove the Log Analytics agent` on the VMs connected to the deleted workspace. Defender for Cloud `reinstalls the agent` and `creates new default workspaces`. You can also define `custom workspace` in `auto-provisioning` configuration if you don't want MDC to use default workspaces.
-![image](https://user-images.githubusercontent.com/96930989/210910915-7ee87ba4-bfc7-442b-8863-5963ca7aa6dc.png)
+
+![image](https://user-images.githubusercontent.com/96930989/211142697-18ee00ae-5b1d-4668-b95b-068658c6aff0.png)
+
+Move to `on`
+![image](https://user-images.githubusercontent.com/96930989/211142730-62f233c4-17c4-4d43-afb2-e63964701883.png)
+
+![image](https://user-images.githubusercontent.com/96930989/211142677-6fef576e-cb30-4106-b20a-62ef814f1384.png)
+
 
 ### 4. What if the Log Analytics agent was already installed as an extension on the VM?
 [Extension already installed before enabling auto-provisioning?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#what-if-the-log-analytics-agent-was-already-installed-as-an-extension-on-the-vm-)
