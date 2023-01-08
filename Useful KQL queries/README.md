@@ -144,17 +144,6 @@ securityresources
 Then download the csv file, let's name it `table1`
 
 ### ARG Table 2 : Detailed information of all Azure VMs
-```kusto
-Resources
-| where type == "microsoft.compute/virtualmachines"
-| extend vmName = properties.osProfile.computerName
-| extend osOffer = properties.storageProfile.imageReference.offer
-| extend osSku = properties.storageProfile.imageReference.sku
-| extend osName = properties.extended.instanceView.osName
-| extend osVersion = properties.extended.instanceView.osVersion
-| project name, id, resourceGroup, location, vmName, osOffer, osSku, osName, osVersion
-```
-Or the one with less columns
 
 ```kusto
 Resources
@@ -164,11 +153,25 @@ Resources
 | extend osSku = properties.storageProfile.imageReference.sku
 | extend osName = properties.extended.instanceView.osName
 | extend osVersion = properties.extended.instanceView.osVersion
-| project name, id, resourceGroup, location, osOffer, osSku
+| project id, resourceGroup, location, osOffer, osSku
 ```
-![image](https://user-images.githubusercontent.com/96930989/210491550-1fb70f3f-b279-4459-bd7d-4428b8f73eed.png)
+![image](https://user-images.githubusercontent.com/96930989/211176909-5cf6884e-ed2a-4eaf-b821-7179d7409376.png)
 
-Then download the csv file(from the query with less columns), let's name it `table2`
+Or the one with more columns
+
+```kusto
+Resources
+| where type == "microsoft.compute/virtualmachines"
+| extend vmName = properties.osProfile.computerName
+| extend osOffer = properties.storageProfile.imageReference.offer
+| extend osSku = properties.storageProfile.imageReference.sku
+| extend osName = properties.extended.instanceView.osName
+| extend osVersion = properties.extended.instanceView.osVersion
+| project id, resourceGroup, location, vmName, osOffer, osSku, osName, osVersion
+```
+![image](https://user-images.githubusercontent.com/96930989/211176924-227b2f7c-eaf1-47f2-a42e-e5b4d731b0ce.png)
+
+Then download the csv file(from the first query with less columns), let's name it `table2`
 
 ### Join two tables together by matching data in the `id (resource id)` column  using `VLOOKUP` in excel
 [How to use VLOOKUP to merge tables](https://www.youtube.com/watch?v=xjrZ4kwbh6w)
