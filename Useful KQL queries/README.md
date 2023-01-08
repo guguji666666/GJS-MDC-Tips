@@ -171,7 +171,7 @@ Resources
 Then download the csv file(from the query with less columns), let's name it `table2`
 
 ### Join two tables together by matching data in the `id (resource id)` column  using `VLOOKUP` in excel
-https://www.youtube.com/watch?v=xjrZ4kwbh6w
+[How to use VLOOKUP to merge tables](https://www.youtube.com/watch?v=xjrZ4kwbh6w)
 
 #### 1. Create a new excel file, paste `table1` and `table2` to the sheets in the same file.
 #### 2. In `table1`, insert a new column C named `OSSKU` ; then insert a new `row` on the top, input `5` above it
