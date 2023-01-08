@@ -177,10 +177,11 @@ Then download the csv file(from the first query with less columns), let's name i
 [How to use VLOOKUP to merge tables](https://www.youtube.com/watch?v=xjrZ4kwbh6w)
 
 #### 1. Create a new excel file, paste `table1` and `table2` to the sheets in the same file.
+![image](https://user-images.githubusercontent.com/96930989/211176981-883f82d7-984b-46a5-8199-39988c24bd04.png)
 #### 2. In `table1`, insert a new column C named `OSSKU` ; then insert a new `row` on the top, input `5` above it
 ![image](https://user-images.githubusercontent.com/96930989/210538609-8ad0d2ec-5dd9-4f24-98b1-17b988dd9083.png)
 
-#### 3. Navigate to `table2`, delete the first `Name` column, select all, and type a name in the section below, then press enter
+#### 3. Navigate to `table2` which is in the same excel file, select all, and type a name in the section below, then press enter
 * In this test i use the name `table_ingestion`
 ![image](https://user-images.githubusercontent.com/96930989/210542537-eb63b0c9-a728-4bc2-82c5-b88cb98c1d4d.png)
 
