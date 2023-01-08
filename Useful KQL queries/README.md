@@ -182,7 +182,8 @@ Then download the csv file(from the first query with less columns), let's name i
 ![image](https://user-images.githubusercontent.com/96930989/210538609-8ad0d2ec-5dd9-4f24-98b1-17b988dd9083.png)
 
 #### 3. Navigate to `table2` which is in the same excel file, select all, and type a name in the section below, then press enter
-* In this test i use the name `table_ingestion`
+
+In this demo, i will use the name `table_ingestion`
 ![image](https://user-images.githubusercontent.com/96930989/210542537-eb63b0c9-a728-4bc2-82c5-b88cb98c1d4d.png)
 
 
