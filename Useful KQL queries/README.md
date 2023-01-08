@@ -186,7 +186,7 @@ Then download the csv file(from the first query with less columns), let's name i
 ![image](https://user-images.githubusercontent.com/96930989/210542537-eb63b0c9-a728-4bc2-82c5-b88cb98c1d4d.png)
 
 
-#### 4. Go back to `table1`, select `C3`, input `=VLOOKUP($B3,table_ingestion,C$1,FALSE`, press enter, a value should be filled automatically
+#### 4. Go back to `table1`, select `C3`, input `=VLOOKUP($B3,table_ingestion,C$1,FALSE`, press enter, the OS information should be filled automatically
 ![image](https://user-images.githubusercontent.com/96930989/210542709-2c182991-cd22-442e-ac0d-02a256aa4412.png)
 
 #### 5. Expand the rest of the column, the values are supposed to be filled automatically
