@@ -22,7 +22,7 @@ resourcecontainers
 | sort by name asc
 ```
 
-## 3. ARG list secure score of all subscriptions
+## 3. ARG list current secure score of all subscriptions
 
 ```kusto
 SecurityResources 
