@@ -7,7 +7,7 @@ By default, when you onboard for the first time Defender for Cloud creates a new
 
 If you have `VMs` in `multiple locations`, Defender for Cloud creates `multiple workspaces` accordingly, to ensure data compliance.
 
-### 2. Where is the default Log Analytics workspace created?
+### 2. Where is the default Log Analytics workspace created by defender for cloud plans?
 [Locations of default workspaces](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#where-is-the-default-log-analytics-workspace-created-)
 ```
 For VMs in the United States and Brazil the workspace location is the United States
