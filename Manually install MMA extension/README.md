@@ -1,6 +1,6 @@
 ## Manually MMA extension on `Azure VM`
 
-### 1. Manually MMA extension on Azure VM running `Windows`
+### 1. Manually deploy MMA extension on Azure VM running `Windows`
 [MMA extension for Windows](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/oms-windows?toc=%2Fazure%2Fazure-monitor%2Ftoc.json#powershell-deployment)
 
 [Switch subscription in Azure CLI](https://learn.microsoft.com/en-us/cli/azure/manage-azure-subscriptions-azure-cli#change-the-active-subscription)
@@ -11,7 +11,6 @@ Make sure your Azure VM is in `running` state
 
 Using `Powershell`
 ```powershell
-
 Set-ExecutionPolicy RemoteSigned
 
 Install-Module Az
@@ -31,7 +30,6 @@ Set-AzVMExtension -ExtensionName "MicrosoftMonitoringAgent" `
     -ProtectedSettings $ProtectedSettings `
     -Location <Location of VM>
 ```
-![image](https://user-images.githubusercontent.com/96930989/211567930-f29da061-18f6-4556-8368-5c6cce4f24f0.png)
 
 Sample
 
@@ -43,7 +41,7 @@ Sample
 
 
 
-### 2. Manually MMA extension on Azure VM running `Linux`
+### 2. Manually deploy MMA extension on Azure VM running `Linux`
 [MMA extension for Linux](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/oms-linux?toc=%2Fazure%2Fazure-monitor%2Ftoc.json)
 
 [Switch subscription in Azure CLI](https://learn.microsoft.com/en-us/cli/azure/manage-azure-subscriptions-azure-cli#change-the-active-subscription)
