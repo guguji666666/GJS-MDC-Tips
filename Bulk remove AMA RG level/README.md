@@ -1,4 +1,4 @@
-## Remove AMA from multiple VM using powershell
+## Remove AMA at resource group level using powershell
 
 ### For Azure VM running `Windows OS`
 ```powershell
