@@ -7,6 +7,8 @@
 
 [Set-AzVMExtension](https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmextension?view=azps-9.2.0)
 
+[az vm extension Reference](https://learn.microsoft.com/en-us/cli/azure/vm/extension?view=azure-cli-latest)
+
 Make sure your Azure VM is in `running` state
 
 Using `Powershell`
