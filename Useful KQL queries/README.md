@@ -119,7 +119,7 @@ policyresources
 ```
 MDC Recommendation: System updates should be installed on your machines
 ```
-### ARG Table 1 : Unpatched VM with resource id (filter with unhealty and not applicable state)
+### ARG Table 1 : Unpatched VM with resource id (filter with `Unhealty` and `NotApplicable` state)
 ```kusto
 securityresources
         | where type == "microsoft.security/assessments"
