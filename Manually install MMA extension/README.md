@@ -6,9 +6,10 @@
 [Switch subscription in Azure CLI](https://learn.microsoft.com/en-us/cli/azure/manage-azure-subscriptions-azure-cli#change-the-active-subscription)
 
 [Set-AzVMExtension](https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmextension?view=azps-9.2.0)
+
 Make sure your Azure VM is in `running` state
 
-Using Azure CLI
+Using `Powershell`
 ```powershell
 
 Set-ExecutionPolicy RemoteSigned
@@ -33,9 +34,13 @@ Set-AzVMExtension -ExtensionName "MicrosoftMonitoringAgent" `
 ![image](https://user-images.githubusercontent.com/96930989/211567930-f29da061-18f6-4556-8368-5c6cce4f24f0.png)
 
 Sample
-![image](https://user-images.githubusercontent.com/96930989/211565864-5cd46c5a-38d4-4590-813b-f440ed91d16e.png)
 
-![image](https://user-images.githubusercontent.com/96930989/211569162-c3c003b3-cc81-408d-afeb-cc6834b812b5.png)
+![image](https://user-images.githubusercontent.com/96930989/211575414-8800a998-4ece-47fc-98d9-ac6eef9c12fa.png)
+
+![image](https://user-images.githubusercontent.com/96930989/211575464-1bef01bc-995e-46a7-b9e3-e4fe78fed93f.png)
+
+![image](https://user-images.githubusercontent.com/96930989/211575553-ffab9ace-1093-4bb7-91a2-75c175ddbac1.png)
+
 
 
 ### 2. Manually MMA extension on Azure VM running `Linux`
