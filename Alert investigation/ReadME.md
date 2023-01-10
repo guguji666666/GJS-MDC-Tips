@@ -1,4 +1,6 @@
-# OMS runs apt managed scripts - adaptive application control
+# MDC alerts investigation
+
+## 1. OMS runs apt managed scripts - adaptive application control alert
 
 ### Reason : If the solution "securityCenterFree" has been pushed to the VM, then the behavior is expected
 
