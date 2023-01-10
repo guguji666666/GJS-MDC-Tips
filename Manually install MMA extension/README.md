@@ -50,7 +50,7 @@ Sample
 
 Make sure your Azure VM is in `running` state
 
-Using Azure CLI
+Using `Azure CLI`
 ```powershell
 az vm extension set --resource-group <name of the rg where VM belongs to> --vm-name <name of VM> --name OmsAgentForLinux --publisher Microsoft.EnterpriseCloud.Monitoring --protected-settings '{"workspaceKey":"myWorkspaceKey"}' --settings '{"workspaceId":"myWorkspaceId","skipDockerProviderInstall": true}' --version 1.13
 ```
