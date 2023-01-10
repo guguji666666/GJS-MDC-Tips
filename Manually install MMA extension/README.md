@@ -1,4 +1,4 @@
-## Manually MMA extension on `Azure VM`
+## Manually install MMA extension on `Azure VM`
 
 ### 1. Manually deploy MMA extension on Azure VM running `Windows`
 [MMA extension for Windows](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/oms-windows?toc=%2Fazure%2Fazure-monitor%2Ftoc.json#powershell-deployment)
