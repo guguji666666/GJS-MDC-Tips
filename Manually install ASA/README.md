@@ -8,7 +8,7 @@ The ASA extension, which supports endpoint protection recommendations, fileless 
 ### Install ASA on Azure VM running `Windows`
 #### 1. Get postman
 Download postman from [Download Postman](https://www.postman.com/downloads/) and launch it.
-#### 2. [Get user token](https://github.com/guguji666666/GJS-MDC-Tips/blob/main/API/README.md)
+#### 2. Get user token via https://github.com/guguji666666/GJS-MDC-Tips/blob/main/API/README.md
 #### 3. Insert the user token here in postman
 ![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
 
