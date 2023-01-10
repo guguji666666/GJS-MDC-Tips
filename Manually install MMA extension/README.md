@@ -10,6 +10,13 @@ Make sure your Azure VM is in `running` state
 
 Using Azure CLI
 ```powershell
+
+Set-ExecutionPolicy RemoteSigned
+
+Install-Module Az
+  
+Connect-AzAccount -Subscription <subscription id>
+
 $PublicSettings = @{"workspaceId" = "myWorkspaceId"}
 $ProtectedSettings = @{"workspaceKey" = "myWorkspaceKey"}
 
