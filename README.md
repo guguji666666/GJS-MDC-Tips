@@ -1,6 +1,6 @@
 # MDC- FAQ
 ## Defender for servers plan - workspaces and agents
-### 1. The behavior that defender for cloud create workspaces
+### 1. The behavior that defender for cloud creates workspaces
 [Defender for server creates workspaces](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#default-workspace)
 
 By default, when you onboard for the first time Defender for Cloud creates a new resource group and default workspace in the region of each subscription with Defender for Cloud enabled.
