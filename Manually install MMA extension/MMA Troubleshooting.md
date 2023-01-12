@@ -6,7 +6,7 @@
 
 "The agent could not connect to the Microsoft Operations Management Suite service. Please check that the system either has Internet access, or that a valid HTTP proxy has been configured for the agent"
 
-#### TSG steps on Windows machine
+#### TSG steps on Windows machine (Whether MMA is installed as extension or MSI package)
 1. RDP to the VM, go to `Control Panel -> System and Security` and here you could see `Microsoft Monitoring Agent`, click it.
 ![image](https://user-images.githubusercontent.com/96930989/212033799-9fb7eec1-4179-4de4-8c7f-901c709694c8.png)
 
