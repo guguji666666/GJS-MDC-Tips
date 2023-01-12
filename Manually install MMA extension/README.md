@@ -41,6 +41,12 @@ Sample
 
 ![image](https://user-images.githubusercontent.com/96930989/211575553-ffab9ace-1093-4bb7-91a2-75c175ddbac1.png)
 
+To verify on local machine, RDP to the VM, go to `Control Panel -> System and Security` and here you could see `Microsoft Monitoring Agent`
+![image](https://user-images.githubusercontent.com/96930989/212033799-9fb7eec1-4179-4de4-8c7f-901c709694c8.png)
+
+Then move to the tab named "Azure Log Analytics" andverify if the workspace id is correct, and if the Status column of this workspace shows green checkbox.
+
+![image](https://user-images.githubusercontent.com/96930989/212016538-d5f340f2-aef0-40b9-857b-6e5a99112199.png)
 
 
 ### 2. Manually deploy MMA extension on Azure VM running `Linux`
