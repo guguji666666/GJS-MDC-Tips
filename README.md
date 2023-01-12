@@ -50,7 +50,19 @@ Defender for Cloud will store security data from a VM in a workspace that is `al
 
 Defender for Cloud may `upgrade the extension version` to the latest version in this process.
 
-### 5. Billing once after enable defender for server on subscription and workspace level?
+### 5. What if a Log Analytics agent is directly installed on the machine but not as an extension (Direct Agent)?
+
+If the Log Analytics agent is installed directly on the VM (not as an Azure extension), Defender for Cloud `will install` the Log Analytics agent extension, and may `upgrade` the Log Analytics agent to the latest version.
+
+The agent installed will `continue` to report to its `already configured workspace(s)`, and `in addition` will report to the workspace `configured in Defender for Cloud` (`Multi-homing` is supported on `Windows` machines).
+
+If the configured workspace is a user workspace (not Defender for Cloud's default workspace), you will need to install the "Security" or "SecurityCenterFree" solution on it for Defender for Cloud to start processing events from VMs and computers reporting to that workspace.
+
+For `Linux` machines, Agent multi-homing is `not yet supported` - hence, if an existing agent installation is detected, automatic provisioning `will not occur` and the machine's configuration will not be altered.
+
+For `existing machines` on subscriptions onboarded to Defender for Cloud `before March 17 2019`, when an existing agent will be detected, the Log Analytics agent extension `will not be` installed and the machine will not be affected. For these machines, see the "Resolve monitoring agent health issues on your machines" recommendation to resolve the agent installation issues on these machines
+
+### 6. Billing once after enable defender for server on subscription and workspace level?
 [Billing for defender for server](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-on-the-subscription-and-workspace-)
 
 When you enable the Servers plan on the `subscription level`, Defender for Cloud enables the plan on your `default workspaces` automatically. 
@@ -68,7 +80,7 @@ If you enable Defender for Servers on cross-subscription workspaces:
 * For the `Log Analytics agent`, connected machines from all subscriptions are billed, including subscriptions that don't have the servers plan enabled.
 * For the `Azure Monitor agent`, billing and feature coverage for Defender for Servers depends only on the plan being enabled in the subscription.
 
-### 6. Delete and recover Azure Log Analytics workspace (Azure monitoring team)
+### 7. Delete and recover Azure Log Analytics workspace (Azure monitoring team)
 [Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
 
 ### Deploy Auto-provisioning 
