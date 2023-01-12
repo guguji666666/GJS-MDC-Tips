@@ -7,15 +7,15 @@
 "The agent could not connect to the Microsoft Operations Management Suite service. Please check that the system either has Internet access, or that a valid HTTP proxy has been configured for the agent"
 
 #### TSG steps on Windows machine
-1. Once login on the VM, go to `Control Panel -> All Control Panel Items` and here you could see `Microsoft Monitoring Agent`, click on it to bring up the UI.
-![image](https://user-images.githubusercontent.com/96930989/212015109-39f05712-ff70-416d-825b-4b2ce4b4bf82.png)
+1. Once login on the VM, go to `Control Panel -> System and Security` and here you could see `Microsoft Monitoring Agent`, click on it to bring up the UI.
+![image](https://user-images.githubusercontent.com/96930989/212033799-9fb7eec1-4179-4de4-8c7f-901c709694c8.png)
 
 
 2. Then move to the tab named "Azure Log Analytics" and please kindly verify if the workspace id is correct, and if the Status column of this workspace shows green checkbox. 
 
 ![image](https://user-images.githubusercontent.com/96930989/212016538-d5f340f2-aef0-40b9-857b-6e5a99112199.png)
 
-3. Please kindly identify network connectivity issue by running the `TestCloudConnectivity` tool. The tool is installed `by default` with the agent in the folder `%SystemRoot%\Program Files\Microsoft Monitoring Agent\Agent`
+3. Identify network connectivity issue by running the `TestCloudConnectivity` tool. The tool is installed `by default` with the agent in the folder `%SystemRoot%\Program Files\Microsoft Monitoring Agent\Agent`
 
 Launch cmd with administrator, then run the commands below:
 ```sh
