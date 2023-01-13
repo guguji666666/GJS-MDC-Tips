@@ -39,7 +39,7 @@ $JitPolicy = (@{
          allowedSourceAddressPrefix=@("*");
          maxRequestAccessDuration="PT6H"})})
 
-Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "LOCATION" -Name "default" -ResourceGroupName "RESOURCEGROUP" -VirtualMachine $JitPolicyArr
+Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "<LOCATION of VM>" -Name "<name of VM>" -ResourceGroupName "<RESOURCEGROUP>" -VirtualMachine $JitPolicyArr
 ```
 
 ## P2 : Create Custom role for requiring JIT access (least privileged)
