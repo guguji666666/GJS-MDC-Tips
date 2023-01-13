@@ -76,9 +76,9 @@ Create a json file with this content
 ```powershell
 Set-PSRepository PSGallery -InstallationPolicy Trusted
 
-Install-Module -Name "Az"
-
 Set-ExecutionPolicy RemoteSigned
+
+Install-Module -Name "Az"
 
 Import-Module -Name "Az" -Verbose -Force
 
@@ -87,7 +87,7 @@ Connect-AzAccount -subscription <subscription id>
 New-AzRoleDefinition -InputFile <path to the json file you created before>
 ```
 
-To verify if the custom role has been created successfully
+To `verify` if the custom role has been created successfully
 ```powershell
 Get-AzRoleDefinition -name "JIT Custom Role"
 
