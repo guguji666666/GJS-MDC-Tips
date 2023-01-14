@@ -36,6 +36,8 @@ $JitPolicy = (@{
          allowedSourceAddressPrefix=@("*");
          maxRequestAccessDuration="PT6H"})})
 
+$JitPolicyArr=@($JitPolicy)
+
 Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "<LOCATION of VM>" -Name "<name of VM>" -ResourceGroupName "<RESOURCEGROUP>" -VirtualMachine $JitPolicyArr
 ```
 
