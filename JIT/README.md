@@ -1,4 +1,4 @@
-# JIT to VM
+# Manage JIT on Azure VM
 ## [Permissions required](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks#faq---just-in-time-virtual-machine-access)
 
 
