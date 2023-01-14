@@ -3,7 +3,7 @@
 ## [MS official powershell commands](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-powershell%2Cjit-request-powershell#powershell)
 
 ## P1 : Create JIT policy for VM
-Example - Enable just-in-time VM access on a specific VM with the following rules:
+Below is the `example` - Enable just-in-time VM access on a specific VM with the following rules:
 * Close ports `22` and `3389`
 * Set a maximum time window of `6 hours` for each so they can be opened per approved request
 * Allow the user who is requesting access to control the `source IP addresses`
