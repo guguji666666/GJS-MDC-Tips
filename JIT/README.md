@@ -1,4 +1,4 @@
-# Manage JIT on Azure VM
+# Manage JIT rule on Azure VM
 ## [Permissions required](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks#faq---just-in-time-virtual-machine-access)
 ## [MS official powershell commands](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-powershell%2Cjit-request-powershell#powershell)
 
@@ -146,7 +146,7 @@ $JitPolicyVm1 = (@{
     id="/subscriptions/<SUBSCRIPTIONID>/resourceGroups/<RESOURCEGROUP>/providers/Microsoft.Compute/virtualMachines/<VMNAME>";
     ports=(@{
        number=<port>;
-       endTimeUtc="<2020-07-15T17:00:00.3658798Z>";
+       endTimeUtc="2020-07-15T17:00:00.3658798Z";
        allowedSourceAddressPrefix=@("<IPV4ADDRESS of the source>")})})       
 ```
 
