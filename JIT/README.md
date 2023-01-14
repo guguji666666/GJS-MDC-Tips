@@ -61,6 +61,7 @@ $JitPolicyArr=@($JitPolicy)
 
 Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "East Asia" -Name "gjsubuntu2004lts01" -ResourceGroupName "GJS-MS150-MDFC1" -VirtualMachine $JitPolicyArr
 ```
+![image](https://user-images.githubusercontent.com/96930989/212460825-5d8dca40-b42c-4ba7-8546-f75e28168a18.png)
 
 ## P2 : Create custom role for requiring JIT access (least privileged)
 ### 1. Create the role template in json file
