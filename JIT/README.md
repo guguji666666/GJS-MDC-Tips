@@ -97,6 +97,9 @@ Note:
                              "/subscriptions/<SubscriptionID>"]
 }
 ```
+Sample
+
+![image](https://user-images.githubusercontent.com/96930989/212461228-b3f99b1f-64d8-4a6a-817f-cb1be0b2e372.png)
 
 ### 2. Create the custom role in subscription
 ```powershell
@@ -104,15 +107,22 @@ Connect-AzAccount -subscription <subscription id>
 
 New-AzRoleDefinition -InputFile <path to the json file you created before>
 ```
+Sample
+
+![image](https://user-images.githubusercontent.com/96930989/212461351-d404a10d-f515-496a-94bf-dbb21f73ccef.png)
+
 
 ### 3. To `verify` if the custom role has been created successfully
 ```powershell
 Connect-AzAccount -subscription <subscription id>
-
 Get-AzRoleDefinition -name "JIT Custom Role"
-
+```
+or
+```powershell
 Get-AzRoleDefinition| ? {$_.IsCustom -eq$true} | FT Name, IsCustom
-
+```
+or
+```powershell
 Get-AzRoleDefinition| ? {$_.IsCustom -eq$true} | fl
 ```
 
