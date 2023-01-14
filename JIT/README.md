@@ -24,7 +24,7 @@ Install-Module Az
 Connect-AzAccount -Subscription <your subscription id>
 
 $JitPolicy = (@{
-    id="/subscriptions/SUBSCRIPTIONID/resourceGroups/RESOURCEGROUP/providers/Microsoft.Compute/virtualMachines/VMNAME";
+    id="/subscriptions/<SUBSCRIPTIONID>/resourceGroups/<RESOURCEGROUP>/providers/Microsoft.Compute/virtualMachines/<VMNAME>";
     ports=(@{
          number=22;
          protocol="*";
@@ -38,7 +38,28 @@ $JitPolicy = (@{
 
 $JitPolicyArr=@($JitPolicy)
 
-Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "<LOCATION of VM>" -Name "<name of VM>" -ResourceGroupName "<RESOURCEGROUP>" -VirtualMachine $JitPolicyArr
+Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "<LOCATION of VM>" -Name "<VMNAME>" -ResourceGroupName "<RESOURCEGROUP>" -VirtualMachine $JitPolicyArr
+```
+Sample:
+```
+Connect-AzAccount -Subscription 8b7ef460-1d5d-41ef-b73c-ccfe136cb315
+
+$JitPolicy = (@{
+    id="/subscriptions/8b7ef460-1d5d-41ef-b73c-ccfe136cb315/resourceGroups/GJS-MS150-MDFC1/providers/Microsoft.Compute/virtualMachines/gjsubuntu2004lts01";
+    ports=(@{
+         number=22;
+         protocol="*";
+         allowedSourceAddressPrefix=@("*");
+         maxRequestAccessDuration="PT6H"},
+         @{
+         number=3389;
+         protocol="*";
+         allowedSourceAddressPrefix=@("*");
+         maxRequestAccessDuration="PT6H"})})
+
+$JitPolicyArr=@($JitPolicy)
+
+Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "East Asia" -Name "gjsubuntu2004lts01" -ResourceGroupName "GJS-MS150-MDFC1" -VirtualMachine $JitPolicyArr
 ```
 
 ## P2 : Create Custom role for requiring JIT access (least privileged)
