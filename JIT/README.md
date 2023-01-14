@@ -75,7 +75,7 @@ Note:
 
 ```json
 {
-    "Name":  "JIT Custom Role 20230114",
+    "Name":  "JIT Custom Role",
     "Id":  "88888888-8888-8888-8888-888888888888",
     "IsCustom":  true,
     "Description":  "Enable user to request JIT access with restricted privileges",
@@ -100,14 +100,6 @@ Note:
 
 ### 2. Create the custom role in subscription
 ```powershell
-Set-PSRepository PSGallery -InstallationPolicy Trusted
-
-Set-ExecutionPolicy RemoteSigned
-
-Install-Module -Name "Az"
-
-Import-Module -Name "Az" -Verbose -Force
-
 Connect-AzAccount -subscription <subscription id>
 
 New-AzRoleDefinition -InputFile <path to the json file you created before>
@@ -115,6 +107,8 @@ New-AzRoleDefinition -InputFile <path to the json file you created before>
 
 ### 3. To `verify` if the custom role has been created successfully
 ```powershell
+Connect-AzAccount -subscription <subscription id>
+
 Get-AzRoleDefinition -name "JIT Custom Role"
 
 Get-AzRoleDefinition| ? {$_.IsCustom -eq$true} | FT Name, IsCustom
