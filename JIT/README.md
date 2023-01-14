@@ -62,8 +62,8 @@ $JitPolicyArr=@($JitPolicy)
 Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "East Asia" -Name "gjsubuntu2004lts01" -ResourceGroupName "GJS-MS150-MDFC1" -VirtualMachine $JitPolicyArr
 ```
 
-## P2 : Create Custom role for requiring JIT access (least privileged)
-### 1. Creating the role template in json file
+## P2 : Create custom role for requiring JIT access (least privileged)
+### 1. Create the role template in json file
 To add Azure custom RBAC Role you'll need to create a `.json` file with the "actions" and "non-actions" defined.
 
 Create a json file with this content
