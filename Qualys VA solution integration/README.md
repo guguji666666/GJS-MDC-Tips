@@ -27,16 +27,41 @@ As the metadata scan and upload only occurs every 12 hours, there can be a delay
 
 
 ### Azure VM running Windows TSG steps
-1. Test connection to qualys cloud service
-2. Check if the metadata is generated
-3. Perform on demand scan, then wait for 24 hours
-4. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
-5. Collect the logs and reach Microsoft support
+1. Check the installation of the qualys extension
+2. Test connection to qualys cloud service
+
+[What prerequisites and permissions are required to install the Qualys extension?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#what-prerequisites-and-permissions-are-required-to-install-the-qualys-extension)
+
+• https://qagpublic.qg3.apps.qualys.com - Qualys' US data center
+
+• https://qagpublic.qg2.apps.qualys.eu - Qualys' European data center
+	
+If your machine is in a region in an Azure `European geography` (such as Europe, UK, Germany), its artifacts will be processed in Qualys' `European data center`. 
+
+Artifacts for virtual machines located `elsewhere` are sent to the `US data center`.
+
+3. Check if the metadata is generated
+Navigate to the path below and see if `Vulnerability_snapshot.db` exists
+```
+C:\ProgramData\Qualys\QualysAgent\Vulnerability_snapshot.db
+```
+![image](https://user-images.githubusercontent.com/96930989/212463493-d5981a23-051a-4ca0-b561-6ce8e9cca92e.png)
+
+4. Perform on demand scan, then wait for 24 hours
+5. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
+6. Collect the logs and reach Microsoft support
 
 
 ### Azure VM running Linux
-1. Test connection to qualys cloud service
-2. Check if the metadata is generated
-3. Perform on demand scan, then wait for 24 hours
-4. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
-5. Collect the logs and reach Microsoft support
+1. Check the installation of the qualys extension
+2. Test connection to qualys cloud service
+3. Check if the metadata is generated
+Navigate to the path below and see if `SnapshotVM.db` exists
+```
+/usr/local/qualys/cloud-agent/SnapshotVM.db
+```
+![image](https://user-images.githubusercontent.com/96930989/212463514-a666a0cd-8b79-448c-ae3e-27ae47d67960.png)
+
+5. Perform on demand scan, then wait for 24 hours
+6. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
+7. Collect the logs and reach Microsoft support
