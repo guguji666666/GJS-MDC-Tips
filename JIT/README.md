@@ -117,17 +117,23 @@ Sample
 Connect-AzAccount -subscription <subscription id>
 Get-AzRoleDefinition -name "JIT Custom Role"
 ```
+![image](https://user-images.githubusercontent.com/96930989/212461418-8110dcaf-6231-4f9b-a993-37b349bfc56d.png)
+
 or
 ```powershell
 Get-AzRoleDefinition| ? {$_.IsCustom -eq$true} | FT Name, IsCustom
 ```
+![image](https://user-images.githubusercontent.com/96930989/212461435-622d716c-a927-4905-bae7-c85d10a77abf.png)
+
 or
 ```powershell
 Get-AzRoleDefinition| ? {$_.IsCustom -eq$true} | fl
 ```
+![image](https://user-images.githubusercontent.com/96930989/212461447-81eacada-8aa8-4b69-8c95-cdfd752047b2.png)
 
-Check the new custom role in subscription's IAM management (below is the sample)
-![image](https://user-images.githubusercontent.com/96930989/212226060-93f41f7f-baed-49c3-957f-2d8a96a98616.png)
+You can also check the new custom role in subscription's IAM management (below is the sample)
+![image](https://user-images.githubusercontent.com/96930989/212461506-2b833d9d-c1f8-4d69-a733-d309ebfd476d.png)
+
 
 ## P3 : Request JIT access to VM
 Configure the VM request access properties
