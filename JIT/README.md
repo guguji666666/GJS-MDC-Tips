@@ -20,7 +20,7 @@ Install-Module Az.Security
 Import-Module -Name "Az.Security" -Verbose -Force
 ```
 
-### 2. Assign a variable that holds the just-in-time VM access rules for a VM
+### 2. Create JIT rule and assign it ot the VM
 ```powershell
 
 Connect-AzAccount -Subscription <your subscription id>
@@ -42,7 +42,7 @@ Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "<LOCATION of VM>" -Name "<
 ```
 
 ## P2 : Create Custom role for requiring JIT access (least privileged)
-### 1. Creating the template in json file
+### 1. Creating the role template in json file
 To add Azure custom RBAC Role you'll need to create a `.json` file with the "actions" and "non-actions" defined.
 
 Create a json file with this content
@@ -71,7 +71,7 @@ Create a json file with this content
 }
 ```
 
-### 2. Create the custom in subscription
+### 2. Create the custom role in subscription
 ```powershell
 Set-PSRepository PSGallery -InstallationPolicy Trusted
 
@@ -86,7 +86,7 @@ Connect-AzAccount -subscription <subscription id>
 New-AzRoleDefinition -InputFile <path to the json file you created before>
 ```
 
-To `verify` if the custom role has been created successfully
+### 3. To `verify` if the custom role has been created successfully
 ```powershell
 Get-AzRoleDefinition -name "JIT Custom Role"
 
