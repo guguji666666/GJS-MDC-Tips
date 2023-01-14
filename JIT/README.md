@@ -38,7 +38,7 @@ $JitPolicy = (@{
 
 $JitPolicyArr=@($JitPolicy)
 
-Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "<LOCATION of VM>" -Name "<VMNAME>" -ResourceGroupName "<RESOURCEGROUP>" -VirtualMachine $JitPolicyArr
+Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "<LOCATION of VM>" -Name "default" -ResourceGroupName "<RESOURCEGROUP>" -VirtualMachine $JitPolicyArr
 ```
 Sample:
 ```
@@ -59,7 +59,7 @@ $JitPolicy = (@{
 
 $JitPolicyArr=@($JitPolicy)
 
-Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "East Asia" -Name "gjsubuntu2004lts01" -ResourceGroupName "GJS-MS150-MDFC1" -VirtualMachine $JitPolicyArr
+Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "East Asia" -Name "default" -ResourceGroupName "GJS-MS150-MDFC1" -VirtualMachine $JitPolicyArr
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212460825-5d8dca40-b42c-4ba7-8546-f75e28168a18.png)
 
@@ -147,6 +147,8 @@ $JitPolicyVm1 = (@{
        endTimeUtc="<2020-07-15T17:00:00.3658798Z>";
        allowedSourceAddressPrefix=@("<IPV4ADDRESS of the source>")})})       
 ```
+Sample
+![image](https://user-images.githubusercontent.com/96930989/212461658-b47f285b-8c1b-47c5-8cb3-77d45d2ad3a3.png)
 
 Insert the VM access request parameters in an array
 ```powershell
