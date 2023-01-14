@@ -55,7 +55,7 @@ REG ADD HKLM\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability /v "ScanOnDe
 ##### 6. Collect the logs and reach Microsoft support
 
 
-### Azure VM running Linux
+### Azure VM running Linux TSG steps
 ##### 1. Check the installation of the qualys extension
 ##### 2. Test connection to qualys cloud service
 ##### 3. Check if the metadata is generated
