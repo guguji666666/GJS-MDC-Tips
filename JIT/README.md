@@ -61,7 +61,9 @@ $JitPolicyArr=@($JitPolicy)
 
 Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "East Asia" -Name "default" -ResourceGroupName "GJS-MS150-MDFC1" -VirtualMachine $JitPolicyArr
 ```
-![image](https://user-images.githubusercontent.com/96930989/212460825-5d8dca40-b42c-4ba7-8546-f75e28168a18.png)
+![image](https://user-images.githubusercontent.com/96930989/212462373-95aae3a2-f926-4c19-a2df-62b8b32e694f.png)
+
+![image](https://user-images.githubusercontent.com/96930989/212462411-e07876ed-4a16-4f32-8e7e-8e6695812fb2.png)
 
 ## P2 : Create custom role for requiring JIT access (least privileged)
 ### 1. Create the role template in json file
@@ -147,8 +149,6 @@ $JitPolicyVm1 = (@{
        endTimeUtc="<2020-07-15T17:00:00.3658798Z>";
        allowedSourceAddressPrefix=@("<IPV4ADDRESS of the source>")})})       
 ```
-Sample
-![image](https://user-images.githubusercontent.com/96930989/212461658-b47f285b-8c1b-47c5-8cb3-77d45d2ad3a3.png)
 
 Insert the VM access request parameters in an array
 ```powershell
@@ -160,3 +160,8 @@ Send the request access (use the resource ID from step 1)
 ```powershell
 Start-AzJitNetworkAccessPolicy -ResourceId "/subscriptions/<sub id>/resourceGroups/<RG name>/providers/Microsoft.Security/locations/<location of VM>/jitNetworkAccessPolicies/default" -VirtualMachine $JitPolicyArr
 ```
+Sample
+![image](https://user-images.githubusercontent.com/96930989/212462460-3e19164e-f9c4-46f7-898f-2d1a509f992b.png)
+
+The JIT rule should be found in UI
+![image](https://user-images.githubusercontent.com/96930989/212462523-9b961667-a51f-4051-b035-a773120cb498.png)
