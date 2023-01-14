@@ -2,7 +2,8 @@
 
 ### Workflow of qualys agent
 [Defender for Cloud's integrated Qualys vulnerability scanner for Azure and hybrid machines](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm)
-![image](https://user-images.githubusercontent.com/96930989/212463134-9197573d-0fdb-4337-936a-37da7fe883e7.png)
+![image](https://user-images.githubusercontent.com/96930989/212463315-f45920c2-7977-4350-9b55-985fe84b0931.png)
+
 1. Deploy - Microsoft Defender for Cloud monitors your machines and provides recommendations to deploy the Qualys extension on your selected machine/s.
 
 2. Gather information - The extension collects artifacts and sends them for analysis in the Qualys cloud service in the defined region.
@@ -25,8 +26,17 @@ As the metadata scan and upload only occurs every 12 hours, there can be a delay
 ![image](https://user-images.githubusercontent.com/96930989/212463200-28dfd795-2b93-40e9-ab37-61e3161dc64d.png)
 
 
-### Azure VM running Windows
-
+### Azure VM running Windows TSG steps
+1. Test connection to qualys cloud service
+2. Check if the metadata is generated
+3. Perform on demand scan, then wait for 24 hours
+4. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
+5. Collect the logs and reach Microsoft support
 
 
 ### Azure VM running Linux
+1. Test connection to qualys cloud service
+2. Check if the metadata is generated
+3. Perform on demand scan, then wait for 24 hours
+4. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
+5. Collect the logs and reach Microsoft support
