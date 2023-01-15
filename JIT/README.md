@@ -1,6 +1,7 @@
 # Manage JIT rule on Azure VM
-## [Permissions required](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks#faq---just-in-time-virtual-machine-access)
-## [MS official powershell commands](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-powershell%2Cjit-request-powershell#powershell)
+1. [What is JIT?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks)
+2. [Permissions required](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-overview?tabs=defender-for-container-arch-aks#faq---just-in-time-virtual-machine-access)
+3. [MS official powershell commands](https://learn.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-powershell%2Cjit-request-powershell#powershell)
 
 ## P1 : Create JIT policy for VM
 Below is the `example` - Enable just-in-time VM access on a specific VM with the following rules:
