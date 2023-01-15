@@ -1,6 +1,6 @@
-## Qualys VA scanning troubleshooting
+# Qualys VA scanning troubleshooting
 
-### Workflow of qualys agent
+## Workflow of qualys agent
 [Defender for Cloud's integrated Qualys vulnerability scanner for Azure and hybrid machines](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm)
 ![image](https://user-images.githubusercontent.com/96930989/212463315-f45920c2-7977-4350-9b55-985fe84b0931.png)
 
@@ -26,7 +26,7 @@ As the metadata scan and upload only occurs every 12 hours, there can be a delay
 ![image](https://user-images.githubusercontent.com/96930989/212463200-28dfd795-2b93-40e9-ab37-61e3161dc64d.png)
 
 
-### Azure VM running Windows TSG steps
+## Azure VM running Windows TSG steps
 ##### 1. Check the installation of the qualys extension
 ##### 2. Test connection to qualys cloud service
 
@@ -55,7 +55,7 @@ REG ADD HKLM\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability /v "ScanOnDe
 ##### 6. Collect the logs and reach Microsoft support
 
 
-### Azure VM running Linux TSG steps
+## Azure VM running Linux TSG steps
 ##### 1. Check the installation of the qualys extension
 ##### 2. Test connection to qualys cloud service
 ##### 3. Check if the metadata is generated
