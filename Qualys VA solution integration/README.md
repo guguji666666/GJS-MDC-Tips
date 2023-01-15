@@ -84,7 +84,7 @@ C:\ProgramFiles\Qualys
 2. Remove the `QualysAgent` from below provided registry path:
 ```
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\
-``
+```
 ![image](https://user-images.githubusercontent.com/96930989/212525215-2331730f-5738-409b-a473-5b383209b91d.png)
 
 3. Remove `Qualys` from below registry location:
