@@ -29,16 +29,26 @@ As the metadata scan and upload only occurs every 12 hours, there can be a delay
 ## Azure VM running Windows TSG steps
 ##### 1. Check the installation of the qualys extension
 ##### 2. Test connection to qualys cloud service
-
 [What prerequisites and permissions are required to install the Qualys extension?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#what-prerequisites-and-permissions-are-required-to-install-the-qualys-extension)
+* https://qagpublic.qg3.apps.qualys.com (64.39.104.113)- Qualys' US data center
+* https://qagpublic.qg2.apps.qualys.eu (154.59.121.74)- Qualys' European data center
 
-• https://qagpublic.qg3.apps.qualys.com - Qualys' US data center
-
-• https://qagpublic.qg2.apps.qualys.eu - Qualys' European data center
-	
 If your machine is in a region in an Azure `European geography` (such as Europe, UK, Germany), its artifacts will be processed in Qualys' `European data center`. 
 
 Artifacts for virtual machines located `elsewhere` are sent to the `US data center`.
+
+1. Test connection using powershell (launch with admin)
+```powershell
+Test-NetConnection -Port 443 -ComputerName 64.39.104.113 -InformationLevel Detailed
+```
+or
+```powershell
+Test-NetConnection -Port 443 -ComputerName 154.59.121.74 -InformationLevel Detailed
+```
+![image](https://user-images.githubusercontent.com/96930989/212520515-1f765380-35f5-43d4-a337-349c249549ba.png)
+
+
+3. Test connection using [Psping]
 
 ##### 3. Check if the metadata is generated
 Navigate to the path below and see if `Vulnerability_snapshot.db` exists
