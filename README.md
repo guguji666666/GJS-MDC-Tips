@@ -130,6 +130,3 @@ Oracle Linux 6 & 7
 SLES 12
 ```
 
-All in all, the AzSecPack could be considered as a component to improve VA scanning and enables true security monitoring of your service.
-
-
