@@ -97,6 +97,35 @@ HKEY_LOCAL_MACHINE\SOFTWARE\
 5. Wait for 12 hours, then reinstall the qualys agent via `quick fix` in the recommendation
 
 #### 6. Collect the logs and reach Microsoft support
+Log 1
+```
+C:\WindowsAzure\Logs\Plugins\Qualys.WindowsAgent.AzureSecurityCenter
+```
+![image](https://user-images.githubusercontent.com/96930989/212525495-f0a7ca13-2140-469d-b2bc-e2a641c98c98.png)
+
+Log 2
+```
+C:\WindowsAzure\Logs\WaAppAgent.log
+```
+![image](https://user-images.githubusercontent.com/96930989/212525501-ff596597-a7f6-4b0a-a53e-d6ec865809dc.png)
+
+Log 3
+```
+C:\Packages\Plugins\Qualys.QualysAgent
+```
+
+Log 4
+```
+C:\Packages\Plugins\Qualys.WindowsAgent.AzureSecurityCenter
+```
+![image](https://user-images.githubusercontent.com/96930989/212525511-48d64192-fc54-4c26-a781-1240bc2835df.png)
+
+Log 5
+```
+C:\ProgramData\Qualys
+```
+![image](https://user-images.githubusercontent.com/96930989/212525523-27dfbd28-6e3c-4fd4-ab20-0414ffcc5c6a.png)
+
 
 
 ## Azure VM running Linux TSG steps
