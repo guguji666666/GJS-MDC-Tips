@@ -96,7 +96,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\
 4. Remove the qualys extension from VM
 5. Wait for 12 hours, then reinstall the qualys agent via `quick fix` in the recommendation
 
-#### 6. Collect the logs and reach Microsoft support
+#### 6. Collect the logs below and reach Microsoft support
 Log 1
 ```
 C:\WindowsAzure\Logs\Plugins\Qualys.WindowsAgent.AzureSecurityCenter
