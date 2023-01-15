@@ -33,8 +33,7 @@ As the metadata scan and upload only occurs every 12 hours, there can be a delay
 * https://qagpublic.qg3.apps.qualys.com (64.39.104.113)- Qualys' US data center
 * https://qagpublic.qg2.apps.qualys.eu (154.59.121.74)- Qualys' European data center
 
-If your machine is in a region in an Azure `European geography` (such as Europe, UK, Germany), its artifacts will be processed in Qualys' `European data center`. 
-
+If your machine is in a region in an Azure `European geography` (such as Europe, UK, Germany), its artifacts will be processed in Qualys' `European data center`.
 Artifacts for virtual machines located `elsewhere` are sent to the `US data center`.
 
 1. Test connection using powershell (launch with admin)
