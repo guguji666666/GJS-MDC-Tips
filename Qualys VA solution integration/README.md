@@ -57,6 +57,8 @@ REG ADD HKLM\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability /v "ScanOnDe
 
 ## Azure VM running Linux TSG steps
 ##### 1. Check the installation of the qualys extension
+![image](https://user-images.githubusercontent.com/96930989/212520057-bd6a74e7-319e-4d40-97a7-8b542bd3c2ac.png)
+
 ##### 2. Test connection to qualys cloud service
 ##### 3. Check if the metadata is generated
 Navigate to the path below and see if `SnapshotVM.db` exists
