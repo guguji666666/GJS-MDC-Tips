@@ -70,7 +70,7 @@ REG ADD HKLM\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability /v "ScanOnDe
 ```
 #### 5. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
 Steps to uninstall qualys agent
-1. Ensure that the Qualys Agent folder is completely removed from the location:
+1. Ensure that the `Qualys Agent` folder is completely removed from the location:
 ```
 C:\ProgramData\Qualys
 ```
