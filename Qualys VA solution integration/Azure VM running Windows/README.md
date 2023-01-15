@@ -10,7 +10,6 @@
 If your machine is in a region in an Azure `European geography` (such as Europe, UK, Germany), its artifacts will be processed in Qualys' `European data center`.
 Artifacts for virtual machines located `elsewhere` are sent to the `US data center`.
 
-
 1. Test connection using powershell (launch with admin)
 ```powershell
 Test-NetConnection -Port 443 -ComputerName 64.39.104.113 -InformationLevel Detailed
@@ -44,8 +43,8 @@ C:\ProgramData\Qualys\QualysAgent\Vulnerability_snapshot.db
 REG ADD HKLM\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability /v "ScanOnDemand" /t REG_DWORD /d "1" /f
 ```
 #### 5. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
-Steps to uninstall qualys agent
-1. Ensure that the `Qualys Agent` folder is completely removed from the location:
+
+Ensure that the `Qualys Agent` folder is completely removed from the location:
 ```
 C:\ProgramData\Qualys
 ```
@@ -56,20 +55,21 @@ C:\ProgramFiles\Qualys
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212525183-c24a0d15-1ca1-4800-b049-302b97a12619.png)
 
-2. Remove the `QualysAgent` from below provided registry path:
+Remove the `QualysAgent` from below provided registry path:
 ```
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212525215-2331730f-5738-409b-a473-5b383209b91d.png)
 
-3. Remove `Qualys` from below registry location:
+Remove `Qualys` from below registry location:
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212525234-7335ac4d-86cd-43ac-ae17-c9439067f835.png)
 
-4. Remove the qualys extension from VM
-5. Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
+Remove the qualys extension from VM
+
+Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
 
 #### 6. Collect the logs below and reach Microsoft support
 Log 1
