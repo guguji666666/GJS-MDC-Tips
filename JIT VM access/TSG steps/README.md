@@ -1,5 +1,5 @@
 ## JIT TSG steps
-Lab for insufficient JIT(requesting) permissions
+### Lab for insufficient JIT(requesting) permissions
 #### 1. We create a user and only assign the `read` permission on the VM (Microsoft.Compute/virtualMachines/read)
 ![image](https://user-images.githubusercontent.com/96930989/212519542-60efd0a3-76b7-4fef-b0e6-83d86564a447.png)
 #### 2. Check the behavior when user tries to open the `Networking` and `Connect` page
