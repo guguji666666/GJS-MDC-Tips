@@ -10,7 +10,7 @@ Below is the `example` - Enable just-in-time VM access on a specific VM with the
 * Allow the user who is requesting access to control the `source IP addresses`
 * Allow the user who is requesting access to establish a successful session upon an approved just-in-time access request
 
-### 1. Install Az powershell module
+### 1. Install `Az` powershell module 
 ```powershell
 Set-PSRepository PSGallery -InstallationPolicy Trusted
 
@@ -18,6 +18,7 @@ Set-ExecutionPolicy RemoteSigned
 
 Install-Module Az
 ```
+[Install the Azure Az PowerShell module](https://learn.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-9.3.0)
 
 ### 2. Create JIT rule and assign it ot the VM
 ```powershell
