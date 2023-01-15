@@ -29,7 +29,7 @@ foreach ($Name in $para.name)
 You will see the results below once the operation has been performed successfully on the machines
 ![image](https://user-images.githubusercontent.com/96930989/211447888-4db1d32e-3ee7-42d5-adcd-9405f23d3fea.png)
 
-#### Other reference
+### Reference
 
 [Get-AzVM](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azvm?view=azps-9.2.0)
 
