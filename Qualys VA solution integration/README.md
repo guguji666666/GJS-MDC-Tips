@@ -48,7 +48,15 @@ Test-NetConnection -Port 443 -ComputerName 154.59.121.74 -InformationLevel Detai
 ![image](https://user-images.githubusercontent.com/96930989/212520515-1f765380-35f5-43d4-a337-349c249549ba.png)
 
 
-3. Test connection using [Psping]
+2. Test connection using [Psping](https://learn.microsoft.com/en-us/movere/test-443-connectivity)
+```powershell
+psping <URL for Resource consumption data upload>:443
+```
+Sample
+```powershell
+psping 64.39.104.113:443
+```
+![image](https://user-images.githubusercontent.com/96930989/212520669-19c546bc-b900-480d-944f-7db5f92d84d2.png)
 
 ##### 3. Check if the metadata is generated
 Navigate to the path below and see if `Vulnerability_snapshot.db` exists
