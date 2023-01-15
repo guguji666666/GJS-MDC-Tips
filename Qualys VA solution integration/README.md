@@ -94,7 +94,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\
 ![image](https://user-images.githubusercontent.com/96930989/212525234-7335ac4d-86cd-43ac-ae17-c9439067f835.png)
 
 4. Remove the qualys extension from VM
-5. Wait for 12 hours, then reinstall the qualys agent via `quick fix` in the recommendation
+5. Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
 
 #### 6. Collect the logs below and reach Microsoft support
 Log 1
