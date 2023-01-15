@@ -30,11 +30,14 @@ As the metadata scan and upload only occurs every 12 hours, there can be a delay
 #### 1. Check the installation of the qualys extension
 #### 2. Test connection to qualys cloud service
 [What prerequisites and permissions are required to install the Qualys extension?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#what-prerequisites-and-permissions-are-required-to-install-the-qualys-extension)
+
+[Locations of qualys cloud service(scroll down)](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#deploy-the-integrated-scanner-to-your-azure-and-hybrid-machines)
 * https://qagpublic.qg3.apps.qualys.com (64.39.104.113)- Qualys' US data center
 * https://qagpublic.qg2.apps.qualys.eu (154.59.121.74)- Qualys' European data center
 
 If your machine is in a region in an Azure `European geography` (such as Europe, UK, Germany), its artifacts will be processed in Qualys' `European data center`.
 Artifacts for virtual machines located `elsewhere` are sent to the `US data center`.
+
 
 1. Test connection using powershell (launch with admin)
 ```powershell
