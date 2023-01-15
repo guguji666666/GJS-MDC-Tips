@@ -168,7 +168,7 @@ Sample
 The JIT rule should be found in UI
 ![image](https://user-images.githubusercontent.com/96930989/212462523-9b961667-a51f-4051-b035-a773120cb498.png)
 
-If you want to check more details of JIT rule you just created
+If you want to check the definition inside JIT rule you just created
 1. Navigate to `defender for cloud panel > Workload protections`
 2. On the right, click `Just-in-time VM access` under `Advanced protection`
 ![image](https://user-images.githubusercontent.com/96930989/212526103-d5bdd1f9-2f74-4785-8330-40c40971d094.png)
