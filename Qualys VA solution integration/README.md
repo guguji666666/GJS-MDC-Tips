@@ -69,6 +69,33 @@ C:\ProgramData\Qualys\QualysAgent\Vulnerability_snapshot.db
 REG ADD HKLM\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability /v "ScanOnDemand" /t REG_DWORD /d "1" /f
 ```
 #### 5. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
+Steps to uninstall qualys agent
+1. Ensure that the Qualys Agent folder is completely removed from the location:
+```
+C:\ProgramData\Qualys
+```
+![image](https://user-images.githubusercontent.com/96930989/212525176-0ea6be15-dd56-4806-9d2d-c92085189f82.png)
+
+```
+C:\ProgramFiles\Qualys
+```
+![image](https://user-images.githubusercontent.com/96930989/212525183-c24a0d15-1ca1-4800-b049-302b97a12619.png)
+
+2. Remove the `QualysAgent` from below provided registry path:
+```
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\
+``
+![image](https://user-images.githubusercontent.com/96930989/212525215-2331730f-5738-409b-a473-5b383209b91d.png)
+
+3. Remove `Qualys` from below registry location:
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\
+```
+![image](https://user-images.githubusercontent.com/96930989/212525234-7335ac4d-86cd-43ac-ae17-c9439067f835.png)
+
+4. Remove the qualys extension from VM
+5. Wait for 12 hours, then reinstall the qualys agent via `quick fix` in the recommendation
+
 #### 6. Collect the logs and reach Microsoft support
 
 
