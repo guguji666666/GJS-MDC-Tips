@@ -156,7 +156,6 @@ If you only want the user to request JIT only via `API`, then please use the jso
                              "/subscriptions/<SubscriptionID>"]
 }
 ```
-Note: If you want to the role to be assignable at `VM level` only, input `resource id` of the VM at the `AssignableScopes` section
 
 Sample for JIT role（API only) at the subscription level
 
@@ -164,6 +163,58 @@ Sample for JIT role（API only) at the subscription level
 
 ![image](https://user-images.githubusercontent.com/96930989/212682150-02652123-0c8c-46f7-bb96-bae7623dbec9.png)
     
+
+If you want to the JIT role to be assignable at `VM level` only, then
+
+Create custom role 1
+```json
+{
+    "Name":  "JIT Full network",
+    "Id":  "88888888-8888-8888-8888-888888888888",
+    "IsCustom":  true,
+    "Description":  "Enable user to request JIT access with restricted privileges",
+    "Actions":  [
+        "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
+        "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
+        "Microsoft.Network/*/read",
+        "Microsoft.Security/policies/read"],
+    "NotActions":  [
+  
+                   ],
+    "DataActions":  [
+  
+                    ],
+    "NotDataActions":  [
+  
+                       ],
+    "AssignableScopes":  [
+                             "/subscriptions/<subscription id>"]
+}
+```
+Create custom role 2 to set restrcition to specified VM only,input `resource id` of the VM at the `AssignableScopes` section
+```json
+{
+    "Name":  "JIT ony <name of VM>",
+    "Id":  "88888888-8888-8888-8888-888888888888",
+    "IsCustom":  true,
+    "Description":  "Enable user to request JIT access with restricted privileges",
+    "Actions":  [
+        "Microsoft.Compute/virtualMachines/read"],
+    "NotActions":  [
+  
+                   ],
+    "DataActions":  [
+  
+                    ],
+    "NotDataActions":  [
+  
+                       ],
+    "AssignableScopes":  [
+                             "/subscriptions/<resource id of the VM>"]
+}
+```
+
+
 
 ### 2. Create the custom role in subscription 
 ```powershell
