@@ -89,8 +89,7 @@ User can request JIT via `API` or `UI` with the permisssion below
         "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
         "Microsoft.Compute/virtualMachines/read",
         "Microsoft.Network/networkInterfaces/*/read",
-        "Microsoft.Network/networkWatchers/read",
-        "Microsoft.Network/publicIPAddresses/read"],
+        "Microsoft.Network/networkWatchers/read"],
     "NotActions":  [
   
                    ],
@@ -178,7 +177,8 @@ Create custom role 1 for network permission at subscription level
         "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
         "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
         "Microsoft.Network/*/read",
-        "Microsoft.Security/policies/read"],
+        "Microsoft.Security/policies/read",
+        "Microsoft.Security/pricings/read"],
     "NotActions":  [
   
                    ],
