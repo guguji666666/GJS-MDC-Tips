@@ -77,10 +77,10 @@ Note:
 "Id" can be left all 8's for the submission, you will get a new one generated on Addition in the results.
 ```
 
-User can request JIT via `API` or `UI` with the permisssion below
+User can request JIT via `API` or `UI` with the least permisssion below
 ```json
 {
-    "Name":  "JIT Full",
+    "Name":  "JIT least privileges",
     "Id":  "88888888-8888-8888-8888-888888888888",
     "IsCustom":  true,
     "Description":  "Enable user to request JIT access with restricted privileges",
@@ -89,7 +89,7 @@ User can request JIT via `API` or `UI` with the permisssion below
         "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
         "Microsoft.Compute/virtualMachines/read",
         "Microsoft.Network/networkInterfaces/*/read",
-        "Microsoft.Network/networkWatchers/read"],
+        "Microsoft.Network/publicIPAddresses/read"],
     "NotActions":  [
   
                    ],
@@ -103,66 +103,6 @@ User can request JIT via `API` or `UI` with the permisssion below
                              "/subscriptions/<subscription id>"]
 }
 ```
-or
-```json
-{
-    "Name":  "JIT Full network",
-    "Id":  "88888888-8888-8888-8888-888888888888",
-    "IsCustom":  true,
-    "Description":  "Enable user to request JIT access with restricted privileges",
-    "Actions":  [
-        "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
-        "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
-        "Microsoft.Compute/virtualMachines/read",
-        "Microsoft.Network/*/read",
-        "Microsoft.Security/policies/read",
-        "Microsoft.Security/pricings/read"],
-    "NotActions":  [
-  
-                   ],
-    "DataActions":  [
-  
-                    ],
-    "NotDataActions":  [
-  
-                       ],
-    "AssignableScopes":  [
-                             "/subscriptions/<subscription id>"]
-}
-```
-
-If you want the user to request JIT only via `API`, then please use the json below:
-```json
-{
-    "Name":  "JIT Custom Role API",
-    "Id":  "88888888-8888-8888-8888-888888888888",
-    "IsCustom":  true,
-    "Description":  "Enable user to request JIT access with restricted privileges",
-    "Actions":  [
-        "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
-        "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
-        "Microsoft.Compute/virtualMachines/read",
-        "Microsoft.Network/networkInterfaces/*/read"],
-    "NotActions":  [
-  
-                   ],
-    "DataActions":  [
-  
-                    ],
-    "NotDataActions":  [
-  
-                       ],
-    "AssignableScopes":  [
-                             "/subscriptions/<SubscriptionID>"]
-}
-```
-
-Sample for JIT role（API only) at the subscription level
-
-![image](https://user-images.githubusercontent.com/96930989/212461228-b3f99b1f-64d8-4a6a-817f-cb1be0b2e372.png)
-
-![image](https://user-images.githubusercontent.com/96930989/212682150-02652123-0c8c-46f7-bb96-bae7623dbec9.png)
-    
 
 If you want to the JIT role to be assignable at `VM level` only, then
 
