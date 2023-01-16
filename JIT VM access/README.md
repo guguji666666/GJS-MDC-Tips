@@ -214,6 +214,12 @@ Create custom role 2 to set restrcition to specified VM only, input `resource id
 }
 ```
 
+IAM at VM level
+![image](https://user-images.githubusercontent.com/96930989/212705745-51a20743-b1c5-4d6e-bd52-55121e33b142.png)
+
+User can only see the VM which he has the read permission
+![image](https://user-images.githubusercontent.com/96930989/212705984-f3a6f6c6-0bed-4e9c-a000-59fe46bc4704.png)
+
 
 
 ### 2. Create the custom role in subscription 
