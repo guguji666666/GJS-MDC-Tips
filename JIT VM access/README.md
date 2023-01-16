@@ -107,7 +107,7 @@ User can request JIT via `API` or `UI` with the permisssion below
 or
 ```json
 {
-    "Name":  "JIT Full",
+    "Name":  "JIT Full network",
     "Id":  "88888888-8888-8888-8888-888888888888",
     "IsCustom":  true,
     "Description":  "Enable user to request JIT access with restricted privileges",
