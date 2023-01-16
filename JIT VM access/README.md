@@ -177,3 +177,5 @@ If you want to check the definition inside JIT rule you just created
 4. You can then see the definition of this JIT rule
 ![image](https://user-images.githubusercontent.com/96930989/212526219-f751d997-a572-42b5-b17b-98d16ebb2d45.png)
 
+# JIT FAQ
+1. If i enable JIT in the UI, What is the name of this JIT policy?
