@@ -99,7 +99,7 @@ Note:
   
                        ],
     "AssignableScopes":  [
-                             "/subscriptions/<SubscriptionID>"]
+                             "/subscriptions/<subscription id>"]
 }
 ```
 Note: If you want to assign the role to VM level only, input `resource id` of the VM at the `AssignableScopes` section
