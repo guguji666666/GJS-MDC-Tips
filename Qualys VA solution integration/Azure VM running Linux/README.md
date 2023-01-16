@@ -36,8 +36,16 @@ Navigate to the path below and see if `SnapshotVM.db` exists under the path
 sudo /usr/local/qualys/cloud-agent/bin/cloudagentctl.sh action=demand type=vm
 ```
 #### 6. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
-1. 
-
+1. Romove the qualys extension from Azure VM in Azure portal
+2. Run command
+```sh
+ rpm -e –nodeps "qualys-cloud-agent-x.x.exe"
+ ```
+3. Remove all the folder named `qualys` under path
+```sh
+ls /etc
+```
+4. Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
 
 #### 7. Collect the logs and reach Microsoft support
 Log 1 
