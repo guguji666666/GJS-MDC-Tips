@@ -179,3 +179,14 @@ If you want to check the definition inside JIT rule you just created
 
 # JIT FAQ
 ## 1. If i enable JIT in the UI, What is the name of this JIT policy?
+We picked Azure VM running Linux for the test, after we enabled JIT in UI
+![image](https://user-images.githubusercontent.com/96930989/212584226-29ce3adc-9983-4673-96f8-a50f64f7208d.png)
+
+Check the JIT policy using powershell commands
+```powershell
+Connect-AzAccount -Subscription <subscription id>
+Get-AzJitNetworkAccessPolicy
+```
+The name of the JIT policy is `default`
+![image](https://user-images.githubusercontent.com/96930989/212585689-59fa7d3f-9422-4ff0-9057-4a1ea9e9d525.png)
+
