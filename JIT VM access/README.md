@@ -77,7 +77,7 @@ Note:
 "Id" can be left all 8's for the submission, you will get a new one generated on Addition in the results.
 ```
 
-User can request JIT via API or UI with the permisssion below
+User can request JIT via `API` or `UI` with the permisssion below
 ```json
 {
     "Name":  "JIT Custom Role Full",
@@ -128,7 +128,7 @@ If you only want the user to request JIT only via `API`, then please use the jso
                              "/subscriptions/<SubscriptionID>"]
 }
 ```
-Note: If you want to assign the role to VM level only, input `resource id` of the VM at the `AssignableScopes` section
+Note: If you want to the role to be assignable at `VM level` only, input `resource id` of the VM at the `AssignableScopes` section
 
 Sample for JIT role at the subscription level
 
