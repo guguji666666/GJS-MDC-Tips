@@ -67,7 +67,7 @@ Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "East Asia" -Name "default"
 
 ![image](https://user-images.githubusercontent.com/96930989/212462411-e07876ed-4a16-4f32-8e7e-8e6695812fb2.png)
 
-## P2 : Create custom role for requiring JIT access (least privileged)
+## P2 : Create custom role for requiring JIT access (least privileged) at subscription level
 ### 1. Create the role template in json file
 To add Azure custom RBAC Role you'll need to create a `.json` file with the `"actions"` and `"non-actions"` defined.
 
@@ -101,11 +101,14 @@ Note:
                              "/subscriptions/<SubscriptionID>"]
 }
 ```
+* Note:
+If you want to assign the role to VM level only, input `resource id` of the VM at the `AssignableScopes` section
+
 Sample
 
 ![image](https://user-images.githubusercontent.com/96930989/212461228-b3f99b1f-64d8-4a6a-817f-cb1be0b2e372.png)
 
-### 2. Create the custom role in subscription
+### 2. Create the custom role in subscription 
 ```powershell
 Connect-AzAccount -subscription <subscription id>
 
