@@ -77,7 +77,7 @@ Note:
 "Id" can be left all 8's for the submission, you will get a new one generated on Addition in the results.
 ```
 
-User can request JIT via `API` or `UI` with the least permisssion below
+User can request JIT via `API` or `UI` with the least permission below
 ```json
 {
     "Name":  "JIT least privileges",
@@ -90,6 +90,32 @@ User can request JIT via `API` or `UI` with the least permisssion below
         "Microsoft.Compute/virtualMachines/read",
         "Microsoft.Network/networkInterfaces/*/read",
         "Microsoft.Network/publicIPAddresses/read"],
+    "NotActions":  [
+  
+                   ],
+    "DataActions":  [
+  
+                    ],
+    "NotDataActions":  [
+  
+                       ],
+    "AssignableScopes":  [
+                             "/subscriptions/<subscription id>"]
+}
+```
+
+User can request JIT via `powershell` or `API` only with the permissions below
+```json
+{
+    "Name":  "JIT only API PS",
+    "Id":  "88888888-8888-8888-8888-888888888888",
+    "IsCustom":  true,
+    "Description":  "Enable user to request JIT access with restricted privileges",
+    "Actions":  [
+        "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
+        "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
+        "Microsoft.Compute/virtualMachines/read",
+        "Microsoft.Network/networkInterfaces/*/read"],
     "NotActions":  [
   
                    ],
