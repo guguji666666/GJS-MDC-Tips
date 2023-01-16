@@ -20,7 +20,7 @@ Install-Module Az
 ```
 [Install the Azure Az PowerShell module](https://learn.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-9.3.0)
 
-### 2. Create JIT rule and assign it ot the VM
+### 2. Create JIT rule and assign it to the VM
 ```powershell
 
 Connect-AzAccount -Subscription <your subscription id>
@@ -166,7 +166,7 @@ Sample for JIT role（API only) at the subscription level
 
 If you want to the JIT role to be assignable at `VM level` only, then
 
-Create custom role 1
+Create custom role 1 for network permission at subscription level
 ```json
 {
     "Name":  "JIT Full network",
@@ -191,7 +191,7 @@ Create custom role 1
                              "/subscriptions/<subscription id>"]
 }
 ```
-Create custom role 2 to set restrcition to specified VM only,input `resource id` of the VM at the `AssignableScopes` section
+Create custom role 2 to set restrcition to specified VM only, input `resource id` of the VM at the `AssignableScopes` section
 ```json
 {
     "Name":  "JIT ony <name of VM>",
