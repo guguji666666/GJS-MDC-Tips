@@ -104,8 +104,8 @@ User can request JIT via `API` or `UI` with the least permisssion below
 }
 ```
 
-#### If you want the user to request JIT to `specified VM` only, then
-Create custom role 1 for network permission at subscription level
+#### If you want the user to request JIT to `specified VM` only, then we need to create 2 custom roles
+`Custom role 1` for network permission at subscription level
 ```json
 {
     "Name":  "JIT Full network",
@@ -131,7 +131,7 @@ Create custom role 1 for network permission at subscription level
                              "/subscriptions/<subscription id>"]
 }
 ```
-Create custom role 2 to set restrcition to specified VM only, input `resource id` of the VM at the `AssignableScopes` section
+`Custom role` 2 to set restrcition on specified VM only, input `resource id` of the VM at the `AssignableScopes` section
 ```json
 {
     "Name":  "See only <name of VM>",
