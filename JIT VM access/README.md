@@ -131,7 +131,7 @@ or
 }
 ```
 
-If you only want the user to request JIT only via `API`, then please use the json below:
+If you want the user to request JIT only via `API`, then please use the json below:
 ```json
 {
     "Name":  "JIT Custom Role API",
