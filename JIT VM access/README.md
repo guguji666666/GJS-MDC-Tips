@@ -116,7 +116,8 @@ or
         "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
         "Microsoft.Compute/virtualMachines/read",
         "Microsoft.Network/*/read",
-        "Microsoft.Security/policies/read"],
+        "Microsoft.Security/policies/read",
+        "Microsoft.Security/pricings/read"],
     "NotActions":  [
   
                    ],
