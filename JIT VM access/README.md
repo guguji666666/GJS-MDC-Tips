@@ -137,7 +137,7 @@ Create custom role 2 to set restrcition to specified VM only, input `resource id
     "Name":  "See only <name of VM>",
     "Id":  "88888888-8888-8888-8888-888888888888",
     "IsCustom":  true,
-    "Description":  "Enable user to request JIT access with restricted privileges",
+    "Description":  "User can only see specified VM",
     "Actions":  [
         "Microsoft.Compute/virtualMachines/read"],
     "NotActions":  [
