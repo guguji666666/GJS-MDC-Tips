@@ -194,7 +194,7 @@ Create custom role 1 for network permission at subscription level
 Create custom role 2 to set restrcition to specified VM only, input `resource id` of the VM at the `AssignableScopes` section
 ```json
 {
-    "Name":  "JIT only <name of VM>",
+    "Name":  "See only <name of VM>",
     "Id":  "88888888-8888-8888-8888-888888888888",
     "IsCustom":  true,
     "Description":  "Enable user to request JIT access with restricted privileges",
