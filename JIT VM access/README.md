@@ -87,7 +87,7 @@ Note:
         "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
         "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
         "Microsoft.Compute/virtualMachines/read",
-        "Microsoft.Network/networkInterfaces/*/read"
+        "Microsoft.Network/networkInterfaces/*/read",
         "Microsoft.Network/publicIPAddresses/read"],
     "NotActions":  [
   
