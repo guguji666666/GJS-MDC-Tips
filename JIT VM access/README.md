@@ -79,29 +79,13 @@ Note:
 
 User can request JIT via `API` or `UI` with the permisssion below
 ```json
-{
-    "Name":  "JIT Custom Role Full",
-    "Id":  "88888888-8888-8888-8888-888888888888",
-    "IsCustom":  true,
-    "Description":  "Enable user to request JIT access with restricted privileges",
     "Actions":  [
         "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
         "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
         "Microsoft.Compute/virtualMachines/read",
         "Microsoft.Network/networkInterfaces/*/read",
+        "Microsoft.Network/networkWatchers/read",
         "Microsoft.Network/publicIPAddresses/read"],
-    "NotActions":  [
-  
-                   ],
-    "DataActions":  [
-  
-                    ],
-    "NotDataActions":  [
-  
-                       ],
-    "AssignableScopes":  [
-                             "/subscriptions/<subscription id>"]
-}
 ```
 If you only want the user to request JIT only via `API`, then please use the json below:
 ```json
