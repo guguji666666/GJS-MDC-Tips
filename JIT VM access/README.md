@@ -104,8 +104,7 @@ User can request JIT via `API` or `UI` with the least permisssion below
 }
 ```
 
-If you want to the JIT role to be assignable at `VM level` only, then
-
+#### If you want to the JIT role to be assignable at `VM level` only, then
 Create custom role 1 for network permission at subscription level
 ```json
 {
