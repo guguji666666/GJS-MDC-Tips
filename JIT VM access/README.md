@@ -127,7 +127,7 @@ or
   
                        ],
     "AssignableScopes":  [
-                             "/subscriptions/74a72629-ac6d-44db-a66a-abc69f3bfb7e"]
+                             "/subscriptions/<subscription id>"]
 }
 ```
 
