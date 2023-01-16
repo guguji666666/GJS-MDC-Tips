@@ -101,10 +101,9 @@ Note:
                              "/subscriptions/<SubscriptionID>"]
 }
 ```
-* Note:
-If you want to assign the role to VM level only, input `resource id` of the VM at the `AssignableScopes` section
+Note: If you want to assign the role to VM level only, input `resource id` of the VM at the `AssignableScopes` section
 
-Sample
+Sample for JIT role at the subscription level
 
 ![image](https://user-images.githubusercontent.com/96930989/212461228-b3f99b1f-64d8-4a6a-817f-cb1be0b2e372.png)
 
