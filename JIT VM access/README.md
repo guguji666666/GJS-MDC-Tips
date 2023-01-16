@@ -77,6 +77,7 @@ Note:
 "Id" can be left all 8's for the submission, you will get a new one generated on Addition in the results.
 ```
 
+User can request JIT via API or UI with the permisssion below
 ```json
 {
     "Name":  "JIT Custom Role Full",
@@ -100,6 +101,31 @@ Note:
                        ],
     "AssignableScopes":  [
                              "/subscriptions/<subscription id>"]
+}
+```
+If you only want the user to request JIT only via `API`, then please use the json below:
+```json
+{
+    "Name":  "JIT Custom Role API",
+    "Id":  "88888888-8888-8888-8888-888888888888",
+    "IsCustom":  true,
+    "Description":  "Enable user to request JIT access with restricted privileges",
+    "Actions":  [
+        "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
+        "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
+        "Microsoft.Compute/virtualMachines/read",
+        "Microsoft.Network/networkInterfaces/*/read"],
+    "NotActions":  [
+  
+                   ],
+    "DataActions":  [
+  
+                    ],
+    "NotDataActions":  [
+  
+                       ],
+    "AssignableScopes":  [
+                             "/subscriptions/<SubscriptionID>"]
 }
 ```
 Note: If you want to assign the role to VM level only, input `resource id` of the VM at the `AssignableScopes` section
