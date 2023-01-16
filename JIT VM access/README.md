@@ -101,7 +101,7 @@ User can request JIT via `API` or `UI` with the permisssion below
   
                        ],
     "AssignableScopes":  [
-                             "/subscriptions/74a72629-ac6d-44db-a66a-abc69f3bfb7e"]
+                             "/subscriptions/<subscription id>"]
 }
 ```
 If you only want the user to request JIT only via `API`, then please use the json below:
