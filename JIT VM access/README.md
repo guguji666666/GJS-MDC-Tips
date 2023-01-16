@@ -67,7 +67,7 @@ Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "East Asia" -Name "default"
 
 ![image](https://user-images.githubusercontent.com/96930989/212462411-e07876ed-4a16-4f32-8e7e-8e6695812fb2.png)
 
-## P2 : Create custom role for requiring JIT access (least privileged) at subscription level
+## P2 : Create custom role for requiring JIT access (least privileged)
 ### 1. Create the role template in json file
 To add Azure custom RBAC Role you'll need to create a `.json` file with the `"actions"` and `"non-actions"` defined.
 
@@ -79,7 +79,7 @@ Note:
 
 ```json
 {
-    "Name":  "JIT Custom Role",
+    "Name":  "JIT Custom Role Full",
     "Id":  "88888888-8888-8888-8888-888888888888",
     "IsCustom":  true,
     "Description":  "Enable user to request JIT access with restricted privileges",
@@ -87,7 +87,8 @@ Note:
         "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
         "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
         "Microsoft.Compute/virtualMachines/read",
-        "Microsoft.Network/networkInterfaces/*/read"],
+        "Microsoft.Network/networkInterfaces/*/read"
+        "Microsoft.Network/publicIPAddresses/read"],
     "NotActions":  [
   
                    ],
