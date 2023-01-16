@@ -43,8 +43,8 @@ C:\ProgramData\Qualys\QualysAgent\Vulnerability_snapshot.db
 REG ADD HKLM\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability /v "ScanOnDemand" /t REG_DWORD /d "1" /f
 ```
 #### 5. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
-
-1. Ensure that the `Qualys Agent` folder is completely removed from the location:
+1. Romove the qualys extension "WindowsAgent.AzureSecurityCenter" from Azure VM in Azure portal
+2. Ensure that the `Qualys Agent` folder is completely removed from the location:
 ```
 C:\ProgramData\Qualys
 ```
@@ -55,7 +55,7 @@ C:\ProgramFiles\Qualys
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212525183-c24a0d15-1ca1-4800-b049-302b97a12619.png)
 
-2. Remove the `QualysAgent` from below provided registry path:
+3. Remove the `QualysAgent` from below provided registry path:
 ```
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\
 ```
@@ -66,8 +66,6 @@ Remove `Qualys` from below registry location:
 HKEY_LOCAL_MACHINE\SOFTWARE\
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212525234-7335ac4d-86cd-43ac-ae17-c9439067f835.png)
-
-3. Remove the qualys extension from VM
 
 4. Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
 
