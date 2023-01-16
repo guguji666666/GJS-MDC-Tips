@@ -168,7 +168,8 @@ Sample for JIT role（API only) at the subscription level
 ### 2. Create the custom role in subscription 
 ```powershell
 Connect-AzAccount -subscription <subscription id>
-
+```
+```powershell
 New-AzRoleDefinition -InputFile <path to the json file you created before>
 ```
 Sample
@@ -179,6 +180,8 @@ Sample
 ### 3. To `verify` if the custom role has been created successfully
 ```powershell
 Connect-AzAccount -subscription <subscription id>
+```
+```powershell
 Get-AzRoleDefinition -name "JIT Custom Role"
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212461418-8110dcaf-6231-4f9b-a993-37b349bfc56d.png)
