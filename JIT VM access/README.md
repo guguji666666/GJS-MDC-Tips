@@ -104,11 +104,11 @@ User can request JIT via `API` or `UI` with the least permission below
 }
 ```
 
-#### If you want the user to request JIT only to specified VM , then we need to:
+#### If you want the user to request JIT only to `specified VM` , then we need to:
 Create `Custom role 1` to set permission on the network resources, assign it to the subscription level
 ```json
 {
-    "Name":  "JIT least privileges",
+    "Name":  "JIT least privileges without VM read",
     "Id":  "88888888-8888-8888-8888-888888888888",
     "IsCustom":  true,
     "Description":  "Enable user to request JIT access with restricted privileges",
@@ -155,6 +155,20 @@ Create `Custom role 2` to set restrcition so that user can only see specified VM
 ```
 You can also assign the reader/contributor permission directly to user in the IAM page of specified VM
 
+
+Test results : 
+
+IAM at VM level
+* Assign custom role `JIT least privileges without VM read` to user at the subscription level
+![image](https://user-images.githubusercontent.com/96930989/212705745-51a20743-b1c5-4d6e-bd52-55121e33b142.png)
+![image](https://user-images.githubusercontent.com/96930989/212807359-3333577a-e3eb-4afe-9de0-c1a31fd04e27.png)
+
+
+* Assign read permission at the `VM level` only, user can only see the VM which he has the read permission
+![image](https://user-images.githubusercontent.com/96930989/212705984-f3a6f6c6-0bed-4e9c-a000-59fe46bc4704.png)
+
+
+
 #### If you want the user to request JIT from security portal, then we need to:
 Create `Custom role 1` for network permission at subscription level
 ```json
@@ -183,14 +197,6 @@ Create `Custom role 1` for network permission at subscription level
                              "/subscriptions/<subscription id>"]
 }
 ```
-
-
-IAM at VM level
-![image](https://user-images.githubusercontent.com/96930989/212705745-51a20743-b1c5-4d6e-bd52-55121e33b142.png)
-
-User can only see the VM which he has the read permission
-![image](https://user-images.githubusercontent.com/96930989/212705984-f3a6f6c6-0bed-4e9c-a000-59fe46bc4704.png)
-
 
 
 ### 2. Create the custom role in subscription 
@@ -235,7 +241,7 @@ You can also check the new custom role in subscription's IAM management (below i
 ![image](https://user-images.githubusercontent.com/96930989/212461506-2b833d9d-c1f8-4d69-a733-d309ebfd476d.png)
 
 
-## P3 : Request JIT access to VM
+## P3 : Request JIT access to VM using powershell commands
 Configure the VM request access properties
 ```powershell
 Connect-AzAccount -Subscription <subscription id>
