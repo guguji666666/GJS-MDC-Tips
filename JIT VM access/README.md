@@ -130,8 +130,8 @@ User can request JIT via `powershell` or `API` only with the permissions below
 }
 ```
 
-#### If you want the user to request JIT to `specified VM` only, then we need to create 2 custom roles
-`Custom role 1` for network permission at subscription level
+#### If you want the user to request JIT (from portal) to `specified VM` only, then we need to:
+Create `Custom role 1` for network permission at subscription level
 ```json
 {
     "Name":  "JIT Full network",
@@ -179,6 +179,7 @@ User can request JIT via `powershell` or `API` only with the permissions below
                              "/subscriptions/<resource id of the VM>"]
 }
 ```
+You can also assign the reader/contributor permission on the specified VM only
 
 IAM at VM level
 ![image](https://user-images.githubusercontent.com/96930989/212705745-51a20743-b1c5-4d6e-bd52-55121e33b142.png)
