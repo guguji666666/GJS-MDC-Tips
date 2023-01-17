@@ -104,32 +104,6 @@ User can request JIT via `API` or `UI` with the least permission below
 }
 ```
 
-User can request JIT via `powershell` or `API` only with the permissions below
-```json
-{
-    "Name":  "JIT only API PS",
-    "Id":  "88888888-8888-8888-8888-888888888888",
-    "IsCustom":  true,
-    "Description":  "Enable user to request JIT access with restricted privileges",
-    "Actions":  [
-        "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
-        "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
-        "Microsoft.Compute/virtualMachines/read",
-        "Microsoft.Network/networkInterfaces/*/read"],
-    "NotActions":  [
-  
-                   ],
-    "DataActions":  [
-  
-                    ],
-    "NotDataActions":  [
-  
-                       ],
-    "AssignableScopes":  [
-                             "/subscriptions/<subscription id>"]
-}
-```
-
 #### If you want the user to request JIT (from portal) to `specified VM` only, then we need to:
 Create `Custom role 1` for network permission at subscription level
 ```json
