@@ -204,6 +204,11 @@ Sample
 
 ![image](https://user-images.githubusercontent.com/96930989/212461351-d404a10d-f515-496a-94bf-dbb21f73ccef.png)
 
+Methods to deploy custom role in Azure
+* [Create or update Azure custom roles using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles-portal)
+* [Tutorial: Create an Azure custom role using Azure CLI](https://learn.microsoft.com/en-us/azure/role-based-access-control/tutorial-custom-role-cli)
+* [Tutorial: Create an Azure custom role using Azure PowerShell](https://learn.microsoft.com/en-us/azure/role-based-access-control/tutorial-custom-role-powershell)
+
 
 ### 3. To `verify` if the custom role has been created successfully
 ```powershell
