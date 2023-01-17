@@ -104,20 +104,19 @@ User can request JIT via `API` or `UI` with the least permission below
 }
 ```
 
-#### If you want the user to request JIT (from portal) to `specified VM` only, then we need to:
-Create `Custom role 1` for network permission at subscription level
+#### If you want the user to request JIT only to specified VM , then we need to:
+Create `Custom role` 1 to set permission on the network resources, assign it to the subscription level
 ```json
 {
-    "Name":  "JIT Full network",
+    "Name":  "JIT least privileges",
     "Id":  "88888888-8888-8888-8888-888888888888",
     "IsCustom":  true,
     "Description":  "Enable user to request JIT access with restricted privileges",
     "Actions":  [
         "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
         "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
-        "Microsoft.Network/*/read",
-        "Microsoft.Security/policies/read",
-        "Microsoft.Security/pricings/read"],
+        "Microsoft.Network/networkInterfaces/*/read",
+        "Microsoft.Network/publicIPAddresses/read"],
     "NotActions":  [
   
                    ],
@@ -131,7 +130,8 @@ Create `Custom role 1` for network permission at subscription level
                              "/subscriptions/<subscription id>"]
 }
 ```
-`Custom role` 2 to set restrcition on specified VM only, input `resource id` of the VM at the `AssignableScopes` section
+
+Create `Custom role` 2 to set restrcition so that user can only see specified VM only, type `resource id` of the VM at the `AssignableScopes` section
 ```json
 {
     "Name":  "See only <name of VM>",
@@ -153,7 +153,37 @@ Create `Custom role 1` for network permission at subscription level
                              "/subscriptions/<resource id of the VM>"]
 }
 ```
-You can also assign the reader/contributor permission on the specified VM only
+You can also assign the reader/contributor permission directly to user in the IAM page of specified VM
+
+#### If you want the user to request JIT from security portal, then we need to:
+Create `Custom role 1` for network permission at subscription level
+```json
+{
+    "Name":  "JIT Full network",
+    "Id":  "88888888-8888-8888-8888-888888888888",
+    "IsCustom":  true,
+    "Description":  "Enable user to request JIT access with restricted privileges",
+    "Actions":  [
+        "Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action",
+        "Microsoft.Security/locations/jitNetworkAccessPolicies/*/read",
+        "Microsoft.Compute/virtualMachines/read",
+        "Microsoft.Network/*/read",
+        "Microsoft.Security/policies/read",
+        "Microsoft.Security/pricings/read"],
+    "NotActions":  [
+  
+                   ],
+    "DataActions":  [
+  
+                    ],
+    "NotDataActions":  [
+  
+                       ],
+    "AssignableScopes":  [
+                             "/subscriptions/<subscription id>"]
+}
+```
+
 
 IAM at VM level
 ![image](https://user-images.githubusercontent.com/96930989/212705745-51a20743-b1c5-4d6e-bd52-55121e33b142.png)
