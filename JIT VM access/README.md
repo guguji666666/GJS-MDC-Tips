@@ -160,9 +160,8 @@ Test results :
 
 IAM at VM level
 * Assign custom role `JIT least privileges without VM read` to user at the subscription level
-![image](https://user-images.githubusercontent.com/96930989/212705745-51a20743-b1c5-4d6e-bd52-55121e33b142.png)
-![image](https://user-images.githubusercontent.com/96930989/212807359-3333577a-e3eb-4afe-9de0-c1a31fd04e27.png)
-
+![image](https://user-images.githubusercontent.com/96930989/212807829-064d976b-da04-47c1-922d-624f4627a48c.png)
+![image](https://user-images.githubusercontent.com/96930989/212807880-16f1d6b6-be2d-486a-be26-b01dbb8c55c8.png)
 
 * Assign read permission at the `VM level` only, user can only see the VM which he has the read permission
 ![image](https://user-images.githubusercontent.com/96930989/212705984-f3a6f6c6-0bed-4e9c-a000-59fe46bc4704.png)
