@@ -70,3 +70,7 @@ Sample
 
 ![image](https://user-images.githubusercontent.com/96930989/211573097-676a1207-d0cf-46b0-b7c7-5d5403d979a7.png)
 
+Note
+```
+If you remove the MMA extension from the VM, the MMA client will be removed from the machine as well.
+```
