@@ -15,7 +15,7 @@ Assessenment key in the recommendation
 87448ec1-55f6-3746-3f79-0f35beee76b4
 ```
 
-1. For the machine running `Client OS`, VM should show compliant state in the Azure policy
+1. For the machine running `Client OS`, VM should show compliant state directly in the Azure policy
 2. For the machine running `Server OS`, if IIS is not enabled on the server, VM should show compliant state in the Azure policy
 3. On the server, only TLS 1.1 and/or TLS 1.2 are Enabled under server key
 4. On the server, all other protocols (SSL 2.0, SSL 3.0, TLS 1.0, PCT 1.0 and Multi-Protocol Unified Hello) should be Disabled (Enabled = 0) under server key
