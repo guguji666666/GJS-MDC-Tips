@@ -10,7 +10,7 @@ The VM will be considered as `Healthy resource` when meeting the requirements be
 
 ![image](https://user-images.githubusercontent.com/96930989/211691888-58efdbf5-c84b-44c3-8cf6-2bdfb3596146.png)
 
-8. The query `ProtectionStatus` should output the results
+7. The query `ProtectionStatus` should return the results
 
 ![image](https://user-images.githubusercontent.com/96930989/211691952-851a9ff2-5443-4777-bfd4-0bcb0d861db1.png)
 
