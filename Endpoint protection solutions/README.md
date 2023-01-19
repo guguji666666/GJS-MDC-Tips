@@ -3,7 +3,7 @@
 The VM will be considered as `Healthy resource` when meeting the requirements below:
 1. Defender for server plan 1/2 is enabled at `subscription level`
 2. Defender for server plan also enabled at `workspace level`
-3. MMA or AMA is installed on the VM and `provisioned successfully`
+3. MMA (Microsoft monitoring agent) or AMA (Azure monitoring agent) is installed on the VM and `provisioned successfully`
 4. 3rd party endpoint protection solution supported by MS is installed [Supported endpoint protection solutions](https://learn.microsoft.com/en-us/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers?tabs=features-windows#supported-endpoint-protection-solutions)
 5. VM must be in `running` state when the recommendation refreshes the results (better to run 24*7)
 6. MMA or AMA is reporting to the workspace (results should be found from `heartbeat`)
