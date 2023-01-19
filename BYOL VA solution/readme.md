@@ -14,11 +14,8 @@
 
 ### Apply existing BYOL solution to your VM
 1. Defender for cloud -> recommendation -> Machines should have a vulnerability assessment solution -> fix
-![image](https://user-images.githubusercontent.com/96930989/213363188-c2164819-4b1e-4ac3-8362-c21c0f00025a.png)
+![image](https://user-images.githubusercontent.com/96930989/213402182-bfa3d63a-c330-4304-9000-cb2249601855.png)
 
 2. Click `Deploy your configured third-party vulnerability scanner (BYOL - requires a separate license)`
-![image](https://user-images.githubusercontent.com/96930989/213401669-3849db98-948e-4589-a811-28f6e957aa37.png)
 
 3. Proceed
-![image](https://user-images.githubusercontent.com/96930989/213401810-322c0d88-f07b-484f-98e1-1e8693599c39.png)
-![image](https://user-images.githubusercontent.com/96930989/213401867-b0541c27-dee3-4127-b28d-126a576154cf.png)
