@@ -11,7 +11,6 @@ Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
 ```
 
 ## 2. Get AAD user token （recommend owner or contributor role on the subscription)
-
 ```powershell
 Connect-AzAccount -TenantId <your tenant id>
 
@@ -21,7 +20,7 @@ $accessToken = (Get-AzAccessToken).Token
 
 $accessToken | Set-Clipboard
 ```
-![image](https://user-images.githubusercontent.com/96930989/210188454-74d8a6f2-9941-48b3-88d9-8b16bcc138dd.png)
+The user access token is already copied to your clipboard.
 
 ## 3. Retrieve user token and correct the format
 
