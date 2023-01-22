@@ -4,6 +4,8 @@ The Log Analytics agent is on a `deprecation path` and won't be supported after 
 
 [Log Analytics agent overview](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/log-analytics-agent)
 
+[MMA supported OS](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
+
 ### 1. Manually deploy MMA extension on Azure VM running `Windows`
 [MMA extension for Windows](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/oms-windows?toc=%2Fazure%2Fazure-monitor%2Ftoc.json#powershell-deployment)
 
