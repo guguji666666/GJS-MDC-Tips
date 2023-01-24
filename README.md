@@ -80,7 +80,16 @@ If you enable Defender for Servers on cross-subscription workspaces:
 * For the `Log Analytics agent`, connected machines from all subscriptions are billed, including subscriptions that don't have the servers plan enabled.
 * For the `Azure Monitor agent`, billing and feature coverage for Defender for Servers depends only on the plan being enabled in the subscription.
 
-### 7. Delete and recover Azure Log Analytics workspace (Azure monitoring team)
+### 7. How to check which recommendation affects the secure score?
+Enable continuous export together with the built-in workbook so that you can get more details about how recommendations affect your secure score.
+* [Continuously export Microsoft Defender for Cloud data](https://learn.microsoft.com/en-us/azure/defender-for-cloud/continuous-export?tabs=azure-portal)
+* Built-in workbook
+![image](https://user-images.githubusercontent.com/96930989/214222344-8a076879-cb63-4024-a2bf-6fabcc5539b4.png)
+* Sample in my lab
+![image](https://user-images.githubusercontent.com/96930989/214222646-77c9f727-1256-459e-82f8-a6e6d5a603c8.png)
+
+
+### 8. Delete and recover Azure Log Analytics workspace (Azure monitoring team)
 [Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
 
 ### Deploy Auto-provisioning 
