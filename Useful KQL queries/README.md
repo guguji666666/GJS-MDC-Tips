@@ -77,7 +77,7 @@ policyresources
 | summarize statuses = make_set(status) by policySetDefinitionId
 ```
 
-##  7. ARG compare results between MDC and Azure Policy
+##  7. ARG compare results between Defender for cloud and Azure Policy
 
 ```kusto
 securityresources
