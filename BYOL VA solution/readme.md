@@ -19,3 +19,22 @@
 2. Click `Deploy your configured third-party vulnerability scanner (BYOL - requires a separate license)`
 
 3. Proceed
+
+
+### Migrate the VM to new BYOL solution
+1. Turn off auto-provisioning in existing BYOL solution
+![image](https://user-images.githubusercontent.com/96930989/215653657-f9b925c2-736e-480a-9916-03f87b87ee21.png)
+![image](https://user-images.githubusercontent.com/96930989/215653668-b1b736c6-7b8f-469f-b314-77a181c0be32.png)
+
+2. Remove VM from existing BYOL solution:
+`Binding`
+
+PUT
+
+`URL`
+
+https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{RGName}/providers/Microsoft.Security/locations/{subscriptionLocation}/securitySolutions/{solutionName}/protectedResources/{azureResourceId of VM}?api-version=2015-06-01-preview 
+
+3. Manually uninstall the extension in Azure
+4. Ensure there are no folders named ”qualys” under /etc
+5. Add the VM to the new BYOL solution
