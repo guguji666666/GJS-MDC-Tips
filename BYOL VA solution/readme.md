@@ -27,7 +27,8 @@
 ![image](https://user-images.githubusercontent.com/96930989/215653668-b1b736c6-7b8f-469f-b314-77a181c0be32.png)
 
 2. Remove VM from existing BYOL solution(Using postman)
-`Binding` > PUT
+
+`Binding` - DELETE
 
 `URL`
 ```
