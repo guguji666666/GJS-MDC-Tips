@@ -23,8 +23,9 @@
 
 ### Migrate the VM to new BYOL solution
 1. Turn off auto-provisioning in existing BYOL solution
-![image](https://user-images.githubusercontent.com/96930989/215653657-f9b925c2-736e-480a-9916-03f87b87ee21.png)
-![image](https://user-images.githubusercontent.com/96930989/215653668-b1b736c6-7b8f-469f-b314-77a181c0be32.png)
+![image](https://user-images.githubusercontent.com/96930989/215679440-2b832156-b5be-49ba-ab19-91707fc54d15.png)
+![image](https://user-images.githubusercontent.com/96930989/215679303-90b07626-ce66-49ee-beb0-005122ffb93d.png)
+![image](https://user-images.githubusercontent.com/96930989/215679331-bd66f99f-b077-4ecf-b916-b6a227c87315.png)
 
 2. Remove VM from existing BYOL solution(Using postman)
 
