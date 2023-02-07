@@ -1,4 +1,4 @@
-ARG query to get unhealthy storage accounts
+ARG query to get unhealthy databricks storage accounts
 ```kusto
 securityresources
         | where type == "microsoft.security/assessments"
@@ -16,6 +16,7 @@ securityresources
         | extend assessmentKey = tostring(name)
         | where assessmentKey == "cdc78c07-02b0-4af0-1cb2-cb7c672a8b0a"
         //| where subscriptionId == "<sub id>"
+        | where resourceId contains "databricks"
         | project tenantId, subscriptionId, resourceId
 ```
 
