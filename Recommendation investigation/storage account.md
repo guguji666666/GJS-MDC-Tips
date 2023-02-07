@@ -88,6 +88,7 @@ where type == "microsoft.databricks/workspaces"
 | where (type !~ ('microsoft.windowspushnotificationservices/registrations'))
 | where not((type =~ ('microsoft.sql/servers/databases')) and ((kind in~ ('system','v2.0,system','v12.0,system','v12.0,user,datawarehouse,gen2,analytics'))))
 | where not((type =~ ('microsoft.sql/servers')) and ((kind =~ ('v12.0,analytics'))))
+| where subscriptionId == "<your sub id>"
 | project name, subscriptionId, id
 ```
 
