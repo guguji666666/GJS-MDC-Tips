@@ -279,6 +279,9 @@ Healthy resources
 ![image](https://user-images.githubusercontent.com/96930989/219846758-08e15887-ade2-40e8-8c68-1c833557b14c.png)
 
 Unhealthy resources
-![image](https://user-images.githubusercontent.com/96930989/219846767-2b3d75a9-a6d6-4e22-9cb9-b13cbfed08a5.png)
+![image](https://user-images.githubusercontent.com/96930989/219846787-207c24b6-42a2-4a76-b379-f336e0cf1b42.png)
 
+* The customed initiaive should be assgned to the VMs installed with 3rd party antivirus products not supported by Microsoft
+* Avoid dupliated asignment of native endpoint protection recommendation and customed initiative
+* It takes hours to update the results in the policies and recommendations
 
