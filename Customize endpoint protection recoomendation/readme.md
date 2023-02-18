@@ -228,7 +228,7 @@ To verify in the portal, navigate to `Policy > Definitions`, you will find the n
 #### 4. Assign the initiative to the subscription (you can exclude the resource groups where the VMs are using endpoint products supported by Microsoft)
 
 * Assign the initiave to the subscription and create the exemption if required
-![image](https://user-images.githubusercontent.com/96930989/219846086-0f894f4d-035d-476d-a24c-a1a74e53f7d2.png)
+![image](https://user-images.githubusercontent.com/96930989/219846522-73e84938-6496-46bd-9497-32152d461c5c.png)
 
 * Edit initiative definition (select the value of the 3rd party endpoint protection product you want to monitor)
 ![image](https://user-images.githubusercontent.com/96930989/219845702-60c1735e-acbb-4032-873c-2f250c9a73ea.png)
@@ -247,11 +247,12 @@ Sample
 ![image](https://user-images.githubusercontent.com/96930989/219846173-d81f1441-60d0-4a00-b8e7-c40d0546caaa.png)
 ![image](https://user-images.githubusercontent.com/96930989/219846182-171016b0-5c67-4383-88ff-e79459447910.png)
 
-#### 5. Run the command in azure cloud shell to reduce the time of policy evaluation
+#### 5. Run the command in Azure cloud shell to reduce the time of policy evaluation
 ```powershell
 $job = Start-AzPolicyComplianceScan -AsJob
 $job
 ```
+
 #### 6. Wait for 24 hours and check the compliance state in new policies (keep VM on)
 
 Navigate to `Policy > Compliance`
@@ -262,11 +263,16 @@ Click the policy showing `non-compliant` state
 
 ![image](https://user-images.githubusercontent.com/96930989/219846336-48fe4c69-477e-4967-9ba6-afb7f15e6623.png)
 
+
 Then open the link here
+
 ![image](https://user-images.githubusercontent.com/96930989/219846399-24727f59-515a-456a-a06f-d4c107f90599.png)
 
 This page will tell the reason why the resource is non-compliant
 ![image](https://user-images.githubusercontent.com/96930989/219846429-413bb6e6-97ff-4a2f-98eb-6a6007378281.png)
 
+
+#### 7. Wait for 24 hours and check the regulatory compliance in Defender for cloud
+![image](https://user-images.githubusercontent.com/96930989/219846601-a7dd5c12-c1ef-406d-bbd0-d19e2fd7e438.png)
 
 
