@@ -21,3 +21,16 @@ Check the scope during assignment
 Deploy `remediation task` so that the guest configuration extension could be deployed on `existing VMs` as well (not only new VMs created in the future)
 ![image](https://user-images.githubusercontent.com/96930989/219843400-99ceb4aa-2252-451c-b6e1-b0a7d1d4a7b0.png)
 
+Navigate to `Policy>Remediation`, you can check the number of existing VMs applied with remediation task
+![image](https://user-images.githubusercontent.com/96930989/219844128-a81c874b-cbbe-4141-b54e-956102ad17ab.png)
+
+You can also check the status of the remediation task
+![image](https://user-images.githubusercontent.com/96930989/219844136-1130a435-6cf2-47e6-8cf6-c1b5e7dc4420.png)
+
+![image](https://user-images.githubusercontent.com/96930989/219844144-2166fea9-c648-49c5-bde9-fb49cff5fce0.png)
+
+Once the remediation taks has completed, we can check the `guest configuration extension` on the VM
+![image](https://user-images.githubusercontent.com/96930989/219844174-e9636464-e9ac-4a91-ab03-bc4687951edc.png)
+
+The `system assigned identity` should also been enabled on the VM at that point
+![image](https://user-images.githubusercontent.com/96930989/219844190-1660fd0b-7352-499f-9a07-6114f26bd74e.png)
