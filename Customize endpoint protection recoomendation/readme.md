@@ -34,3 +34,78 @@ Once the remediation taks has completed, we can check the `guest configuration e
 
 The `system assigned identity` should also been enabled on the VM at that point
 ![image](https://user-images.githubusercontent.com/96930989/219844190-1660fd0b-7352-499f-9a07-6114f26bd74e.png)
+
+
+#### 2. Install the powershell modules required (on win10/11 client machine)
+* [EndPointProtectionDSC powershell module](https://www.powershellgallery.com/packages/GuestConfiguration/3.0.0)
+* [GuestConfiguration powershell module](https://www.powershellgallery.com/packages/EndPointProtectionDSC/1.0.0.0)
+```powershell
+Set-ExecutionPolicy RemoteSigned
+  
+Install-Module Az -Force
+    
+Install-Module -Name EndPointProtectionDSC -Force
+  
+Import-module -Name EndPointProtectionDSC
+
+Install-Module -Name GuestConfiguration -RequiredVersion 1.19.4 -Force
+
+Import-module -Name GuestConfiguration
+```
+Download the powershell module from [Customed EndPointProtectionDSC module](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Remediation%20scripts/Customize%20Endpoint%20Protection%20Recommendation) using the tool [GitZip](https://kinolien.github.io/gitzip/)
+
+Input the url of the github file you want to download
+![image](https://user-images.githubusercontent.com/96930989/219844419-5501096e-4d91-4cbe-acc1-5d53593bb704.png)
+
+You will then get the files below
+![image](https://user-images.githubusercontent.com/96930989/219844449-fda72f31-0243-49c2-a4ed-b695e3b7aad0.png)
+
+
+Unzip the file and you will see
+![image](https://user-images.githubusercontent.com/96930989/219844457-028a3e5b-06b7-4f1a-9402-57cc1f810d55.png)
+![image](https://user-images.githubusercontent.com/96930989/219844458-650acd37-c5cb-4e30-87a7-ddc6c3b5777d.png)
+
+Then navigate to the path `C:\Program Files\WindowsPowerShell\Modules`, we can find the files below (generated when we install the module EndPointProtectionDSC)
+```
+C:\Program Files\WindowsPowerShell\Modules
+```
+![image](https://user-images.githubusercontent.com/96930989/219844502-56c131aa-112c-43ed-b9de-0953b41cad25.png)
+
+Replace the folders `AzureGuestConfigurationPolicy` and `DSCResources` we downloaded from github 
+![image](https://user-images.githubusercontent.com/96930989/219844524-b8d6b618-8d08-42c5-a525-95041e9c01b5.png)
+
+
+
+Navigate to the path `C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGuestConfigurationPolicy\AzureGuestPolicyHelper.psm1`
+
+Search for `New-GuestConfigurationPackage`
+
+Delete `-Force` behind `"$env:Temp/MonitorAntivirus/MonitorAntivirus.mof"` , save the file
+```
+C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGuestConfigurationPolicy\AzureGuestPolicyHelper.psm1
+```
+
+```
+New-GuestConfigurationPackage
+```
+
+Before
+
+![image](https://user-images.githubusercontent.com/96930989/219844565-9b122a22-9f2d-45d8-a476-cb193d5333ee.png)
+
+After
+
+![image](https://user-images.githubusercontent.com/96930989/219844575-be4b9602-70df-4ef2-8e79-faf651151709.png)
+
+
+#### 3. Check the process name of the 3rd party endpoint protection product you want o add
+Command to check the current antivirus products on the machine
+```cmd
+Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
+```
+![image](https://user-images.githubusercontent.com/96930989/219844642-a392c40f-95f5-45bd-a120-2b2170f47a03.png)
+
+For test purpose, we install `Huorong Internet security` on the client machine running win10
+
+
+
