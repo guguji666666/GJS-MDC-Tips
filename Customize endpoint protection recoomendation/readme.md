@@ -262,5 +262,11 @@ Click the policy showing `non-compliant` state
 
 ![image](https://user-images.githubusercontent.com/96930989/219846336-48fe4c69-477e-4967-9ba6-afb7f15e6623.png)
 
+Then open the link here
+![image](https://user-images.githubusercontent.com/96930989/219846399-24727f59-515a-456a-a06f-d4c107f90599.png)
+
+This page will tell the reason why the resource is non-compliant
+![image](https://user-images.githubusercontent.com/96930989/219846429-413bb6e6-97ff-4a2f-98eb-6a6007378281.png)
+
 
 
