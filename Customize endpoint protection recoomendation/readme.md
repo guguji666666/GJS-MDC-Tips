@@ -275,4 +275,10 @@ This page will tell the reason why the resource is non-compliant
 #### 7. Wait for 24 hours and check the regulatory compliance in Defender for cloud
 ![image](https://user-images.githubusercontent.com/96930989/219846601-a7dd5c12-c1ef-406d-bbd0-d19e2fd7e438.png)
 
+Healthy resources
+![image](https://user-images.githubusercontent.com/96930989/219846758-08e15887-ade2-40e8-8c68-1c833557b14c.png)
+
+Unhealthy resources
+![image](https://user-images.githubusercontent.com/96930989/219846767-2b3d75a9-a6d6-4e22-9cb9-b13cbfed08a5.png)
+
 
