@@ -227,3 +227,40 @@ To verify in the portal, navigate to `Policy > Definitions`, you will find the n
 
 #### 4. Assign the initiative to the subscription (you can exclude the resource groups where the VMs are using endpoint products supported by Microsoft)
 
+* Assign the initiave to the subscription and create the exemption if required
+![image](https://user-images.githubusercontent.com/96930989/219846086-0f894f4d-035d-476d-a24c-a1a74e53f7d2.png)
+
+* Edit initiative definition (select the value of the 3rd party endpoint protection product you want to monitor)
+![image](https://user-images.githubusercontent.com/96930989/219845702-60c1735e-acbb-4032-873c-2f250c9a73ea.png)
+
+* Edit parameter when create the assignment (select the name of the 3rd party antivirus product you want to monitor
+![image](https://user-images.githubusercontent.com/96930989/219845788-492722b5-7281-40cc-bb14-082d24786f77.png)
+
+* Refer to the doc [Add a custom initiative to your subscription](https://learn.microsoft.com/en-us/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal#to-add-a-custom-initiative-to-your-subscription)
+
+* Add the initiative to the subscription level or above
+![image](https://user-images.githubusercontent.com/96930989/219845590-1d7ee33e-ddd6-49b0-b6a5-9c59650ea908.png)
+
+Sample
+![image](https://user-images.githubusercontent.com/96930989/219846164-91b92d1f-5973-4724-9ca8-575dfc74517b.png)
+![image](https://user-images.githubusercontent.com/96930989/219846168-801c8465-8793-4961-a91b-775b03ebd1ea.png)
+![image](https://user-images.githubusercontent.com/96930989/219846173-d81f1441-60d0-4a00-b8e7-c40d0546caaa.png)
+![image](https://user-images.githubusercontent.com/96930989/219846182-171016b0-5c67-4383-88ff-e79459447910.png)
+
+#### 5. Run the command in azure cloud shell to reduce the time of policy evaluation
+```powershell
+$job = Start-AzPolicyComplianceScan -AsJob
+$job
+```
+#### 6. Wait for 24 hours and check the compliance state in new policies (keep VM on)
+
+Navigate to `Policy > Compliance`
+![image](https://user-images.githubusercontent.com/96930989/219846261-b922ae9d-d865-41cc-a82b-e1f0a193f197.png)
+
+Click the policy showing `non-compliant` state
+![image](https://user-images.githubusercontent.com/96930989/219846279-d0bf3a29-3834-4207-a676-5d1a3b9e3608.png)
+
+![image](https://user-images.githubusercontent.com/96930989/219846336-48fe4c69-477e-4967-9ba6-afb7f15e6623.png)
+
+
+
