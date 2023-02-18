@@ -281,7 +281,8 @@ Healthy resources
 Unhealthy resources
 ![image](https://user-images.githubusercontent.com/96930989/219846787-207c24b6-42a2-4a76-b379-f336e0cf1b42.png)
 
-* The customed initiaive should be assgned to the VMs installed with 3rd party antivirus products not supported by Microsoft
+* The reason we use old powershell modules is that some commands in the script are not supported by the latest powershell modules
+* The customed initiaive should be assigned to the VMs installed with 3rd party antivirus products not supported by Microsoft
 * Avoid dupliated asignment of native endpoint protection recommendation and customed initiative
 * It takes hours to update the results in the policies and recommendations
 
