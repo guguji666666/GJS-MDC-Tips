@@ -118,7 +118,7 @@ Get-process wsctrlsvc
 
 The DSC is using Get-Process that will find the process running in the machine. If there’s no instance of a process running the Antivirus executable found, the validation will stop and returns a status of Stopped providing you a clear description.
 
-Then, we navigate to the path below and modify the configuration file according to your actual environment
+Then, we navigate to the path below and modify the configuration file according to your actual environment (the steps are mentioned in the doc [Customizing Endpoint Protection Recommendation in Microsoft Defender for Cloud](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/customizing-endpoint-protection-recommendation-in-microsoft/ba-p/1733217) )
 ```
 C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGuestConfigurationPolicy\Configurations\MonitorAntivirus.ps1
 ```
