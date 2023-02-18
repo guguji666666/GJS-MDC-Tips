@@ -105,7 +105,65 @@ Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
 ```
 ![image](https://user-images.githubusercontent.com/96930989/219844642-a392c40f-95f5-45bd-a120-2b2170f47a03.png)
 
-For test purpose, we install `Huorong Internet security` on the client machine running win10
+For test purpose, we install [Huorong Internet security](https://www.huorong.cn/) on the client machine running win10.
+After installtion, we run the command again:
+![image](https://user-images.githubusercontent.com/96930989/219844742-3a785232-3c52-4245-aae0-8732089e7c51.png)
 
+
+As we can see, the process of huorong is `wsctrlsvc.exe`, then we ran the command
+```cmd
+Get-process wsctrlsvc
+```
+![image](https://user-images.githubusercontent.com/96930989/219844775-4213101f-0927-4bf7-973e-c56c8388d569.png)
+
+The DSC is using Get-Process that will find the process running in the machine. If there’s no instance of a process running the Antivirus executable found, the validation will stop and returns a status of Stopped providing you a clear description.
+
+Then, we navigate to the path below and modify the file according to your actual environment
+```
+C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGuestConfigurationPolicy\Configurations\MonitorAntivirus.ps1
+```
+
+##### Default configuration
+```json
+Configuration MonitorAntivirus
+{
+    Import-DscResource -ModuleName EndPointProtectionDSC
+    Node MonitorAntivirus
+    {
+        EPAntivirusStatus AV
+        {
+            AntivirusName = "Windows Defender"
+            Status        = "Running"
+            Ensure        = "Present"
+        }
+    }
+}
+cd $env:Temp
+MonitorAntivirus
+```
+
+##### Custom configuration(below is sample)
+```json
+Configuration MonitorAntivirus
+{
+    Import-DscResource -ModuleName EndPointProtectionDSC
+    Node MonitorAntivirus
+    {
+        EPAntivirusStatus AV
+        {
+            AntivirusName = "Windows Defender"
+            Status        = "Running"
+            Ensure        = "Present"
+        };
+        {
+            AntivirusName = "Huorong Internet Security"
+            Status        = "Running"
+            Ensure        = "Present"
+        }
+    }
+}
+cd $env:Temp
+MonitorAntivirus
+```
 
 
