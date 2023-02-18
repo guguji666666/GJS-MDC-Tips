@@ -124,7 +124,7 @@ C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGu
 ```
 
 ##### Default configuration
-```json
+```conf
 Configuration MonitorAntivirus
 {
     Import-DscResource -ModuleName EndPointProtectionDSC
@@ -143,7 +143,7 @@ MonitorAntivirus
 ```
 
 ##### Custom configuration(below is sample)
-```json
+```conf
 Configuration MonitorAntivirus
 {
     Import-DscResource -ModuleName EndPointProtectionDSC
