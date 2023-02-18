@@ -106,7 +106,7 @@ Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
 ![image](https://user-images.githubusercontent.com/96930989/219844642-a392c40f-95f5-45bd-a120-2b2170f47a03.png)
 
 For test purpose, we install [Huorong Internet security](https://www.huorong.cn/) on the client machine running win10.
-After installtion, we run the command again:
+After installtion, we run the command again to get the `product name` and the `process name`
 ![image](https://user-images.githubusercontent.com/96930989/219844742-3a785232-3c52-4245-aae0-8732089e7c51.png)
 
 
@@ -118,7 +118,7 @@ Get-process wsctrlsvc
 
 The DSC is using Get-Process that will find the process running in the machine. If there’s no instance of a process running the Antivirus executable found, the validation will stop and returns a status of Stopped providing you a clear description.
 
-Then, we navigate to the path below and modify the file according to your actual environment
+Then, we navigate to the path below and modify the configuration file according to your actual environment
 ```
 C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGuestConfigurationPolicy\Configurations\MonitorAntivirus.ps1
 ```
@@ -166,4 +166,64 @@ cd $env:Temp
 MonitorAntivirus
 ```
 
-s
+Then navigate to another path to modify the configuration file
+```
+C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGuestConfigurationPolicy\ParameterFiles\EPAntivirusStatus.Params.psd1
+```
+##### Default configuration
+```conf
+@(
+    @{
+        Name                 = 'AntivirusName'
+        DisplayName          = 'Antivirus Name'
+        Description          = "Name of the Antivirus Software to monitor."
+        ResourceType         = "EPAntivirusStatus"
+        ResourceId           = 'AV'
+        ResourcePropertyName = "AntivirusName"
+        DefaultValue         = 'Windows Defender'
+        #AllowedValues        = @('Avast','Windows Defender','CrowdStrike','Sentinel One')
+    }
+)
+```
+
+##### Custom configuration
+```conf
+@(
+    @{
+        Name                 = 'AntivirusName'
+        DisplayName          = 'Antivirus Name'
+        Description          = "Name of the Antivirus Software to monitor."
+        ResourceType         = "EPAntivirusStatus"
+        ResourceId           = 'AV'
+        ResourcePropertyName = "AntivirusName"
+        DefaultValue         = 'Windows Defender'
+        AllowedValues        = @('Avast','Windows Defender','CrowdStrike','Sentinel One','Huorong Internet Security')
+    }
+)
+```
+
+Once the configuration files are all modified, `Close the powershell client app`, re-launch powershell client app with local admin, run the command:
+```powershell
+New-EPDSCAzureGuestConfigurationPolicyPackage
+```
+Then follow the instructions in the script.
+
+Create the resource group as well as the storage account (you can also use the existing the resource group and storage account)
+![image](https://user-images.githubusercontent.com/96930989/219845097-7a2bc749-1824-4902-b8ee-de240f135e30.png)
+
+Input the number of the subscription you want to access
+
+![image](https://user-images.githubusercontent.com/96930989/219845118-75d9f7c8-4374-4c0b-8a8b-b647f2d9de96.png)
+
+
+Wait until the policies and initiative are created in your subscription
+![image](https://user-images.githubusercontent.com/96930989/219845150-cb7b9cdf-560b-4f6d-983d-afb23c245de6.png)
+
+![image](https://user-images.githubusercontent.com/96930989/219845124-653be203-da7b-494d-9aea-528f698a178a.png)
+
+To verify in the portal, navigate to `Policy > Definitions`, you will find the new initiative `[Initiative] Monitor Antivirus` here
+![image](https://user-images.githubusercontent.com/96930989/219845340-11873fc6-8b3a-4a8d-b903-c035534cc3ae.png)
+
+
+#### 4. Assign the initiative to the subscription (you can exclude the resource groups where the VMs are using endpoint products supported by Microsoft)
+
