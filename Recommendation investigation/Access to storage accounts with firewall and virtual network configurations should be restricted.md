@@ -1,9 +1,23 @@
-## Use ARG - Resource Graph Explorer
-### Navigate to Azure portal, and search `Resource Graph Explorer` on the top
+## Symptom: Azure databricks storage accounts could not exempted from the recommendation
+## Below would be the information required before reaching microsoft support
+
+### Use ARG - Resource Graph Explorer
+#### 1. Navigate to Azure portal, and search `Resource Graph Explorer` on the top
 ![image](https://user-images.githubusercontent.com/96930989/210159757-b875ba41-6946-4ee7-a604-92183cf9f58b.png)
 
+#### 2. Find `ASSESSMENT-KEY` from recommendation
+![image](https://user-images.githubusercontent.com/96930989/220023467-58dfa81b-dec8-4433-a7f1-60e904e5e7b5.png)
 
-## Get unhealthy databricks storage accounts (you can also set the filter for subscription)
+![image](https://user-images.githubusercontent.com/96930989/220023598-38f83a87-83c8-4b39-801c-126fafcb2a0b.png)
+
+#### 3. Find `POLICY-DEFINITION-ID` from recommendation
+![image](https://user-images.githubusercontent.com/96930989/220023678-c5cf5fcc-70f5-4b51-8d92-095d38804981.png)
+![image](https://user-images.githubusercontent.com/96930989/220023825-b0dc8c2a-310f-447f-99ad-ec2d20bf43eb.png)
+
+#### 4. Copy the last part of the `Definition ID`
+![image](https://user-images.githubusercontent.com/96930989/220023758-6dd08272-9568-4bbc-b3c6-03cd81ba45bf.png)
+
+### Get unhealthy databricks storage accounts (you can also set the filter for subscription)
 ```kusto
 securityresources
         | where type == "microsoft.security/assessments"
@@ -19,14 +33,14 @@ securityresources
         | extend status = trim(" ", tostring(properties.status.code))
         | extend cause = trim(" ", tostring(properties.status.cause))
         | extend assessmentKey = tostring(name)
-        | where assessmentKey == "cdc78c07-02b0-4af0-1cb2-cb7c672a8b0a"
+        | where assessmentKey == "<assessment key you found from the recommendation>"
         //| where subscriptionId == "<sub id>"
         | where resourceId contains "databricks"
         | project tenantId, subscriptionId, resourceId
 ```
 
 
-## Get all databricks workspaces in the tenant (you can also set the filter for subscription)
+### Get all databricks workspaces in the tenant (you can also set the filter for subscription)
 ```kusto
 // Run query to see results.
 where type == "microsoft.databricks/workspaces"
