@@ -129,7 +129,7 @@ Then, we navigate to the path below and modify the configuration file according 
 C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGuestConfigurationPolicy\Configurations\MonitorAntivirus.ps1
 ```
 
-##### Default configuration
+##### Default configuration in the file
 ```conf
 Configuration MonitorAntivirus
 {
@@ -148,7 +148,7 @@ cd $env:Temp
 MonitorAntivirus
 ```
 
-##### Custom configuration(below is sample)
+##### Customize configuration(below is sample)
 ```conf
 Configuration MonitorAntivirus
 {
@@ -176,7 +176,7 @@ Then navigate to another path to modify the configuration file
 ```
 C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGuestConfigurationPolicy\ParameterFiles\EPAntivirusStatus.Params.psd1
 ```
-##### Default configuration
+##### Default configuration in the file
 ```conf
 @(
     @{
@@ -192,7 +192,7 @@ C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGu
 )
 ```
 
-##### Custom configuration
+##### Customize configuration
 ```conf
 @(
     @{
