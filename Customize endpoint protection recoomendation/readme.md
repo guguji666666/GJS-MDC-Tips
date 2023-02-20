@@ -1,13 +1,20 @@
 ## Customize Endpoint Protection Recommendation in Microsoft Defender for Cloud
-##### Microsoft Defender for Cloud covers a variety of Antimalware vendors today. You can find the list of supported versions in [Supported endpoint protection solutions](https://learn.microsoft.com/en-us/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers?tabs=features-windows#supported-endpoint-protection-solutions)
-![image](https://user-images.githubusercontent.com/96930989/219843241-37347dd4-510c-4dae-a531-4da58dc993a0.png)
+##### Microsoft Defender for Cloud covers a variety of Antimalware vendors today. 
+##### You can find the list of supported versions in the MS doc [Supported endpoint protection solutions](https://learn.microsoft.com/en-us/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers?tabs=features-windows#supported-endpoint-protection-solutions)
+![image](https://user-images.githubusercontent.com/96930989/219985583-d0e73627-02b4-48e7-9f11-03b7ff246b7a.png)
 
 However, in a scenario where you’re using an antimalware protection that is not in the Microsoft Defender for Cloud supported list but you still want to have visibility over the status of this antimalware using Defender for Cloud dashboard,Microsoft Defender for Cloud covers a variety of Antimalware vendors today. You can find the list of supported versions in this article. However, in a scenario where you’re using an antimalware protection that is not in the Microsoft Defender for Cloud supported list but you still want to have visibility over the status of this antimalware using Defender for Cloud dashboard,.
 The the steps mentioned below will be a workaround.
 
-### Steps for deployment https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/customizing-endpoint-protection-recommendation-in-microsoft/ba-p/1733217
+## Steps for deployment
+### Before we start
+* We will use old powershell modules since some commands in the script are not supported by the latest powershell modules
+* The customed initiaive should be assigned to the VMs installed with 3rd party antivirus products `not supported` by Microsoft
+* We should avoid duplicated assignment of native endpoint protection recommendation and customed initiative we creat
+* It takes hours to update the results in the policies and defender for cloud recommendations
+
 #### 1. Deploy guest configuration extension and enable managed identity on the VM
-To audit settings inside a machine, the Guest Configuration extension and a managed identity is required to audit Azure virtual machines. 
+To audit settings inside a machine, the `Guest Configuration extension` and a `managed identity` are required to audit Azure virtual machines. 
 
 To deploy the extension at scale, make sure to choose appropriate scope and assign the policy initiative `Deploy prerequisites to enable Guest Configuration policies on virtual machines` under Azure Policies as shown in the image below.
 ![image](https://user-images.githubusercontent.com/96930989/219843355-37f9d15a-0f1b-48ef-93ab-9b3f96c7e4e5.png)
@@ -278,11 +285,14 @@ This page will tell the reason why the resource is non-compliant
 Healthy resources
 ![image](https://user-images.githubusercontent.com/96930989/219846758-08e15887-ade2-40e8-8c68-1c833557b14c.png)
 
-Unhealthy resources
+Unhealthy resources (we picked the machine running server 2019 OS for sample)
 ![image](https://user-images.githubusercontent.com/96930989/219846787-207c24b6-42a2-4a76-b379-f336e0cf1b42.png)
 
-* The reason we use old powershell modules is that some commands in the script are not supported by the latest powershell modules
-* The customed initiaive should be assigned to the VMs installed with 3rd party antivirus products not supported by Microsoft
-* Avoid dupliated asignment of native endpoint protection recommendation and customed initiative
-* It takes hours to update the results in the policies and recommendations
+We then install huorong on this server, after 12 hours, it becomes healthy resources as well
+![image](https://user-images.githubusercontent.com/96930989/219985156-d2004e34-eff8-4467-a1dc-efccd2127fa4.png)
+
+We also test for client machine running windows 11 OS, it is supported as well
+![image](https://user-images.githubusercontent.com/96930989/219985261-c7bada1f-1989-4e3b-b8fe-44cd8e5414e9.png)
+
+According to the test results in our lab, the customized initiaitve supports server 2016/2019, win 10/11
 
