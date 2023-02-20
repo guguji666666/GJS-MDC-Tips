@@ -82,7 +82,6 @@ Replace the folders `AzureGuestConfigurationPolicy` and `DSCResources` we downlo
 ![image](https://user-images.githubusercontent.com/96930989/219844524-b8d6b618-8d08-42c5-a525-95041e9c01b5.png)
 
 
-
 Navigate to the path `C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGuestConfigurationPolicy\AzureGuestPolicyHelper.psm1`
 
 Search for `New-GuestConfigurationPackage`
