@@ -258,6 +258,8 @@ Sample
 $job = Start-AzPolicyComplianceScan -AsJob
 $job
 ```
+![image](https://user-images.githubusercontent.com/96930989/219985951-0eabfc52-59b3-4dda-98a1-4117331c6020.png)
+
 
 #### 6. Wait for 24 hours and check the compliance state in new policies (keep VM on)
 
