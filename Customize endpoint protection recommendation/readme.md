@@ -296,5 +296,9 @@ We then install huorong on this server, after 12 hours, it becomes healthy resou
 We also test for client machine running windows 11 OS, it is supported as well
 ![image](https://user-images.githubusercontent.com/96930989/219985261-c7bada1f-1989-4e3b-b8fe-44cd8e5414e9.png)
 
+You can also find the recommendations related to this initiative
+![image](https://user-images.githubusercontent.com/96930989/220029393-03d42cc3-4380-4d3a-b93b-0b73ec1676d3.png)
+![image](https://user-images.githubusercontent.com/96930989/220029457-f4af4550-4929-40af-bc22-4fab793fdbd7.png)
+
 According to the test results in our lab, the customized initiaitve supports server 2016/2019, win 10/11
 
