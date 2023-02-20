@@ -8,6 +8,7 @@ The the steps mentioned below will be a workaround.
 
 ## Steps for deployment
 ### Before we start
+* Please prepare a client machine running win 10/11, install the 3rd party antivirus product (you want to monitor) on it
 * We will use old powershell modules since some commands in the script are not supported by the latest powershell modules
 * The customed initiaive should be assigned to the VMs installed with 3rd party antivirus products `not supported` by Microsoft
 * We should avoid duplicated assignment of native endpoint protection recommendation and customed initiative we creat
