@@ -1,4 +1,9 @@
-ARG query to get unhealthy databricks storage accounts
+## Use ARG - Resource Graph Explorer
+### Navigate to Azure portal, and search `Resource Graph Explorer` on the top
+![image](https://user-images.githubusercontent.com/96930989/210159757-b875ba41-6946-4ee7-a604-92183cf9f58b.png)
+
+
+## Get unhealthy databricks storage accounts (you can also set the filter for subscription)
 ```kusto
 securityresources
         | where type == "microsoft.security/assessments"
@@ -21,8 +26,7 @@ securityresources
 ```
 
 
-
-ARG query to get all databricks workspaces
+## Get all databricks workspaces in the tenant (you can also set the filter for subscription)
 ```kusto
 // Run query to see results.
 where type == "microsoft.databricks/workspaces"
@@ -89,7 +93,7 @@ where type == "microsoft.databricks/workspaces"
 | where (type !~ ('microsoft.windowspushnotificationservices/registrations'))
 | where not((type =~ ('microsoft.sql/servers/databases')) and ((kind in~ ('system','v2.0,system','v12.0,system','v12.0,user,datawarehouse,gen2,analytics'))))
 | where not((type =~ ('microsoft.sql/servers')) and ((kind =~ ('v12.0,analytics'))))
-| where subscriptionId == "<your sub id>"
+//| where subscriptionId == "<your sub id>"
 | project name, subscriptionId, id
 ```
 
