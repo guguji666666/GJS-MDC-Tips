@@ -3,6 +3,9 @@
 The Log Analytics agent is on a `deprecation path` and won't be supported after `August 31, 2024`. If you use the Log Analytics agent to ingest data to Azure Monitor, migrate to the new Azure Monitor agent prior to that date.
 * [Log Analytics agent overview](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/log-analytics-agent)
 * [Multi-homing in MMA and AMA](https://learn.microsoft.com/en-us/azure/sentinel/ama-migrate#gap-analysis-between-agents)
+![image](https://user-images.githubusercontent.com/96930989/220602245-b1e2022f-bed6-4c00-af55-c8d994ba5cbc.png)
+![image](https://user-images.githubusercontent.com/96930989/220602315-8f271d51-ad18-40ca-91b5-6a92595a87a1.png)
+
 * [MMA supported OS](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
 
 ### 1. Manually deploy MMA extension on Azure VM running `Windows`
