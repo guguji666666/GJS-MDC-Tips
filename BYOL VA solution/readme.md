@@ -39,3 +39,69 @@ https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{RGNa
 3. Manually uninstall the extension in Azure
 4. Ensure there are no folders named ”qualys” under /etc
 5. Add the VM to the new BYOL solution
+
+
+### Useful API for BYOL VA solution
+
+#### 1. List existing BYOL solutions activated in your subscription
+Binding
+```
+GET
+```
+URL
+```
+https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/securitySolutions?api-version=2015-06-01-preview
+```
+![image](https://user-images.githubusercontent.com/96930989/220620651-981a2f19-ae6b-4e3b-a5fa-dd9abf625e84.png)
+
+You can also find the location of the subscription from the results
+![image](https://user-images.githubusercontent.com/96930989/220620754-5942bca4-3981-4c74-bdab-dad757ad6633.png)
+
+
+#### 2. List all resourcess(VM) linked to the specified BYOL VA solution
+Binding
+```
+GET
+``` 
+URL
+```
+https://management.azure.com/subscriptions/{SubscriptionId}/resourceGroups/{RG of the BYOL solution }/providers/Microsoft.Security/locations/{subscriptionLocation}/securitySolutions/{SolutionName}?api-version=2015-06-01-preview&includeProtectedResources=true
+```
+![image](https://user-images.githubusercontent.com/96930989/220621676-cc185327-aa7a-4457-a3dd-5066912dd281.png)
+
+
+#### 3. Delete an existing VA BYOL Solution from the subscription
+Binding
+```
+DELETE
+``` 
+URL
+```
+https://management.azure.com/subscriptions/{subscritionId}/resourceGroups/{RG of BYOL solution}/providers/Microsoft.Security/locations/{ASCLocation}/securitySolutions/{solutionName}/?api-version=2015-06-01-preview
+```
+
+#### 4. Add specified VM to the existing BYOL VA solution
+Binding
+```
+PUT
+```
+URL
+```
+https://management.azure.com/subscriptions/{SubscriptionId}/resourceGroups/{RG of BYOL solution}/providers/Microsoft.Security/locations/{subscriptionLocation}/securitySolutions/{SolutionName}/protectedResources?api-version=2015-06-01-preview 
+```
+Body
+```
+[{ ResourceAzureId: "{vm Resource Id}" }]
+```
+
+#### 5. Remove specified VM from the BYOL VA solution
+Binding
+```
+Delete
+```
+URL
+```
+https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{RGName of BYOL solution}/providers/Microsoft.Security/locations/{subscriptionLocation}/securitySolutions/{solutionName}/protectedResources/{azureResourceId of VM}?api-version=2015-06-01-preview 
+```
+
+
