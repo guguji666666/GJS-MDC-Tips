@@ -227,14 +227,17 @@ To verify in the portal, navigate to `Policy > Definitions`, you will find the n
 
 #### 4. Assign the initiative to the subscription (you can exclude the resource groups where the VMs are using endpoint products supported by Microsoft)
 
+* Edit initiative definition (select the value of the 3rd party endpoint protection product you want to monitor) and save it
+![image](https://user-images.githubusercontent.com/96930989/219845702-60c1735e-acbb-4032-873c-2f250c9a73ea.png)
+
 * Assign the initiave to the subscription level and create the exemption if required
 ![image](https://user-images.githubusercontent.com/96930989/219846522-73e84938-6496-46bd-9497-32152d461c5c.png)
 
-* Edit initiative definition (select the value of the 3rd party endpoint protection product you want to monitor)
-![image](https://user-images.githubusercontent.com/96930989/219845702-60c1735e-acbb-4032-873c-2f250c9a73ea.png)
-
 * Edit parameter when create the assignment (select the name of the 3rd party antivirus product you want to monitor
 ![image](https://user-images.githubusercontent.com/96930989/219845788-492722b5-7281-40cc-bb14-082d24786f77.png)
+
+* Create remediation task so that the initiative will apply to the existing VMs
+![image](https://user-images.githubusercontent.com/96930989/221903629-711b59cf-37d6-4af0-b4d8-2c98ca27028a.png)
 
 * Refer to the doc [Add a custom initiative to your subscription](https://learn.microsoft.com/en-us/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal#to-add-a-custom-initiative-to-your-subscription)
 
