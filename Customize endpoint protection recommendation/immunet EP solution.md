@@ -1,5 +1,4 @@
-## Customize Endpoint Protection Recommendation in Microsoft Defender for Cloud (for immunet)
-
+## Customize Endpoint Protection Recommendation in Microsoft Defender for Cloud (immunet)
 ## Steps for deployment
 ### Before we start
 * Please prepare a client machine running win 10/11, install the 3rd party antivirus product (you want to monitor) on it
@@ -106,16 +105,15 @@ Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
 ```
 ![image](https://user-images.githubusercontent.com/96930989/219844642-a392c40f-95f5-45bd-a120-2b2170f47a03.png)
 
-For test purpose, we install [Huorong Internet security](https://www.huorong.cn/) on the client machine running win10.
+For test purpose, we install [Immunet](https://www.immunet.com/index) on the client machine running win10.
 After installtion, we run the command again to get the `product name` and the `process name`
-![image](https://user-images.githubusercontent.com/96930989/219844742-3a785232-3c52-4245-aae0-8732089e7c51.png)
+![image](https://user-images.githubusercontent.com/96930989/221882291-1e347d41-ea78-495c-83cb-5f905377c974.png)
 
-
-As we can see, the process of huorong is `wsctrlsvc.exe`, then we ran the command
+As we can see, the process of immunet is `cscm.exe`, then we ran the command
 ```cmd
-Get-process wsctrlsvc
+Get-process cscm
 ```
-![image](https://user-images.githubusercontent.com/96930989/219844775-4213101f-0927-4bf7-973e-c56c8388d569.png)
+![image](https://user-images.githubusercontent.com/96930989/221882483-9ce99b16-9249-472a-80f2-f97a9adc49f2.png)
 
 The DSC is using Get-Process that will find the process running in the machine. If there’s no instance of a process running the Antivirus executable found, the validation will stop and returns a status of Stopped providing you a clear description.
 
@@ -157,7 +155,7 @@ Configuration MonitorAntivirus
             Ensure        = "Present"
         };
         {
-            AntivirusName = "Huorong Internet Security"
+            AntivirusName = "Immunet"
             Status        = "Running"
             Ensure        = "Present"
         }
@@ -198,7 +196,7 @@ C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGu
         ResourceId           = 'AV'
         ResourcePropertyName = "AntivirusName"
         DefaultValue         = 'Windows Defender'
-        AllowedValues        = @('Avast','Windows Defender','CrowdStrike','Sentinel One','Huorong Internet Security')
+        AllowedValues        = @('Avast','Windows Defender','CrowdStrike','Sentinel One','Huorong Internet Security','Immunet')
     }
 )
 ```
