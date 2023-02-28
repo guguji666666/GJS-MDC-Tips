@@ -208,7 +208,8 @@ New-EPDSCAzureGuestConfigurationPolicyPackage
 Then follow the instructions in the script.
 
 Create the resource group as well as the storage account (you can also use the existing the resource group and storage account)
-![image](https://user-images.githubusercontent.com/96930989/219845097-7a2bc749-1824-4902-b8ee-de240f135e30.png)
+![image](https://user-images.githubusercontent.com/96930989/221900969-531fa125-aeba-4918-9580-e5616e4bd16e.png)
+
 
 Input the number of the subscription you want to access
 
@@ -226,11 +227,11 @@ To verify in the portal, navigate to `Policy > Definitions`, you will find the n
 
 #### 4. Assign the initiative to the subscription (you can exclude the resource groups where the VMs are using endpoint products supported by Microsoft)
 
+* Edit initiative definition (select the value of the 3rd party endpoint protection product you want to monitor), the save it
+![image](https://user-images.githubusercontent.com/96930989/221903000-f082658e-5cae-4013-8329-5895c92e8fa6.png)
+
 * Assign the initiave to the subscription level and create the exemption if required
 ![image](https://user-images.githubusercontent.com/96930989/219846522-73e84938-6496-46bd-9497-32152d461c5c.png)
-
-* Edit initiative definition (select the value of the 3rd party endpoint protection product you want to monitor)
-![image](https://user-images.githubusercontent.com/96930989/219845702-60c1735e-acbb-4032-873c-2f250c9a73ea.png)
 
 * Edit parameter when create the assignment (select the name of the 3rd party antivirus product you want to monitor
 ![image](https://user-images.githubusercontent.com/96930989/219845788-492722b5-7281-40cc-bb14-082d24786f77.png)
