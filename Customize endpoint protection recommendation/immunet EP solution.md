@@ -227,7 +227,7 @@ To verify in the portal, navigate to `Policy > Definitions`, you will find the n
 
 #### 4. Assign the initiative to the subscription (you can exclude the resource groups where the VMs are using endpoint products supported by Microsoft)
 
-* Edit initiative definition (select the value of the 3rd party endpoint protection product you want to monitor), the save it
+* Edit initiative definition (select the value of the 3rd party endpoint protection product you want to monitor) and save it
 ![image](https://user-images.githubusercontent.com/96930989/221903000-f082658e-5cae-4013-8329-5895c92e8fa6.png)
 
 * Assign the initiave to the subscription level and create the exemption if required
