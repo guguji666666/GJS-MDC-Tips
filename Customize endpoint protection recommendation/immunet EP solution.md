@@ -278,7 +278,7 @@ The client machine we deployed before is showing healthy state
 ![image](https://user-images.githubusercontent.com/96930989/222013663-477620e4-1d33-4627-b13e-ae836860c96e.png)
 
 
-#### 7. Wait for 24 hours and check the regulatory compliance in Defender for cloud
+#### 7. Check the regulatory compliance in Defender for cloud, wait for 12 hours if the results are not updated
 
 ![image](https://user-images.githubusercontent.com/96930989/222014672-47d5e176-943e-4cdb-89af-07f47bd9eaba.png)
 
