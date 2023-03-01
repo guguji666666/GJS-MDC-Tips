@@ -1,4 +1,4 @@
-## Customize Endpoint Protection Recommendation in Microsoft Defender for Cloud (immunet)
+## Customize Endpoint Protection Recommendation in MS Defender for Cloud (immunet)
 ## Steps for deployment
 ### Before we start
 * Please prepare a client machine running win 10/11, install the 3rd party antivirus product (you want to monitor) on it
