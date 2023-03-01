@@ -1,7 +1,6 @@
 # Quickly get user token and call API
 
-## 1. Install the Azure Az PowerShell module
-https://learn.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-8.3.0
+## 1. [Install Azure Az PowerShell module](https://learn.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-8.3.0)
 ```powershell
 $PSVersionTable.PSVersion
 
@@ -22,7 +21,7 @@ $accessToken | Set-Clipboard
 ```
 The user access token is already copied to your clipboard.
 
-## 3. Retrieve user token and correct the format
+## 3. Check user token and correct the format before using it in postman or other tools
 
 The user token has already been copied to clipboard via previous powershell commands
 
