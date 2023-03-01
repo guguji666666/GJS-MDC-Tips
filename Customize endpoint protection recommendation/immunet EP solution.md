@@ -258,23 +258,19 @@ $job
 ![image](https://user-images.githubusercontent.com/96930989/219985951-0eabfc52-59b3-4dda-98a1-4117331c6020.png)
 
 
-#### 6. Wait for 24 hours and check the compliance state in new policies (keep VM on)
+#### 6. Wait for 12-24 hours and check the compliance state in new policies (keep VM on)
 
 Navigate to `Policy > Compliance`
-![image](https://user-images.githubusercontent.com/96930989/219846261-b922ae9d-d865-41cc-a82b-e1f0a193f197.png)
+![image](https://user-images.githubusercontent.com/96930989/222013357-da9e78d7-f755-4cb7-a41d-61cd00b39d51.png)
 
-Click the policy showing `non-compliant` state
-![image](https://user-images.githubusercontent.com/96930989/219846279-d0bf3a29-3834-4207-a676-5d1a3b9e3608.png)
+Check the compliance state of this initiative
+![image](https://user-images.githubusercontent.com/96930989/222013278-489d1eec-8cb9-4118-b8a6-2427366dd5de.png)
 
-![image](https://user-images.githubusercontent.com/96930989/219846336-48fe4c69-477e-4967-9ba6-afb7f15e6623.png)
+Click the `[Audit]Monitor Antivirus` policy
+![image](https://user-images.githubusercontent.com/96930989/222013581-cd75db1b-8ab9-4971-9fe0-623e4f77cea3.png)
 
-
-Then open the link here
-
-![image](https://user-images.githubusercontent.com/96930989/219846399-24727f59-515a-456a-a06f-d4c107f90599.png)
-
-This page will tell the reason why the resource is non-compliant
-![image](https://user-images.githubusercontent.com/96930989/219846429-413bb6e6-97ff-4a2f-98eb-6a6007378281.png)
+The client machine we deplyoed before is showing healthy state
+![image](https://user-images.githubusercontent.com/96930989/222013663-477620e4-1d33-4627-b13e-ae836860c96e.png)
 
 
 #### 7. Wait for 24 hours and check the regulatory compliance in Defender for cloud
@@ -282,19 +278,6 @@ This page will tell the reason why the resource is non-compliant
 
 Healthy resources
 ![image](https://user-images.githubusercontent.com/96930989/219846758-08e15887-ade2-40e8-8c68-1c833557b14c.png)
-
-Unhealthy resources (we picked the machine running server 2019 OS for sample)
-![image](https://user-images.githubusercontent.com/96930989/219846787-207c24b6-42a2-4a76-b379-f336e0cf1b42.png)
-
-We then install huorong on this server, after 12 hours, it becomes healthy resources as well
-![image](https://user-images.githubusercontent.com/96930989/219985156-d2004e34-eff8-4467-a1dc-efccd2127fa4.png)
-
-We also test for client machine running windows 11 OS, it is supported as well
-![image](https://user-images.githubusercontent.com/96930989/219985261-c7bada1f-1989-4e3b-b8fe-44cd8e5414e9.png)
-
-You can also find the recommendations related to this initiative
-![image](https://user-images.githubusercontent.com/96930989/220029393-03d42cc3-4380-4d3a-b93b-0b73ec1676d3.png)
-![image](https://user-images.githubusercontent.com/96930989/220029457-f4af4550-4929-40af-bc22-4fab793fdbd7.png)
 
 According to the test results in our lab, the customized initiaitve supports server 2016/2019, win 10/11
 
