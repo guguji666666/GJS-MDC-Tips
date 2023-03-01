@@ -279,10 +279,6 @@ The client machine we deployed before is showing healthy state
 
 
 #### 7. Wait for 24 hours and check the regulatory compliance in Defender for cloud
-![image](https://user-images.githubusercontent.com/96930989/219846601-a7dd5c12-c1ef-406d-bbd0-d19e2fd7e438.png)
-
-Healthy resources
-![image](https://user-images.githubusercontent.com/96930989/219846758-08e15887-ade2-40e8-8c68-1c833557b14c.png)
 
 According to the test results in our lab, the customized initiaitve supports server 2016/2019, win 10/11
 
