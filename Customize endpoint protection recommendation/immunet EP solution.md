@@ -269,7 +269,7 @@ Check the compliance state of this initiative
 Click the `[Audit]Monitor Antivirus` policy
 ![image](https://user-images.githubusercontent.com/96930989/222013581-cd75db1b-8ab9-4971-9fe0-623e4f77cea3.png)
 
-The client machine we deplyoed before is showing healthy state
+The client machine we deployed before is showing healthy state
 ![image](https://user-images.githubusercontent.com/96930989/222013663-477620e4-1d33-4627-b13e-ae836860c96e.png)
 
 
