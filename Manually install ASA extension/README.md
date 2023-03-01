@@ -68,7 +68,7 @@ https://management.azure.com/subscriptions/<subdid>/resourceGroups/<rgname>/prov
   "type":"Microsoft.Compute/virtualmachines/extensions", 
   "location":"<vmlocation>", 
   "properties":{ 
-    "autoUpgradeMinorVersion":?true, 
+    "autoUpgradeMinorVersion":true, 
     "publisher":"Microsoft.Azure.Security.Monitoring", 
     "type":"AzureSecurityLinuxAgent", 
     "typeHandlerVersion":"2.0",
