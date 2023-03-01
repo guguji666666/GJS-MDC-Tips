@@ -27,7 +27,7 @@ The user token has already been copied to clipboard via previous powershell comm
 
 Paste the user token in https://jwt.ms/ and correct the format
 
-Verify that the token could be decoded
+Verify that the token could be decoded (below is the sample)
 ![image](https://user-images.githubusercontent.com/96930989/210707002-751e29ab-1380-44f1-afb6-5de4f7e2c75f.png)
 
 
