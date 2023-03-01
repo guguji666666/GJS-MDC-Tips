@@ -106,6 +106,11 @@ Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
 ![image](https://user-images.githubusercontent.com/96930989/219844642-a392c40f-95f5-45bd-a120-2b2170f47a03.png)
 
 For test purpose, we install [Immunet](https://www.immunet.com/index) on the client machine running win10.
+
+![image](https://user-images.githubusercontent.com/96930989/222013844-a562fd62-8fd6-462e-999c-a500372832be.png)
+
+![image](https://user-images.githubusercontent.com/96930989/222013854-307f31bf-e9a3-4027-a32b-3a3620e66104.png)
+
 After installtion, we run the command again to get the `product name` and the `process name`
 ![image](https://user-images.githubusercontent.com/96930989/221882291-1e347d41-ea78-495c-83cb-5f905377c974.png)
 
