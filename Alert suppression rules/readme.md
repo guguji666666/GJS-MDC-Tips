@@ -1,4 +1,4 @@
-## Useful API to manage MDC alert suppression rules
+## Useful API to manage Defender for cloud alert suppression rules
 
 ### 1. [List existing alert suppression rules](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/alerts-suppression-rules/list?tabs=HTTP)
 
