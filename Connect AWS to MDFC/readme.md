@@ -1,4 +1,4 @@
-## Connect AWS to Microsoft defender for cloud
+## [Connect AWS to Microsoft defender for cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings)
 
 ### 1. Create a new [AWS account]((https://www.youtube.com/watch?v=AxsFAuBnQWE))
 
