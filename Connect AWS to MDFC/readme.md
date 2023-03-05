@@ -18,5 +18,17 @@ Click `launch instance` to create the VM
 Modify the configurations if required
 ![image](https://user-images.githubusercontent.com/96930989/222948151-35f5c507-61fe-4c73-89c3-be40c2fc3df6.png)
 
-Define the number of instance you want to create and then click launch to create them
+Define the number of instances you want to create and then click launch to create them
+
 ![image](https://user-images.githubusercontent.com/96930989/222948299-30569a6b-a73c-4af3-90b4-c30d42ef34b9.png)
+
+![image](https://user-images.githubusercontent.com/96930989/222948360-d537dfd1-083d-48bb-b43d-cd06570ef4dd.png)
+
+### 3. Create billing and free tier usage alerts
+![image](https://user-images.githubusercontent.com/96930989/222948445-84403b9a-2099-45f0-bc5e-450fc3843864.png)
+
+Save the settings
+![image](https://user-images.githubusercontent.com/96930989/222948576-0c1f3524-3e35-4618-b00c-1ffcbe44d1d7.png)
+
+### 4. Go back to the VM we created
+![image](https://user-images.githubusercontent.com/96930989/222948651-6393902c-068a-4b9d-bb55-92721b1b0d4b.png)
