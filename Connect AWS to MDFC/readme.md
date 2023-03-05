@@ -16,7 +16,7 @@ Create security group if required
 Click `launch instance` to create the VM
 ![image](https://user-images.githubusercontent.com/96930989/222940204-e2f9251b-2f33-4685-8d4e-bf172a1416b0.png)
 
-Download the key pairt and modify other configurations if required
+Download the key pair and modify other configurations if required
 ![image](https://user-images.githubusercontent.com/96930989/222948151-35f5c507-61fe-4c73-89c3-be40c2fc3df6.png)
 
 Define the number of instances you want to create and then click launch to create them
@@ -42,27 +42,35 @@ Username is admin by default
 Using the ssh client to the VM, we will use the key pair downloaded before
 
 ### 5. [Connect AWS to Microsoft defender for cloud](https://www.youtube.com/watch?v=UwYWAClAtgc)
+
 <img width="1157" alt="image" src="https://user-images.githubusercontent.com/96930989/222953576-40f388a9-54e4-498d-b653-08a04e1da7a3.png">
 
-![image](https://user-images.githubusercontent.com/96930989/222952840-6c0f7e97-bd47-4290-bff4-24c59a404192.png)
+We pick sinle account for example
+<img width="890" alt="image" src="https://user-images.githubusercontent.com/96930989/222956985-52c25144-f03e-49ee-9070-432e3237e11e.png">
 
-<img width="1258" alt="image" src="https://user-images.githubusercontent.com/96930989/222955649-b4789162-8e58-42ad-955d-f26487c30464.png">
+Select the defender plans you want to enable
+<img width="1467" alt="image" src="https://user-images.githubusercontent.com/96930989/222957000-dcac87ab-f95c-487e-aefc-b1d2dd060eb8.png">
 
-You can find the management account here
-![image](https://user-images.githubusercontent.com/96930989/222952922-5574be8f-4c37-4978-a1ca-c84ea5254b14.png)
+Download the template here
 
-<img width="1061" alt="image" src="https://user-images.githubusercontent.com/96930989/222953787-54663cec-ebf3-4435-af07-0158d7601491.png">
+<img width="678" alt="image" src="https://user-images.githubusercontent.com/96930989/222957030-78128e50-36cd-42ae-a1e7-53f90dde4ed2.png">
 
-<img width="1559" alt="image" src="https://user-images.githubusercontent.com/96930989/222953813-9b130ddb-f516-4c59-9d1f-a1fca2869a56.png">
+Navigate to AWS, upload the template we got
+<img width="1745" alt="image" src="https://user-images.githubusercontent.com/96930989/222957080-6c897f8d-b6ed-45e6-8f74-fb238e5e951e.png">
 
-<img width="1753" alt="image" src="https://user-images.githubusercontent.com/96930989/222953866-67fc79d4-86a9-468c-b963-0b63b5c179d9.png">
+Specify the name for the stack
+<img width="1649" alt="image" src="https://user-images.githubusercontent.com/96930989/222957109-5d4980d9-9f6e-4df3-a040-e9772537661a.png">
 
-<img width="1813" alt="image" src="https://user-images.githubusercontent.com/96930989/222954096-9d4fdc74-acac-4c90-bd22-b5a994f102d9.png">
+Once submit the request, wait until the creation is completed
+<img width="1796" alt="image" src="https://user-images.githubusercontent.com/96930989/222957139-20921006-edb5-432b-96d6-ca231f373efb.png">
 
-Wait until the creation of stack is completed
-<img width="1824" alt="image" src="https://user-images.githubusercontent.com/96930989/222954127-5113d2ef-e1ef-4809-87da-73dcfe9a5e45.png">
+Once the creation is done, go back to azure portal and go ahead the process
+<img width="1826" alt="image" src="https://user-images.githubusercontent.com/96930989/222957256-8b052399-0e5f-47e8-8f76-45b920875551.png">
 
-Input the stack name in defender for cloud, the go ahead to generate
-<img width="813" alt="image" src="https://user-images.githubusercontent.com/96930989/222954168-d7feecc8-65b9-496f-bf89-3f8996902f01.png">
+Once done, you will see the notifications
 
+<img width="540" alt="image" src="https://user-images.githubusercontent.com/96930989/222957269-72c37afb-1f17-40ab-9c13-2b688d7bbb12.png">
 
+The AWS resource will show in defender for cloud
+
+<img width="1815" alt="image" src="https://user-images.githubusercontent.com/96930989/222957336-5dd2fc13-991d-4cab-b91f-3294cb2b89d7.png">
