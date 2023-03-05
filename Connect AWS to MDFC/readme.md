@@ -17,3 +17,6 @@ Click `launch instance` to create the VM
 
 Modify the configurations if required
 ![image](https://user-images.githubusercontent.com/96930989/222948151-35f5c507-61fe-4c73-89c3-be40c2fc3df6.png)
+
+Define the number of instance you want to create and then click launch to create them
+![image](https://user-images.githubusercontent.com/96930989/222948299-30569a6b-a73c-4af3-90b4-c30d42ef34b9.png)
