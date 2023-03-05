@@ -42,8 +42,24 @@ Username is admin by default
 Using the ssh client to the VM, we will use the key pair downloaded before
 
 ### 5. [Connect AWS to Microsoft defender for cloud](https://www.youtube.com/watch?v=UwYWAClAtgc)
+<img width="1157" alt="image" src="https://user-images.githubusercontent.com/96930989/222953576-40f388a9-54e4-498d-b653-08a04e1da7a3.png">
 
 ![image](https://user-images.githubusercontent.com/96930989/222952840-6c0f7e97-bd47-4290-bff4-24c59a404192.png)
 
 ![image](https://user-images.githubusercontent.com/96930989/222952922-5574be8f-4c37-4978-a1ca-c84ea5254b14.png)
+
+<img width="1061" alt="image" src="https://user-images.githubusercontent.com/96930989/222953787-54663cec-ebf3-4435-af07-0158d7601491.png">
+
+<img width="1559" alt="image" src="https://user-images.githubusercontent.com/96930989/222953813-9b130ddb-f516-4c59-9d1f-a1fca2869a56.png">
+
+<img width="1753" alt="image" src="https://user-images.githubusercontent.com/96930989/222953866-67fc79d4-86a9-468c-b963-0b63b5c179d9.png">
+
+<img width="1813" alt="image" src="https://user-images.githubusercontent.com/96930989/222954096-9d4fdc74-acac-4c90-bd22-b5a994f102d9.png">
+
+Wait until the creation is completed
+<img width="1824" alt="image" src="https://user-images.githubusercontent.com/96930989/222954127-5113d2ef-e1ef-4809-87da-73dcfe9a5e45.png">
+
+Input the stackset name in defender for cloud, the go ahead to generate
+<img width="813" alt="image" src="https://user-images.githubusercontent.com/96930989/222954168-d7feecc8-65b9-496f-bf89-3f8996902f01.png">
+
 
