@@ -69,7 +69,7 @@ Once the creation is done, go back to azure portal and go ahead the process
 
 Once done, you will see the notifications
 
-<img width="540" alt="image" src="https://user-images.githubusercontent.com/96930989/222957269-72c37afb-1f17-40ab-9c13-2b688d7bbb12.png">
+![image](https://user-images.githubusercontent.com/96930989/222957454-4eb354d1-69d3-4a9d-aed8-62b657d39ccb.png)
 
 The AWS resource will show in defender for cloud
 
