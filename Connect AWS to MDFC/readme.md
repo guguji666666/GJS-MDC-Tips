@@ -3,6 +3,7 @@
 ### 1. Create a new [AWS account]((https://www.youtube.com/watch?v=AxsFAuBnQWE))
 
 ### 2. [Create VM in AWS](https://www.youtube.com/watch?v=JgfWYcNR6nk)
+[AWS Global Accelerator Tool](https://docs.aws.amazon.com/zh_tw/global-accelerator/latest/dg/introduction-speed-comparison-tool.html)
 
 Navigate to EC2
 ![image](https://user-images.githubusercontent.com/96930989/222940188-39e7d9f4-e5d8-470b-b909-a172e84cb5f1.png)
@@ -39,4 +40,10 @@ Username is admin by default
 <img width="833" alt="image" src="https://user-images.githubusercontent.com/96930989/222951180-95016539-896f-406b-a3c8-129139a143b9.png">
 
 Using the ssh client to the VM, we will use the key pair downloaded before
+
+### 5. [Connect AWS to Microsoft defender for cloud](https://www.youtube.com/watch?v=UwYWAClAtgc)
+
+![image](https://user-images.githubusercontent.com/96930989/222952840-6c0f7e97-bd47-4290-bff4-24c59a404192.png)
+
+![image](https://user-images.githubusercontent.com/96930989/222952922-5574be8f-4c37-4978-a1ca-c84ea5254b14.png)
 
