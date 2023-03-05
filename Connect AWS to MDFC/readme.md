@@ -46,6 +46,9 @@ Using the ssh client to the VM, we will use the key pair downloaded before
 
 ![image](https://user-images.githubusercontent.com/96930989/222952840-6c0f7e97-bd47-4290-bff4-24c59a404192.png)
 
+<img width="1258" alt="image" src="https://user-images.githubusercontent.com/96930989/222955649-b4789162-8e58-42ad-955d-f26487c30464.png">
+
+You can find the management account here
 ![image](https://user-images.githubusercontent.com/96930989/222952922-5574be8f-4c37-4978-a1ca-c84ea5254b14.png)
 
 <img width="1061" alt="image" src="https://user-images.githubusercontent.com/96930989/222953787-54663cec-ebf3-4435-af07-0158d7601491.png">
