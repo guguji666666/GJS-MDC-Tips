@@ -30,7 +30,7 @@ Define the number of instances you want to create and then click launch to creat
 Save the settings
 ![image](https://user-images.githubusercontent.com/96930989/222948576-0c1f3524-3e35-4618-b00c-1ffcbe44d1d7.png)
 
-### 4. Connect the VM
+### 4. Connect to AWS VM
 
 Go back to the VM we created, click connect
 ![image](https://user-images.githubusercontent.com/96930989/222948651-6393902c-068a-4b9d-bb55-92721b1b0d4b.png)
