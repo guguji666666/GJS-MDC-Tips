@@ -59,10 +59,10 @@ You can find the management account here
 
 <img width="1813" alt="image" src="https://user-images.githubusercontent.com/96930989/222954096-9d4fdc74-acac-4c90-bd22-b5a994f102d9.png">
 
-Wait until the creation is completed
+Wait until the creation of stack is completed
 <img width="1824" alt="image" src="https://user-images.githubusercontent.com/96930989/222954127-5113d2ef-e1ef-4809-87da-73dcfe9a5e45.png">
 
-Input the stackset name in defender for cloud, the go ahead to generate
+Input the stack name in defender for cloud, the go ahead to generate
 <img width="813" alt="image" src="https://user-images.githubusercontent.com/96930989/222954168-d7feecc8-65b9-496f-bf89-3f8996902f01.png">
 
 
