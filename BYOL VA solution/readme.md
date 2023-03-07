@@ -112,4 +112,20 @@ URL
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{RGName of BYOL solution}/providers/Microsoft.Security/locations/{subscriptionLocation}/securitySolutions/{solutionName}/protectedResources/{azureResourceId of VM}?api-version=2015-06-01-preview 
 ```
 
+## BYOL migration (updating)
+
+#### 1. Disable auto-provisioning from previous BYOL solution
+#### 2. Remove qualys extension from Azure portal
+#### 3. Uninstall qualys agent on local machine
+#### 4. Remove the files/registry keys below:
+* Ensure that the Qualys Agent folder is completely removed from the location C:\ProgramData\Qualys
+* Ensure that the Qualys Agent folder is completely removed from the location C:\ProgramFiles\Qualys
+* Remove the QualysAgent from below provided registry HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\**
+* Remove Qualys from below registry location HKEY_LOCAL_MACHINE\SOFTWARE\
+#### 5. Restart the VM
+#### 6. Wait until the qualys extension and agent are pushed via auto-provisioning set in the new BYOL solution
+#### 7. Updat registry key under path Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Qualys if required
+#### 8. Restart Qualys service
+
+
 
