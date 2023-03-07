@@ -124,7 +124,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{RGNa
 * Remove Qualys from below registry location HKEY_LOCAL_MACHINE\SOFTWARE\
 #### 5. Restart the VM
 #### 6. Wait until the qualys extension and agent are pushed via auto-provisioning set in the new BYOL solution
-#### 7. Updat registry key under path Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Qualys if required
+#### 7. Update registry key under path Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Qualys if required
 #### 8. Restart Qualys service
 
 
