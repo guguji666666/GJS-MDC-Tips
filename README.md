@@ -72,7 +72,7 @@ If you're using a `custom workspace`, you need to select it to enable the plan m
 
 ![image](https://user-images.githubusercontent.com/96930989/211142168-0fddb5ae-3321-4a2a-98ad-1475cc4ce73b.png)
 
-### Note that:
+### Note !
 
 If you turn on Defender for Servers for a subscription and for a connected custom workspace, you `aren't charged` for both. The system identifies `unique VMs`.
 
