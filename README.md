@@ -1,6 +1,6 @@
 # Defender for cloud FAQ
 ## Defender for servers plan - workspaces and agents
-### 1. The behavior that defender for cloud creates workspaces
+### 1. The behavior that defender for cloud creates `default` workspaces
 [Defender for server creates workspaces](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#default-workspace)
 
 By default, when you onboard for the first time Defender for Cloud creates a new resource group and default workspace in the region of each subscription with Defender for Cloud enabled.
@@ -72,13 +72,17 @@ If you're using a `custom workspace`, you need to select it to enable the plan m
 
 ![image](https://user-images.githubusercontent.com/96930989/211142168-0fddb5ae-3321-4a2a-98ad-1475cc4ce73b.png)
 
-Note that:
+### Note that:
 
 If you turn on Defender for Servers for a subscription and for a connected custom workspace, you `aren't charged` for both. The system identifies `unique VMs`.
 
 If you enable Defender for Servers on cross-subscription workspaces:
 * For the `Log Analytics agent`, connected machines from all subscriptions are billed, including subscriptions that don't have the servers plan enabled.
 * For the `Azure Monitor agent`, billing and feature coverage for Defender for Servers depends only on the plan being enabled in the subscription.
+
+### Reference
+* [If I enable Defender for Clouds Servers plan on the subscription level, do I need to enable it on the workspace level?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#if-i-enable-defender-for-clouds-servers-plan-on-the-subscription-level-do-i-need-to-enable-it-on-the-workspace-level)
+* [Do I need to enable Defender for Servers on the subscription and on the workspace?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-defender-for-servers-on-the-subscription-and-on-the-workspace-)
 
 ### 7. How to check which recommendation affects the secure score?
 Enable continuous export together with the built-in workbook so that you can get more details about how recommendations affect your secure score.
