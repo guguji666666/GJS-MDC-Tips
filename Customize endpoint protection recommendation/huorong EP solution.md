@@ -298,3 +298,10 @@ You can also find the recommendations related to this initiative
 
 According to the test results in our lab, the customized initiaitve supports server 2016/2019, win 10/11
 
+* On server 2016
+```cmd
+Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
+```
+```cmd
+Get-process wsctrlsvc
+```
