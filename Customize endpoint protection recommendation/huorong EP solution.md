@@ -299,9 +299,12 @@ You can also find the recommendations related to this initiative
 ![image](https://user-images.githubusercontent.com/96930989/220029393-03d42cc3-4380-4d3a-b93b-0b73ec1676d3.png)
 ![image](https://user-images.githubusercontent.com/96930989/220029457-f4af4550-4929-40af-bc22-4fab793fdbd7.png)
 
-According to the test results in our lab, the customized initiaitve supports server 2016/2019, win 10/11
+#### 8. Results in the lab
 
-* On win 10 (compliant)
+According to the test results in our lab, the customized initiaitve supports server 2016/2019, win 10/11
+![image](https://user-images.githubusercontent.com/96930989/223973821-298f1ce3-14d9-4d61-a300-fd199fedf454.png)
+
+Win 10 (compliant)
 ```cmd
 Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
 ```
@@ -311,7 +314,7 @@ Get-process wsctrlsvc
 ![image](https://user-images.githubusercontent.com/96930989/223882375-0d948aee-5f19-46f3-acf2-a7f7af42a423.png)
 
 
-On server 2016 (compliant)
+Server 2016 (compliant)
 ```cmd
 Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
 ```
