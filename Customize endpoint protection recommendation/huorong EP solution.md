@@ -298,7 +298,17 @@ You can also find the recommendations related to this initiative
 
 According to the test results in our lab, the customized initiaitve supports server 2016/2019, win 10/11
 
-* On server 2016
+* On win 10 (compliant)
+```cmd
+Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
+```
+```cmd
+Get-process wsctrlsvc
+```
+![image](https://user-images.githubusercontent.com/96930989/223882375-0d948aee-5f19-46f3-acf2-a7f7af42a423.png)
+
+
+On server 2019 (compliant)
 ```cmd
 Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
 ```
