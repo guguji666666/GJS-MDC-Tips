@@ -308,10 +308,12 @@ Get-process wsctrlsvc
 ![image](https://user-images.githubusercontent.com/96930989/223882375-0d948aee-5f19-46f3-acf2-a7f7af42a423.png)
 
 
-On server 2019 (compliant)
+On server 2016 (compliant)
 ```cmd
 Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
 ```
 ```cmd
 Get-process wsctrlsvc
 ```
+![image](https://user-images.githubusercontent.com/96930989/223934969-cfa03e4b-ec48-4178-ba85-a3c823542436.png)
+
