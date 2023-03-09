@@ -285,5 +285,44 @@ The client machine we deployed before is showing healthy state
 We can also check more details in the recommendation
 ![image](https://user-images.githubusercontent.com/96930989/222014765-2ed8f834-afd1-48e7-a0cc-dac588e75c0c.png)
 
-According to the test results in our lab, the customized initiaitve supports server 2016/2019, win 10/11
+According to the test results in our lab, the customized initiaitve supports win 10/11
+![image](https://user-images.githubusercontent.com/96930989/223878128-cdabcc0b-e8a9-42fe-8fdc-46a2e5254e3b.png)
 
+On machine running Win10 (compliant)
+```cmd
+Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
+```
+```cmd
+Get-process cscm
+```
+![image](https://user-images.githubusercontent.com/96930989/223879339-397e52f3-6d72-4cb7-823d-3f72082149ed.png)
+
+
+On machine running Win11 (compliant)
+```cmd
+Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
+```
+```cmd
+Get-process cscm
+```
+![image](https://user-images.githubusercontent.com/96930989/223879183-8daff3b7-b2e7-4091-9f6a-89b9ec1b8951.png)
+
+
+On Server 2016 (non-compliant)
+```cmd
+Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
+```
+```cmd
+Get-process cscm
+```
+![image](https://user-images.githubusercontent.com/96930989/223879919-ceca3c23-bb6b-4817-8097-363cc3046453.png)
+
+
+On Server 2019 (non-compliant)
+```cmd
+Get-CimInstance -Namespace "root\securitycenter2" -ClassName AntivirusProduct
+```
+```cmd
+Get-process cscm
+```
+![image](https://user-images.githubusercontent.com/96930989/223880126-3ab4207a-d268-4257-b5b6-845bab138cc2.png)
