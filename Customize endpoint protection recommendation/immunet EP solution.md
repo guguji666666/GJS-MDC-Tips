@@ -66,9 +66,9 @@ Unzip the file and you will see
 ![image](https://user-images.githubusercontent.com/96930989/219844457-028a3e5b-06b7-4f1a-9402-57cc1f810d55.png)
 ![image](https://user-images.githubusercontent.com/96930989/219844458-650acd37-c5cb-4e30-87a7-ddc6c3b5777d.png)
 
-Then navigate to the path `C:\Program Files\WindowsPowerShell\Modules`, we can find the files below (generated when we install the module EndPointProtectionDSC)
+Then navigate to the path `C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0`, we can find the files below (generated when we install the module EndPointProtectionDSC)
 ```
-C:\Program Files\WindowsPowerShell\Modules
+C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0
 ```
 ![image](https://user-images.githubusercontent.com/96930989/219844502-56c131aa-112c-43ed-b9de-0953b41cad25.png)
 
