@@ -288,6 +288,8 @@ The client machine we deployed before is showing healthy state
 We can also check more details in the recommendation
 ![image](https://user-images.githubusercontent.com/96930989/222014765-2ed8f834-afd1-48e7-a0cc-dac588e75c0c.png)
 
+#### 8. Results in the lab
+
 According to the test results in our lab, the customized initiaitve supports win 10/11
 ![image](https://user-images.githubusercontent.com/96930989/223878128-cdabcc0b-e8a9-42fe-8fdc-46a2e5254e3b.png)
 
