@@ -42,13 +42,16 @@ The `system assigned identity` should also been enabled on the VM at that point
 * [GuestConfiguration powershell module](https://www.powershellgallery.com/packages/EndPointProtectionDSC/1.0.0.0)
 ```powershell
 Set-ExecutionPolicy RemoteSigned
+
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   
 Install-Module Az -Force
     
 Install-Module -Name EndPointProtectionDSC -Force
 
 Install-Module -Name GuestConfiguration -RequiredVersion 1.19.4 -Force
-
+```
+```powershell
 Import-module -Name EndPointProtectionDSC
 
 Import-module -Name GuestConfiguration
