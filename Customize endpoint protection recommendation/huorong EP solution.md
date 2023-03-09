@@ -46,10 +46,10 @@ Set-ExecutionPolicy RemoteSigned
 Install-Module Az -Force
     
 Install-Module -Name EndPointProtectionDSC -Force
-  
-Import-module -Name EndPointProtectionDSC
 
 Install-Module -Name GuestConfiguration -RequiredVersion 1.19.4 -Force
+
+Import-module -Name EndPointProtectionDSC
 
 Import-module -Name GuestConfiguration
 ```
