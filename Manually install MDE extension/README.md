@@ -106,6 +106,7 @@ $base64_encoded_text = [System.Convert]::ToBase64String($byteContent)
 $base64_encoded_text >> output.txt
 ```
 Sample:
+
 ![image](https://user-images.githubusercontent.com/96930989/224612239-e60ae9b5-e851-4618-ba1c-71b3923bd04a.png)
 
 ![image](https://user-images.githubusercontent.com/96930989/224612267-d8ebd373-789d-40e6-8509-625c61ad734e.png)
@@ -115,12 +116,20 @@ Sample:
 9. Copy the base64 code and paste it in the “<Base64EncodedPackage>" section  
 10. Send the request in the postman
 11. Check the MDE extension in Azure VM
+  
+  ![image](https://user-images.githubusercontent.com/96930989/224614943-7dcc1b70-84c9-4226-a9ea-4fd971468b23.png)
+ 
+  ![image](https://user-images.githubusercontent.com/96930989/224614673-16bf9333-27e9-4ce0-81fa-2f88fef71a4b.png)
+  
+  ![image](https://user-images.githubusercontent.com/96930989/224614713-6ff5be68-9fc6-45bd-b560-fbb7cab998b3.png)
+
+
+
+
 
   
   
-  
-  
-### Install MDE on Azure VM running `Linux`
+### Install MDE on Azure VM running `Linux` （Updating）
 #### 1. [Download and install postman](https://www.postman.com/downloads/)
 #### 2. [Get user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/API%20Basic)
 #### 3. Insert the user token here in postman
