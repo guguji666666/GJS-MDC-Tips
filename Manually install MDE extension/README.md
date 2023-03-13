@@ -61,10 +61,13 @@ Request body
 
 6. Unzip/Extract the packaged onboarding script
 7. Rename the file "WindowsDefenderATP.onboarding" to "WindowsDefenderATPOnboardingScript.cmd"
+
 Before
+
 ![image](https://user-images.githubusercontent.com/96930989/224611653-d85393c3-f1e2-4f9b-84e2-a51e5d1427ee.png)
 
 After
+
 ![image](https://user-images.githubusercontent.com/96930989/224611604-2089e85e-d402-4242-a2d0-8dd156aa4634.png)
 
 9. Check powershell version and execute these powerShell commands in the same folder:
