@@ -14,8 +14,19 @@
 #### 3. Insert the user token here in postman
 ![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
 
+Request URL
+```
+https://management.azure.com/ <ResourceId>/extensions/MDE.<OsType>?api-version=<ApiVersion>
+```
+
+Binding
+```
+Put
+```
 
 Request body
+![image](https://user-images.githubusercontent.com/96930989/224613494-7382c921-c898-4010-8e70-d1bdb156ec2b.png)
+
 ```json
 { 
 "name": "MDE.<OsType>", 
