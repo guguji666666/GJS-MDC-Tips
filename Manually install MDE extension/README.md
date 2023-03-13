@@ -6,7 +6,7 @@
 * [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](https://learn.microsoft.com/en-us/azure/defender-for-cloud/integration-defender-for-endpoint#new-users-who-never-enabled-the-integration-with-microsoft-defender-for-endpoint-for-windows)
 
 
-## Deploy MDE extension using Azure policy
+## Deploy MDE extension using Azure policy ( in this way we can define the scope for deployment)
 #### 1. Navigate to [Azure Policy](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions)
 #### 2. Enter the following in the search bar: "Deploy Microsoft Defender for Endpoint agent on"
 #### 3. Choose the policy that matches the device you want to deploy the extension to
