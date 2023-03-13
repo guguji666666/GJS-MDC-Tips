@@ -50,17 +50,24 @@ Request body
 * ApiVersion: 2015-06-15 (for Azure VM) / 2020-08-02 (for Azure Arc)
 
 #### Get `<Base64EncodedPackage>` for Windows VM
-1. Select operating system: Windows 10 and 11
+1. Navigate to [MDE portal](https://security.microsoft.com)
+2. Navigate to Settings > Endpoints
+![image](https://user-images.githubusercontent.com/96930989/224611145-931e10e5-9929-448c-86c0-ec77ab850272.png)
 
-2. Select Deployment method: System Center Configuration Manager 2012 / 2012 R2 / 1511 / 1602
+3. Select operating system: Windows 10 and 11
+4. Select Deployment method: Microsoft Endpoint Configuration Manager
+5. Click “Download onboarding package“
+![image](https://user-images.githubusercontent.com/96930989/224611328-e089a895-e0e1-4b5a-bb3b-5a00d99a09a8.png)
 
-3. Click “Download onboarding package“
+6. Unzip/Extract the packaged onboarding script
+7. Rename the file "WindowsDefenderATP.onboarding" to "WindowsDefenderATPOnboardingScript.cmd"
+Before
+![image](https://user-images.githubusercontent.com/96930989/224611653-d85393c3-f1e2-4f9b-84e2-a51e5d1427ee.png)
 
-4. Unzip/Extract the packaged onboarding script
+After
+![image](https://user-images.githubusercontent.com/96930989/224611604-2089e85e-d402-4242-a2d0-8dd156aa4634.png)
 
-5. Rename the file "WindowsDefenderATP.onboarding" to "WindowsDefenderATPOnboardingScript.cmd"
-
-6. Check powershell version and execute these PowerShell commands in the same folder:
+9. Check powershell version and execute these powerShell commands in the same folder:
 Check powershell version
 ```powershell
 $PSVersionTable
@@ -84,9 +91,9 @@ $byteContent = Get-Content -Path "WindowsDefenderATPOnboardingScript.cmd" -Encod
 $base64_encoded_text = [System.Convert]::ToBase64String($byteContent)
 $base64_encoded_text >> output.txt
 ```
-7. Copy the base64 code and paste it in the “<Base64EncodedPackage>" section
+9. Copy the base64 code and paste it in the “<Base64EncodedPackage>" section
   
-8. Send the request in the postman
+10. Send the request in the postman
   
 ### Install MDE on Azure VM running `Linux`
 #### 1. [Download and install postman](https://www.postman.com/downloads/)
