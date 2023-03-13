@@ -66,7 +66,8 @@ Check powershell version
 $PSVersionTable
 ```
 Sample
-![image](https://user-images.githubusercontent.com/96930989/224610264-fdb42010-1c42-4149-aa37-25d7838dea82.png)
+
+![image](https://user-images.githubusercontent.com/96930989/224610535-ad3ccc11-f5f8-4048-a2f8-0599d4191f83.png)
 
 For Windows PowerShell versions > 7.0 (included) first line of the script needs to be changed as below:
 ```powershell
@@ -83,7 +84,10 @@ $byteContent = Get-Content -Path "WindowsDefenderATPOnboardingScript.cmd" -Encod
 $base64_encoded_text = [System.Convert]::ToBase64String($byteContent)
 $base64_encoded_text >> output.txt
 ```
-
+7. Copy the base64 code and paste it in the “<Base64EncodedPackage>" section
+  
+8. Send the request in the postman
+  
 ### Install MDE on Azure VM running `Linux`
 #### 1. [Download and install postman](https://www.postman.com/downloads/)
 #### 2. [Get user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/API%20Basic)
