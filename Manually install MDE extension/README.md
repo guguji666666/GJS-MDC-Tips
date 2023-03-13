@@ -36,7 +36,6 @@ Request body
 } 
 } 
 } 
-![image](https://user-images.githubusercontent.com/96930989/224601432-3f6ba076-f049-4180-9291-63ed0979ca27.png)
 ```
 
 
