@@ -91,9 +91,20 @@ $byteContent = Get-Content -Path "WindowsDefenderATPOnboardingScript.cmd" -Encod
 $base64_encoded_text = [System.Convert]::ToBase64String($byteContent)
 $base64_encoded_text >> output.txt
 ```
-9. Copy the base64 code and paste it in the “<Base64EncodedPackage>" section
-  
+Sample:
+![image](https://user-images.githubusercontent.com/96930989/224612239-e60ae9b5-e851-4618-ba1c-71b3923bd04a.png)
+
+![image](https://user-images.githubusercontent.com/96930989/224612267-d8ebd373-789d-40e6-8509-625c61ad734e.png)
+
+![image](https://user-images.githubusercontent.com/96930989/224612298-3d84c518-7c65-4d80-a27d-7b87b34e4ae1.png)
+
+9. Copy the base64 code and paste it in the “<Base64EncodedPackage>" section  
 10. Send the request in the postman
+11. Check the MDE extension in Azure VM
+
+  
+  
+  
   
 ### Install MDE on Azure VM running `Linux`
 #### 1. [Download and install postman](https://www.postman.com/downloads/)
