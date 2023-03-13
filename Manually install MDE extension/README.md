@@ -14,6 +14,7 @@
 #### 3. Insert the user token here in postman
 ![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
 
+
 Request body
 ```json
 { 
@@ -38,6 +39,17 @@ Request body
 } 
 ```
 
+* OsType: Windows / Linux
+
+* ResourceId: Azure Resource Id of the Azure VM
+
+* MachineType: Compute (for Azure VM) / HybridCompute (for Azure Arc)
+
+* MachineTypePath: virtualMachines (for Azure VM) / machines (for Azure Arc)
+
+* ApiVersion: 2015-06-15 (for Azure VM) / 2020-08-02 (for Azure Arc)
+
+##### Get `<Base64EncodedPackage>`
 
 
 ### Install MDE on Azure VM running `Linux`
