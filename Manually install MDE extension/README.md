@@ -214,7 +214,9 @@ Request body
 6. Unzip/Extract the packaged onboarding script
 ![image](https://user-images.githubusercontent.com/96930989/224673057-7042f509-44ba-4113-8fd9-de081d681ffa.png)
 
-7. Execute these python commands line by line in the same folder (run in python and not bash):
+Then create a new python file under the path, let's name it `MDELinux.py`
+
+7. Copy these python commands to `MDELinux.py`, then save it
 ```python
 import base64
 f = open('MicrosoftDefenderATPOnboardingLinuxServer.py', 'rb') 
@@ -224,7 +226,22 @@ base64_encoded_text = base64.b64encode(text)
 with open('ouput.txt', 'w') as f:
    f.write(str(base64_encoded_text))
 ```
- 
+
+8. Run the command
+```python
+cd <path of python files>
+py .\MDELinux.py
+```
+Sample
+![image](https://user-images.githubusercontent.com/96930989/224681648-8ac88c36-bfa2-4e75-8b80-f1fdcc7b7f15.png)
+
+You will then find the `output.txt` under that path, `remove` the leading characters b' from the front and the trailing ‘ at the end of the content of output.txt
+  
+![image](https://user-images.githubusercontent.com/96930989/224681935-6577228e-74ef-44b0-9964-ef6dfff87cf9.png)
+  
+![image](https://user-images.githubusercontent.com/96930989/224681985-513d76d7-5645-45b6-8e24-f792fc5fbf8d.png)
+
+
   
 9. Copy the base64 code and paste it in the “<Base64EncodedPackage>" section  
 10. Send the request in the postman
