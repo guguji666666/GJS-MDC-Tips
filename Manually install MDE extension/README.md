@@ -22,7 +22,8 @@
 
 Please notice, the policy is assigned to the resource group:
 * All the VM without MDE extension installed will be applied and installed with MDE extension.
-* All the VM with MDE extension already installed will remain the same.![Uploading image.png…]()
+* All the VM with MDE extension already installed will remain the same.
+
 
 
 ## Deploy MDE extension using API
