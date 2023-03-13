@@ -4,7 +4,25 @@
 * [MDE extension supported other OS](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/minimum-requirements?view=o365-worldwide#other-supported-operating-systems)
 
 ## Deploy MDE extension using Azure policy
-![image](https://user-images.githubusercontent.com/96930989/224591445-26a54866-e2aa-429a-a906-6ef37687b15c.png)
+#### 1. Navigate to [Azure Policy](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions
+#### 2. Enter the following in the search bar: "Deploy Microsoft Defender for Endpoint agent on"
+#### 3. Choose the policy that matches the device you want to deploy the extension to
+![image](https://user-images.githubusercontent.com/96930989/224615665-f277b0d2-36e5-45c0-b892-54d091b949d1.png)
+#### 4. Click Assign
+#### 5. Select the scope of deployment (Normally Resource Group)
+![image](https://user-images.githubusercontent.com/96930989/224615740-2f5a17fa-960d-450f-8088-4b0bdd10280f.png)
+
+#### 6. Click the remediation tab (for the existing VM without MDE extension installed)
+#### 7. Check “Create a remediation task”
+![image](https://user-images.githubusercontent.com/96930989/224615817-2f29e19b-bbd7-4028-b2bd-3cda04fe72d8.png)
+
+#### 8. Click Review + Create, then Create
+#### 9. Then navigate to Remediation > Remediation tasks, you will find the new remediation task created, wait until the task is completed(running backend), this may take several minutes.
+![image](https://user-images.githubusercontent.com/96930989/224615924-8116d75a-d93e-4c18-85c4-86c873a8270c.png)
+
+Please notice, the policy is assigned to the resource group:
+* All the VM without MDE extension installed will be applied and installed with MDE extension.
+* All the VM with MDE extension already installed will remain the same.![Uploading image.png…]()
 
 
 ## Deploy MDE extension using API
