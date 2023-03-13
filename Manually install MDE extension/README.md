@@ -21,7 +21,7 @@ https://management.azure.com/ <ResourceId>/extensions/MDE.<OsType>?api-version=<
 
 Binding
 ```
-Put
+PUT
 ```
 
 Request body
