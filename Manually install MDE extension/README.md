@@ -49,8 +49,40 @@ Request body
 
 * ApiVersion: 2015-06-15 (for Azure VM) / 2020-08-02 (for Azure Arc)
 
-##### Get `<Base64EncodedPackage>`
+#### Get `<Base64EncodedPackage>` for Windows VM
+1. Select operating system: Windows 10 and 11
 
+2. Select Deployment method: System Center Configuration Manager 2012 / 2012 R2 / 1511 / 1602
+
+3. Click “Download onboarding package“
+
+4. Unzip/Extract the packaged onboarding script
+
+5. Rename the file "WindowsDefenderATP.onboarding" to "WindowsDefenderATPOnboardingScript.cmd"
+
+6. Check powershell version and execute these PowerShell commands in the same folder:
+Check powershell version
+```powershell
+$PSVersionTable
+```
+Sample
+![image](https://user-images.githubusercontent.com/96930989/224610264-fdb42010-1c42-4149-aa37-25d7838dea82.png)
+
+For Windows PowerShell versions > 7.0 (included) first line of the script needs to be changed as below:
+```powershell
+cd <path of the onboarding package>
+$byteContent = Get-Content -Path "WindowsDefenderATPLocalOnboardingScript.cmd" -AsByteStream
+$base64_encoded_text = [System.Convert]::ToBase64String($byteContent)
+$base64_encoded_text >> output.txt
+```
+
+For Windows PowerShell versions < 7.0 (included)
+```powershell
+cd <path of the onboarding package>
+$byteContent = Get-Content -Path "WindowsDefenderATPOnboardingScript.cmd" -Encoding Byte
+$base64_encoded_text = [System.Convert]::ToBase64String($byteContent)
+$base64_encoded_text >> output.txt
+```
 
 ### Install MDE on Azure VM running `Linux`
 #### 1. [Download and install postman](https://www.postman.com/downloads/)
