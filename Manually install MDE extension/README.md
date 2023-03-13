@@ -14,6 +14,31 @@
 #### 3. Insert the user token here in postman
 ![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
 
+Request body
+```json
+{ 
+"name": "MDE.<OsType>", 
+"id": "<ResourceId>/extensions/MDE.<OsType>", 
+"type": "Microsoft.<MachineType>/<MachineTypePath>/extensions", 
+"location": "<location_of_vm>", 
+"properties": { 
+"autoUpgradeMinorVersion": true, 
+"publisher": "Microsoft.Azure.AzureDefenderForServers", 
+"type": "MDE.<OsType>", 
+"typeHandlerVersion": "1.0", 
+"settings": { 
+"azureResourceId": "<ResourceId>", 
+"defenderForServersWorkspaceId": "<SubscriptionId>", 
+"forceReOnboarding": true 
+}, 
+"protectedSettings": { 
+"defenderForEndpointOnboardingScript": "<Base64EncodedPackage>" 
+} 
+} 
+} 
+![image](https://user-images.githubusercontent.com/96930989/224601432-3f6ba076-f049-4180-9291-63ed0979ca27.png)
+```
+
 
 
 ### Install MDE on Azure VM running `Linux`
