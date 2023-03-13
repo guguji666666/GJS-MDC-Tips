@@ -4,7 +4,7 @@
 * [MDE extension supported other OS](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/minimum-requirements?view=o365-worldwide#other-supported-operating-systems)
 
 ## Deploy MDE extension using Azure policy
-#### 1. Navigate to [Azure Policy](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions
+#### 1. Navigate to [Azure Policy](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions)
 #### 2. Enter the following in the search bar: "Deploy Microsoft Defender for Endpoint agent on"
 #### 3. Choose the policy that matches the device you want to deploy the extension to
 ![image](https://user-images.githubusercontent.com/96930989/224615665-f277b0d2-36e5-45c0-b892-54d091b949d1.png)
