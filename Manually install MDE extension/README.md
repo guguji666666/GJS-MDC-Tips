@@ -2,6 +2,9 @@
 * [MDE extension supported Windows OS](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/minimum-requirements?view=o365-worldwide#supported-windows-versions)
 * [MDE extension supported Linux OS](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux?view=o365-worldwide#system-requirements)
 * [MDE extension supported other OS](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/minimum-requirements?view=o365-worldwide#other-supported-operating-systems)
+* [Defender for Servers Plan 2 now integrates with Defender for Endpoint unified solution](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-servers-plan-2-now-integrates-with-defender-for/ba-p/3527534)
+* [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](https://learn.microsoft.com/en-us/azure/defender-for-cloud/integration-defender-for-endpoint#new-users-who-never-enabled-the-integration-with-microsoft-defender-for-endpoint-for-windows)
+
 
 ## Deploy MDE extension using Azure policy
 #### 1. Navigate to [Azure Policy](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions)
