@@ -76,7 +76,7 @@ $base64_encoded_text = [System.Convert]::ToBase64String($byteContent)
 $base64_encoded_text >> output.txt
 ```
 
-For Windows PowerShell versions < 7.0 (included)
+For Windows PowerShell versions < 7.0
 ```powershell
 cd <path of the onboarding package>
 $byteContent = Get-Content -Path "WindowsDefenderATPOnboardingScript.cmd" -Encoding Byte
