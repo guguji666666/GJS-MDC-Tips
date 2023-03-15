@@ -31,7 +31,7 @@ SecurityResources
 | project subscriptionId, current, max, percentage = ((current / max)*100)
 ```
   
-## 4. ARG check relevant initiatives in subscription(basic)
+## 4. ARG check relevant initiatives in subscription (basic)
 
 ```kusto
 securityresources
@@ -46,7 +46,7 @@ securityresources
 | project initiativeName, statusInMdc
 ```
 
-## 5. ARG check relevant initiatives in subscription(advanced)
+## 5. ARG check relevant initiatives in subscription (advanced)
 
 ```kusto
 securityresources
