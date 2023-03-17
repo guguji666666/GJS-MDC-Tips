@@ -211,6 +211,7 @@ C:\Program Files\WindowsPowerShell\Modules\EndPointProtectionDSC\1.0.0.0\AzureGu
 
 Once the configuration files are all modified, `Close the powershell client app`, re-launch powershell client app with local admin, run the command:
 ```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 New-EPDSCAzureGuestConfigurationPolicyPackage
 ```
 Then follow the instructions in the script.
