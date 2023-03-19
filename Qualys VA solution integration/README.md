@@ -24,3 +24,66 @@ As the metadata scan and upload only occurs every 12 hours, there can be a delay
 
 ![image](https://user-images.githubusercontent.com/96930989/212463200-28dfd795-2b93-40e9-ab37-61e3161dc64d.png)
 
+
+## Bulk deploy qualys built-in solution
+#### [Automate at-scale deployments - Defender for Cloud's integrated Qualys vulnerability scanner](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
+![image](https://user-images.githubusercontent.com/96930989/226186069-0fd15aa9-c321-4e4d-b20a-f6c1edd45e7f.png)
+
+##### If you are using Azure policy for deployment and you only want to deploy qualys extension on VMs with specified `tags`, then
+1. Hard-code the tag name and value in the policy rule
+```json
+"policyRule": {
+    "if": {
+        "allOf": [{
+                "field": "type",
+                "in": [
+                    "Microsoft.Compute/virtualMachines",
+                    "Microsoft.ClassicCompute/virtualMachines"
+                ]
+            }, {
+                "field": "tags['environment']",
+                "in": ["prod",”UAT”]
+            }
+        ]
+    },
+    "then": {
+        "effect": "deployIfNotExists",
+```
+
+or
+
+2. If you want to parameterize the tag name and value,
+```json
+"parameters": {
+    "inclusionTagName": {
+        "type": "String",
+        "metadata": {
+            "displayName": "Inclusion Tag Name",
+            "description": "Name of the tag to use for including VMs in the scope of this policy. 
+        }
+    },
+    "inclusionTagValue": {
+        "type": "Array",
+        "metadata": {
+            "displayName": "Inclusion Tag Values",
+            "description": "Value of the tag to use for including VMs in the scope of this policy. 
+        }
+    }
+},
+"policyRule": {
+    "if": {
+        "allOf": [{
+                "field": "type",
+                "in": [
+                    "Microsoft.Compute/virtualMachines",
+                    "Microsoft.ClassicCompute/virtualMachines"
+                ]
+            }, {
+                "field": "[concat('tags[', parameters('inclusionTagName'), ']')]",
+                "in": "[parameters('inclusionTagValue')]"
+            }
+        ]
+    },
+    "then": {
+        "effect": "deployIfNotExists",
+```
