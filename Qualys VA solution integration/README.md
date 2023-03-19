@@ -87,3 +87,13 @@ or
     "then": {
         "effect": "deployIfNotExists",
 ```
+
+Complete policy definition for scenario 1
+```json
+test1
+```
+
+Complete policy definition for scenario 2
+```json
+test2
+```
