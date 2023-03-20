@@ -1,3 +1,5 @@
+# [Security recommendations - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference)
+
 # Defender for cloud FAQ
 ## Defender for servers plan - workspaces and agents
 ### 1. The behavior that defender for cloud creates `default` workspaces
