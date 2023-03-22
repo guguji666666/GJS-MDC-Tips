@@ -117,15 +117,18 @@ https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{RGNa
 #### 1. Disable auto-provisioning from previous BYOL solution
 #### 2. Remove qualys extension from Azure portal
 #### 3. Uninstall qualys agent on local machine
+![image](https://user-images.githubusercontent.com/96930989/226828201-673c12a6-7aec-46d6-a53d-7cefc6fdbe1b.png)
+
 #### 4. Remove the files/registry keys below:
 * Ensure that the Qualys Agent folder is completely removed from the location C:\ProgramData\Qualys
 * Ensure that the Qualys Agent folder is completely removed from the location C:\ProgramFiles\Qualys
 * Remove the QualysAgent from below provided registry HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\**
 * Remove Qualys from below registry location HKEY_LOCAL_MACHINE\SOFTWARE\
-#### 5. Restart the VM
-#### 6. Wait until the qualys extension and agent are pushed via auto-provisioning set in the new BYOL solution
-#### 7. Update registry key under path Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Qualys if required
-#### 8. Restart Qualys service
+#### 5. Delete the BYOL solution from subscription
+#### 6. Restart the VM
+#### 7. Wait until the qualys extension and agent are pushed via auto-provisioning set in the new BYOL solution
+#### 8. Update registry key under path Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Qualys if required (need support from qualys team)
+#### 9. Restart Qualys service
 
 
 
