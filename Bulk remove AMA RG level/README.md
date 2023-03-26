@@ -31,10 +31,10 @@ You will see the results below once the operation has been performed successfull
 
 ### Reference
 
-[Get-AzVM](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azvm?view=azps-9.2.0)
+* [Get-AzVM](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azvm?view=azps-9.2.0)
 
-[Manage AMA on Azure VM or Arc-enabled VM](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-powershell#uninstall)
+* [Manage AMA on Azure VM or Arc-enabled VM](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-powershell#uninstall)
 
-[Details of defender for server plan](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace)
+* [Details of defender for server plan](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace)
 
-[Deploy MMA or AMA to defined scope using azure policy](https://learn.microsoft.com/en-us/azure/azure-monitor/policy-reference)
+* [Deploy MMA or AMA to defined scope using azure policy](https://learn.microsoft.com/en-us/azure/azure-monitor/policy-reference)
