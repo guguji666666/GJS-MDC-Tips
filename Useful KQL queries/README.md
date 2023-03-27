@@ -204,3 +204,25 @@ AzureDiagnostics | whereCategory == "DDoSMitigationFlowLogs"
 AzureDiagnostics | whereCategory == "DDoSMitigationReports"
 ```
 
+## 10. Check VA results
+```kusto
+securityresources | where type =~ "microsoft.security/assessments/subassessments"
+        | extend assessmentKey=extract(@"(?i)providers/Microsoft.Security/assessments/([^/]*)", 1, id), subAssessmentId=tostring(properties.id), parentResourceId= extract("(.+)/providers/Microsoft.Security", 1, id)
+        | extend resourceId = tostring(properties.resourceDetails.id)
+        | extend subAssessmentName=tostring(properties.displayName),
+            subAssessmentDescription=tostring(properties.description),
+            subAssessmentRemediation=tostring(properties.remediation),
+            subAssessmentCategory=tostring(properties.category),
+            subAssessmentImpact=tostring(properties.impact),
+            severity=tostring(properties.status.severity),
+            status=tostring(properties.status.code),
+            cause=tostring(properties.status.cause),
+            statusDescription=tostring(properties.status.description),
+            additionalData=tostring(properties.additionalData)
+        | where assessmentKey == "1195afff-c881-495e-9bc5-1486211ae03f"
+                      | where status == "Unhealthy"
+        | summarize numOfResources=dcount(resourceId), timeGenerated=arg_max(todatetime(properties.timeGenerated), additionalData) by assessmentKey, subAssessmentId, subAssessmentName, subAssessmentCategory, severity, status, cause, statusDescription, subAssessmentDescription, subAssessmentRemediation, subAssessmentImpact
+        | extend high = iff(severity == "High", 3,0), medium = iff(severity == "Medium", 2, 0), low = iff(severity == "Low", 1 ,0)
+        | extend all = high + medium + low
+        | order by all desc, numOfResources desc
+```
