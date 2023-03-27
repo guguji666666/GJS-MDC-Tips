@@ -195,4 +195,12 @@ In this demo, i will use the name `table_ingestion`
 ![image](https://user-images.githubusercontent.com/96930989/210542776-3f20b878-e4cd-4c0a-ad8a-b8914a4a3bdc.png)
 
 
+## 9. ARG list DDOS related reports (including mitigation reports)
+```kusto
+AzureDiagnostics | whereCategory == "DDoSMitigationFlowLogs"
+```
+
+```kusto
+AzureDiagnostics | whereCategory == "DDoSMitigationReports"
+```
 
