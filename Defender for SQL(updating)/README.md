@@ -101,11 +101,11 @@ New-AzRoleAssignment `
 ```
 ![image](https://user-images.githubusercontent.com/96930989/228438226-f231b96b-4f91-4014-ad3b-a64a61a40782.png)
 
+
 ##### Enable Advanced Data Security
 ```powershell
 Enable-AzSqlServerAdvancedDataSecurity -DoNotConfigureVulnerabilityAssessment -ResourceGroupName $ResourceGroupName -ServerName $ServerName
 ```
-![image](https://user-images.githubusercontent.com/96930989/228438325-24251f11-dddf-446c-8102-ed626dad2803.png)
 
 
 ##### Set VA policy with an empty SAS Key, this indicates we are using Managed Identity
