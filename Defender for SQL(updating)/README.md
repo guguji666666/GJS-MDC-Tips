@@ -67,7 +67,7 @@ Defender for SQL is not enabled yet
 $ResourceGroupName = 'GJS-MS150-MDFC2'
 $ServerName = 'gjs-test-sql2'
 $DatabaseName = 'gjs-ms-sqdb3'
-$SubscriptionId = "74a72629-ac6d-44db-a66a-abc69f3bfb7e"
+$SubscriptionId = "74a72629-xxxx-xxxb-xxxx-xxxx3bfb7e"
 $StorageAccountName = "gjs666storage1"
 ```
 
