@@ -17,6 +17,7 @@
 ## Useful powershell commands
 ### 1. Define storage account to store defender for SQL VA results
 * Apply to configuration at the server side (defender for SQL should be enabled at server level)
+* Support storage account with puiblic access or behind firewall
 * The storage account and the SQL server should be in the same resource group (we can modify the storage account later)
 
 ```powershell
@@ -54,3 +55,69 @@ Update-AzSqlServerVulnerabilityAssessmentSetting `
     -BlobStorageSasUri "https://$StorageAccountName.blob.core.windows.net/vulnerability-assessment?" `
     -RecurringScansInterval Weekly
 ```
+
+#### Sample in my lab
+
+Defender for SQL is not enabled yet
+
+![image](https://user-images.githubusercontent.com/96930989/228437517-4cbbdd91-5328-4e33-b466-a3d0db7a0a7e.png)
+
+
+```powershell
+$ResourceGroupName = 'GJS-MS150-MDFC2'
+$ServerName = 'gjs-test-sql2'
+$DatabaseName = 'gjs-ms-sqdb3'
+$SubscriptionId = "74a72629-ac6d-44db-a66a-abc69f3bfb7e"
+$StorageAccountName = "gjs666storage1"
+```
+
+##### Connect Azure 
+```powershell
+Connect-AzAccount
+Set-AzContext -SubscriptionId $SubscriptionId
+```
+![image](https://user-images.githubusercontent.com/96930989/228437788-e2571c68-9577-4361-b5ca-2b0d4b71312c.png)
+
+##### Generate/Update a Managed Identity for the SQL Server
+```powershell
+Set-AzSqlServer -AssignIdentity -ResourceGroupName $ResourceGroupName -ServerName $ServerName
+```
+![image](https://user-images.githubusercontent.com/96930989/228437991-01b4b755-c7c5-4bbf-8ee9-c84f19d6b6c8.png)
+
+
+##### Get the SQL Server information, as we need the identity that was generated.
+```powershell
+$sqlServer = Get-AzSqlServer -ResourceGroupName $ResourceGroupName -ServerName $ServerName
+```
+
+##### Assign the Managed Identity a "Storage Blob Data Contributor" role on the Storage account.
+```powershell
+New-AzRoleAssignment `
+    -ObjectId $sqlServer.Identity.PrincipalId.Guid `
+    -RoleDefinitionName 'Storage Blob Data Contributor' `
+    -ResourceName $StorageAccountName `
+    -ResourceType 'Microsoft.Storage/storageAccounts' `
+    -ResourceGroupName $ResourceGroupName
+```
+![image](https://user-images.githubusercontent.com/96930989/228438226-f231b96b-4f91-4014-ad3b-a64a61a40782.png)
+
+##### Enable Advanced Data Security
+```powershell
+Enable-AzSqlServerAdvancedDataSecurity -DoNotConfigureVulnerabilityAssessment -ResourceGroupName $ResourceGroupName -ServerName $ServerName
+```
+![image](https://user-images.githubusercontent.com/96930989/228438325-24251f11-dddf-446c-8102-ed626dad2803.png)
+
+
+##### Set VA policy with an empty SAS Key, this indicates we are using Managed Identity
+```powershell
+Update-AzSqlServerVulnerabilityAssessmentSetting `
+    -ResourceGroupName $ResourceGroupName `
+    -ServerName $ServerName `
+    -BlobStorageSasUri "https://$StorageAccountName.blob.core.windows.net/vulnerability-assessment?" `
+    -RecurringScansInterval Weekly
+```
+
+Then we go to the portal, at that point we can modify the storage account we want to use in different resource groups
+
+![image](https://user-images.githubusercontent.com/96930989/228439099-9a3cc4a4-500b-4b9f-a5ac-b0166609538a.png)
+
