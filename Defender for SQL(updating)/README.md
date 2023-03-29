@@ -16,7 +16,7 @@
 
 ## Useful powershell commands
 ### 1. Define storage account to store defender for SQL VA results
-* Apply to configuration at the server side (defender for SQL should be enabled at server level)
+* Apply to configuration at the server side (defender for SQL should be disabled at subscription level)
 * Support storage account with puiblic access or behind firewall
 * The storage account and the SQL server should be in the same resource group (we can modify the storage account later)
 
