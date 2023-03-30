@@ -15,11 +15,19 @@
 
 ![image](https://user-images.githubusercontent.com/96930989/224294881-80429837-8385-40c4-8437-2b6395c432bc.png)
 
+### 1. VA baselines after migration
 You may need to re-configure the baselines in the VA scanning results after migration to the express configuration, the existing baselines could be found from blob in the storage account. (below is the example)
 
 ![image](https://user-images.githubusercontent.com/96930989/228467900-4ff217bc-721c-4d48-8777-80c9fb7a29bb.png)
 
 ![image](https://user-images.githubusercontent.com/96930989/228467921-40c50f17-59a6-44b6-af4f-c751e59400cc.png)
+
+### 2. Email notification of VA scanning results after migration 
+
+The diffences between express and classic configuration are mentioned [here](https://learn.microsoft.com/en-us/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview#whats-the-difference-between-the-express-and-classic-configuration)
+
+![image](https://user-images.githubusercontent.com/96930989/228756838-cfa4dc7c-4ca3-41d7-a109-faac743ce765.png)
+
 
 ## Useful powershell commands
 ### 1. Define storage account to store defender for SQL VA results
