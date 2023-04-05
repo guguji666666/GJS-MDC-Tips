@@ -103,6 +103,8 @@ Set-AzVMDiskEncryptionExtension -ResourceGroupName Custom-EP-guestconfiguration 
 
 ![image](https://user-images.githubusercontent.com/96930989/230122686-0ad2dae6-61c8-472c-ab4f-0d38f6064b7c.png)
 
+Then we wait until the command is run completely
+
 ![image](https://user-images.githubusercontent.com/96930989/230123271-75c36225-3ac5-4ccc-863e-0b49ffae58d3.png)
 
 Before we enable ADE
