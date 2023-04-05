@@ -87,7 +87,7 @@ New-AzKeyvault -name GJSADEKV -ResourceGroupName ADEKV -Location EastAsia -Enabl
 ![image](https://user-images.githubusercontent.com/96930989/230056186-da3cf419-f97e-4ab8-917e-8d9fdf6fc818.png)
 
 
-Then, we can [Encrypt the virtual machine](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart#encrypt-the-virtual-machine)
+Then, we can [Encrypt the virtual machine using powershell commands](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart#encrypt-the-virtual-machine)
 ```powershell
 $KeyVault = Get-AzKeyVault -VaultName <name of your KV> -ResourceGroupName <Name of your resource group that KV locates>
 ```
