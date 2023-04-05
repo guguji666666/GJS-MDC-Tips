@@ -60,3 +60,4 @@ Enabling both ADE and HBE at the same time on a VM is not supported at present. 
 
 ![image](https://user-images.githubusercontent.com/96930989/229993443-7b8961a6-da20-440e-a059-f247ff9e7ec1.png)
 
+1. Check Azure Disk Encryption on the VM
