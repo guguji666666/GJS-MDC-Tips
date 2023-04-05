@@ -80,6 +80,27 @@ Set-AzContext -Subscription <subscription id>
 New-AzKeyvault -name <name of your KV> -ResourceGroupName <Name of your resource group> -Location EastUS -EnabledForDiskEncryption
 ```
 
+Sample:
+```powershell
+New-AzKeyvault -name GJSADEKV -ResourceGroupName ADEKV -Location EastAsia -EnabledForDiskEncryption
+```
+![image](https://user-images.githubusercontent.com/96930989/230056186-da3cf419-f97e-4ab8-917e-8d9fdf6fc818.png)
+
+Then, we can [Encrypt the virtual machine](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart#encrypt-the-virtual-machine)
+```powershell
+$KeyVault = Get-AzKeyVault -VaultName MyKV -ResourceGroupName MyResourceGroup
+```
+```powershell
+Set-AzVMDiskEncryptionExtension -ResourceGroupName <Name of the resource group where VM locates> -VMName <Name of the VM> -DiskEncryptionKeyVaultUrl $KeyVault.VaultUri -DiskEncryptionKeyVaultId $KeyVault.ResourceId
+```
+Sample
+```powershell
+$KeyVault = Get-AzKeyVault -VaultName MyKV -ResourceGroupName MyResourceGroup
+```
+```powershell
+Set-AzVMDiskEncryptionExtension -ResourceGroupName <Name of the resource group where VM locates> -VMName <Name of the VM> -DiskEncryptionKeyVaultUrl $KeyVault.VaultUri -DiskEncryptionKeyVaultId $KeyVault.ResourceId
+
+
 ADE extension
 
 
