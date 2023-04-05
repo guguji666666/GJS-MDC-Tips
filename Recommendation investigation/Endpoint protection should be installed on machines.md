@@ -1,6 +1,6 @@
 ## Recommendation "Endpoint protection should be installed on machines"
 
-The VM will be considered as `Healthy resource` when meeting the requirements below:
+### The VM will be considered as `Healthy resource` when meeting the requirements below:
 1. Defender for server plan 1/2 is enabled at `subscription level`
 2. Defender for server plan also enabled at `workspace level`
 3. MMA (Microsoft monitoring agent) or AMA (Azure monitoring agent) is installed on the VM and `provisioned successfully`
@@ -14,8 +14,10 @@ The VM will be considered as `Healthy resource` when meeting the requirements be
 
 ![image](https://user-images.githubusercontent.com/96930989/211691952-851a9ff2-5443-4777-bfd4-0bcb0d861db1.png)
 
+### Endpoint protection solutions
 [Endpoint protection assessment and recommendations in Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/endpoint-protection-recommendations-technical#windows-defender)
 
+#### Windows Defender
 1. Defender for Cloud recommends Endpoint protection should be installed on your machines when `Get-MpComputerStatus` runs and the result is `AMServiceEnabled: False`
 2. Defender for Cloud recommends Endpoint protection health issues should be resolved on your machines when `Get-MpComputerStatus` runs and any of the following occurs:
 Any of the following properties are false:
