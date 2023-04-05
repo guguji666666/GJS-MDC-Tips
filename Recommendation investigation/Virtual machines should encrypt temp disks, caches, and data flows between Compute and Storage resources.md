@@ -70,6 +70,13 @@ Enabling both ADE and HBE at the same time on a VM is not supported at present. 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 Install-Module Az
+```
+```powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Connect-AzAccount -TenantId <your tenant id>
+Set-AzContext -Subscription <subscription id>
+```
+```powershell
 New-AzKeyvault -name <name of your KV> -ResourceGroupName <Name of your resource group> -Location EastUS -EnabledForDiskEncryption
 ```
 
