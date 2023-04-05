@@ -60,4 +60,20 @@ Enabling both ADE and HBE at the same time on a VM is not supported at present. 
 
 ![image](https://user-images.githubusercontent.com/96930989/229993443-7b8961a6-da20-440e-a059-f247ff9e7ec1.png)
 
-1. Check Azure Disk Encryption on the VM
+
+1.Check Azure Disk Encryption on the VM
+
+[Quickstart: Create and encrypt a Windows virtual machine in Azure with PowerShell](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart)
+
+[Create a Key Vault configured for encryption keys](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart#create-a-key-vault-configured-for-encryption-keys)
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
+Install-Module Az
+New-AzKeyvault -name <name of your KV> -ResourceGroupName <Name of your resource group> -Location EastUS -EnabledForDiskEncryption
+```
+
+ADE extension
+
+
+Check ADE state on disk
