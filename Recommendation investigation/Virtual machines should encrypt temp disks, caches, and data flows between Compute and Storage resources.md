@@ -52,3 +52,11 @@ policyresources
 | project resourceName, statusInMdc, statusInPolicy
 ```
 
+Notice
+
+Enabling both ADE and HBE at the same time on a VM is not supported at present. We should only enable either ADE or HBE.
+
+##### [Comparison of Disk Storage SSE, ADE, encryption at host, and Confidential disk encryption](https://learn.microsoft.com/en-us/azure/virtual-machines/disk-encryption-overview#comparison)
+
+![image](https://user-images.githubusercontent.com/96930989/229993443-7b8961a6-da20-440e-a059-f247ff9e7ec1.png)
+
