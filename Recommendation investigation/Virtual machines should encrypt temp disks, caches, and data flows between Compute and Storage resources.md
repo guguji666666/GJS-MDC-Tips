@@ -123,4 +123,8 @@ Then Check ADE state on disk
 
 ### Check `Encryption at host` on the VM
 
-[Use the Azure portal to enable end-to-end encryption using encryption at host](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal?tabs=azure-powershell)
+* [Use the Azure portal to enable end-to-end encryption using encryption at host](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal?tabs=azure-powershell)
+* [Use the Azure PowerShell module to enable end-to-end encryption using encryption at host](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-host-based-encryption-powershell)
+* [Use the Azure CLI to enable end-to-end encryption using encryption at host](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli)
+
+
