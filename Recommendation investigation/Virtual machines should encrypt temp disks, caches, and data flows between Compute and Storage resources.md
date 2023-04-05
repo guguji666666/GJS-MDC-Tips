@@ -65,7 +65,7 @@ Enabling both ADE and HBE at the same time on a VM is not supported at present. 
 
 [Quickstart: Create and encrypt a Windows virtual machine in Azure with PowerShell](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart)
 
-[Create a Key Vault configured for encryption keys](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart#create-a-key-vault-configured-for-encryption-keys)
+First, [Create a Key Vault configured for encryption keys](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart#create-a-key-vault-configured-for-encryption-keys)
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
@@ -80,11 +80,12 @@ Set-AzContext -Subscription <subscription id>
 New-AzKeyvault -name <name of your KV> -ResourceGroupName <Name of your resource group that KV locates> -Location EastUS -EnabledForDiskEncryption
 ```
 
-Sample:
+Sample
 ```powershell
 New-AzKeyvault -name GJSADEKV -ResourceGroupName ADEKV -Location EastAsia -EnabledForDiskEncryption
 ```
 ![image](https://user-images.githubusercontent.com/96930989/230056186-da3cf419-f97e-4ab8-917e-8d9fdf6fc818.png)
+
 
 Then, we can [Encrypt the virtual machine](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart#encrypt-the-virtual-machine)
 ```powershell
@@ -93,6 +94,7 @@ $KeyVault = Get-AzKeyVault -VaultName <name of your KV> -ResourceGroupName <Name
 ```powershell
 Set-AzVMDiskEncryptionExtension -ResourceGroupName <Name of the resource group where VM locates> -VMName <Name of the VM> -DiskEncryptionKeyVaultUrl $KeyVault.VaultUri -DiskEncryptionKeyVaultId $KeyVault.ResourceId
 ```
+
 Sample
 ```powershell
 $KeyVault = Get-AzKeyVault -VaultName GJSADEKV -ResourceGroupName ADEKV
