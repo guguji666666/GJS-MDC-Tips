@@ -61,7 +61,7 @@ Enabling both ADE and HBE at the same time on a VM is not supported at present. 
 ![image](https://user-images.githubusercontent.com/96930989/229993443-7b8961a6-da20-440e-a059-f247ff9e7ec1.png)
 
 
-### Check Azure Disk Encryption on the VM
+### Check `Azure Disk Encryption` (ADE) on the VM
 
 [Quickstart: Create and encrypt a Windows virtual machine in Azure with PowerShell](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart)
 
@@ -118,3 +118,7 @@ After ADE is enabled, we check ADE extension first
 Then Check ADE state on disk
 
 ![image](https://user-images.githubusercontent.com/96930989/230123641-f39a9ea9-8f13-43c7-a179-cd58f1bcaaba.png)
+
+### Check `Encryption at host` on the VM
+
+[Use the Azure portal to enable end-to-end encryption using encryption at host](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal?tabs=azure-powershell)
