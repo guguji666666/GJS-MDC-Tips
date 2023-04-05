@@ -95,10 +95,10 @@ Set-AzVMDiskEncryptionExtension -ResourceGroupName <Name of the resource group w
 ```
 Sample
 ```powershell
-$KeyVault = Get-AzKeyVault -VaultName MyKV -ResourceGroupName MyResourceGroup
+$KeyVault = Get-AzKeyVault -VaultName GJSADEKV -ResourceGroupName ADEKV
 ```
 ```powershell
-Set-AzVMDiskEncryptionExtension -ResourceGroupName <Name of the resource group where VM locates> -VMName <Name of the VM> -DiskEncryptionKeyVaultUrl $KeyVault.VaultUri -DiskEncryptionKeyVaultId $KeyVault.ResourceId
+Set-AzVMDiskEncryptionExtension -ResourceGroupName Custom-EP-guestconfiguration -VMName win11-test01 -DiskEncryptionKeyVaultUrl $KeyVault.VaultUri -DiskEncryptionKeyVaultId $KeyVault.ResourceId
 ```
 
 ADE extension
