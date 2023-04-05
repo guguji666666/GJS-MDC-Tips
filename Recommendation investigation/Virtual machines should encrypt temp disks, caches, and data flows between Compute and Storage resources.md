@@ -100,7 +100,10 @@ $KeyVault = Get-AzKeyVault -VaultName GJSADEKV -ResourceGroupName ADEKV
 ```powershell
 Set-AzVMDiskEncryptionExtension -ResourceGroupName Custom-EP-guestconfiguration -VMName win11-test01 -DiskEncryptionKeyVaultUrl $KeyVault.VaultUri -DiskEncryptionKeyVaultId $KeyVault.ResourceId
 ```
+
 ![image](https://user-images.githubusercontent.com/96930989/230122686-0ad2dae6-61c8-472c-ab4f-0d38f6064b7c.png)
+
+![image](https://user-images.githubusercontent.com/96930989/230123271-75c36225-3ac5-4ccc-863e-0b49ffae58d3.png)
 
 Before we enable ADE
 
