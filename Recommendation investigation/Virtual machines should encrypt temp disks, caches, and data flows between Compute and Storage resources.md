@@ -1,6 +1,6 @@
-### Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources
+# Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources
 
-#### Information about this recommendation
+## Information about this recommendation
 
 Policy name
 ```
@@ -23,7 +23,7 @@ d57a4221-a804-52ca-3dea-768284f06bb7
 ```
 
 
-#### ARG query to compare the results between Azure policy and defender for cloud
+### ARG query to compare the results between Azure policy and defender for cloud
 
 Navigate to Azure portal, and search `Resource Graph Explorer` on the top
 
@@ -61,7 +61,7 @@ Enabling both ADE and HBE at the same time on a VM is not supported at present. 
 ![image](https://user-images.githubusercontent.com/96930989/229993443-7b8961a6-da20-440e-a059-f247ff9e7ec1.png)
 
 
-1.Check Azure Disk Encryption on the VM
+### Check Azure Disk Encryption on the VM
 
 [Quickstart: Create and encrypt a Windows virtual machine in Azure with PowerShell](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-powershell-quickstart)
 
@@ -99,7 +99,7 @@ $KeyVault = Get-AzKeyVault -VaultName MyKV -ResourceGroupName MyResourceGroup
 ```
 ```powershell
 Set-AzVMDiskEncryptionExtension -ResourceGroupName <Name of the resource group where VM locates> -VMName <Name of the VM> -DiskEncryptionKeyVaultUrl $KeyVault.VaultUri -DiskEncryptionKeyVaultId $KeyVault.ResourceId
-
+```
 
 ADE extension
 
