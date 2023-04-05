@@ -111,5 +111,8 @@ Before we enable ADE
 
 Then, we check ADE extension
 
+![image](https://user-images.githubusercontent.com/96930989/230123418-59414fd5-c7b9-44cf-aaca-923c2e540d47.png)
 
 Check ADE state on disk
+
+![image](https://user-images.githubusercontent.com/96930989/230123641-f39a9ea9-8f13-43c7-a179-cd58f1bcaaba.png)
