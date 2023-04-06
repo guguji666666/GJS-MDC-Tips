@@ -55,7 +55,9 @@ C:\ProgramFiles\Qualys
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212525183-c24a0d15-1ca1-4800-b049-302b97a12619.png)
 
-3. Remove the `QualysAgent` from below provided registry path:
+3. Remove qualys app from control panel
+
+4. Remove the `QualysAgent` from below provided registry path:
 ```
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\
 ```
@@ -67,7 +69,11 @@ HKEY_LOCAL_MACHINE\SOFTWARE\
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212525234-7335ac4d-86cd-43ac-ae17-c9439067f835.png)
 
-4. Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
+5. Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
+
+We pick REST API as sample:
+
+Get the access token of your Azure AD account following the steps in ()
 
 #### 6. Collect the logs below and reach Microsoft support
 Log 1
