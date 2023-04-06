@@ -79,14 +79,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\
 
 The steps below shown how to install qualys extension using REST API
 
-* Download postman from [Download Postman](https://www.postman.com/downloads/) and launch it.
+a. Download postman from [Download Postman](https://www.postman.com/downloads/) and launch it.
 
-* [Get AAD user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/API%20Basic)
+b. [Get AAD user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/API%20Basic)
 
-* Insert the user token here in postman
+c. Insert the user token here in postman
 ![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
 
-* Set the `request URL`, `Body` following
+d. Set the `request URL`, `Body` following
 ![image](https://user-images.githubusercontent.com/96930989/210707768-4979d7d8-4a3e-4b8d-821e-3234f2704be5.png)
 
 `Binding`: PUT
@@ -106,7 +106,7 @@ Later the extension will show provisioning suceeded state
 
 ![image](https://user-images.githubusercontent.com/96930989/230295602-53043ef9-4774-426b-bd49-f416ec7f4efb.png)
 
-##### e. Trigger qualys on-demand scan
+e. Trigger qualys on-demand scan
 
 Run the command, then monitor for24 hours
 
