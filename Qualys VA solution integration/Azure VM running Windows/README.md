@@ -43,7 +43,9 @@ C:\ProgramData\Qualys\QualysAgent\Vulnerability_snapshot.db
 REG ADD HKLM\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability /v "ScanOnDemand" /t REG_DWORD /d "1" /f
 ```
 #### 5. If the issue still persists, reinstall the qualys agent, then wait for 24 hours
+
 1. Romove the qualys extension "WindowsAgent.AzureSecurityCenter" from Azure VM in Azure portal
+
 2. Ensure that the `Qualys Agent` folder is completely removed from the location:
 ```
 C:\ProgramData\Qualys
@@ -55,7 +57,9 @@ C:\ProgramFiles\Qualys
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212525183-c24a0d15-1ca1-4800-b049-302b97a12619.png)
 
-3. Remove qualys app from control panel
+3. Remove `Qualys Cloud Security Agent` from control panel
+
+![image](https://user-images.githubusercontent.com/96930989/230296742-33e36f45-35fb-4015-b9c1-49152b2e2139.png)
 
 4. Remove the `QualysAgent` from below provided registry path:
 ```
@@ -69,13 +73,52 @@ HKEY_LOCAL_MACHINE\SOFTWARE\
 ```
 ![image](https://user-images.githubusercontent.com/96930989/212525234-7335ac4d-86cd-43ac-ae17-c9439067f835.png)
 
-5. Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
+5. Restart the machine
 
-We pick REST API as sample:
+6. Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
 
-Get the access token of your Azure AD account following the steps in ()
+We pick Installtion using REST API as sample:
+
+##### a. Download postman from [Download Postman](https://www.postman.com/downloads/) and launch it.
+
+##### b. [Get AAD user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/API%20Basic)
+
+##### c. Insert the user token here in postman
+![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
+
+##### d. Set the `request URL`, `Body` following
+
+![image](https://user-images.githubusercontent.com/96930989/210707768-4979d7d8-4a3e-4b8d-821e-3234f2704be5.png)
+
+`Binding`: PUT
+
+`Request URL`
+```
+https://management.azure.com/<resourceId of the VM>/providers/Microsoft.Security/serverVulnerabilityAssessments/default?api-Version=2015-06-01-preview
+```
+
+![image](https://user-images.githubusercontent.com/96930989/230294641-cb20d8e6-2a80-416f-9205-95d7b5d28970.png)
+
+The qualys extension will show transitioning state first
+
+![image](https://user-images.githubusercontent.com/96930989/230294767-967538ed-daa6-4fda-9de8-99053a65a531.png)
+
+Later the extension will show provisioning suceeded state
+
+![image](https://user-images.githubusercontent.com/96930989/230295602-53043ef9-4774-426b-bd49-f416ec7f4efb.png)
+
+##### e. Trigger qualys on-demand scan
+
+Run the command:
+
+```cmd
+REG ADD HKLM\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability /v "ScanOnDemand" /t REG_DWORD /d "1" /f
+```
+![image](https://user-images.githubusercontent.com/96930989/230297945-a53aa619-be5c-4793-9363-0dce9fb1d479.png)
+
 
 #### 6. Collect the logs below and reach Microsoft support
+
 Log 1
 ```
 C:\WindowsAzure\Logs\Plugins\Qualys.WindowsAgent.AzureSecurityCenter
