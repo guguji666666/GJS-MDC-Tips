@@ -77,13 +77,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\
 
 6. Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
 
-The steps below shown how to install qualys extension using REST API
+The steps below show how to install qualys extension using REST API
 
-a. Download postman from [Download Postman](https://www.postman.com/downloads/) and launch it.
+a. Download Postman from [Download Postman](https://www.postman.com/downloads/) and launch it.
 
 b. [Get AAD user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/API%20Basic)
 
-c. Insert the user token here in postman
+c. Insert the user token here in Postman
 ![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
 
 d. Set the `request URL`, `Body` following
