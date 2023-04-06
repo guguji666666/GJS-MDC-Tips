@@ -77,17 +77,16 @@ HKEY_LOCAL_MACHINE\SOFTWARE\
 
 6. Reinstall Qualys agent with the options mentioned in [Automate at-scale deployments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
 
-We pick Installtion using REST API as sample:
+The steps below shown how to install qualys extension using REST API
 
-##### a. Download postman from [Download Postman](https://www.postman.com/downloads/) and launch it.
+* Download postman from [Download Postman](https://www.postman.com/downloads/) and launch it.
 
-##### b. [Get AAD user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/API%20Basic)
+* [Get AAD user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/API%20Basic)
 
-##### c. Insert the user token here in postman
+* Insert the user token here in postman
 ![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
 
-##### d. Set the `request URL`, `Body` following
-
+* Set the `request URL`, `Body` following
 ![image](https://user-images.githubusercontent.com/96930989/210707768-4979d7d8-4a3e-4b8d-821e-3234f2704be5.png)
 
 `Binding`: PUT
@@ -109,7 +108,7 @@ Later the extension will show provisioning suceeded state
 
 ##### e. Trigger qualys on-demand scan
 
-Run the command:
+Run the command, then monitor for24 hours
 
 ```cmd
 REG ADD HKLM\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability /v "ScanOnDemand" /t REG_DWORD /d "1" /f
