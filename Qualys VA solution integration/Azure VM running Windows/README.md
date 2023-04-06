@@ -86,8 +86,9 @@ b. [Get AAD user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/A
 c. Insert the user token here in Postman
 ![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
 
-d. Set the `request URL`, `Body` following
-![image](https://user-images.githubusercontent.com/96930989/210707768-4979d7d8-4a3e-4b8d-821e-3234f2704be5.png)
+d. Set the `request URL`
+
+![image](https://user-images.githubusercontent.com/96930989/230302053-09c10fb4-3208-46b6-a2ad-d377ed183906.png)
 
 `Binding`: PUT
 
