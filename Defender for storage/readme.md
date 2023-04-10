@@ -10,8 +10,15 @@ securityresources
 | project subscriptionId, id, properties.pricingTier, properties.subPlan
 ```
 
-![image](https://user-images.githubusercontent.com/96930989/230875188-b9d2bea4-fddc-4498-9dc8-d0150194fe2f.png)
+![image](https://user-images.githubusercontent.com/96930989/230877193-f43bda35-a282-48f0-b3c2-df8543d15a04.png)
 
+![image](https://user-images.githubusercontent.com/96930989/230875611-5a3abf0b-6c47-480d-bfe5-20fe76bf1dc6.png)
+
+We are able to exclude a specific Storage account if the legacy "Per transaction" pricing plan is enabled
+
+We CAN'T exclude a specific Storage account if the legacy "Per-storage-account plan" (new)" pricing plan is enabled
+
+Refer customer to Can I exclude specific storage accounts from protections in per-storage account pricing? 
 
 ### Plan type
 
