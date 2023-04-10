@@ -20,5 +20,8 @@ We CAN'T exclude a specific Storage account if the legacy "Per-storage-account p
 
 Refer customer to Can I exclude specific storage accounts from protections in per-storage account pricing? 
 
-### Plan type
+### Deploy defender for storage plan in per-transaction
 
+[Set up per-transaction pricing for a subscription](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-storage-classic-enable#set-up-microsoft-defender-for-storage-classic)
+
+[Exclude an Azure Storage account protection on a subscription with per-transaction pricing](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-storage-classic-enable#exclude-an-azure-storage-account-protection-on-a-subscription-with-per-transaction-pricing)
