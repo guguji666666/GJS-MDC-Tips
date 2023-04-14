@@ -149,6 +149,6 @@ C:\ProgramData\Qualys
 
 ![image](https://user-images.githubusercontent.com/96930989/232026901-8ea4643e-bc83-4efa-9611-f9044b16377e.png)
 
-The files should be found under this path `C:\ProgramData\Qualys\QualysAgent`
+There should be files exist under this path `C:\ProgramData\Qualys\QualysAgent`
 
 ![image](https://user-images.githubusercontent.com/96930989/232026942-622a968d-663c-4d46-afb2-cdfcda6d4840.png)
