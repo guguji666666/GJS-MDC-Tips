@@ -146,6 +146,9 @@ Log 5
 ```
 C:\ProgramData\Qualys
 ```
-![image](https://user-images.githubusercontent.com/96930989/212525523-27dfbd28-6e3c-4fd4-ab20-0414ffcc5c6a.png)
 
+![image](https://user-images.githubusercontent.com/96930989/232026901-8ea4643e-bc83-4efa-9611-f9044b16377e.png)
 
+The files should be found under this path `C:\ProgramData\Qualys\QualysAgent`
+
+![image](https://user-images.githubusercontent.com/96930989/232026942-622a968d-663c-4d46-afb2-cdfcda6d4840.png)
