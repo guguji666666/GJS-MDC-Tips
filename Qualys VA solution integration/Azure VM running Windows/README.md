@@ -140,7 +140,7 @@ Log 4
 ```
 C:\Packages\Plugins\Qualys.WindowsAgent.AzureSecurityCenter
 ```
-![image](https://user-images.githubusercontent.com/96930989/212525511-48d64192-fc54-4c26-a781-1240bc2835df.png)
+![image](https://user-images.githubusercontent.com/96930989/232027185-629cba39-cee6-430c-a7bc-61ed64c758b1.png)
 
 Log 5
 ```
