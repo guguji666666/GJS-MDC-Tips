@@ -3,6 +3,7 @@
 ### 1. Steps to reinstall guest configuration extension
 
 1. Uninstall guest configuration from Azure VM
+![image](https://user-images.githubusercontent.com/96930989/233086469-31dcaf22-3cd0-4af5-bb43-8ef785a78ec1.png)
 
 2. Add Service tags  to port 80 and 443
 * AzureArcInfrastructure
@@ -16,12 +17,18 @@ Sample <br>
 
 Remove files from local machine
 
-<img width="1138" alt="image" src="https://user-images.githubusercontent.com/96930989/233060385-0995cecf-d581-4d54-a9c8-6f2e34c1a176.png">
+C:\ProgramData  <br>
+<img width="814" alt="image" src="https://user-images.githubusercontent.com/96930989/233085903-dd13f0b4-f2d9-4d0d-9576-98b8a985a2ba.png">
 
-<img width="916" alt="image" src="https://user-images.githubusercontent.com/96930989/233060430-ecba883b-428a-41eb-835c-53e81d9badc6.png">
+C:\Packages\Plugins  <br>
+<img width="936" alt="image" src="https://user-images.githubusercontent.com/96930989/233087257-af642ef1-fa85-4a2e-bc3e-5bb8990c0834.png">
 
-<img width="1002" alt="image" src="https://user-images.githubusercontent.com/96930989/233060446-66bef3b2-5bbf-4ea2-a4ac-3f3a348cf414.png">
+C:\WindowsAzure\Logs\Plugins  <br>
+<img width="981" alt="image" src="https://user-images.githubusercontent.com/96930989/233087464-de4c3737-30d7-46a6-91db-8b271054d2ba.png">
 
 5. Reboot the machine
 
 6. Run command for manual scan
+```powershell
+$job = Start-AzPolicyComplianceScan -AsJob
+```
