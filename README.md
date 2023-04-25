@@ -5,6 +5,8 @@
 ### 1. The behavior that defender for cloud creates `default` workspaces
 [Defender for server creates workspaces](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#default-workspace)
 
+[Security alerts - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-dns)
+
 By default, when you onboard for the first time Defender for Cloud creates a new resource group and default workspace in the region of each subscription with Defender for Cloud enabled.
 
 If you have `VMs` in `multiple locations`, Defender for Cloud creates `multiple workspaces` accordingly, to ensure data compliance.
