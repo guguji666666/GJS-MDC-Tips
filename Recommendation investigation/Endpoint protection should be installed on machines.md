@@ -1,6 +1,6 @@
 ## Recommendation "Endpoint protection should be installed on machines"
 
-### The VM will be considered as `Healthy resource` when meeting the requirements below:
+### The VM will be considered as `Healthy resource` when they meet the requirements below:
 1. Defender for server plan 1/2 is enabled at `subscription level`
 2. Defender for server plan also enabled at `workspace level`
 3. MMA (Microsoft monitoring agent) or AMA (Azure monitoring agent) is installed on the VM and `provisioned successfully`
