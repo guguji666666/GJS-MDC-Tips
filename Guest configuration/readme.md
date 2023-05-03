@@ -10,7 +10,7 @@
 * Storage
 * GuestAndHybridManagement
 
-Sample <br>
+Sample (`Service tag` AzureArcInfrastructure, `Port`80) <br>
 <img width="1929" alt="image" src="https://user-images.githubusercontent.com/96930989/233061489-abb59dd6-4ee1-45b7-b2a0-dad24b980fd4.png">
 
 3. Enable System assigned identity 
