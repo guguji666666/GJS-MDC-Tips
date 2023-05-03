@@ -1,4 +1,4 @@
-# Install ASA (Azure Security Agent) manually on Azure VM
+# Install ASA (Azure Security Agent) manually on Azure VM/Arc VM
 [Why we need ASA?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent#additional-extensions-for-defender-for-cloud)
 ```
 The Azure Monitor Agent requires additional extensions. 
