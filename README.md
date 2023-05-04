@@ -1,4 +1,7 @@
-# [Security recommendations - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference)
+## [Security recommendations - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference)
+## [VMSS support](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-servers#supported-features-for-virtual-machines-and-servers)
+![image](https://user-images.githubusercontent.com/96930989/236124943-a5ded4a7-33b1-4d51-8d69-71b999262c9b.png) <br>
+![image](https://user-images.githubusercontent.com/96930989/236125002-1e61c91d-efb8-42cb-9826-ea7c89e75d53.png)
 
 # Defender for cloud FAQ
 ## Defender for servers plan - workspaces and agents
