@@ -1,4 +1,5 @@
 ## Windows web servers should be configured to use secure communication protocols
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/ad3cb59e-ef34-4ab1-a3ad-519e9e58c83b)
 
 ##### This recommendation is based on the Azure Policy `Windows web servers should be configured to use secure communication protocols`
 
