@@ -1,6 +1,6 @@
 ## Windows web servers should be configured to use secure communication protocols
 
-#### This recommendation is based on the Azure Policy `Windows web servers should be configured to use secure communication protocols`
+##### This recommendation is based on the Azure Policy `Windows web servers should be configured to use secure communication protocols`
 
 Policy definition id
 ```
