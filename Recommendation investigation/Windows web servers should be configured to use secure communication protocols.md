@@ -121,6 +121,9 @@ $regSettings += Get-RegValue $regKey 'DisabledByDefault'
 $regSettings
 ```
 
+Sample output <br>
+![image](https://user-images.githubusercontent.com/96930989/236149449-2a91b47b-5504-485d-86a8-88ede4843670.png)
+
 ### Powershell scripts to Manage SSL and TLS protocols
 #### 1. Disable TLS 1.0
 
