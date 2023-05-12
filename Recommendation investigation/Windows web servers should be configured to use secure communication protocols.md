@@ -218,3 +218,12 @@ New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders
 
 Write-Host 'TLS 1.2 has been enabled. You must restart the Windows Server for the changes to take affect.' -ForegroundColor Cyan
 ```
+
+### The guest assignment report will tell why the machine is non-compliant, we can follow the steps below:
+#### 1. Navigate to `guest assignment`
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/8b675e01-9501-455d-8fbb-f2f1218dba85)
+#### 2. Search for `AuditSecureProtocol`, select the machine you want to investigate further
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/d374a737-b77f-4755-ae73-3eaaff92684e)
+#### 3. On the right you can see the reason why the machine is non-compliant
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/798eee8a-71ae-4118-8404-d841cc724463)
+
