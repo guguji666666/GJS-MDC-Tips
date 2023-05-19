@@ -127,6 +127,11 @@ Enable continuous export together with the built-in workbook so that you can get
 
 [Deploy AMA extension](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-powershell#install)
 
+### 9. Agentless scanning not enabled?
+
+[]()
+[]()
+
 ## Extension for VA scanning
 ### 1. What is `AzSecPack`?
 
