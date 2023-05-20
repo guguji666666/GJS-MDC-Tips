@@ -112,7 +112,7 @@ Sample <br>
 ![image](https://user-images.githubusercontent.com/96930989/214222646-77c9f727-1256-459e-82f8-a6e6d5a603c8.png)
 
 
-### 9. Defender for Server supported OS
+### 9. Defender for Cloud supported OS
 
 [Defender for cloud supported OS](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-cloud#supported-operating-systems)
 
