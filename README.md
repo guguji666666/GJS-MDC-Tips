@@ -127,10 +127,17 @@ Enable continuous export together with the built-in workbook so that you can get
 
 [Deploy AMA extension](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-powershell#install)
 
-### 9. Agentless scanning not enabled?
+### 10. Defender for Server supported OS
 
-[]()
-[]()
+[Defender for cloud supported OS](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-cloud#supported-operating-systems)
+
+![image](https://guguimage.aceultraman.com/i/2023/05/20/ey8ein.png)
+
+[MMA,AMA supported OS](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
+![image](https://guguimage.aceultraman.com/i/2023/05/20/ezlkwz.png)
+ 
+AMA is not supported for Windows server 2008, 2008R2
+AMA is supported for Windows server 2012, 2012R2
 
 ## Extension for VA scanning
 ### 1. What is `AzSecPack`?
