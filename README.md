@@ -140,7 +140,7 @@ AMA is not supported for Windows server 2008, 2008R2
 AMA is supported for Windows server 2012, 2012R2
 
 
-![image](https://guguimage.aceultraman.com/i/2023/05/20/ezlkwz.png = 200x200)
+![image](https://guguimage.aceultraman.com/i/2023/05/20/ezlkwz.png =200x200)
 
 ## Extension for VA scanning
 ### 1. What is `AzSecPack`?
