@@ -3,6 +3,8 @@
 ![image](https://user-images.githubusercontent.com/96930989/236124943-a5ded4a7-33b1-4d51-8d69-71b999262c9b.png) <br>
 ![image](https://user-images.githubusercontent.com/96930989/236125002-1e61c91d-efb8-42cb-9826-ea7c89e75d53.png)
 
+![image](https://user-images.githubusercontent.com/96930989/236125002-1e61c91d-efb8-42cb-9826-ea7c89e75d53.png =100x)
+
 # Defender for cloud FAQ
 ## Defender for servers plan - workspaces and agents
 ### 1. The behavior that defender for cloud creates `default` workspaces
@@ -139,8 +141,6 @@ Enable continuous export together with the built-in workbook so that you can get
 AMA is not supported for Windows server 2008, 2008R2
 AMA is supported for Windows server 2012, 2012R2
 
-
-![image](https://guguimage.aceultraman.com/i/2023/05/20/ezlkwz.png =200x200)
 
 ## Extension for VA scanning
 ### 1. What is `AzSecPack`?
