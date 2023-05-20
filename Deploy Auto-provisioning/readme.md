@@ -26,7 +26,7 @@
 
 [Configure Linux Machines to be associated with a Data Collection Rule](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2ea82cdd-f2e8-4500-af75-67a2e084ca74)
 
-[Configure Linux virtual machine scale sets to run Azure Monitor Agent with system-assigned managed i...](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F56a3e4f8-649b-4fac-887e-5564d11e8d3a)
+[Configure Linux virtual machine scale sets to run Azure Monitor Agent with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F56a3e4f8-649b-4fac-887e-5564d11e8d3a)
 
 [Configure Linux virtual machines to run Azure Monitor Agent with system-assigned managed identity-ba...](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa4034bc6-ae50-406d-bf76-50f4ee5a7811)
 
@@ -38,7 +38,7 @@
 
 [Configure Windows Machines to be associated with a Data Collection Rule](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Feab1f514-22e3-42e3-9a1f-e1dc9199355c)
 
-[Configure Windows virtual machine scale sets to run Azure Monitor Agent using system-assigned manage...](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F4efbd9d8-6bc6-45f6-9be2-7fe9dd5d89ff)
+[Configure Windows virtual machine scale sets to run Azure Monitor Agent using system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F4efbd9d8-6bc6-45f6-9be2-7fe9dd5d89ff)
 
 [Configure Windows virtual machines to run Azure Monitor Agent using system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fca817e41-e85a-4783-bc7f-dc532d36235e)
 
