@@ -1,4 +1,4 @@
-# Deploy Auto-provisioning 
+# Deploy Auto-provisioning in defender for cloud
 [Scaling auto-provisioning using Azure policy](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-scale#scaling-auto-provisioning)
 
 ## Relating Azure policies
@@ -18,7 +18,7 @@
 [[Preview]: Configure machines to create the Microsoft Defender for Cloud user-defined pipeline using AMA](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fc15c5978-ab6e-4599-a1c3-90a7918f5371)
 
 
-**Built-in Initiative/Definitions - Linux**
+### Built-in Initiative/Definitions - Linux ([Reference](https://techcommunity.microsoft.com/t5/itops-talk-blog/building-a-policy-to-deploy-the-new-azure-monitor-agent/ba-p/2234423))
 
 [Configure Linux machines to run Azure Monitor Agent and associate them to a Data Collection Rule](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicySetDefinitions%2F118f04da-0375-44d1-84e3-0fd9e1849403)
 
@@ -30,7 +30,7 @@
 
 [Configure Linux virtual machines to run Azure Monitor Agent with system-assigned managed identity-ba...](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fa4034bc6-ae50-406d-bf76-50f4ee5a7811)
 
-**Built-in Initiative/Definitions - Windows**
+### Built-in Initiative/Definitions - Windows ([Reference](https://techcommunity.microsoft.com/t5/itops-talk-blog/building-a-policy-to-deploy-the-new-azure-monitor-agent/ba-p/2234423))
 
 [Configure Windows machines to run Azure Monitor Agent and associate them to a Data Collection Rule](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicySetDefinitions%2F9575b8b7-78ab-4281-b53b-d3c1ace2260b)
 
