@@ -4,6 +4,7 @@
 ![image](https://user-images.githubusercontent.com/96930989/236125002-1e61c91d-efb8-42cb-9826-ea7c89e75d53.png)
 
 # Defender for cloud FAQ
+
 ## Defender for servers plan - workspaces and agents
 ### 1. The behavior that defender for cloud creates `default` workspaces
 [Defender for server creates workspaces](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#default-workspace)
@@ -30,7 +31,7 @@ For VMs in Australia, the workspace location is Australia
 ```
 
 ### 3. Can I delete the default workspaces created by Defender for Cloud?
-[Delete default workspaces?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#can-i-delete-the-default-workspaces-created-by-defender-for-cloud-)
+[Delete default workspaces?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#can-i-delete-the-default-workspaces-created-by-defender-for-cloud-) 
 
 Deleting the default workspace is not recommended if you don't have custom workspace. 
 
@@ -44,7 +45,6 @@ Move to `on`
 ![image](https://user-images.githubusercontent.com/96930989/211142730-62f233c4-17c4-4d43-afb2-e63964701883.png)
 
 ![image](https://user-images.githubusercontent.com/96930989/211142677-6fef576e-cb30-4106-b20a-62ef814f1384.png)
-
 
 ### 4. What if the Log Analytics agent was already installed as an extension on the VM?
 [Extension already installed before enabling auto-provisioning?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-data-collection-agents#what-if-the-log-analytics-agent-was-already-installed-as-an-extension-on-the-vm-)
@@ -69,7 +69,11 @@ For `Linux` machines, Agent multi-homing is `not yet supported` - hence, if an e
 
 For `existing machines` on subscriptions onboarded to Defender for Cloud `before March 17 2019`, when an existing agent will be detected, the Log Analytics agent extension `will not be` installed and the machine will not be affected. For these machines, see the "Resolve monitoring agent health issues on your machines" recommendation to resolve the agent installation issues on these machines
 
-### 6. Billing once after enable defender for server on subscription and workspace level?
+### 6. Can I enable Defender for Servers on a subset of machines in a subscription?
+As mentioned in [Defender for cloud FAQ](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#can-i-enable-defender-for-servers-on-a-subset-of-machines-in-a-subscription-), when you enable Microsoft Defender for Servers on an Azure subscription or on a connected AWS account or GCP project, all connected machines are protected by Defender for Servers. Servers that don't have the Log Analytics agent or Azure Monitor agent installed are also protected. <br>
+However, as mentioned in [Plan your Defender for Servers deployment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers), you can enable Microsoft Defender for Servers at the `Log Analytics workspace level`, but only servers reporting to that workspace will be protected and billed and those servers won't receive some benefits, such as `Microsoft Defender for Endpoint, vulnerability assessment, and just-in-time VM access`.
+
+### 7. Billing once after enable defender for server on subscription and workspace level?
 [Billing for defender for server](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-on-the-subscription-and-workspace-)
 
 When you enable the Servers plan on the `subscription level`, Defender for Cloud enables the plan on your `default workspaces` automatically. 
@@ -79,7 +83,7 @@ If you're using a `custom workspace`, you need to select it to enable the plan m
 
 ![image](https://user-images.githubusercontent.com/96930989/211142168-0fddb5ae-3321-4a2a-98ad-1475cc4ce73b.png)
 
-### Note !
+### Notice !!!
 
 If you turn on Defender for Servers for a subscription and for a connected custom workspace, you `aren't charged` for both. The system identifies `unique VMs`.
 
@@ -91,41 +95,20 @@ If you enable Defender for Servers on cross-subscription workspaces:
 * [If I enable Defender for Clouds Servers plan on the subscription level, do I need to enable it on the workspace level?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#if-i-enable-defender-for-clouds-servers-plan-on-the-subscription-level-do-i-need-to-enable-it-on-the-workspace-level)
 * [Do I need to enable Defender for Servers on the subscription and on the workspace?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-defender-for-servers-on-the-subscription-and-on-the-workspace-)
 
-### 7. How to check which recommendation affects the secure score?
-Enable continuous export together with the built-in workbook so that you can get more details about how recommendations affect your secure score.
-* [Continuously export Microsoft Defender for Cloud data](https://learn.microsoft.com/en-us/azure/defender-for-cloud/continuous-export?tabs=azure-portal)
-* Built-in workbook
+### 8. How to check which recommendation affects the secure score?
+Enable continuous export together with the built-in workbook so that you can get more details about how recommendations affect your secure score. <br>
+[Continuously export Microsoft Defender for Cloud data](https://learn.microsoft.com/en-us/azure/defender-for-cloud/continuous-export?tabs=azure-portal)
+
+Built-in workbook <br>
 ![image](https://user-images.githubusercontent.com/96930989/214222344-8a076879-cb63-4024-a2bf-6fabcc5539b4.png)
-* Sample in my lab
+
+Sample <br>
 ![image](https://user-images.githubusercontent.com/96930989/214222646-77c9f727-1256-459e-82f8-a6e6d5a603c8.png)
 
 
-### 8. Delete and recover Azure Log Analytics workspace (Azure monitoring team)
+### 9. Delete and recover Azure Log Analytics workspace (Reach Azure monitoring team)
 [Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
 
-### Deploy Auto-provisioning 
-
-#### [Scaling auto-provisioning using Azure policy](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-scale#scaling-auto-provisioning)
-
-[Auto provisioing - Deploy MMA extension and report to default workspace](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F6df2fee6-a9ed-4fef-bced-e13be1b25f1c)
-
-#### Relating Azure policies
-[Auto provisioing - Deploy MMA extension and report to custom workspace](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F8e7da0a5-0a0e-4bbc-bfc0-7773c018b616)
-
-[[Preview]: Configure Arc machines to create the default Microsoft Defender for Cloud pipeline using AMA](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F3b1a8e0a-b2e1-48be-9365-28be2fbef550)
-
-[[Preview]: Configure virtual machines to create the default Microsoft Defender for Cloud pipeline using AMA](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F8b5ad9ab-3d44-4a6e-9ac3-75b04ea5fd28)
-
-[[Preview]: Configure Arc machines to create the Microsoft Defender for Cloud user-defined pipeline using AMA](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Faba46665-c3a7-4319-ace1-a0282deebac2)
-
-[[Preview]: Configure machines to create the Microsoft Defender for Cloud user-defined pipeline using AMA](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fc15c5978-ab6e-4599-a1c3-90a7918f5371)
-
-### Manually deploy MMA/AMA extension via Powershell/Azure CLI
-[Deploy MMA extension on Windows machines](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/oms-windows?toc=%2Fazure%2Fazure-monitor%2Ftoc.json#powershell-deployment)
-
-[Deploy MMA extension on Linux machines](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/oms-linux?toc=%2Fazure%2Fazure-monitor%2Ftoc.json#azure-cli-deployment)
-
-[Deploy AMA extension](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-powershell#install)
 
 ### 10. Defender for Server supported OS
 
@@ -136,11 +119,21 @@ Enable continuous export together with the built-in workbook so that you can get
 [MMA,AMA supported OS](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
 ![image](https://guguimage.aceultraman.com/i/2023/05/20/ezlkwz.png)
  
-AMA is not supported for Windows server 2008, 2008R2
+AMA is not supported for Windows server 2008, 2008R2 <br>
 AMA is supported for Windows server 2012, 2012R2
 
 ### 11. Defender for server cover Windows client?
+1. Create Azure VM for test, OS information <br>
+![image](https://guguimage.aceultraman.com/i/2023/05/20/e6baqy.png)
 
+2. AMA is installed via auto-provisioning <br>
+![image](https://guguimage.aceultraman.com/i/2023/05/20/e5q4zr.png)
+
+3. Win10 Pro client OS is supported by defender for cloud <br>
+![image](https://guguimage.aceultraman.com/i/2023/05/20/fnv6j1.png)
+
+4. The machine is protected by defender for cloud , we can confirm it in `defender for cloud > inventory` <br>
+![image](https://guguimage.aceultraman.com/i/2023/05/20/flh68q.png)
 
 
 
