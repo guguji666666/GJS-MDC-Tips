@@ -45,5 +45,13 @@ Enable per-account mode and turn on on-upload malware scanning
 
 [Upload a block blob](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal#upload-a-block-blob) <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5a213855-e25c-41ca-a1b9-474da3514d4d) <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/36a2ff9c-b595-4353-adfb-bcf8e401c3c1)
 
 [Testing Malware Scanning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-storage-test#testing-malware-scanning) <br>
+Click the file uploaded, two new tags are found: <br>
+`Malware Scanning scan result` and `Malware Scanning scan time` <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/7bc49277-197e-4c7f-8c38-2cedc430a6d9) <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/6faf9d4f-07da-4f62-9635-10275abd07c8)
+
+
+
