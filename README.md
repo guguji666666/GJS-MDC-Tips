@@ -73,7 +73,13 @@ For `existing machines` on subscriptions onboarded to Defender for Cloud `before
 As mentioned in [Defender for cloud FAQ](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#can-i-enable-defender-for-servers-on-a-subset-of-machines-in-a-subscription-), when you enable Microsoft Defender for Servers on an Azure subscription or on a connected AWS account or GCP project, all connected machines are protected by Defender for Servers. Servers that don't have the Log Analytics agent or Azure Monitor agent installed are also protected. <br>
 However, as mentioned in [Plan your Defender for Servers deployment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers), you can enable Microsoft Defender for Servers at the `Log Analytics workspace level`, but only servers reporting to that workspace will be protected and billed and those servers won't receive some benefits, such as `Microsoft Defender for Endpoint, vulnerability assessment, and just-in-time VM access`.
 
-### 7. Billing once after enable defender for server on subscription and workspace level?
+To enable defender for server on the workspace, <br>
+Navigate to defender for cloud > Environment settings, select the workspace you want to configure <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/7dc97b26-d671-416b-a352-da03ade14ec9) <br>
+In `Settings | Defender plans` page, turn on the switch of Servers, save the settings <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/0d9c4ce4-da51-4370-aed5-dc2d60725bf0)
+
+### 7. Billing after enable defender for server on subscription and workspace level?
 [Billing for defender for server](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-on-the-subscription-and-workspace-)
 
 When you enable the Servers plan on the `subscription level`, Defender for Cloud enables the plan on your `default workspaces` automatically. 
@@ -106,11 +112,7 @@ Sample <br>
 ![image](https://user-images.githubusercontent.com/96930989/214222646-77c9f727-1256-459e-82f8-a6e6d5a603c8.png)
 
 
-### 9. Delete and recover Azure Log Analytics workspace (Reach Azure monitoring team)
-[Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
-
-
-### 10. Defender for Server supported OS
+### 9. Defender for Server supported OS
 
 [Defender for cloud supported OS](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-cloud#supported-operating-systems)
 
@@ -122,7 +124,7 @@ Sample <br>
 AMA is not supported for Windows server 2008, 2008R2 <br>
 AMA is supported for Windows server 2012, 2012R2
 
-### 11. Defender for server cover Windows client?
+### 10. Will Defender for server cover Windows client machine?
 1. Create Azure VM for test, OS information <br>
 ![image](https://guguimage.aceultraman.com/i/2023/05/20/e6baqy.png)
 
@@ -134,6 +136,10 @@ AMA is supported for Windows server 2012, 2012R2
 
 4. The machine is protected by defender for cloud , we can confirm it in `defender for cloud > inventory` <br>
 ![image](https://guguimage.aceultraman.com/i/2023/05/20/flh68q.png)
+
+
+### 11. Delete and recover Azure Log Analytics workspace (Reach Azure monitoring team)
+[Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
 
 
 
