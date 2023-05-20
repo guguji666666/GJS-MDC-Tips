@@ -90,6 +90,14 @@ Navigate to defender for cloud > Environment settings, select the workspace you 
 In `Settings | Defender plans` page, turn on the switch of Servers, save the settings <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/0d9c4ce4-da51-4370-aed5-dc2d60725bf0)
 
+Then we can deploy AMA on the VM using powershell or Azure policy <br>
+[Deploy AMA extension using powershell/Azure cloudshell](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-powershell#install) <br>
+
+Associate the Azure VM with DCR so that the logs could be sent to the workspace <br>
+[Configure Windows Machines to be associated with a Data Collection Rule](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Feab1f514-22e3-42e3-9a1f-e1dc9199355c) <br>
+[Configure Linux Machines to be associated with a Data Collection Rule](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F2ea82cdd-f2e8-4500-af75-67a2e084ca74)
+
+
 ### 7. Billing after enable defender for server on subscription and workspace level?
 [Billing for defender for server](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-on-the-subscription-and-workspace-)
 
