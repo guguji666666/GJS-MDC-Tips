@@ -29,16 +29,16 @@ Refer customer to Can I exclude specific storage accounts from protections in pe
 
 ### Test mailware scanning
 
-[Testing Malware Scanning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-storage-test#testing-malware-scanning) <br>
-[Create a container](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)
-[Upload a block blob](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal#upload-a-block-blob)
-
 Legacy per-storage mode <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a5307e41-bf0c-4f53-a4ba-397286e94f75)
-
 
 Enable per-account mode and turn on on-upload malware scanning
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5fd85903-bf35-4cc4-ad9e-36a8d3c1dc8a) <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/1019cebf-8898-4e94-a140-3ba6cb8db630) <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/70fa06de-3e81-4d76-b3ce-d3931a9ff179)
 
+
+[Create a container](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container) <br>
+
+[Upload a block blob](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal#upload-a-block-blob) <br>
+[Testing Malware Scanning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-storage-test#testing-malware-scanning) <br>
