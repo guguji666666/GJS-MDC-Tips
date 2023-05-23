@@ -120,7 +120,10 @@ If you enable Defender for Servers on cross-subscription workspaces:
 * [If I enable Defender for Clouds Servers plan on the subscription level, do I need to enable it on the workspace level?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#if-i-enable-defender-for-clouds-servers-plan-on-the-subscription-level-do-i-need-to-enable-it-on-the-workspace-level)
 * [Do I need to enable Defender for Servers on the subscription and on the workspace?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#do-i-need-to-enable-defender-for-servers-on-the-subscription-and-on-the-workspace-)
 
-### 8. How to check which recommendation affects the secure score?
+### 8. Will I be charged for machines without the Log Analytics agent installed
+As mentioned in the [Plan data residency and workspaces for Defender for Servers](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#will-i-be-charged-for-machines-without-the-log-analytics-agent-installed), Yes. When you enable Microsoft Defender for Servers on an Azure subscription or a connected AWS account, you'll be charged for all machines that are connected to your Azure subscription or AWS account. The term machines include Azure virtual machines, Azure Virtual Machine Scale Sets instances, and Azure Arc-enabled servers. Machines that don't have Log Analytics installed are covered by protections that `don't depend on` the Log Analytics agent.
+
+### 9. How to check which recommendation affects the secure score?
 Enable continuous export together with the built-in workbook so that you can get more details about how recommendations affect your secure score. <br>
 [Continuously export Microsoft Defender for Cloud data](https://learn.microsoft.com/en-us/azure/defender-for-cloud/continuous-export?tabs=azure-portal)
 
@@ -131,7 +134,7 @@ Sample <br>
 ![image](https://user-images.githubusercontent.com/96930989/214222646-77c9f727-1256-459e-82f8-a6e6d5a603c8.png)
 
 
-### 9. Defender for Cloud supported OS
+### 10. Defender for Cloud supported OS
 
 [Defender for cloud supported OS](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-cloud#supported-operating-systems)
 
@@ -143,7 +146,7 @@ Sample <br>
 AMA is not supported for Windows server 2008, 2008R2 <br>
 AMA is supported for Windows server 2012, 2012R2
 
-### 10. Will Defender for server cover Windows client machine?
+### 11. Will Defender for server cover Windows client machine?
 1. Create Azure VM for test, OS information <br>
 ![image](https://guguimage.aceultraman.com/i/2023/05/20/e6baqy.png)
 
