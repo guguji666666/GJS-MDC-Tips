@@ -242,7 +242,7 @@ You will then find the `output.txt` under that path, `remove` the leading charac
   
 ![image](https://user-images.githubusercontent.com/96930989/224681985-513d76d7-5645-45b6-8e24-f792fc5fbf8d.png)
   
-9. Copy the base64 code and paste it in the “<Base64EncodedPackage>" section  
+9. Copy the base64 code and paste it in the `<Base64EncodedPackage>` section  
 10. Send the request in the postman
 ![image](https://user-images.githubusercontent.com/96930989/224683919-d03d871c-2c62-46dd-a1bb-e47b0b8661ae.png)
 
