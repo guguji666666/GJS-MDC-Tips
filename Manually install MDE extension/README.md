@@ -236,7 +236,7 @@ Sample
   
 ![image](https://user-images.githubusercontent.com/96930989/224681648-8ac88c36-bfa2-4e75-8b80-f1fdcc7b7f15.png)
 
-You will then find the `output.txt` under that path, `remove` the leading characters b' from the front and the trailing ‘ at the end of the content of output.txt
+You will then find the `output.txt` under that path, `remove` the leading characters `b'` from the front and the trailing `‘` at the end of the content of output.txt
   
 ![image](https://user-images.githubusercontent.com/96930989/224681935-6577228e-74ef-44b0-9964-ef6dfff87cf9.png)
   
