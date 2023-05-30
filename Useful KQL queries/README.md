@@ -228,3 +228,14 @@ securityresources | where type =~ "microsoft.security/assessments/subassessments
         | extend all = high + medium + low
         | order by all desc, numOfResources desc
 ```
+
+## 11. Monitor protection status
+```kusto
+ProtectionStatus
+| distinct Computer
+```
+```kusto
+ProtectionStatus
+| summarize LastCall = max(TimeGenerated) by Computer
+| order by LastCall asc 
+```
