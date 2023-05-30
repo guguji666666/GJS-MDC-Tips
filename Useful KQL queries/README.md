@@ -234,6 +234,7 @@ securityresources | where type =~ "microsoft.security/assessments/subassessments
 ProtectionStatus
 | distinct Computer
 ```
+
 ```kusto
 ProtectionStatus
 | summarize LastCall = max(TimeGenerated) by Computer
