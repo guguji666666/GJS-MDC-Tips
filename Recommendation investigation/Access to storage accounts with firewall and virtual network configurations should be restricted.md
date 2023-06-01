@@ -1,6 +1,7 @@
 ## Symptom: Azure databricks storage accounts could not exempted from the recommendation
-## Below would be the information required before reaching microsoft support
+When we create a Azure Databricks workspace, by design it will automatically create Databricks Managed resource Group. The managed resource group must exist as this is where your cluster(s) will be created. To ensure that nothing breaks them, they are placed in a separate resource group (managed resource group) that has a super lock on it so you cannot modify anything in it.
 
+## Below would be the information required before reaching microsoft support
 ### Use ARG - Resource Graph Explorer
 #### 1. Navigate to Azure portal, and search `Resource Graph Explorer` on the top
 ![image](https://user-images.githubusercontent.com/96930989/210159757-b875ba41-6946-4ee7-a604-92183cf9f58b.png)
@@ -38,7 +39,6 @@ securityresources
         | where resourceId contains "databricks"
         | project tenantId, subscriptionId, resourceId
 ```
-
 
 ### Get all databricks workspaces in the tenant (you can also set the filter for subscription)
 ```kusto
@@ -110,5 +110,8 @@ where type == "microsoft.databricks/workspaces"
 //| where subscriptionId == "<your sub id>"
 | project name, subscriptionId, id
 ```
+
+### All in all, the information we need to collect before reaching databrick team
+
 
 
