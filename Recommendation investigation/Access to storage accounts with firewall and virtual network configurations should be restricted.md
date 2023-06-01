@@ -18,7 +18,7 @@ When we create a Azure Databricks workspace, by design it will automatically cre
 #### 4. Copy the last part of the `Definition ID`
 ![image](https://user-images.githubusercontent.com/96930989/220023758-6dd08272-9568-4bbc-b3c6-03cd81ba45bf.png)
 
-### Get unhealthy databricks storage accounts (you can also set the filter for subscription)
+### Get `unhealthy` databricks storage accounts (you can also set the filter for subscription)
 ```kusto
 securityresources
         | where type == "microsoft.security/assessments"
@@ -40,7 +40,7 @@ securityresources
         | project tenantId, subscriptionId, resourceId
 ```
 
-### Get all databricks workspaces in the tenant (you can also set the filter for subscription)
+### Get all databricks `workspaces` in the tenant (you can also add the filter for subscription in the query)
 ```kusto
 // Run query to see results.
 where type == "microsoft.databricks/workspaces"
@@ -114,7 +114,8 @@ where type == "microsoft.databricks/workspaces"
 ### All in all, the information we need to collect before reaching databrick team
 * Tenant id
 * Subscription id
-* Resource id of the storage accounts
+* Affected databricks workspace
+* Resource id of the databricks storage accounts
 
 Finally we can get the permissions required: 
 * */read;microsoft.authorization/policyexemptions/*
