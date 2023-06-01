@@ -112,6 +112,11 @@ where type == "microsoft.databricks/workspaces"
 ```
 
 ### All in all, the information we need to collect before reaching databrick team
+* Tenant id
+* Subscription id
+* Resource id of the storage accounts
+
+Finally we can get the permissions required: 
 
 
 
