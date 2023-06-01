@@ -1,4 +1,4 @@
-## Symptom: Azure databricks storage accounts could not exempted from the recommendation
+## Azure databricks storage accounts failed to be exempted from the recommendation
 When we create a Azure Databricks workspace, by design it will automatically create Databricks Managed resource Group. The managed resource group must exist as this is where your cluster(s) will be created. To ensure that nothing breaks them, they are placed in a separate resource group (managed resource group) that has a super lock on it so you cannot modify anything in it.
 
 ## Below would be the information required before reaching microsoft support
@@ -117,6 +117,10 @@ where type == "microsoft.databricks/workspaces"
 * Resource id of the storage accounts
 
 Finally we can get the permissions required: 
+* */read;microsoft.authorization/policyexemptions/*
+* microsoft.authorization/policyassignments/exempt/action
+* microsoft.security/locations/alerts/dismiss/action
+* Microsoft.Advisor/*
 
 
 
