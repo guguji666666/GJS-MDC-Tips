@@ -1,7 +1,7 @@
 ## Steps to deploy BYOL VA solution
 [Deploy a bring your own license (BYOL) vulnerability assessment solution](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-byol-vm)
 
-### Configure a new BYOL solution in your subscription
+### Configure a new Qualys BYOL solution in your subscription
 1. Defender for cloud -> recommendation -> Machines should have a vulnerability assessment solution -> fix
 ![image](https://user-images.githubusercontent.com/96930989/213363188-c2164819-4b1e-4ac3-8362-c21c0f00025a.png)
 
@@ -19,7 +19,6 @@
 2. Click `Deploy your configured third-party vulnerability scanner (BYOL - requires a separate license)`
 
 3. Proceed
-
 
 ### Migrate the VM to new BYOL solution
 1. Turn off auto-provisioning in existing BYOL solution
