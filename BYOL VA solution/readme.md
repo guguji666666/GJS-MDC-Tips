@@ -98,7 +98,26 @@ https://management.azure.com/subscriptions/{SubscriptionId}/resourceGroups/{RG o
 ```
 Body
 ```
-[{ ResourceAzureId: "{vm Resource Id}" }]
+[
+
+   {
+
+       "resourceAzureId": "/subscriptions/{vm1Subscription}/resourceGroups/{vm1ResourceGroup}/providers/Microsoft.Compute/virtualMachines/{vm1Name}"
+
+   },
+
+   {
+
+       "resourceAzureId": "/subscriptions/{vm2Subscription}/resourceGroups/{vm2ResourceGroup}/providers/Microsoft.Compute/virtualMachines/{vm2Name}"
+
+   },
+
+   {
+
+  "resourceAzureId": "/subscriptions/{vm3Subscription}/resourceGroups/{vm3ResourceGroup}/providers/Microsoft.Compute/virtualMachines/{vm3Name}"
+
+   },
+]
 ```
 
 #### 5. Remove specified VM from the BYOL VA solution
