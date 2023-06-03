@@ -7,11 +7,11 @@
 
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/2f2064cb-0a65-4e6b-96d4-9d6c2ab918cc) <br>
 
-Security Center
+### Security Center
 * Defender for Servers
 * Defender for AppService
 
-Advanced Threat Protection
+### Advanced Threat Protection
 * Defender for Kubernetes
 * Defender for Storage
 * Defender for Container Registries
@@ -21,10 +21,10 @@ Advanced Threat Protection
 * Defender for DNS
 * Defender for MySQL
 
-Advanced Data Security
+### Advanced Data Security
 * Defender for SQL
 
-Azure Defender
+### Azure Defender
 * Defender for MariaDB
 * Defender for Containers
 
