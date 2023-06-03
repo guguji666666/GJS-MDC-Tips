@@ -1,5 +1,9 @@
 # Defender for cloud useful doc
-* [Security recommendations - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference)
+
+## [Security recommendations - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference)
+## [Security alerts - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-dns)
+## [MDE alerts in defender for cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/integration-defender-for-endpoint)
+
 * [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
 * [Which Azure resources are monitored by Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-general#which-azure-resources-are-monitored-by-microsoft-defender-for-cloud-)
 * [Defender for Cloud for your multicloud environment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/multicloud)
@@ -19,8 +23,6 @@
 ## Defender for servers plan - workspaces and agents
 ### 1. The behavior that defender for cloud creates `default` workspaces
 [Defender for server creates workspaces](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-data-workspace#default-workspace)
-
-[Security alerts - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-dns)
 
 By default, when you onboard for the first time Defender for Cloud creates a new resource group and default workspace in the region of each subscription with Defender for Cloud enabled.
 
