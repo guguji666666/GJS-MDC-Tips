@@ -2,7 +2,7 @@
 
 ## [Security recommendations - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference)
 ## [Security alerts - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-dns)
-## [MDE alerts in defender for cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/integration-defender-for-endpoint)
+## [Check MDE alerts in defender for cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 * [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
 * [Which Azure resources are monitored by Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-general#which-azure-resources-are-monitored-by-microsoft-defender-for-cloud-)
@@ -15,7 +15,6 @@
 * [VMSS support?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-servers#supported-features-for-virtual-machines-and-servers)
 ![image](https://user-images.githubusercontent.com/96930989/236124943-a5ded4a7-33b1-4d51-8d69-71b999262c9b.png) <br>
 ![image](https://user-images.githubusercontent.com/96930989/236125002-1e61c91d-efb8-42cb-9826-ea7c89e75d53.png) <br>
-
 
 
 # Defender for cloud FAQ
