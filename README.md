@@ -159,8 +159,13 @@ AMA is supported for Windows server 2012, 2012R2
 4. The machine is protected by defender for cloud , we can confirm it in `defender for cloud > inventory` <br>
 ![image](https://guguimage.aceultraman.com/i/2023/05/20/flh68q.png)
 
+### 11. Recommendation for on-prem servers
+[Review Defender for server plan](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-select-plan#review-plans) <br>
+For on-premises server, to receive configuration recommendations machines must be onboarded to Azure with Azure Arc, and Defender for Servers must be enabled. <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/39e93a10-3779-4e69-9aaf-73f405b55a08)
 
-### 11. Delete and recover Azure Log Analytics workspace (Reach Azure monitoring team)
+
+### 12. Delete and recover Azure Log Analytics workspace (Reach Azure monitoring team)
 [Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
 
 
