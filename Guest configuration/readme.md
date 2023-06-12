@@ -1,5 +1,11 @@
-## Guest configuration 
+## Guest configuration useful doc
 
+* [Azure Policy guest configuration extension](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/azure-server-management/guest-configuration-policy)
+* [Apply Azure security baselines to machines](https://learn.microsoft.com/en-us/azure/defender-for-cloud/apply-security-baseline)
+* [Guest configuration supported client types](https://learn.microsoft.com/en-us/azure/governance/machine-configuration/overview#supported-client-types)
+* [Guest configuration network requirements](https://learn.microsoft.com/en-us/azure/governance/machine-configuration/overview#network-requirements)
+
+## Guest configuration TSG
 ### 1. Steps to reinstall guest configuration extension
 
 #### 1. Uninstall guest configuration from Azure VM
