@@ -13,9 +13,9 @@
 Sample (`Service tag` AzureArcInfrastructure, `Port`80) <br>
 <img width="1929" alt="image" src="https://user-images.githubusercontent.com/96930989/233061489-abb59dd6-4ee1-45b7-b2a0-dad24b980fd4.png">
 
-#### 3. Enable System assigned identity 
+#### 3. Enable System assigned identity on the VM
 
-##### Remove files from local machine
+#### 4. Remove files from local machine
 
 C:\ProgramData  <br>
 <img width="814" alt="image" src="https://user-images.githubusercontent.com/96930989/233085903-dd13f0b4-f2d9-4d0d-9576-98b8a985a2ba.png">
@@ -27,6 +27,7 @@ C:\WindowsAzure\Logs\Plugins  <br>
 <img width="981" alt="image" src="https://user-images.githubusercontent.com/96930989/233087464-de4c3737-30d7-46a6-91db-8b271054d2ba.png">
 
 #### 5. Reboot the machine
+
 #### 6. Run Azure cloudshell command to trigger manual scan
 ```powershell
 $job = Start-AzPolicyComplianceScan -AsJob
