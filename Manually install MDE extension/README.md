@@ -129,13 +129,12 @@ Sample  <br>
 ![image](https://user-images.githubusercontent.com/96930989/224612267-d8ebd373-789d-40e6-8509-625c61ad734e.png) <br>
 ![image](https://user-images.githubusercontent.com/96930989/224612298-3d84c518-7c65-4d80-a27d-7b87b34e4ae1.png) <br>
 
-9. Copy the base64 code and paste it in the “<Base64EncodedPackage>" section  
-10. Send the request in the postman
-11. Check the MDE extension in Azure VM
-
-  ![image](https://user-images.githubusercontent.com/96930989/224614943-7dcc1b70-84c9-4226-a9ea-4fd971468b23.png) <br>  
-  ![image](https://user-images.githubusercontent.com/96930989/224670755-5e5e31eb-dd66-4c22-a39d-aba796f2e494.png) <br>  
-  ![image](https://user-images.githubusercontent.com/96930989/224670971-a1991618-c4ab-4ad6-a7e6-928d4a4ea1c2.png)  <br>
+10. Copy the base64 code and paste it in the “<Base64EncodedPackage>" section  
+11. Send the request in the postman
+12. Check the MDE extension in Azure VM
+![image](https://user-images.githubusercontent.com/96930989/224614943-7dcc1b70-84c9-4226-a9ea-4fd971468b23.png) <br>  
+![image](https://user-images.githubusercontent.com/96930989/224670755-5e5e31eb-dd66-4c22-a39d-aba796f2e494.png) <br>  
+![image](https://user-images.githubusercontent.com/96930989/224670971-a1991618-c4ab-4ad6-a7e6-928d4a4ea1c2.png) <br>
   
   
 ### Install MDE on Azure VM running `Linux` （Updating）
@@ -191,21 +190,21 @@ Request body
 * ApiVersion: 2015-06-15 (for Azure VM) / 2020-08-02 (for Azure Arc)
 
 #### Get `<Base64EncodedPackage>` for Windows VM
-1. Navigate to [MDE portal](https://security.microsoft.com)
-2. Navigate to Settings > Endpoints
+##### 1. Navigate to [MDE portal](https://security.microsoft.com)
+##### 2. Navigate to Settings > Endpoints
 ![image](https://user-images.githubusercontent.com/96930989/224611145-931e10e5-9929-448c-86c0-ec77ab850272.png)
 
-3. Select operating system: Linux Server
-4. Select Deployment method: Local Script
-5. Click “Download onboarding package“
+##### 3. Select operating system: Linux Server
+##### 4. Select Deployment method: Local Script
+##### 5. Click “Download onboarding package“
 ![image](https://user-images.githubusercontent.com/96930989/224672377-386a0165-2bea-4e8e-aaae-f607b865ce46.png)
 
-6. Unzip/Extract the packaged onboarding script
+##### 6. Unzip/Extract the packaged onboarding script
 ![image](https://user-images.githubusercontent.com/96930989/224673057-7042f509-44ba-4113-8fd9-de081d681ffa.png)
 
 Then create a new python file under the path, let's name it `MDELinux.py`
 
-7. Copy these python commands to `MDELinux.py`, then save it
+##### 7. Copy these python commands to `MDELinux.py`, then save it
 ```python
 import base64
 f = open('MicrosoftDefenderATPOnboardingLinuxServer.py', 'rb') 
@@ -216,9 +215,11 @@ with open('ouput.txt', 'w') as f:
    f.write(str(base64_encoded_text))
 ```
 
-8. Run the command
+##### 8. Run the command
 ```python
 cd <path of python files>
+```
+```python
 py .\MDELinux.py
 ```
 Sample <br>
@@ -228,16 +229,21 @@ You will then find the `output.txt` under that path, `remove` the leading charac
 ![image](https://user-images.githubusercontent.com/96930989/224681935-6577228e-74ef-44b0-9964-ef6dfff87cf9.png) <br>  
 ![image](https://user-images.githubusercontent.com/96930989/224681985-513d76d7-5645-45b6-8e24-f792fc5fbf8d.png) <br>
   
-9. Copy the base64 code and paste it in the `<Base64EncodedPackage>` section  
-10. Send the request in the postman
+##### 9. Copy the base64 code and paste it in the `<Base64EncodedPackage>` section  
+##### 10. Send the request in the postman
 ![image](https://user-images.githubusercontent.com/96930989/224683919-d03d871c-2c62-46dd-a1bb-e47b0b8661ae.png)
 
-11. Check the MDE extension in Azure VM
+##### 11. Check the MDE extension in Azure VM
 ![image](https://user-images.githubusercontent.com/96930989/224683242-4f7c0f47-2a56-4103-83e8-7857c0961f77.png)
 
-Amazon Linx 2 OS is supported for MDE extension <br>
+##### (Optional) Amazon Linx 2 OS is supported for MDE extension <br>
 ```sh
 cat /etc/os-release
 ```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/374ba3a9-eb01-4000-b9df-78ec74b12b50)
 
 The deployment is successful and we can find the `machine id` <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/41e755a8-8db2-48fd-90e8-5bec414705b2) <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/313c17b5-bcfd-4b6d-add6-007bb1960f30) <br>
+
+
