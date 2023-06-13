@@ -235,4 +235,9 @@ You will then find the `output.txt` under that path, `remove` the leading charac
 11. Check the MDE extension in Azure VM
 ![image](https://user-images.githubusercontent.com/96930989/224683242-4f7c0f47-2a56-4103-83e8-7857c0961f77.png)
 
-  
+Amazon Linx 2 OS is supported for MDE extension <br>
+```sh
+cat /etc/os-release
+```
+
+The deployment is successful and we can find the `machine id` <br>
