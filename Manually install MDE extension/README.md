@@ -240,7 +240,7 @@ You will then find the `output.txt` under that path, `remove` the leading charac
 ```sh
 cat /etc/os-release
 ```
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/374ba3a9-eb01-4000-b9df-78ec74b12b50)
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9025c59b-6b43-4093-8bdd-2a76e4edd791)
 
 The deployment is successful and we can find the `machine id` <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/41e755a8-8db2-48fd-90e8-5bec414705b2) <br>
