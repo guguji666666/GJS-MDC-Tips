@@ -1,0 +1,16 @@
+# Reference of remediation of the findings
+
+* [Ensure 'Audit Logoff' is set to 'Success'](https://www.tenable.com/audits/items/CIS_DC_SERVER_2016_Level_1_v1.3.0.audit:06f4cbc5b93fc59b2f2dc14ff10a5222)
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
