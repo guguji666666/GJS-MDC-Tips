@@ -12,12 +12,18 @@
 
 [Ensure 'Allow Cortana above lock screen' is set to 'Disabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_Next_Generation_Windows_Security_v1.7.1.audit:2fb32663ea4cbaac35bc3a3c0694f068)
 
-Enable 'Send file samples when further analysis is required' for 'Send Safe Samples'
-Ensure 'Allow Telemetry' is set to 'Enabled: 0 - Security [Enterprise Only]'
-Ensure 'Allow search and Cortana to use location' is set to 'Disabled'
-Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'
-Ensure 'Network security: Allow Local System to use computer identity for NTLM' is set to 'Enabled'
-Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'
+[Enable 'Send file samples when further analysis is required' for 'Send Safe Samples'](https://www.tenable.com/audits/items/MSCT_Windows_10_1909_1.0.0.audit:0dbab85b152585bab2a2f7a8468e0953)
+
+[Ensure 'Allow Telemetry' is set to 'Enabled: 0 - Security [Enterprise Only]'](https://www.tenable.com/audits/items/CIS_DC_SERVER_2016_Level_1_v1.3.0.audit:ac5ab8e01b5fc023eb2576b03bc05919)
+
+[Ensure 'Allow search and Cortana to use location' is set to 'Disabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_11_Enterprise_Level_1_Next_Generation_Windows_Security_v1.0.0.audit:847d02682604492d0f585e8e2299352c)
+
+[Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_11_Enterprise_Level_1_v1.0.0.audit:d90377d3bcf9d74f915f08bc33ea8a6f)
+
+[Ensure 'Network security: Allow Local System to use computer identity for NTLM' is set to 'Enabled']()
+
+[Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled']()
+
 Ensure 'Block user from showing account details on sign-in' is set to 'Enabled'
 Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled'
 Ensure 'Interactive logon: Do not display last user name' is set to 'Enabled'
