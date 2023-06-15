@@ -40,13 +40,30 @@
 
 [Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_v1.12.0.audit:6a22cb39c4f0b16d7919366c348b008d)
 
-[Ensure 'Windows Firewall: Private: Settings: Display a notification' is set to 'No']()
+[Ensure 'Windows Firewall: Private: Settings: Display a notification' is set to 'No'](https://www.tenable.com/audits/items/CIS_MS_SERVER_2016_Level_1_v1.3.0.audit:e6d5077fd9035db53dcdf8dee85b1d2b)
 
 [Ensure 'Windows Firewall: Private: Settings: Apply local connection security rules' is set to 'Yes (default)']()
 
-[Ensure 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No']()
+Ensure 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No'
 
-[Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rules' is set to 'Yes (default)']()
+1. In the Local Group Policy Editor window, navigate to the following path:
+
+Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security - Local Group Policy Object
+
+2. In the right-hand pane, you will see a list of settings. Look for "Windows Firewall: Private: Settings: Apply local connection security rules" and double-click on it. <br>
+3. In the properties window that appears, select the "Yes (default)" option. <br>
+4. Click on "Apply" and then "OK" to save the changes. <br>
+5. Close the Local Group Policy Editor. <br>
+
+Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rules' is set to 'Yes (default)'
+1. In the Local Group Policy Editor window, navigate to the following path:
+
+Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security - Local Group Policy Object
+
+2. In the right-hand pane, you will see a list of settings. Look for "Windows Firewall: Domain: Settings: Apply local connection security rules" and double-click on it. <br>
+3. In the properties window that appears, select the "Yes (default)" option. <br>
+4. Click on "Apply" and then "OK" to save the changes. <br>
+5. Close the Local Group Policy Editor. <br>
 
 [Ensure 'Turn off multicast name resolution' is set to 'Enabled']()
 
