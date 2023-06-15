@@ -45,55 +45,48 @@
 [Ensure 'Windows Firewall: Private: Settings: Apply local connection security rules' is set to 'Yes (default)']()
 
 Ensure 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No'
-
-1. In the Local Group Policy Editor window, navigate to the following path:
-
-Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security - Local Group Policy Object
-
-2. In the right-hand pane, you will see a list of settings. Look for "Windows Firewall: Private: Settings: Apply local connection security rules" and double-click on it. <br>
+1. Local GPO path: `Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security - Local Group Policy Object` <br>
+2. Look for "Windows Firewall: Private: Settings: Apply local connection security rules" and double-click on it. <br>
 3. In the properties window that appears, select the "Yes (default)" option. <br>
 4. Click on "Apply" and then "OK" to save the changes. <br>
-5. Close the Local Group Policy Editor. <br>
+
 
 Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rules' is set to 'Yes (default)'
-1. In the Local Group Policy Editor window, navigate to the following path:
-
-Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security - Local Group Policy Object
-
-2. In the right-hand pane, you will see a list of settings. Look for "Windows Firewall: Domain: Settings: Apply local connection security rules" and double-click on it. <br>
+1. Local GPO path: `Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security - Local Group Policy Object` <br>
+2. Look for "Windows Firewall: Domain: Settings: Apply local connection security rules" and double-click on it. <br>
 3. In the properties window that appears, select the "Yes (default)" option. <br>
 4. Click on "Apply" and then "OK" to save the changes. <br>
-5. Close the Local Group Policy Editor. <br>
 
-[Ensure 'Turn off multicast name resolution' is set to 'Enabled']()
+[Ensure 'Turn off multicast name resolution' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_DC_SERVER_2016_Level_1_v1.3.0.audit:8c675895143b8d6feeb723329b3935ef)
 
-[Ensure 'Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com' is set to 'Enabled']()
+[Ensure 'Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_SERVER_2019_Level_2_v1.2.1.audit:a9c09edb661e1860dee91c7d55d21a82)
 
-[Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled']()
+[Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_Bitlocker_v1.12.0.audit:b4116266b4a5f25776e1c3ff50d860aa)
 
-[Ensure 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater']()
+[Ensure 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'](https://www.tenable.com/audits/items/CIS_Microsoft_Windows_Server_2019_STIG_v1.0.1_L1_MS.audit:0fe31d5780151559690e9003d054d966)
 
-[Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled']()
+[Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_v1.7.1.audit:3bef4ee017b99d0ea0d9009972873bcf)
 
-[Ensure 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'Yes']()
+[Ensure 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'Yes'](https://www.tenable.com/audits/items/CIS_Microsoft_Windows_Server_2016_STIG_v1.1.0_L1_MS.audit:3bde5902cfa3100253194cddc15d9a78)
 
-[System settings: Use Certificate Rules on Windows Executables for Software Restriction Policies]()
+[System settings: Use Certificate Rules on Windows Executables for Software Restriction Policies](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/system-settings-use-certificate-rules-on-windows-executables-for-software-restriction-policies)
 
-[Configure 'Deny access to this computer from the network']()
-Bypass traverse checking
+[Configure 'Deny access to this computer from the network'](https://www.tenable.com/audits/items/CIS_MS_SERVER_2012_Level_1_v2.1.0.audit:80637caadccc5d048c62d0539ba67471)
+
+[Bypass traverse checking](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking)
 Windows Firewall: Public: Allow unicast response
 Windows Firewall: Private: Allow unicast response
 Windows Firewall: Domain: Allow unicast response
 
-[Ensure 'Windows Firewall: Public: Settings: Display a notification' is set to 'No']()
+[Ensure 'Windows Firewall: Public: Settings: Display a notification' is set to 'No'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_v1.5.0.audit:fae78338c245a14bc7b7878a33fc827b)
 
-[Ensure 'Deny log on locally' is configured]()
+[Ensure 'Deny log on locally' is configured](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/deny-log-on-locally)
 
-[Ensure 'Deny log on as a batch job' is configured]()
+[Ensure 'Deny log on as a batch job' is configured](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/deny-log-on-as-a-batch-job)
 
-[Ensure 'Deny log on as a service' is configured]()
+[Ensure 'Deny log on as a service' is configured](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/deny-log-on-as-a-service)
 
-[Ensure 'Deny log on through Remote Desktop Services' is configured]()
+[Ensure 'Deny log on through Remote Desktop Services' is configured](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/deny-log-on-through-remote-desktop-services)
 
 Increase a process working set
 Ensure 'Shut down the system' is set to 'Administrators'
