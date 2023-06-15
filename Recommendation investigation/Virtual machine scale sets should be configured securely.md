@@ -50,8 +50,7 @@ Ensure 'Windows Firewall: Domain: Settings: Display a notification' is set to 'N
 3. In the properties window that appears, select the "Yes (default)" option. <br>
 4. Click on "Apply" and then "OK" to save the changes. <br>
 
-
-Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rules' is set to 'Yes (default)'
+Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rules' is set to 'Yes (default)' <br>
 1. Local GPO path: `Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security - Local Group Policy Object` <br>
 2. Look for "Windows Firewall: Domain: Settings: Apply local connection security rules" and double-click on it. <br>
 3. In the properties window that appears, select the "Yes (default)" option. <br>
@@ -103,5 +102,5 @@ Windows Firewall: Domain: Allow unicast response <br>
 
 [Ensure 'Maximum password age' is set to '70 or fewer days, but not 0'](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/maximum-password-age)
 
-[Ensure 'Increase scheduling priority' is set to 'Administrators']()
+[Ensure 'Increase scheduling priority' is set to 'Administrators'](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/increase-scheduling-priority)
 
