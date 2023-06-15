@@ -20,11 +20,11 @@
 
 [Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_11_Enterprise_Level_1_v1.0.0.audit:d90377d3bcf9d74f915f08bc33ea8a6f)
 
-[Ensure 'Network security: Allow Local System to use computer identity for NTLM' is set to 'Enabled']()
+[Ensure 'Network security: Allow Local System to use computer identity for NTLM' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_Next_Generation_Windows_Security_v1.11.0.audit:d57c83fc46374721546e0af549a5bf08)
 
-[Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled']()
+[Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_7_v3.2.0_Level_1.audit:56155f2efdb13cc323317c623017af44)
 
-[Ensure 'Block user from showing account details on sign-in' is set to 'Enabled']()
+[Ensure 'Block user from showing account details on sign-in' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_v1.9.1.audit:6f202e564eda40c8857449b1fc1ab617)
 
 [Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled']()
 
