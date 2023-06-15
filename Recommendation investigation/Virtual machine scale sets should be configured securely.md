@@ -74,9 +74,16 @@ Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rule
 [Configure 'Deny access to this computer from the network'](https://www.tenable.com/audits/items/CIS_MS_SERVER_2012_Level_1_v2.1.0.audit:80637caadccc5d048c62d0539ba67471)
 
 [Bypass traverse checking](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking)
-Windows Firewall: Public: Allow unicast response
-Windows Firewall: Private: Allow unicast response
-Windows Firewall: Domain: Allow unicast response
+
+[Windows Firewall: Public: Allow unicast response]()
+
+[Windows Firewall: Private: Allow unicast response](https://www.tenable.com/audits/items/MSCT_Windows_Server_2012_R2_MS_v1.0.0.audit:5335046c40e3d17d76327daa51d25a39)
+
+Windows Firewall: Domain: Allow unicast response <br>
+1. Local GPO path: `Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security - Local Group Policy Object` <br>
+2. Locate and double-click on "Windows Firewall: Domain: Allow unicast response." <br>
+3. In the properties window that appears, select the "Enabled" option. <br>
+4. Click on "Apply" and then "OK" to save the changes. <br>
 
 [Ensure 'Windows Firewall: Public: Settings: Display a notification' is set to 'No'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_v1.5.0.audit:fae78338c245a14bc7b7878a33fc827b)
 
@@ -88,9 +95,13 @@ Windows Firewall: Domain: Allow unicast response
 
 [Ensure 'Deny log on through Remote Desktop Services' is configured](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/deny-log-on-through-remote-desktop-services)
 
-Increase a process working set
-Ensure 'Shut down the system' is set to 'Administrators'
-Ensure 'Minimum password length' is set to '14 or more character(s)'
-Ensure 'Maximum password age' is set to '70 or fewer days, but not 0'
-Ensure 'Increase scheduling priority' is set to 'Administrators'
+[Increase a process working set](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/increase-a-process-working-set)
+
+[Ensure 'Shut down the system' is set to 'Administrators'](https://www.tenable.com/audits/items/CIS_Microsoft_Windows_Server_2016_STIG_v1.1.0_L1_DC.audit:80529f95c8c29baa924075a74427a665)
+
+[Ensure 'Minimum password length' is set to '14 or more character(s)'](https://www.tenable.com/audits/items/CIS_Microsoft_Windows_Server_2016_STIG_v1.0.0_L3_MS.audit:f35db3ee22b3215c3137a87c04a27150)
+
+[Ensure 'Maximum password age' is set to '70 or fewer days, but not 0'](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/maximum-password-age)
+
+[Ensure 'Increase scheduling priority' is set to 'Administrators']()
 
