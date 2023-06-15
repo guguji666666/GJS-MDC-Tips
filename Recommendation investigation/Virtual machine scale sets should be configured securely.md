@@ -24,38 +24,63 @@
 
 [Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled']()
 
-Ensure 'Block user from showing account details on sign-in' is set to 'Enabled'
-Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled'
-Ensure 'Interactive logon: Do not display last user name' is set to 'Enabled'
-Ensure 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled' (MS only)
-Ensure 'Do not show feedback notifications' is set to 'Enabled'
-Ensure 'Do not display the password reveal button' is set to 'Enabled'
-Ensure 'Do not display network selection UI' is set to 'Enabled'
-Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'
-Ensure 'Windows Firewall: Private: Settings: Display a notification' is set to 'No'
-Ensure 'Windows Firewall: Private: Settings: Apply local connection security rules' is set to 'Yes (default)'
-Ensure 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No'
-Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rules' is set to 'Yes (default)'
-Ensure 'Turn off multicast name resolution' is set to 'Enabled'
-Ensure 'Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com' is set to 'Enabled'
-Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'
-Ensure 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'
-Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'
-Ensure 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'Yes'
-System settings: Use Certificate Rules on Windows Executables for Software Restriction Policies
-Configure 'Deny access to this computer from the network'
+[Ensure 'Block user from showing account details on sign-in' is set to 'Enabled']()
+
+[Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled']()
+
+[Ensure 'Interactive logon: Do not display last user name' is set to 'Enabled']()
+
+[Ensure 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled' (MS only)]()
+
+[Ensure 'Do not show feedback notifications' is set to 'Enabled']()
+
+[Ensure 'Do not display the password reveal button' is set to 'Enabled']()
+
+[Ensure 'Do not display network selection UI' is set to 'Enabled']()
+
+[Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled']()
+
+[Ensure 'Windows Firewall: Private: Settings: Display a notification' is set to 'No']()
+
+[Ensure 'Windows Firewall: Private: Settings: Apply local connection security rules' is set to 'Yes (default)']()
+
+[Ensure 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No']()
+
+[Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rules' is set to 'Yes (default)']()
+
+[Ensure 'Turn off multicast name resolution' is set to 'Enabled']()
+
+[Ensure 'Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com' is set to 'Enabled']()
+
+[Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled']()
+
+[Ensure 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater']()
+
+[Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled']()
+
+[Ensure 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'Yes']()
+
+[System settings: Use Certificate Rules on Windows Executables for Software Restriction Policies]()
+
+[Configure 'Deny access to this computer from the network']()
 Bypass traverse checking
 Windows Firewall: Public: Allow unicast response
 Windows Firewall: Private: Allow unicast response
 Windows Firewall: Domain: Allow unicast response
-Ensure 'Windows Firewall: Public: Settings: Display a notification' is set to 'No'
-Ensure 'Deny log on locally' is configured
-Ensure 'Deny log on as a batch job' is configured
-Ensure 'Deny log on as a service' is configured
-Ensure 'Deny log on through Remote Desktop Services' is configured
+
+[Ensure 'Windows Firewall: Public: Settings: Display a notification' is set to 'No']()
+
+[Ensure 'Deny log on locally' is configured]()
+
+[Ensure 'Deny log on as a batch job' is configured]()
+
+[Ensure 'Deny log on as a service' is configured]()
+
+[Ensure 'Deny log on through Remote Desktop Services' is configured]()
+
 Increase a process working set
 Ensure 'Shut down the system' is set to 'Administrators'
 Ensure 'Minimum password length' is set to '14 or more character(s)'
 Ensure 'Maximum password age' is set to '70 or fewer days, but not 0'
 Ensure 'Increase scheduling priority' is set to 'Administrators'
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/7ae91b0e-81c0-480d-932b-6ceae9d1ef4c)
+
