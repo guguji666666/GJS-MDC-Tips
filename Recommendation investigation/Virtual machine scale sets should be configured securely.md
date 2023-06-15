@@ -26,19 +26,19 @@
 
 [Ensure 'Block user from showing account details on sign-in' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_v1.9.1.audit:6f202e564eda40c8857449b1fc1ab617)
 
-[Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled']()
+[Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_7_v3.2.0_Level_1.audit:b2274f7cb80c7bbc17b8f749e3f8822d)
 
-[Ensure 'Interactive logon: Do not display last user name' is set to 'Enabled']()
+[Ensure 'Interactive logon: Do not display last user name' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_11_Enterprise_Level_1_Next_Generation_Windows_Security_v1.0.0.audit:6ae2b6378849e48ce2b7254c59d3ff22)
 
-[Ensure 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled' (MS only)]()
+[Ensure 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled' (MS only)](https://www.tenable.com/audits/items/CIS_Microsoft_Windows_Server_2016_STIG_v1.1.0_L1_MS.audit:0f08c2bcc89cf26f03d14a0903b9d388)
 
-[Ensure 'Do not show feedback notifications' is set to 'Enabled']()
+[Ensure 'Do not show feedback notifications' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_v1.12.0.audit:b8c2e2254c3c8066a8de5e864598d601)
 
-[Ensure 'Do not display the password reveal button' is set to 'Enabled']()
+[Ensure 'Do not display the password reveal button' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_v1.9.1.audit:188a107591db9fd598a69e3caf873c71)
 
-[Ensure 'Do not display network selection UI' is set to 'Enabled']()
+[Ensure 'Do not display network selection UI' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_SERVER_2019_Level_1_v1.2.1.audit:44d163b9b4130054eb1ae5582b6b78b2)
 
-[Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled']()
+[Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'](https://www.tenable.com/audits/items/CIS_MS_Windows_10_Enterprise_Level_1_v1.12.0.audit:6a22cb39c4f0b16d7919366c348b008d)
 
 [Ensure 'Windows Firewall: Private: Settings: Display a notification' is set to 'No']()
 
