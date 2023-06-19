@@ -17,12 +17,12 @@ The Log Analytics agent is on a `deprecation path` and won't be supported after 
 
 [Azure CLI : az vm extension Reference](https://learn.microsoft.com/en-us/cli/azure/vm/extension?view=azure-cli-latest)
 
-Make sure your Azure VM is in `running` state
-
-Using `Powershell`
+1. Make sure your Azure VM is in `running` state <br>
+2. Run powershell commands on the machine <br>
 ```powershell
-Set-ExecutionPolicy RemoteSigned
-
+Set-ExecutionPolicy Unrestricted
+```
+```powershell
 Install-Module Az
   
 Connect-AzAccount -Subscription <subscription id>
@@ -41,20 +41,15 @@ Set-AzVMExtension -ExtensionName "MicrosoftMonitoringAgent" `
     -Location <Location of VM>
 ```
 
-Sample
+Sample <br>
+![image](https://user-images.githubusercontent.com/96930989/211575414-8800a998-4ece-47fc-98d9-ac6eef9c12fa.png) <br>
+![image](https://user-images.githubusercontent.com/96930989/211575464-1bef01bc-995e-46a7-b9e3-e4fe78fed93f.png) <br>
+![image](https://user-images.githubusercontent.com/96930989/211575553-ffab9ace-1093-4bb7-91a2-75c175ddbac1.png) <br>
 
-![image](https://user-images.githubusercontent.com/96930989/211575414-8800a998-4ece-47fc-98d9-ac6eef9c12fa.png)
+To verify on local machine, RDP to the VM, go to `Control Panel -> System and Security` and here you could see `Microsoft Monitoring Agent`  <br>
+![image](https://user-images.githubusercontent.com/96930989/212033799-9fb7eec1-4179-4de4-8c7f-901c709694c8.png)  <br>
 
-![image](https://user-images.githubusercontent.com/96930989/211575464-1bef01bc-995e-46a7-b9e3-e4fe78fed93f.png)
-
-![image](https://user-images.githubusercontent.com/96930989/211575553-ffab9ace-1093-4bb7-91a2-75c175ddbac1.png)
-
-To verify on local machine, RDP to the VM, go to `Control Panel -> System and Security` and here you could see `Microsoft Monitoring Agent`
-
-![image](https://user-images.githubusercontent.com/96930989/212033799-9fb7eec1-4179-4de4-8c7f-901c709694c8.png)
-
-Then move to the tab named "Azure Log Analytics" andverify if the workspace id is correct, and if the Status column of this workspace shows green checkbox.
-
+Then move to the tab named "Azure Log Analytics" andverify if the workspace id is correct, and if the Status column of this workspace shows green checkbox. <br>
 ![image](https://user-images.githubusercontent.com/96930989/212016538-d5f340f2-aef0-40b9-857b-6e5a99112199.png)
 
 
