@@ -2,11 +2,10 @@
 ## Notice on MMA deprecation
 The Log Analytics agent is on a `deprecation path` and won't be supported after `August 31, 2024`. If you use the Log Analytics agent to ingest data to Azure Monitor, migrate to the new Azure Monitor agent prior to that date.
 * [Log Analytics agent overview](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/log-analytics-agent)
+* [MMA/AMA supported OS](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
 * [Multi-homing in MMA and AMA](https://learn.microsoft.com/en-us/azure/sentinel/ama-migrate#gap-analysis-between-agents)
-![image](https://user-images.githubusercontent.com/96930989/220602245-b1e2022f-bed6-4c00-af55-c8d994ba5cbc.png)
-![image](https://user-images.githubusercontent.com/96930989/220602315-8f271d51-ad18-40ca-91b5-6a92595a87a1.png)
-
-* [MMA supported OS](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a22ed3d2-6c9c-4947-aec5-e76fe69b9665) <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/c2378eef-8c12-4e86-b12c-5c1704543970)
 
 ### 1. Manually deploy MMA extension on Azure VM running `Windows`
 [MMA extension for Windows](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/oms-windows?toc=%2Fazure%2Fazure-monitor%2Ftoc.json#powershell-deployment)
