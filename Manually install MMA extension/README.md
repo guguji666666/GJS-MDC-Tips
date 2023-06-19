@@ -75,8 +75,14 @@ If you remove the MMA extension from the VM, the MMA client will be removed from
 ```
 
 # Manually install MMA extension on `Arc-enabled VM`
-### 1. Manually deploy MMA extension on ArcVM running `Windows`
-### 2. Manually deploy MMA extension on Arc VM running `Linux`
+### 1. Manually deploy MMA extension on Arc-enabled VM running `Windows`
+We can refer to the doc [Virtual machine extension management with Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions) <br>
+We can deploy the MMA agent using Azure CLI command folowing the steps in [Enable extension on Arc VM](https://learn.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions-cli#enable-extension)
+```sh
+az connectedmachine extension create --machine-name "myMachineName" --name "MicrosoftMonitoringAgent" --location "regionName" --settings '{\"workspaceId\":\"myWorkspaceId\"}' --protected-settings '{\"workspaceKey\":\"myWorkspaceKey\"}' --resource-group "myResourceGroup" --type-handler-version "1.13" --type "OmsAgentForLinux or MicrosoftMonitoringAgent" --publisher "Microsoft.EnterpriseCloud.Monitoring"
+```
+
+### 2. Manually deploy MMA extension on Arc-enabled VM running `Linux`
 We can refer to the doc [Install Linux OMS agent](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agent-windows?tabs=command-line#install-the-agent)<br>
 Run the command below for installtion <br>
 ```sh
