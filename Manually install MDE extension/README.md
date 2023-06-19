@@ -30,7 +30,8 @@ Please notice, the policy is assigned to the resource group:
 
 
 ## Deploy MDE extension using API
-### Install MDE on Azure VM running `Windows`
+
+### Install MDE on Windows VM
 #### 1. [Download and install postman](https://www.postman.com/downloads/)
 #### 2. [Get user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/API%20Basic)
 #### 3. Insert the user token here in postman
@@ -137,7 +138,7 @@ Sample  <br>
 ![image](https://user-images.githubusercontent.com/96930989/224670971-a1991618-c4ab-4ad6-a7e6-928d4a4ea1c2.png) <br>
   
   
-### Install MDE on Azure VM running `Linux` （Updating）
+### Install MDE on Linux VM
 #### 1. [Download and install postman](https://www.postman.com/downloads/)
 #### 2. [Get user token](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/API%20Basic)
 #### 3. Insert the user token here in postman
