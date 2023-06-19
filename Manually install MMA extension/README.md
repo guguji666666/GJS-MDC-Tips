@@ -75,5 +75,11 @@ If you remove the MMA extension from the VM, the MMA client will be removed from
 ```
 
 # Manually install MMA extension on `Arc-enabled VM`
-
+### 1. Manually deploy MMA extension on ArcVM running `Windows`
+### 2. Manually deploy MMA extension on Arc VM running `Linux`
+We can refer to the doc [Install Linux OMS agent](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/agent-windows?tabs=command-line#install-the-agent)<br>
+Run the command below for installtion <br>
+```sh
+wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR WORKSPACE ID> -s <YOUR WORKSPACE PRIMARY KEY>
+```
 
