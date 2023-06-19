@@ -1,4 +1,4 @@
-## Manually install MMA extension on `Azure VM`
+# Manually install MMA extension on `Azure VM`
 ## Notice on MMA deprecation
 The Log Analytics agent is on a `deprecation path` and won't be supported after `August 31, 2024`. If you use the Log Analytics agent to ingest data to Azure Monitor, migrate to the new Azure Monitor agent prior to that date.
 * [Log Analytics agent overview](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/log-analytics-agent)
@@ -79,3 +79,7 @@ Note
 ```
 If you remove the MMA extension from the VM, the MMA client will be removed from the machine as well.
 ```
+
+# Manually install MMA extension on `Arc-enabled VM`
+
+
