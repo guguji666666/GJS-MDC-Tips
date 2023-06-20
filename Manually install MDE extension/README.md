@@ -181,6 +181,9 @@ Request body for Azure VM
 } 
 ```
 
+
+Request body for Arc VM
+
 ```json
 {
   "name": "MDE.Linux",
@@ -207,7 +210,6 @@ Request body for Azure VM
 }
 ```
 
-Request body for Arc VM
 ```json
 { 
   "name": "MDE.<OsType>", 
