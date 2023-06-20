@@ -154,31 +154,85 @@ Binding
 PUT
 ```
 
-Request body
+Request body for Azure VM
 ![image](https://user-images.githubusercontent.com/96930989/224613494-7382c921-c898-4010-8e70-d1bdb156ec2b.png)
-
 ```json
 { 
-"name": "MDE.<OsType>", 
-"id": "<ResourceId>/extensions/MDE.<OsType>", 
-"type": "Microsoft.<MachineType>/<MachineTypePath>/extensions", 
-"location": "<location_of_vm>", 
-"properties": { 
-"autoUpgradeMinorVersion": true, 
-"publisher": "Microsoft.Azure.AzureDefenderForServers", 
-"type": "MDE.<OsType>", 
-"typeHandlerVersion": "1.0", 
-"settings": { 
-"azureResourceId": "<ResourceId>", 
-"defenderForServersWorkspaceId": "<SubscriptionId>", 
-"forceReOnboarding": true 
-}, 
-"protectedSettings": { 
-"defenderForEndpointOnboardingScript": "<Base64EncodedPackage>" 
-} 
-} 
+  "name": "MDE.<OsType>", 
+  "id": "<ResourceId>/extensions/MDE.<OsType>", 
+  "type": "Microsoft.<MachineType>/<MachineTypePath>/extensions", 
+  "location": "<location_of_vm>", 
+  "properties": { 
+    "autoUpgradeMinorVersion": true, 
+    "publisher": "Microsoft.Azure.AzureDefenderForServers", 
+    "type": "MDE.<OsType>", 
+    "typeHandlerVersion": "1.0", 
+    "settings": { 
+        "azureResourceId": "<ResourceId>", 
+        "defenderForServersWorkspaceId": "<SubscriptionId>", 
+        "vNextEnabled": "true", <--- this is only if you want new unified agent on 2012/2016 server
+        "forceReOnboarding": true,
+        "provisionedBy": "Manual"
+    }, 
+    "protectedSettings": { 
+      "defenderForEndpointOnboardingScript": "<Base64EncodedPackage>" 
+    } 
+  } 
 } 
 ```
+
+```json
+{
+  "name": "MDE.Linux",
+  "id": "/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.HybridCompute/machines/<vm name>/extensions/MDE.Linux",
+  "type": "Microsoft.HybridCompute/machines/extensions",
+  "location": "<azure region>",
+  "properties": {
+    "autoUpgradeMinorVersion": true,
+    "publisher": "Microsoft.Azure.AzureDefenderForServers",
+    "type": "MDE.Linux",
+    "typeHandlerVersion": "1.0",
+    "settings": {
+        "azureResourceId": "/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.HybridCompute/machines/<vm name>",
+        "defenderForServersWorkspaceId": "<subscription id>",
+        "vNextEnabled": "true", <--- this is only if you want new unified agent on 2012/2016 server
+        "forceReOnboarding": true,
+        "provisionedBy": "Manual"
+	},
+
+    "protectedSettings": {
+      "defenderForEndpointOnboardingScript": "<base64 onboarding script>"
+	}
+    }
+}
+```
+
+Request body for Arc VM
+```json
+{ 
+  "name": "MDE.<OsType>", 
+  "id": "<ResourceId>/extensions/MDE.<OsType>", 
+  "type": "Microsoft.<MachineType>/<MachineTypePath>/extensions", 
+  "location": "<location_of_vm>", 
+  "properties": { 
+    "autoUpgradeMinorVersion": true, 
+    "publisher": "Microsoft.Azure.AzureDefenderForServers", 
+    "type": "MDE.<OsType>", 
+    "typeHandlerVersion": "1.0", 
+    "settings": { 
+        "azureResourceId": "<ResourceId>", 
+        "defenderForServersWorkspaceId": "<SubscriptionId>", 
+        "vNextEnabled": "true", <--- this is only if you want new unified agent on 2012/2016 server
+        "forceReOnboarding": true,
+        "provisionedBy": "Manual"
+    }, 
+    "protectedSettings": { 
+      "defenderForEndpointOnboardingScript": "<Base64EncodedPackage>" 
+    } 
+  } 
+}
+```
+
 
 * OsType: Windows / Linux
 
