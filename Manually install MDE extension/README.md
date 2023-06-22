@@ -246,7 +246,7 @@ Request body for Arc VM
 
 * ApiVersion: 2015-06-15 (for Azure VM) / 2020-08-02 (for Azure Arc)
 
-#### Get `<Base64EncodedPackage>` for Windows VM
+#### Get `<Base64EncodedPackage>` for Linux VM
 ##### 1. Navigate to [MDE portal](https://security.microsoft.com)
 ##### 2. Navigate to Settings > Endpoints
 ![image](https://user-images.githubusercontent.com/96930989/224611145-931e10e5-9929-448c-86c0-ec77ab850272.png)
