@@ -1,4 +1,4 @@
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/46a4cc1c-ca67-4a49-a298-38a097858529)## SQL VA remediation
+## SQL VA remediation
 
 [SQL VA results reference list](https://learn.microsoft.com/en-us/azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules#data-protection)
 
