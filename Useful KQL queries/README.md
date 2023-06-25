@@ -31,6 +31,53 @@ resourcecontainers
 | sort by name asc
 ```
 
+## List all VM extensions and provisioning status
+
+Azure VM
+```kusto
+resources
+| where type == "microsoft.compute/virtualmachines/extensions"
+| extend VM = tostring (split(id, "/")[8])
+| extend Extension = name
+| project VM, Extension, Publisher = properties.publisher, Status = properties.provisioningState
+| order by VM
+```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5a02ef47-60ff-4d43-8820-48f81d851437)
+
+Arc VM
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines/extensions"
+| extend VM = tostring (split(id, "/")[8])
+| extend Extension = name
+| project VM, Extension, Publisher = properties.publisher, Status = properties.provisioningState
+| order by VM
+```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/2d9d028b-f636-46d8-a07c-563e06daf5dd)
+
+
+## List VMs with `SqlIaasExtension` installed and provisioning status
+
+For Azure VM
+```kusto
+resources
+| where type == "microsoft.compute/virtualmachines/extensions"
+| extend VM = tostring (split(id, "/")[8])
+| extend Extension = name
+| where Extension contains "SqlIaasExtension"
+| project VM, Extension, Publisher = properties.publisher, Status = properties.provisioningState
+```
+
+For Arc VM
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines/extensions"
+| extend VM = tostring (split(id, "/")[8])
+| extend Extension = name
+| where Extension contains "SqlIaasExtension"
+| project VM, Extension, Publisher = properties.publisher, Status = properties.provisioningState
+```
+
 ## List enabled defender plans of each subscription
 
 ```kusto
@@ -48,6 +95,31 @@ resourcecontainers
 | project name, subId, Azure_Defender_plan, Status
 ```
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/0e226f4c-ec41-4f5d-bb99-cede8e030c79)
+
+## Check status of MDE extension on Azure VM and Arc VM
+
+Azure VM
+```kusto
+resources
+| where type == "microsoft.compute/virtualmachines/extensions"
+| extend VM = tostring (split(id, "/")[8])
+| extend Extension = name
+| where Extension contains "MDE"
+| project VM, Extension, Publisher = properties.publisher, Status = properties.provisioningState
+```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a1da4588-8cec-40dd-84bb-cb33b799595f)
+
+Arc VM
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines/extensions"
+| extend VM = tostring (split(id, "/")[8])
+| extend Extension = name
+| where Extension contains "MDE"
+| project VM, Extension, Publisher = properties.publisher, Status = properties.provisioningState
+```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/b6d5384b-42d0-4809-81db-e28d410147ee)
+
 
 ## ARG list current secure score of all subscriptions
 
