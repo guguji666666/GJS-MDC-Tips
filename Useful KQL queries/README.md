@@ -79,7 +79,7 @@ resources
 | project VM, Extension, Publisher = properties.publisher, Status = properties.provisioningState
 ```
 
-## List enabled defender plans of each subscription
+## List defender plans status of each subscription
 
 ```kusto
 SecurityResources
