@@ -1,4 +1,4 @@
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a3cb16aa-587b-4215-b5e6-d8fb38af8193)# Use ARG - Resource Graph Explorer
+# Use ARG - Resource Graph Explorer
 
 Navigate to Azure portal, and search `Resource Graph Explorer` on the top <br>
 ![image](https://user-images.githubusercontent.com/96930989/210159757-b875ba41-6946-4ee7-a604-92183cf9f58b.png)
@@ -21,7 +21,18 @@ resourcecontainers
 ```
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/39a6e992-e96d-43f5-96da-b2e433844bf9)
 
+## ARG list all subscriptions under specified management group
+```kusto
+resourcecontainers
+| where type == 'microsoft.resources/subscriptions'
+| mv-expand managementGroupParent = properties.managementGroupAncestorsChain
+| where managementGroupParent.name =~ '<name of management group>'
+| project name, id
+| sort by name asc
+```
+
 ## List enabled defender plans of each subscription
+
 ```kusto
 SecurityResources
 | where type == 'microsoft.security/pricings'
@@ -36,17 +47,7 @@ resourcecontainers
 ) on subId
 | project name, subId, Azure_Defender_plan, Status
 ```
-
-## ARG list all subscriptions under specified management group
-
-```kusto
-resourcecontainers
-| where type == 'microsoft.resources/subscriptions'
-| mv-expand managementGroupParent = properties.managementGroupAncestorsChain
-| where managementGroupParent.name =~ '<name of management group>'
-| project name, id
-| sort by name asc
-```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/0e226f4c-ec41-4f5d-bb99-cede8e030c79)
 
 ## ARG list current secure score of all subscriptions
 
