@@ -57,6 +57,7 @@ resources
 
 
 ## List VMs with `SqlIaasExtension` installed and provisioning status
+#### SQL servers on machines
 
 For Azure VM
 ```kusto
