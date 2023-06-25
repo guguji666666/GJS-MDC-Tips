@@ -13,6 +13,14 @@ resourcecontainers
 | project name, id
 ```
 
+```kusto
+resourcecontainers
+| where type == "microsoft.resources/subscriptions"
+| extend subscriptionId = split(id, "/")[2]
+| project name, subscriptionId
+```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/39a6e992-e96d-43f5-96da-b2e433844bf9)
+
 ## 2. ARG list all subscriptions under specified management group
 
 ```kusto
