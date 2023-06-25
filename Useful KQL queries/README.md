@@ -1,11 +1,11 @@
-# Use ARG - Resource Graph Explorer
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a3cb16aa-587b-4215-b5e6-d8fb38af8193)# Use ARG - Resource Graph Explorer
 
 Navigate to Azure portal, and search `Resource Graph Explorer` on the top <br>
 ![image](https://user-images.githubusercontent.com/96930989/210159757-b875ba41-6946-4ee7-a604-92183cf9f58b.png)
 
 ## [Azure Resource Graph sample queries for Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/resource-graph-samples?tabs=azure-cli)
 
-## 1. ARG list all subscriptions under your tenant
+## ARG list all subscriptions under your tenant
 
 ```kusto
 resourcecontainers
@@ -21,7 +21,23 @@ resourcecontainers
 ```
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/39a6e992-e96d-43f5-96da-b2e433844bf9)
 
-## 2. ARG list all subscriptions under specified management group
+## List enabled defender plans of each subscription
+```kusto
+SecurityResources
+| where type == 'microsoft.security/pricings'
+| extend subId = tostring(subscriptionId)
+| project subId, Azure_Defender_plan= name, Status= properties.pricingTier
+| join kind = leftouter 
+(
+resourcecontainers
+| where type == "microsoft.resources/subscriptions"
+| extend subId = tostring (split(id, "/")[2])
+| project name, subId
+) on subId
+| project name, subId, Azure_Defender_plan, Status
+```
+
+## ARG list all subscriptions under specified management group
 
 ```kusto
 resourcecontainers
@@ -32,7 +48,7 @@ resourcecontainers
 | sort by name asc
 ```
 
-## 3. ARG list current secure score of all subscriptions
+## ARG list current secure score of all subscriptions
 
 ```kusto
 SecurityResources 
@@ -40,8 +56,9 @@ SecurityResources
 | extend current = properties.score.current, max = todouble(properties.score.max)
 | project subscriptionId, current, max, percentage = ((current / max)*100)
 ```
+
   
-## 4. ARG check relevant initiatives in subscription (basic)
+## ARG check relevant initiatives in subscription (basic)
 
 ```kusto
 securityresources
@@ -56,7 +73,7 @@ securityresources
 | project initiativeName, statusInMdc
 ```
 
-## 5. ARG check relevant initiatives in subscription (advanced)
+## ARG check relevant initiatives in subscription (advanced)
 
 ```kusto
 securityresources
@@ -73,7 +90,7 @@ securityresources
 | project initiativeName, statusInMdc, RecommendationName, ResourceName
 ```
 
-## 6. ARG check relevant initiatives assigned and exemption
+## ARG check relevant initiatives assigned and exemption
 
 ```kusto
 policyresources
@@ -87,7 +104,7 @@ policyresources
 | summarize statuses = make_set(status) by policySetDefinitionId
 ```
 
-##  7. ARG compare results between Defender for cloud and Azure Policy
+## ARG compare results between Defender for cloud and Azure Policy
 
 ```kusto
 securityresources
@@ -125,7 +142,7 @@ policyresources
 ### Copy the last part of the `Definition ID`
 ![image](https://user-images.githubusercontent.com/96930989/210167501-18c46574-1d14-4f58-8a60-5d24ebedd3bc.png)
 
-##  8. ARG list all unpatched VM along with OS information
+## ARG list all unpatched VM along with OS information
 ```
 MDC Recommendation: System updates should be installed on your machines
 ```
@@ -205,7 +222,7 @@ In this demo, i will use the name `table_ingestion`
 ![image](https://user-images.githubusercontent.com/96930989/210542776-3f20b878-e4cd-4c0a-ad8a-b8914a4a3bdc.png)
 
 
-## 9. ARG list DDOS related reports (including mitigation reports)
+## ARG list DDOS related reports (including mitigation reports)
 ```kusto
 AzureDiagnostics | whereCategory == "DDoSMitigationFlowLogs"
 ```
@@ -214,7 +231,7 @@ AzureDiagnostics | whereCategory == "DDoSMitigationFlowLogs"
 AzureDiagnostics | whereCategory == "DDoSMitigationReports"
 ```
 
-## 10. Check VA results
+## Check VA results
 ```kusto
 securityresources | where type =~ "microsoft.security/assessments/subassessments"
         | extend assessmentKey=extract(@"(?i)providers/Microsoft.Security/assessments/([^/]*)", 1, id), subAssessmentId=tostring(properties.id), parentResourceId= extract("(.+)/providers/Microsoft.Security", 1, id)
@@ -237,7 +254,7 @@ securityresources | where type =~ "microsoft.security/assessments/subassessments
         | order by all desc, numOfResources desc
 ```
 
-## 11. Monitor protection status
+## Monitor protection status
 ```kusto
 ProtectionStatus
 | distinct Computer
