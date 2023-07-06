@@ -1,3 +1,8 @@
+## Manage Arc VM extensions
+
+[Enable Azure VM extensions using the Azure CLI](https://learn.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions-cli#list-extensions-installed)
+
+
 ## Connect VM to Arc
 
 ### 1.AWS VM
