@@ -25,8 +25,7 @@ d57a4221-a804-52ca-3dea-768284f06bb7
 
 ### ARG query to compare the results between Azure policy and defender for cloud
 
-Navigate to Azure portal, and search `Resource Graph Explorer` on the top
-
+Navigate to Azure portal, and search `Resource Graph Explorer` on the top <br>
 ![image](https://user-images.githubusercontent.com/96930989/210159757-b875ba41-6946-4ee7-a604-92183cf9f58b.png)
 
 ```kusto
@@ -52,7 +51,7 @@ policyresources
 | project resourceName, statusInMdc, statusInPolicy
 ```
 
-Notice
+**Notice** <br>
 
 Enabling both ADE and HBE at the same time on a VM is not supported at present. We should only enable either ADE or HBE.
 
@@ -69,6 +68,8 @@ First, [Create a Key Vault configured for encryption keys](https://learn.microso
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
+```
+```powershell
 Install-Module Az
 ```
 ```powershell
@@ -80,7 +81,7 @@ Set-AzContext -Subscription <subscription id>
 New-AzKeyvault -name <name of your KV> -ResourceGroupName <Name of your resource group that KV locates> -Location EastUS -EnabledForDiskEncryption
 ```
 
-Sample
+**Sample**
 ```powershell
 New-AzKeyvault -name GJSADEKV -ResourceGroupName ADEKV -Location EastAsia -EnabledForDiskEncryption
 ```
@@ -95,34 +96,28 @@ $KeyVault = Get-AzKeyVault -VaultName <name of your KV> -ResourceGroupName <Name
 Set-AzVMDiskEncryptionExtension -ResourceGroupName <Name of the resource group where VM locates> -VMName <Name of the VM> -DiskEncryptionKeyVaultUrl $KeyVault.VaultUri -DiskEncryptionKeyVaultId $KeyVault.ResourceId
 ```
 
-Sample
+**Sample**
 ```powershell
 $KeyVault = Get-AzKeyVault -VaultName GJSADEKV -ResourceGroupName ADEKV
 ```
 ```powershell
 Set-AzVMDiskEncryptionExtension -ResourceGroupName Custom-EP-guestconfiguration -VMName win11-test01 -DiskEncryptionKeyVaultUrl $KeyVault.VaultUri -DiskEncryptionKeyVaultId $KeyVault.ResourceId
 ```
-
 ![image](https://user-images.githubusercontent.com/96930989/230122686-0ad2dae6-61c8-472c-ab4f-0d38f6064b7c.png)
 
-Then we wait until the command is run completely
-
+Then we wait until the command is run completely <br>
 ![image](https://user-images.githubusercontent.com/96930989/230123271-75c36225-3ac5-4ccc-863e-0b49ffae58d3.png)
 
-Before we enable ADE
-
+Before we enable ADE <br>
 ![image](https://user-images.githubusercontent.com/96930989/230122856-e8deea8d-f819-4b28-9a0e-546f15121c67.png)
 
-After ADE is enabled, we check ADE extension first
-
+After ADE is enabled, we check ADE extension first <br>
 ![image](https://user-images.githubusercontent.com/96930989/230123418-59414fd5-c7b9-44cf-aaca-923c2e540d47.png)
 
-Then Check ADE state on disk
-
+Then Check ADE state on disk <br>
 ![image](https://user-images.githubusercontent.com/96930989/230123641-f39a9ea9-8f13-43c7-a179-cd58f1bcaaba.png)
 
 ### Check `Encryption at host` on the VM
-
 * [Use the Azure portal to enable end-to-end encryption using encryption at host](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal?tabs=azure-powershell)
 * [Use the Azure PowerShell module to enable end-to-end encryption using encryption at host](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-host-based-encryption-powershell)
 * [Use the Azure CLI to enable end-to-end encryption using encryption at host](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli)
