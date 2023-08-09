@@ -1,4 +1,4 @@
-# View MDFC alerts in event hub
+# View defender for cloud alerts in Event Hub
 
 ## In Azure portal
 
