@@ -127,3 +127,7 @@ Remember that while these are some common services to monitor, the specific serv
 | ConfigurationData \| where SoftwareName contains "Monitoring Agent" and CurrentVersion!= "8.0.11081.0" | Useful for seeing which machines have outdated or noncompliant software version installed. This query reports the last reported configuration state, but doesn't report changes. |
 | ConfigurationChange \| where RegistryKey == @"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\QualityCompat" | Useful for tracking changes to crucial antivirus keys.       |
 | ConfigurationChange \| where RegistryKey contains @"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy" | Useful for tracking changes to firewall settings.            |
+
+You can deploy the KQL qeury in Sentinel analytics rules so that you could get alerts/incidents when relating events are generated.
+
+
