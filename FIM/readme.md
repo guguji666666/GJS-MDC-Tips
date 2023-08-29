@@ -128,6 +128,6 @@ Remember that while these are some common services to monitor, the specific serv
 | ConfigurationChange \| where RegistryKey == @"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\QualityCompat" | Useful for tracking changes to crucial antivirus keys.       |
 | ConfigurationChange \| where RegistryKey contains @"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy" | Useful for tracking changes to firewall settings.            |
 
-You can deploy the KQL qeury in Sentinel analytics rules so that you could get alerts/incidents when relating events are generated.
+You can deploy the KQL query in Sentinel analytics rules so that you could get alerts/incidents when relating events are generated.
 
 
