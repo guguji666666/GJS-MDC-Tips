@@ -111,3 +111,19 @@ Limitation per machine <br>
    - Application-specific services that are critical for your organization's operations.
 
 Remember that while these are some common services to monitor, the specific services you need to monitor may vary depending on your organization's requirements and the applications you use. Additionally, regularly review and update your list of monitored services as your environment changes.
+
+
+## KQL query with FIM data
+
+[Support for alerts on configuration state](https://learn.microsoft.com/en-us/azure/automation/change-tracking/overview-monitoring-agent?tabs=win-az-vm#support-for-alerts-on-configuration-state)
+
+| Query                                                        | Description                                                  |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| ConfigurationChange \| where ConfigChangeType == "Files" and FileSystemPath contains " c:\windows\system32\drivers\" | Useful for tracking changes to system-critical files.        |
+| ConfigurationChange \| where FieldsChanged contains "FileContentChecksum" and FileSystemPath == "c:\windows\system32\drivers\etc\hosts" | Useful for tracking modifications to key configuration files. |
+| ConfigurationChange \| where ConfigChangeType == "WindowsServices" and SvcName contains "w3svc" and SvcState == "Stopped" | Useful for tracking changes to system-critical services.     |
+| ConfigurationChange \| where ConfigChangeType == "Daemons" and SvcName contains "ssh" and SvcState!= "Running" | Useful for tracking changes to system-critical services.     |
+| ConfigurationChange \| where ConfigChangeType == "Software" and ChangeCategory == "Added" | Useful for environments that need locked-down software configurations. |
+| ConfigurationData \| where SoftwareName contains "Monitoring Agent" and CurrentVersion!= "8.0.11081.0" | Useful for seeing which machines have outdated or noncompliant software version installed. This query reports the last reported configuration state, but doesn't report changes. |
+| ConfigurationChange \| where RegistryKey == @"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\QualityCompat" | Useful for tracking changes to crucial antivirus keys.       |
+| ConfigurationChange \| where RegistryKey contains @"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy" | Useful for tracking changes to firewall settings.            |
