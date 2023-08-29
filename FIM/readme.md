@@ -53,3 +53,61 @@ Limitation per machine <br>
 |                   |                                                        | HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile |
 |                   |                                                        | HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile |
 |                   |                                                        | HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile |
+
+
+## Services recommend to be monitored
+1. **Security and Critical Services:**
+   - Windows Defender Antivirus Service (WinDefend)
+   - Windows Update (wuauserv)
+   - Windows Firewall (MpsSvc)
+   - Cryptographic Services (CryptSvc)
+   - Remote Procedure Call (RPC, RpcSs)
+
+2. **Networking Services:**
+   - DHCP Client (Dhcp)
+   - DNS Client (Dnscache)
+   - Network Location Awareness (NlaSvc)
+   - WLAN AutoConfig (Wlansvc)
+   - Wired AutoConfig (dot3svc)
+
+3. **System Health and Monitoring Services:**
+   - Windows Management Instrumentation (Winmgmt)
+   - Task Scheduler (Schedule)
+   - Windows Event Log (EventLog)
+   - Performance Logs & Alerts (SysmonLog)
+   - Diagnostic Policy Service (DPS, DPS, diagtrack)
+
+4. **User Account and Authentication Services:**
+   - Security Accounts Manager (SamSs)
+   - Credential Manager (VaultSvc)
+   - Smart Card (SCardSvr)
+   - Windows Time (W32Time)
+
+5. **Remote Access Services:**
+   - Remote Desktop Services (TermService)
+   - Remote Access Connection Manager (RasMan)
+
+6. **System Maintenance Services:**
+   - Background Intelligent Transfer Service (BITS, BITS, BITS)
+   - Windows Modules Installer (TrustedInstaller)
+   - Windows Installer (msiserver)
+
+7. **Printing and Spooling Services:**
+   - Print Spooler (Spooler)
+
+8. **Domain and Network Services:**
+   - Server (LanmanServer)
+   - Workstation (LanmanWorkstation)
+   - Computer Browser (Browser)
+   - Net Logon (Netlogon)
+   - TCP/IP NetBIOS Helper (LmHosts)
+
+9. **Windows Update Services (if applicable):**
+   - Windows Update (wuauserv)
+   - Background Intelligent Transfer Service (BITS, BITS, BITS)
+
+10. **Additional Services (based on your environment):**
+
+   - Application-specific services that are critical for your organization's operations.
+
+Remember that while these are some common services to monitor, the specific services you need to monitor may vary depending on your organization's requirements and the applications you use. Additionally, regularly review and update your list of monitored services as your environment changes.
