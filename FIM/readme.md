@@ -18,7 +18,7 @@ Limitation per machine <br>
 <img width="886" alt="image" src="https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a477ddc4-c92c-4f0c-9615-18b21556a288">
 
 
-## Files and registries recommended to be monitored
+## Files and registries recommend to be monitored
 
 [Which files should I monitor?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/file-integrity-monitoring-overview#which-files-should-i-monitor)
 
