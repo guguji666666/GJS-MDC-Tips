@@ -1,5 +1,6 @@
 # Defender for cloud useful doc
-
+## [Support matrices for Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-cloud)
+## [Defender for Containers support matrices(Qualys & MDVM)](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-containers#registries-and-images---powered-by-mdvm)
 ## [Security recommendations - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference)
 ## [Security alerts - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-dns)
 ## [Check MDE (Defender for endpoint) alerts in defender for cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/integration-defender-for-endpoint)
