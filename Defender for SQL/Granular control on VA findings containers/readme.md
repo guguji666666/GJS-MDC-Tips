@@ -1,4 +1,4 @@
-# Granular control on VA findings containers
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a6157615-a4d2-4c0c-9843-7d9b5262d8f5)# Granular control on VA findings containers
 
 As mentioned in the doc [Find and remediate vulnerabilities in your Azure SQL databases](https://learn.microsoft.com/en-us/azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?tabs=classic#find-vulnerabilities-in-your-azure-sql-databases), if you configure the storage account (classic) to save SQL VA findings, then the permissions required for management <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/4483237e-ff55-4d99-8e82-8550db911cd3)
@@ -68,6 +68,16 @@ The test account can modify SQL ATP baseline on database `guguji--sql01/guguji-s
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/2cdac16f-8825-4ab1-a6b4-774125046c68) <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5ba768f2-49df-4753-9f8f-397847b2540c)
 
+### Failure
+
 The test account can't remediate the VA findings on SQL server `guguji-sql02` since it doesn't have the role `SQL Security Manager` assigned <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9452a594-b5f9-419e-8ccf-358c56206a8e) <br>
+
+In the blob `guguji--sql02`, we didn't assign the `write` permission to the account <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/7651fca5-80d3-4a43-aeef-915cb7565872)
+
+The test account can't create directory under the blob `guguji--sql02` <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/2abbaaff-fef3-450a-95c4-f701dbb19a61)
+
+
 
