@@ -3,12 +3,14 @@
 As mentioned in the doc [Find and remediate vulnerabilities in your Azure SQL databases](https://learn.microsoft.com/en-us/azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?tabs=classic#find-vulnerabilities-in-your-azure-sql-databases), if you configure the storage account (classic) to save SQL VA findings, then the permissions required for management <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/4483237e-ff55-4d99-8e82-8550db911cd3)
 
-
 In case that we store cross subscription SQL VA findings in a single storage accounts, we need to restrict the user to have only write permission on the SQL findings from the SQL server they own <br>
 
+## 1. Requirement of storage account
 First we need to have storage account with `Hierarchical namespace` enabled <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/32731c6e-93d2-4ae3-9c79-05df26db4540)
 
+
+## 2. Azure RBAC role
 Then we need to:
 * Assign the role `Security Admin` at the subscription level where defender for cloud is enabled
 * Assign the role `SQL Security Manager` at the `SQL server level`
@@ -35,6 +37,7 @@ I assign the role `SQL Security Manager` to test account on server `guguji--sql0
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9f813fa3-7564-4336-b864-44784a829edb)
 
 
+## 3. Azure storage ACL
 Then let's configure the permissions on the containers in storage account. <br>
 [Access control lists (ACLs) in Azure Data Lake Storage Gen2](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control)
 
@@ -43,7 +46,6 @@ Normally the SQL VA findings are saved under path `vulnerability-assessment / sc
 
 Then we need to 
 1. Assign the `Execute` permission to the user on the container `vulnerability-assessment` 
-
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/b14239ae-58c6-4407-a92d-d2e459da1c72) <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/23a5e2e5-656a-481b-8830-6e4027cd911d)
 
@@ -66,10 +68,6 @@ The test account can modify SQL ATP baseline on database `guguji--sql01/guguji-s
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/2cdac16f-8825-4ab1-a6b4-774125046c68) <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5ba768f2-49df-4753-9f8f-397847b2540c)
 
-
-The test account can't remediate the VA findings on SQL server `guguji-sql02` <br>
+The test account can't remediate the VA findings on SQL server `guguji-sql02` since it doesn't have the role `SQL Security Manager` assigned <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9452a594-b5f9-419e-8ccf-358c56206a8e) <br>
-
-But for SQL server `guguji--sql02`, the test account doesn't have the `SQL Security Manager` role assigned. On container `guguji--sql02`, we don't assign any role to the test account <br>
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/bf10fe79-1337-4717-a874-6317d7d60c91)
 
