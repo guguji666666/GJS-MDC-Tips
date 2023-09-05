@@ -13,7 +13,27 @@ Then we need to:
 * Assign the role `Security Admin` at the subscription level where defender for cloud is enabled
 * Assign the role `SQL Security Manager` at the `SQL server level`
 * Assign the role `Storage Blob Data Reader` at the storage account level
-* Assign the role `Reader` at the storage account level, or you will meet the error "storage account not fou
+* Assign the role `Reader` at the storage account level, or you will meet the error "storage account not found"
+
+If you assign the `Storage Blob Data Reader` only at the blob level as mentioned in [Assign an Azure role for access to blob data](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/storage/blobs/assign-azure-role-data-access.md), you will get this `error` when check SQL VA findings <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/c4bc3f26-3766-4f91-ac9e-d027599c6eb2)
+```
+{
+    "error": {
+        "code": "AuthorizationFailed",
+        "message": "The client 'test-sqlva-01@tigaultraman.com' with object id 'xxxxxxxxd4-bcd4-4aec-86a9-f6b71e2b9f2c' does not have authorization to perform action 'Microsoft.Storage/storageAccounts/listKeys/action' over scope '/subscriptions/74a72629-ac6d-44db-a66a-abc69f3bfb7e/resourceGroups/GJS-MS150-MDFC1/providers/Microsoft.Storage/storageAccounts/sqlva01' or the scope is invalid. If access was recently granted, please refresh your credentials."
+    }
+}
+```
+
+In my lab, i have two SQL servers:
+* guguji--sql01
+* guguji--sql02
+
+I assign the role `SQL Security Manager` to test account on server `guguji--sql01`, for server `guguji--sql02` i didn't assign this role <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a12d7c39-5ce5-403d-abbc-8766b10e789b) <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9f813fa3-7564-4336-b864-44784a829edb)
+
 
 Then let's configure the permissions on the containers in storage account. <br>
 [Access control lists (ACLs) in Azure Data Lake Storage Gen2](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control)
