@@ -21,3 +21,32 @@ Then let's configure the permissions on the containers in storage account. <br>
 Normally the SQL VA findings are saved under path `vulnerability-assessment / scans / <server name> / <database name>` <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/c56e976e-2271-473a-a4cb-f54bf7a59768)
 
+Then we need to 
+1. Assign the `Execute` permission to the user on the container `vulnerability-assessment`
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/b14239ae-58c6-4407-a92d-d2e459da1c72)
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/23a5e2e5-656a-481b-8830-6e4027cd911d)
+
+2. Assign the `Execute` permission to the user on the folder `scans`
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/99653e62-4f29-4c2a-81bc-a15c51c776de)
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/103f79e9-901f-4842-9ff2-2053c0b49fdd)
+
+3. Assign `Read`,`Write` and `Execute` permissions to the user on the folder `<your SQL server name>
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9e1c9f56-2bff-489e-b364-a0aa63b5b335)
+
+4. Assign `Read`,`Write` and `Execute` permissions to the user on the folder `<your SQL databases>
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a51ce63e-b340-4c9e-99bc-6427a0c7aa3f)
+
+In this test, i only assign the permissions to user on the database `guguji-sqldb01`, for `master` database i didn't assign any permissions
+
+SQL DB `guguji-sqldb01` <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/60c629b6-2f8a-4246-9e62-426b28ba07d5)
+
+SQL DB `master` <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/6827b7c5-ee32-4003-bacf-0971c69e55fc)
+
