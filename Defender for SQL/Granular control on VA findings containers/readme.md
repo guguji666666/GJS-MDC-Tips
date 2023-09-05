@@ -53,7 +53,7 @@ Then we need to
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/99653e62-4f29-4c2a-81bc-a15c51c776de) <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/103f79e9-901f-4842-9ff2-2053c0b49fdd)
 
-3. Assign `Read`,`Write` and `Execute` permissions to the user on the blob `<your SQL server name>`
+3. Assign `Read`,`Write` and `Execute` permissions to the user on the blob `<your SQL server name>` to be managed
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9e1c9f56-2bff-489e-b364-a0aa63b5b335)
 
 4. Assign `Read`,`Write` and `Execute` permissions to the user on the blob `<your SQL databases>`
