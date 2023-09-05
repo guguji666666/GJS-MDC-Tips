@@ -6,9 +6,11 @@ As mentioned in the doc [Find and remediate vulnerabilities in your Azure SQL da
 In case that we store cross subscription SQL VA findings in a single storage accounts, we need to restrict the user to have only write permission on the SQL findings from the SQL server they own <br>
 
 ## 1. Requirement of storage account
-First we need to have storage account with `Hierarchical namespace` enabled <br>
+First we need to have storage account with `Hierarchical namespace` enabled, this could `only be configured` when creating the storage account <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/32731c6e-93d2-4ae3-9c79-05df26db4540)
 
+**Note** <br>
+Existing storage which doesn't have this function enabled `can't` have granular control on blob level
 
 ## 2. Azure RBAC role
 Then we need to:
