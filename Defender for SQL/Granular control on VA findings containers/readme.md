@@ -78,8 +78,12 @@ The test account can't remediate the VA findings on SQL server `guguji-sql02` si
 In the blob `guguji--sql02`, we didn't assign the `write` permission to the account <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/7651fca5-80d3-4a43-aeef-915cb7565872)
 
-The test account can't create directory under the blob `guguji--sql02` <br>
+As a results, the test account can't create directory under the blob `guguji--sql02` <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/2abbaaff-fef3-450a-95c4-f701dbb19a61)
 
-
+In short, if you are managing multiple SQL db VA findings in a single storage account, <br>
+* Role `SQL Security Manager` assigned at the `SQL server level` you want to be managed by the user
+* We still need to assign the role `Storage Blob Data Reader` at the storage account level
+* Inside the storage account, user can't make changes to the VA findings if the role `SQL Security Manager` is not assigned at that SQL server level
+* By using storage ACL function, we can restrict the permissions of the user
 
