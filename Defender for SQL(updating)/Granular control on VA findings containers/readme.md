@@ -50,3 +50,10 @@ SQL DB `guguji-sqldb01` <br>
 SQL DB `master` <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/6827b7c5-ee32-4003-bacf-0971c69e55fc)
 
+Then we sign in as the test user account and check the permissions <br>
+
+The test user can't create new folder under `scans` <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/88e30b58-0780-4812-80e8-223a1402da69)
+
+The test user can't create new folder under the folder `sql server name` <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9ea357bb-92cb-44af-970b-7f72c72ddaae)
