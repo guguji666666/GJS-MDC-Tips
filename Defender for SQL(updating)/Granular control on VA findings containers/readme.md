@@ -1,4 +1,4 @@
-# Granular control on VA findings containers
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/778a839c-b7e1-4111-89d8-a0b5c8b3be1f)# Granular control on VA findings containers
 
 As mentioned in the doc [Find and remediate vulnerabilities in your Azure SQL databases](https://learn.microsoft.com/en-us/azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?tabs=classic#find-vulnerabilities-in-your-azure-sql-databases), if you configure the storage account (classic) to save SQL VA findings, then the permissions required for management <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/4483237e-ff55-4d99-8e82-8550db911cd3)
@@ -11,7 +11,7 @@ First we need to have storage account with `Hierarchical namespace` enabled <br>
 
 Then we need to: <br>
 * Assign the role `Security Admin` at the subscription level where defender for cloud is enabled
-* Assign the role `SQL Security Manager` at the SQL server level
+* Assign the role `SQL Security Manager` at the SQL server level `guguji--sql01`
 * Assign the role `Storage Blob Data Reader` at the storage account level
 * Assign the role `Reader` at the storage account level, or you will meet the error "storage account not found"
 
@@ -40,27 +40,28 @@ Then we need to
 
 4. Assign `Read`,`Write` and `Execute` permissions to the user on the folder `<your SQL databases>
 
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a51ce63e-b340-4c9e-99bc-6427a0c7aa3f)
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a729cdaa-e288-4db1-ab3b-ae68be67ed6f)
 
-In this test, i only assign the permissions to user on the database `guguji-sqldb01`, for `master` database i didn't assign any permissions
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/3ffdbba2-dcf9-4c26-9a2b-7f0799ed84a3)
 
-SQL DB `guguji-sqldb01` <br>
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/60c629b6-2f8a-4246-9e62-426b28ba07d5)
+Then we sign in as the test user account and check the permissions
 
-SQL DB `master` <br>
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/6827b7c5-ee32-4003-bacf-0971c69e55fc)
+The test user can't create new folder under `scans` since the account doesn't have write permission
 
-Then we sign in as the test user account and check the permissions <br>
-
-The test user can't create new folder under `scans` <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/88e30b58-0780-4812-80e8-223a1402da69)
 
-The test user can't create new folder under the folder `sql server name` <br>
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9ea357bb-92cb-44af-970b-7f72c72ddaae)
+The test account can modify SQL ATP baseline on database `guguji--sql01/guguji-sqldb01` and `master`
 
-The test account can modify baseline on database `guguji--sql01/guguji-sqldb01` since this account has the write permissions <br>
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/f9039079-6620-4eda-bc25-1fe8f1a71221)
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/2cdac16f-8825-4ab1-a6b4-774125046c68)
 
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/b91ec23b-2f28-436b-8e1c-e51ab285b8f2)
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5ba768f2-49df-4753-9f8f-397847b2540c)
 
-The test account can modify baseline on database `guguji--sql01/guguji-sqldb01` since this account doesn't have the write permission <br>
+
+The test account can't remediate the VA findings on SQL server `guguji-sql02` <br>
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9452a594-b5f9-419e-8ccf-358c56206a8e)
+
+But for SQL server `guguji--sql02`, the test account doesn't have the `SQL Security Manager` role assigned. On container `guguji--sql02`, we don't assign any role to the test account 
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/bf10fe79-1337-4717-a874-6317d7d60c91)
+
