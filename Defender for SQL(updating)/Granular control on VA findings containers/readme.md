@@ -57,3 +57,10 @@ The test user can't create new folder under `scans` <br>
 
 The test user can't create new folder under the folder `sql server name` <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9ea357bb-92cb-44af-970b-7f72c72ddaae)
+
+The test account can modify baseline on database `guguji--sql01/guguji-sqldb01` since this account has the write permissions <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/f9039079-6620-4eda-bc25-1fe8f1a71221)
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/b91ec23b-2f28-436b-8e1c-e51ab285b8f2)
+
+The test account can modify baseline on database `guguji--sql01/guguji-sqldb01` since this account doesn't have the write permission <br>
