@@ -90,5 +90,3 @@ Then we just wait until the remediation task finishes, the time it takes depends
 We can check the status of remediation task here
 
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/9493283b-ff50-4846-a67b-50c6da8e4519)
-
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/3d55d462-0278-4e60-9bdd-3b5da36842fb)
