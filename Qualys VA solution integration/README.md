@@ -38,8 +38,9 @@ Configure machines to receive a vulnerability assessment provider
 ```
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/62334999-2821-45ab-8c7c-8b8dc62e92fd)
 
-In the assignment we can select `default` or `mdeTVM` <br>
+In the assignment we can select `default` or `mdeTVM` as VA provider <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/ba033593-39c2-4106-8140-ae0cdd87ca9d)
+
 
 ## Optional
 #### If you are using Azure policy for deployment and you only want to deploy qualys extension on VMs with specified `tags`, then
