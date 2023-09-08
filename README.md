@@ -5,17 +5,17 @@
 ## [Security alerts - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-dns)
 ## [Check MDE (Defender for endpoint) alerts in defender for cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/integration-defender-for-endpoint)
 
-* [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
-* [Which Azure resources are monitored by Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-general#which-azure-resources-are-monitored-by-microsoft-defender-for-cloud-)
-* [Defender for Cloud for your multicloud environment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/multicloud)
-* [Enable defender for cloud plans on your subscription](https://learn.microsoft.com/en-us/azure/defender-for-cloud/connect-azure-subscription#enable-all-paid-plans-on-your-subscription) <br>
-  ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/c4515dc6-5311-4773-af27-58193acc36ea) <br>
-* [Plan your Defender for Servers deployment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers)
-* [How often does Defender for Cloud scan for operating system vulnerabilities, system updates, and endpoint protection issues?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-vms#how-often-does-defender-for-cloud-scan-for-operating-system-vulnerabilities--system-updates--and-endpoint-protection-issues-)
-* [Azure security baseline for Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/security-center-security-baseline?toc=%2Fazure%2Fdefender-for-cloud%2FTOC.json)
-* [What's new in Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/release-notes)
-* [Important upcoming changes to Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/upcoming-changes)
-* [VMSS support?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-servers#supported-features-for-virtual-machines-and-servers)
+## [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
+## [Which Azure resources are monitored by Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-general#which-azure-resources-are-monitored-by-microsoft-defender-for-cloud-)
+## [Defender for Cloud for your multicloud environment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/multicloud)
+## [Enable defender for cloud plans on your subscription](https://learn.microsoft.com/en-us/azure/defender-for-cloud/connect-azure-subscription#enable-all-paid-plans-on-your-subscription) <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/c4515dc6-5311-4773-af27-58193acc36ea) <br>
+## [Plan your Defender for Servers deployment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers)
+## [How often does Defender for Cloud scan for operating system vulnerabilities, system updates, and endpoint protection issues?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-vms#how-often-does-defender-for-cloud-scan-for-operating-system-vulnerabilities--system-updates--and-endpoint-protection-issues-)
+## [Azure security baseline for Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/security-center-security-baseline?toc=%2Fazure%2Fdefender-for-cloud%2FTOC.json)
+## [What's new in Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/release-notes)
+## [Important upcoming changes to Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/upcoming-changes)
+## [VMSS support?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-servers#supported-features-for-virtual-machines-and-servers)
 ![image](https://user-images.githubusercontent.com/96930989/236124943-a5ded4a7-33b1-4d51-8d69-71b999262c9b.png) <br>
 ![image](https://user-images.githubusercontent.com/96930989/236125002-1e61c91d-efb8-42cb-9826-ea7c89e75d53.png) <br>
 
