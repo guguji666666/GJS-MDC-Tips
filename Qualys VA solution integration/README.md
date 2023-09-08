@@ -21,7 +21,6 @@ As the metadata scan and upload only occurs every 12 hours, there can be a delay
 ```
 
 ## [Qualys supported OS](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#why-does-my-machine-show-as-not-applicable-in-the-recommendation)
-
 ![image](https://user-images.githubusercontent.com/96930989/212463200-28dfd795-2b93-40e9-ab37-61e3161dc64d.png)
 
 
@@ -29,7 +28,21 @@ As the metadata scan and upload only occurs every 12 hours, there can be a delay
 #### [Automate at-scale deployments - Defender for Cloud's integrated Qualys vulnerability scanner](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-vm#automate-at-scale-deployments)
 ![image](https://user-images.githubusercontent.com/96930989/226186069-0fd15aa9-c321-4e4d-b20a-f6c1edd45e7f.png)
 
-##### If you are using Azure policy for deployment and you only want to deploy qualys extension on VMs with specified `tags`, then
+### [Automatically enable a vulnerability assessment solution](https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-vulnerability-assessment#automatically-enable-a-vulnerability-assessment-solution)
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/4cd3b611-ee53-488e-91f5-886b78a9dec7)
+
+Check this policy in `Policy | Definitions` <br>
+```
+Configure machines to receive a vulnerability assessment provider
+```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/62334999-2821-45ab-8c7c-8b8dc62e92fd)
+
+In the assignment we can select `default` or `mdeTVM` <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/ba033593-39c2-4106-8140-ae0cdd87ca9d)
+
+## Optional
+#### If you are using Azure policy for deployment and you only want to deploy qualys extension on VMs with specified `tags`, then
 1. Hard-code the tag name and value in the policy rule
 ```json
 "policyRule": {
@@ -88,12 +101,3 @@ or
         "effect": "deployIfNotExists",
 ```
 
-Complete policy definition for scenario 1
-```json
-test1
-```
-
-Complete policy definition for scenario 2
-```json
-test2
-```
