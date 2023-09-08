@@ -8,6 +8,8 @@
 * [What is Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
 * [Which Azure resources are monitored by Microsoft Defender for Cloud?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-general#which-azure-resources-are-monitored-by-microsoft-defender-for-cloud-)
 * [Defender for Cloud for your multicloud environment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/multicloud)
+* [Enable defender for cloud plans on your subscription](https://learn.microsoft.com/en-us/azure/defender-for-cloud/connect-azure-subscription#enable-all-paid-plans-on-your-subscription) <br>
+  ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/c4515dc6-5311-4773-af27-58193acc36ea) <br>
 * [Plan your Defender for Servers deployment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers)
 * [How often does Defender for Cloud scan for operating system vulnerabilities, system updates, and endpoint protection issues?](https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-vms#how-often-does-defender-for-cloud-scan-for-operating-system-vulnerabilities--system-updates--and-endpoint-protection-issues-)
 * [Azure security baseline for Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/security-center-security-baseline?toc=%2Fazure%2Fdefender-for-cloud%2FTOC.json)
