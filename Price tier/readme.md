@@ -2,6 +2,7 @@
 
 ## Enable CSPM extensions
 [Update price tier API](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/update?tabs=HTTP#code-try-0)
+
 ### Binding
 ```
 Put
@@ -11,7 +12,7 @@ Put
 https://management.azure.com/subscriptions/<your subscription id>/providers/Microsoft.Security/pricings/CloudPosture?api-version=2023-01-01
 ```
 
-Body
+### Body
 ```json
 {
   "properties": {
