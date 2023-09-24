@@ -57,16 +57,22 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 
 ### Binding
 ```
-Put
+PUT
 ```
 
 ### URL
 ```
-https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings?api-version=2021-06-01
+https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings/WDATP?api-version=2021-06-01
 ```
 
 ### Request body
 ```
+{
+  "kind": "DataExportSettings",
+  "properties": {
+    "enabled": true
+  }
+}
 ```
 
 ### Sample response
