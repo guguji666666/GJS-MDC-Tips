@@ -258,7 +258,14 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 ```
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/3434d23b-30ab-448f-8979-d9e46844870b)
 
+## [Get defender for cloud pricing](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/get?tabs=HTTP)
+
+## Update defender for cloud pricing
+
+
+
 # 3. Defender for cloud CSPM
+
 ## Enable CSPM and all its extensions
 
 ### Binding
