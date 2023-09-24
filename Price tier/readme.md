@@ -6,7 +6,7 @@
 * [Settings](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/settings)
 
 
-## Enable CSPM extensions
+## Enable CSPM and all its extensions
 [Update price tier API](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/update?tabs=HTTP#code-try-0)
 
 ### Binding
