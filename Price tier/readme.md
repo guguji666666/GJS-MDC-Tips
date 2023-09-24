@@ -53,8 +53,25 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 }
 ```
 
-## Update defender for cloud settings
+## Update defender for cloud settings (MDE integration)
 
+### Binding
+```
+Put
+```
+
+### URL
+```
+https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings?api-version=2021-06-01
+```
+
+### Request body
+```
+```
+
+### Sample response
+```
+```
 
 ## Enable CSPM and all its extensions
 [Update price tier API](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/update?tabs=HTTP#code-try-0)
