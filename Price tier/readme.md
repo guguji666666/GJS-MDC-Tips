@@ -371,7 +371,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
         "name": "OnUploadMalwareScanning",
         "isEnabled": "True",
         "additionalExtensionProperties": {
-          "CapGBPerMonthPerStorageAccount": "5000"
+          "CapGBPerMonthPerStorageAccount": "4000"
         }
       },
       {
