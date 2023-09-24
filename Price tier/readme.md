@@ -5,12 +5,11 @@
 * [Pricings](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings)
 * [Settings](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/settings)
 
-
 ## List defender for cloud settings
 
 ### Binding
 ```
-Get
+GET
 ```
 
 ### URL
@@ -87,6 +86,175 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
   }
 }
 ```
+
+## List defender for cloud pricings
+
+### Binding
+```
+GET
+```
+
+### URL
+```
+https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings?api-version=2023-01-01
+```
+
+### Sample response
+```
+{
+  "value": [
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/VirtualMachines",
+      "name": "VirtualMachines",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/SqlServers",
+      "name": "SqlServers",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/AppServices",
+      "name": "AppServices",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/StorageAccounts",
+      "name": "StorageAccounts",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/SqlServerVirtualMachines",
+      "name": "SqlServerVirtualMachines",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/KubernetesService",
+      "name": "KubernetesService",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S",
+        "deprecated": true,
+        "replacedBy": [
+          "Containers"
+        ]
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/ContainerRegistry",
+      "name": "ContainerRegistry",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S",
+        "deprecated": true,
+        "replacedBy": [
+          "Containers"
+        ]
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/KeyVaults",
+      "name": "KeyVaults",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/Dns",
+      "name": "Dns",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Standard",
+        "freeTrialRemainingTime": "PT0S",
+        "deprecated": true,
+        "replacedBy": [
+          "VirtualMachines"
+        ]
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/Arm",
+      "name": "Arm",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "subPlan": "PerApiCall",
+        "pricingTier": "Standard",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/OpenSourceRelationalDatabases",
+      "name": "OpenSourceRelationalDatabases",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/CosmosDbs",
+      "name": "CosmosDbs",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/Containers",
+      "name": "Containers",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/CloudPosture",
+      "name": "CloudPosture",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/Api",
+      "name": "Api",
+      "type": "Microsoft.Security/pricings",
+      "properties": {
+        "pricingTier": "Free",
+        "freeTrialRemainingTime": "PT0S"
+      }
+    }
+  ]
+}
+```
+
 
 ## Enable CSPM and all its extensions
 [Update price tier API](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/update?tabs=HTTP#code-try-0)
