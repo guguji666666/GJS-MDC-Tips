@@ -77,6 +77,15 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 
 ### Sample response
 ```
+{
+  "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings/WDATP",
+  "name": "WDATP",
+  "type": "Microsoft.Security/settings",
+  "kind": "DataExportSettings",
+  "properties": {
+    "enabled": true
+  }
+}
 ```
 
 ## Enable CSPM and all its extensions
