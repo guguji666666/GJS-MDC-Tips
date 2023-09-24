@@ -387,9 +387,41 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 
 ### Sample response
 ```json
+{
+  "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/StorageAccounts",
+  "name": "StorageAccounts",
+  "type": "Microsoft.Security/pricings",
+  "properties": {
+    "extensions": [
+      {
+        "name": "OnUploadMalwareScanning",
+        "isEnabled": "True",
+        "additionalExtensionProperties": {
+          "CapGBPerMonthPerStorageAccount": "4000"
+        },
+        "operationStatus": {
+          "code": "Succeeded",
+          "message": "Successfully enabled extension"
+        }
+      },
+      {
+        "name": "SensitiveDataDiscovery",
+        "isEnabled": "True",
+        "operationStatus": {
+          "code": "Succeeded",
+          "message": "Successfully enabled extension"
+        }
+      }
+    ],
+    "enablementTime": "2023-09-24T04:10:32.800641Z",
+    "subPlan": "DefenderForStorageV2",
+    "pricingTier": "Standard",
+    "freeTrialRemainingTime": "PT0S"
+  }
+}
 ```
 
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/e388e360-e486-47d6-b4eb-adb5e4d9aa6c)
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/70a55483-45be-4165-80cb-8f09c1832bb1)
 
 
 # 3. Defender for cloud CSPM
