@@ -258,7 +258,6 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 
 
 ## Enable CSPM and all its extensions
-[Update price tier API](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/update?tabs=HTTP#code-try-0)
 
 ### Binding
 ```
