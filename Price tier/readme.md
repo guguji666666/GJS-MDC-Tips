@@ -351,6 +351,9 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 }
 ```
 
+### Sample --- Enable defender for storage (per-storage plan)
+
+
 # 3. Defender for cloud CSPM
 
 ## Enable CSPM and all its extensions
