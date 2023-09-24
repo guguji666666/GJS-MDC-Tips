@@ -385,7 +385,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 }
 ```
 
-### Sample request
+### Sample response
 ```json
 ```
 
