@@ -6,16 +6,53 @@
 * [Settings](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/settings)
 
 
-## Get defender for cloud settings
+## List defender for cloud settings
 
 ### Binding
 ```
 Get
 ```
+
 ### url
 ```
-https://management.azure.com/subscriptions/<your subscription id>/providers/Microsoft.Security/pricings/CloudPosture?api-version=2023-01-01
+https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings?api-version=2021-06-01
 ```
+
+Sample output
+```
+{
+  "value": [
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings/MCAS",
+      "name": "MCAS",
+      "type": "Microsoft.Security/settings",
+      "kind": "DataExportSettings",
+      "properties": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings/WDATP",
+      "name": "WDATP",
+      "type": "Microsoft.Security/settings",
+      "kind": "DataExportSettings",
+      "properties": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings/Sentinel",
+      "name": "Sentinel",
+      "type": "Microsoft.Security/settings",
+      "kind": "AlertSyncSettings",
+      "properties": {
+        "enabled": true
+      }
+    }
+  ]
+}
+```
+
 
 ## Enable CSPM and all its extensions
 [Update price tier API](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/update?tabs=HTTP#code-try-0)
@@ -26,7 +63,7 @@ Put
 ```
 ### url
 ```
-https://management.azure.com/subscriptions/<your subscription id>/providers/Microsoft.Security/pricings/CloudPosture?api-version=2023-01-01
+https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/CloudPosture?api-version=2023-01-01
 ```
 
 ### Body
