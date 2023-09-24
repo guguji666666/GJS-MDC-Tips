@@ -13,7 +13,7 @@
 Get
 ```
 
-### url
+### URL
 ```
 https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings?api-version=2021-06-01
 ```
@@ -61,7 +61,7 @@ Sample output
 ```
 Put
 ```
-### url
+### URL
 ```
 https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/CloudPosture?api-version=2023-01-01
 ```
