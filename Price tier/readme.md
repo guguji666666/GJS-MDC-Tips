@@ -18,7 +18,7 @@ Get
 https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings?api-version=2021-06-01
 ```
 
-Sample output
+### Sample output
 ```
 {
   "value": [
