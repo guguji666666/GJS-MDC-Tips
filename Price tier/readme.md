@@ -262,6 +262,28 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 
 ## Update defender for cloud pricing
 
+### Binding
+```
+PUT
+```
+
+### URL
+```
+PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/{pricingName}?api-version=2023-01-01
+```
+
+### PricingName
+* VirtualMachines
+* SqlServers
+* AppServices
+* StorageAccounts
+* SqlServerVirtualMachines
+* KeyVaults
+* ArmOpenSourceRelationalDatabases
+* CosmosDbs
+* Containers
+* CloudPosture
+* Api
 
 
 # 3. Defender for cloud CSPM
