@@ -384,6 +384,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
   }
 }
 ```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/e388e360-e486-47d6-b4eb-adb5e4d9aa6c)
 
 
 # 3. Defender for cloud CSPM
