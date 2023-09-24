@@ -293,11 +293,30 @@ PUT
 
 ### URL
 ```
-PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/{pricingName}?api-version=2023-01-01
+PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
 ```
 
 ### Body
 ```json
+{
+  "properties": {
+    "extensions": [
+      {
+        "name": "MdeDesignatedSubscription",
+        "isEnabled": "False"
+      },
+      {
+        "name": "AgentlessVmScanning",
+        "isEnabled": "True",
+        "additionalExtensionProperties": {
+          "ExclusionTags": "[]"
+        }
+      }
+    ],
+    "subPlan": "P2",
+    "pricingTier": "Standard"
+  }
+}
 ```
 
 
