@@ -296,7 +296,7 @@ PUT
 https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
 ```
 
-### Body
+### Request Body
 ```json
 {
   "properties": {
@@ -319,6 +319,37 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 }
 ```
 
+### Sample response
+```json
+{
+  "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/VirtualMachines",
+  "name": "VirtualMachines",
+  "type": "Microsoft.Security/pricings",
+  "properties": {
+    "extensions": [
+      {
+        "name": "MdeDesignatedSubscription",
+        "isEnabled": "False"
+      },
+      {
+        "name": "AgentlessVmScanning",
+        "isEnabled": "True",
+        "additionalExtensionProperties": {
+          "ExclusionTags": "[]"
+        },
+        "operationStatus": {
+          "code": "Succeeded",
+          "message": "Successfully enabled extension"
+        }
+      }
+    ],
+    "enablementTime": "2023-09-24T03:56:50.3584879Z",
+    "subPlan": "P2",
+    "pricingTier": "Standard",
+    "freeTrialRemainingTime": "PT0S"
+  }
+}
+```
 
 # 3. Defender for cloud CSPM
 
