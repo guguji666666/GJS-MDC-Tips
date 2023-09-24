@@ -18,7 +18,7 @@ Get
 https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings?api-version=2021-06-01
 ```
 
-### Sample output
+### Sample response
 ```
 {
   "value": [
@@ -52,6 +52,8 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
   ]
 }
 ```
+
+## Update defender for cloud settings
 
 
 ## Enable CSPM and all its extensions
