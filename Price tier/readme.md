@@ -351,7 +351,39 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 }
 ```
 
-### Sample --- Enable defender for storage (per-storage plan)
+### Sample --- Enable defender for storage (per-storage plan) with Malware Scanning functions
+
+```
+PUT
+```
+
+### URL
+```
+https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/StorageAccounts?api-version=2023-01-01
+```
+
+### Request body
+```json
+{
+  "properties": {
+    "extensions": [
+      {
+        "name": "OnUploadMalwareScanning",
+        "isEnabled": "True",
+        "additionalExtensionProperties": {
+          "CapGBPerMonthPerStorageAccount": "5000"
+        }
+      },
+      {
+        "name": "SensitiveDataDiscovery",
+        "isEnabled": "True"
+      }
+    ],
+    "subPlan": "DefenderForStorageV2",
+    "pricingTier": "Standard"
+  }
+}
+```
 
 
 # 3. Defender for cloud CSPM
