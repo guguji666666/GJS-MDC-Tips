@@ -19,7 +19,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 ```
 
 ### Sample response
-```
+```json
 {
   "value": [
     {
@@ -66,7 +66,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 ```
 
 ### Request body
-```
+```json
 {
   "kind": "DataExportSettings",
   "properties": {
@@ -102,7 +102,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 ```
 
 ### Sample response
-```
+```json
 {
   "value": [
     {
@@ -284,6 +284,21 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Micros
 * Containers
 * CloudPosture
 * Api
+
+### Sample --- Enable defender for server plan P2
+
+```
+PUT
+```
+
+### URL
+```
+PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/{pricingName}?api-version=2023-01-01
+```
+
+### Body
+```json
+```
 
 
 # 3. Defender for cloud CSPM
