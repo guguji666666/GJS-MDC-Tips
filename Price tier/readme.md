@@ -293,7 +293,7 @@ PUT
 
 ### URL
 ```
-PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
 ```
 
 ### Body
