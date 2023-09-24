@@ -254,6 +254,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
   ]
 }
 ```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/3434d23b-30ab-448f-8979-d9e46844870b)
 
 
 ## Enable CSPM and all its extensions
