@@ -1,9 +1,6 @@
-## Manage Arc VM extensions
+# Connect VM to Arc
 
-[Enable Azure VM extensions using the Azure CLI](https://learn.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions-cli#list-extensions-installed)
-
-
-## Connect VM to Arc
+[Quickstart: Connect hybrid machines with Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/learn/quick-enable-hybrid-vm)
 
 ### 1.AWS VM
 
@@ -66,3 +63,7 @@ Extension Error: [AzureSecurityLinuxAgent] 2023/04/13 07:22:01 INFO: seqnum: 0
 [AzureSecurityLinuxAgent] 2023/04/15 10:03:15 INFO: seqnum: 0
 [AzureSecurityLinuxAgent] 2023/04/15 10:03:15 ERR: OS is not supported. Error: Invalid system-release-cpe file data
 ```
+
+## Manage Arc VM extensions
+
+[Enable Azure VM extensions using the Azure CLI](https://learn.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions-cli#list-extensions-installed)
