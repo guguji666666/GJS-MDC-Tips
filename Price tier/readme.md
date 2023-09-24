@@ -5,6 +5,7 @@
 * [Pricings](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings)
 * [Settings](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/settings)
 
+# 1. Defender for cloud settings
 ## List defender for cloud settings
 
 ### Binding
@@ -87,6 +88,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 }
 ```
 
+# 2. Defender for cloud pricings
 ## List defender for cloud pricings
 
 ### Binding
@@ -256,13 +258,14 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 ```
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/3434d23b-30ab-448f-8979-d9e46844870b)
 
-
+# 3. Defender for cloud CSPM
 ## Enable CSPM and all its extensions
 
 ### Binding
 ```
 PUT
 ```
+
 ### URL
 ```
 https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/CloudPosture?api-version=2023-01-01
