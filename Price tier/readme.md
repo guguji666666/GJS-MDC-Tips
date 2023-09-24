@@ -84,7 +84,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 
 ### Binding
 ```
-Put
+PUT
 ```
 ### URL
 ```
