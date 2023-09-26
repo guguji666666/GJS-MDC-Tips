@@ -428,6 +428,10 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 
 ## Enable CSPM and all its extensions
 
+## Using Azure policy
+### [Configure DCSPM and all of it's capabilities through Azure Policy](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Configure-DCSPM-Extensions#fine-grain-control-of-defender-cspm-dcspm)
+
+## Using API
 ### Binding
 ```
 PUT
