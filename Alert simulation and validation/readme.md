@@ -24,29 +24,29 @@ for ($i = 1; $i -le $NumberOfIterations; $i++) {
 ```
 
 ```powershell
-# Define your Key Vault details
-$resourceGroupName = '<resource-group-name>'
-$vaultName = '<vault-name>'
-$secretName = '<secret-name>'
-$iterations = 10  # Number of iterations
-
 # Authenticate to Azure
 Connect-AzAccount
+
+# Define your Key Vault details
+$vaultUri = 'https://<vault-name>.vault.azure.net'  # Replace <vault-name> with your vault's name
+$secretName = '<secret-name>'
+$iterations = 10  # Number of iterations
 
 # Loop to simulate secret listing and query activities without pausing
 for ($i = 1; $i -le $iterations; $i++) {
     # Simulate a secret listing activity
-    $secrets = Get-AzKeyVaultSecret -VaultName $vaultName -ResourceGroupName $resourceGroupName
+    $secrets = Get-AzKeyVaultSecret -VaultName $vaultUri
 
     Write-Host "Iteration $($i): Secret Listing Activity Detected"
     Write-Host "Number of Secrets Listed: $($secrets.Count)"
     Write-Host "---------------------------------"
 
     # Simulate a secret query activity
-    $secretValue = Get-AzKeyVaultSecret -VaultName $vaultName -ResourceGroupName $resourceGroupName -Name $secretName
+    $secretValue = Get-AzKeyVaultSecret -VaultName $vaultUri -Name $secretName
 
     Write-Host "Iteration $($i): Secret Query Activity Detected"
     Write-Host "Secret Value: $($secretValue.SecretValueText)"
     Write-Host "---------------------------------"
 }
+
 ```
