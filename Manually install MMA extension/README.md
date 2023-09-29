@@ -89,3 +89,19 @@ Run the command below for installtion <br>
 wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR WORKSPACE ID> -s <YOUR WORKSPACE PRIMARY KEY>
 ```
 
+## Purge OMS and reinstallation
+```powershell
+## Purge existing oms agent
+
+wget https://raw.githubusercontent.com/microsoft/OMS-Agent-for-Linux/master/tools/purge_omsagent.sh
+
+sudo sh purge_omsagent.sh
+
+## Reinstall oms agent with latest version
+
+wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR WORKSPACE ID> -s <YOUR WORKSPACE PRIMARY KEY>
+
+## Verify the version of OMS agent
+sudo sh ./omsagent-*.universal.x64.sh --version
+```
+
