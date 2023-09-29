@@ -28,25 +28,17 @@ for ($i = 1; $i -le $NumberOfIterations; $i++) {
 Connect-AzAccount
 
 # Define your Key Vault details
-$vaultUri = 'https://<vault-name>.vault.azure.net'  # Replace <vault-name> with your vault's name
-$secretName = '<secret-name>'
+$vaultName = 'Contoso'  # Replace with your Key Vault name
+$secretName = 'secret1'
 $iterations = 10  # Number of iterations
 
-# Loop to simulate secret listing and query activities without pausing
+# Loop to simulate secret query activity without pausing
 for ($i = 1; $i -le $iterations; $i++) {
-    # Simulate a secret listing activity
-    $secrets = Get-AzKeyVaultSecret -VaultName $vaultUri
-
-    Write-Host "Iteration $($i): Secret Listing Activity Detected"
-    Write-Host "Number of Secrets Listed: $($secrets.Count)"
-    Write-Host "---------------------------------"
-
     # Simulate a secret query activity
-    $secretValue = Get-AzKeyVaultSecret -VaultName $vaultUri -Name $secretName
+    $secretValue = Get-AzKeyVaultSecret -VaultName $vaultName -Name $secretName
 
     Write-Host "Iteration $($i): Secret Query Activity Detected"
     Write-Host "Secret Value: $($secretValue.SecretValueText)"
     Write-Host "---------------------------------"
 }
-
 ```
