@@ -30,7 +30,7 @@ Connect-AzAccount
 # Define your Key Vault details
 $vaultName = 'Contoso'  # Replace with your Key Vault name
 $secretName = 'secret1'
-$iterations = 10  # Number of iterations
+$iterations = 3000  # Number of iterations
 
 # Loop to simulate secret query activity without pausing
 for ($i = 1; $i -le $iterations; $i++) {
