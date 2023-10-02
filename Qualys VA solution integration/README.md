@@ -47,6 +47,33 @@ If we select `default`, then built-in qualys VA scanner will be deployed on supp
 We can find the policy definition id `13ce0167-8ca6-4048-8e6b-f996402e3c1b` in audit logs of the VM <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/2cc19ca9-09ff-4a19-b44e-1481f17c3684)
 
+## [KQL query to list qualys VA findings](https://learn.microsoft.com/en-us/azure/defender-for-cloud/resource-graph-samples?tabs=azure-cli#list-qualys-vulnerability-assessment-results)
+```kusto
+SecurityResources
+| where type == 'microsoft.security/assessments'
+| where * contains 'vulnerabilities in your virtual machines'
+| summarize by assessmentKey=name //the ID of the assessment
+| join kind=inner (
+	securityresources
+	| where type == 'microsoft.security/assessments/subassessments'
+	| extend assessmentKey = extract('.*assessments/(.+?)/.*',1,  id)
+) on assessmentKey
+| project assessmentKey, subassessmentKey=name, id, parse_json(properties), resourceGroup, subscriptionId, tenantId
+| extend description = properties.description,
+	displayName = properties.displayName,
+	resourceId = properties.resourceDetails.id,
+	resourceSource = properties.resourceDetails.source,
+	category = properties.category,
+	severity = properties.status.severity,
+	code = properties.status.code,
+	timeGenerated = properties.timeGenerated,
+	remediation = properties.remediation,
+	impact = properties.impact,
+	vulnId = properties.id,
+	additionalData = properties.additionalData
+```
+
+
 
 ## Optional
 #### If you are using Azure policy for deployment and you only want to deploy qualys extension on VMs with specified `tags`, then
