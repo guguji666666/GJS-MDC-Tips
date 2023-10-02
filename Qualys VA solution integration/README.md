@@ -73,6 +73,30 @@ SecurityResources
 	additionalData = properties.additionalData
 ```
 
+```kusto
+SecurityResources
+| where type == 'microsoft.security/assessments'
+| where * contains 'vulnerability findings'
+| summarize by assessmentKey=name //the ID of the assessment
+| join kind=inner (
+        securityresources
+        | where type == 'microsoft.security/assessments/subassessments'
+        | extend assessmentKey = extract('.*assessments/(.+?)/.*',1,  id)
+) on assessmentKey
+| project assessmentKey, subassessmentKey=name, id, parse_json(properties), resourceGroup, subscriptionId, tenantId
+| extend description = properties.description,
+        displayName = properties.displayName,
+        resourceId = properties.resourceDetails.id,
+        resourceSource = properties.resourceDetails.source,
+        category = properties.category,
+        severity = properties.status.severity,
+        code = properties.status.code,
+        timeGenerated = properties.timeGenerated,
+        remediation = properties.remediation,
+        impact = properties.impact,
+        vulnId = properties.id,
+        additionalData = properties.additionalData
+```
 
 
 ## Optional
