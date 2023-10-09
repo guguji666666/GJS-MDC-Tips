@@ -19,6 +19,7 @@
 ![image](https://user-images.githubusercontent.com/96930989/236124943-a5ded4a7-33b1-4d51-8d69-71b999262c9b.png) <br>
 ![image](https://user-images.githubusercontent.com/96930989/236125002-1e61c91d-efb8-42cb-9826-ea7c89e75d53.png) <br>
 
+### [Compatibility with agent-based vulnerability assessment solutions](https://learn.microsoft.com/en-us/azure/defender-for-cloud/enable-agentless-scanning-vms#compatibility-with-agent-based-vulnerability-assessment-solutions)
 
 # Defender for cloud FAQ
 
@@ -166,7 +167,6 @@ AMA is supported for Windows server 2012, 2012R2
 [Review Defender for server plan](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-select-plan#review-plans) <br>
 For on-premises server, to receive configuration recommendations machines must be onboarded to Azure with Azure Arc, and Defender for Servers must be enabled. <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/39e93a10-3779-4e69-9aaf-73f405b55a08)
-
 
 ### 12. Delete and recover Azure Log Analytics workspace (Reach Azure monitoring team)
 [Delete and recover Azure Log Analytics workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/delete-workspace)
