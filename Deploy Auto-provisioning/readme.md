@@ -1,7 +1,7 @@
 # Deploy Auto-provisioning in defender for cloud
 [Scaling auto-provisioning using Azure policy](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-scale#scaling-auto-provisioning)
 
-## Relating Azure policies
+## Azure policies for deployment
 
 ### MMA (Microsoft monitor agent)
 [Auto provisioing - Deploy MMA extension and report to default workspace](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F6df2fee6-a9ed-4fef-bced-e13be1b25f1c)
