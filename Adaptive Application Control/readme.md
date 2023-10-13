@@ -19,6 +19,9 @@ Applications and Services Logs\Microsoft\Windows\AppLocker\EXE and DLL
 ```
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/dea00900-0f8b-4d54-b459-658d62e3e450)
 
+The pushlisher the software being launched here <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/14240649-3c13-4d1b-a2a0-4b832185d367)
+
 B. If it's not configured, check Event Viewer to see what happened with the onboarding configuration script.
 
 Check for events of type: `9601 (info)`, `9602 (warning)`, `9603 (error)`
