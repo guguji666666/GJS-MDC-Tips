@@ -35,7 +35,7 @@ for ($i = 1; $i -le $NumberOfIterations; $i++) {
 * The script will get secret values for 8000 times, which may take some time
 * Once the script ends, it may take 1 hour to generate defender for key vault alert
 
-Alert i received <br>
+Alert i received in the mail <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/16962491-7494-4bb1-8a73-f97c9a0c7ea6)
 
 Alert in defender for cloud portal <br>
