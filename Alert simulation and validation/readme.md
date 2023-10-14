@@ -2,7 +2,16 @@
 
 ## [Alert validation in Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alert-validation)
 
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/36bb9540-1a36-45b8-b2bc-3a24bada5a4e)
+
 ## Defender for key vault
+### 1. [Download tor browser](https://www.torproject.org/download/)
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/730dc6bb-2af3-4900-9c47-484c2535d84a)
+
+### 2. Run powershell script in tor  browser to get secrets
+
+
+
 ```powershell
 # AAD Auth
 Connect-AzAccount -subscription <subscription id>
