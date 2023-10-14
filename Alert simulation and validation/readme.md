@@ -12,7 +12,7 @@
 
 Navigate to [Azure cloudshell](https://ms.portal.azure.com/#cloudshell/) and sign in
 
-Run the scirpt below
+Then run the scirpt below
 ```powershell
 # AAD Auth
 Connect-AzAccount -subscription <subscription id>
@@ -49,24 +49,3 @@ Alert : Security incident detected suspicious Key Vault activity (Preview) <br>
 
 Alert : Security incident detected suspicious IP activity (Preview) <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/4912e800-57ee-4371-8969-2bb05e3f9917)
-
-
-```powershell
-# Authenticate to Azure
-Connect-AzAccount
-
-# Define your Key Vault details
-$vaultName = 'Contoso'  # Replace with your Key Vault name
-$secretName = 'secret1'
-$iterations = 3000  # Number of iterations
-
-# Loop to simulate secret query activity without pausing
-for ($i = 1; $i -le $iterations; $i++) {
-    # Simulate a secret query activity
-    $secretValue = Get-AzKeyVaultSecret -VaultName $vaultName -Name $secretName
-
-    Write-Host "Iteration $($i): Secret Query Activity Detected"
-    Write-Host "Secret Value: $($secretValue.SecretValueText)"
-    Write-Host "---------------------------------"
-}
-```
