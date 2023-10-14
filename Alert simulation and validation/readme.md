@@ -3,8 +3,7 @@
 * [Security alerts - a reference guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-azurekv)
 
 ## Defender for key vault
-[Alerts for Azure Key Vault](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-azurekv)
-
+### [Alerts for Azure Key Vault](https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-azurekv)
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/36bb9540-1a36-45b8-b2bc-3a24bada5a4e)
 
 ### 1. [Download tor browser](https://www.torproject.org/download/)
