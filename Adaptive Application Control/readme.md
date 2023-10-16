@@ -1,4 +1,6 @@
 # Adaptive application control
+* [Use adaptive application controls to reduce your machines' attack surfaces](https://learn.microsoft.com/en-us/azure/defender-for-cloud/adaptive-application-controls)
+* [Using Event Viewer with AppLocker](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/applocker/using-event-viewer-with-applocker)
 
 ## Administer AppLocker on the local PC
 
