@@ -423,6 +423,21 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/70a55483-45be-4165-80cb-8f09c1832bb1)
 
+### Sample - Get VA solution set on the subscription level
+
+### Binding
+```
+GET
+```
+
+### URL
+```
+https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/serverVulnerabilityAssessmentsSettings?api-version=2022-01-01-preview
+```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/3f50148e-b518-48a6-9601-cc9e0f365eec)
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/c9efd675-16ad-4687-8897-9e7fdcc6e046)
+
 
 # 3. Defender for cloud CSPM
 
