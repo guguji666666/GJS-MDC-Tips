@@ -31,4 +31,10 @@ Paste the user token in https://jwt.ms/ and correct the format
 Verify that the token could be decoded (below is the sample)
 ![image](https://user-images.githubusercontent.com/96930989/210707002-751e29ab-1380-44f1-afb6-5de4f7e2c75f.png)
 
-## Get user token from browser
+## Use postman
+##### 1. Download postman from [Download Postman](https://www.postman.com/downloads/) and launch it.
+##### 2. Get user token as mentioned before.
+##### 3. Insert the user token here in postman
+![image](https://user-images.githubusercontent.com/96930989/210289242-15003c92-1406-4289-9cfd-a08e5cd7260f.png)
+##### 4. Set the `request URL`, `Body` if required (below is sample)
+![image](https://user-images.githubusercontent.com/96930989/210707768-4979d7d8-4a3e-4b8d-821e-3234f2704be5.png)
