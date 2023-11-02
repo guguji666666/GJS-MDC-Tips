@@ -53,3 +53,8 @@ Here you can set the time range and start scanning the events <br>
 We can then find the events (defender for cloud alerts) here <br>
 
 ![image-20230808180147076](https://guguimage.aceultraman.com/i/2023/08/08/tsjy9k-1.png)
+
+We can also save all events <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/39bc4938-ee7d-48a8-9afd-06b4428c5cce)
+
+
