@@ -30,6 +30,7 @@ az account set --subscription <subscriptionId>
 # Get the access token and print it
 az account get-access-token --output table --query accessToken
 ```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/aa5b0a65-dfa3-43ed-8698-d4e888907bad)
 
 ### 3. Check user token and correct the format before using it in postman or other tools
 
