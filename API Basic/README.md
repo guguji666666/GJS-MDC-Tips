@@ -22,6 +22,15 @@ $accessToken | Set-Clipboard
 ```
 The user access token is already copied to your clipboard.
 
+We can also get user token from Azure cloudshell
+```powershell
+# Set the subscription
+az account set --subscription $subscriptionId
+
+# Get the access token and print it
+az account get-access-token --output table --query accessToken
+```
+
 ### 3. Check user token and correct the format before using it in postman or other tools
 
 The user token has already been copied to clipboard via previous powershell commands
