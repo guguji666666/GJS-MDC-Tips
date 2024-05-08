@@ -19,6 +19,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 ```
 
 ### Sample response
+
 ```json
 {
   "value": [
@@ -76,7 +77,8 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 ```
 
 ### Sample response
-```
+
+```json
 {
   "id": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/settings/WDATP",
   "name": "WDATP",
