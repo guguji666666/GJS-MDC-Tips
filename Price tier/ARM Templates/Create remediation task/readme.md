@@ -20,7 +20,7 @@ PolicyResources
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a1f971a1-053b-4e69-83bd-0d65e02a3e30)
 
 
-You can also check Policy assignment ID and policy definition ID here (below is the sample) <br>
+You can also check `Policy assignment ID` and `Policy Definition ID`here (below is the sample) <br>
 
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5768e328-7cc8-413b-a424-b5468ef5e236)
 
