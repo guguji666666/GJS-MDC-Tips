@@ -11,10 +11,14 @@ PolicyResources
     policyAssignmentScope = tostring(properties.policyAssignmentScope),
     policyAssignmentName = tostring(properties.policyAssignmentName),
     policyDefinitionId = tostring(properties.policyDefinitionId),
-    policyDefinitionReferenceId = tostring(properties.policyDefinitionReferenceId),
-    //stateWeight = iff(complianceState == 'NonCompliant', int(300), iff(complianceState == 'Compliant', int(200), iff(complianceState == 'Conflict', int(100), iff(complianceState == 'Exempt', int(50), int(0)))))
+    policyDefinitionReferenceId = tostring(properties.policyDefinitionReferenceId)
 | project resourceId, policyAssignmentId, policyAssignmentName, policyDefinitionId, policyDefinitionReferenceId
 ```
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/785f8283-bbcf-445d-9078-86bba4b7b261)
+
+
+
 
 
 ## ARM template for deployment
