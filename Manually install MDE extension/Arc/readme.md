@@ -3,6 +3,9 @@
 ## Windows
 
 ```powershell
+
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 #Install required powershell modules
 Install-Module -Name Az.Accounts
 Install-Module -Name Az.ConnectedMachine
