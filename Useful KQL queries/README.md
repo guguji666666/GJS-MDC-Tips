@@ -328,6 +328,57 @@ securityresources | where type =~ "microsoft.security/assessments/subassessments
         | order by all desc, numOfResources desc
 ```
 
+## ARG Summarize the count of vulnerabilities at the repo level (defender for container)
+```kusto
+securityresources
+| where type == "microsoft.security/assessments/subassessments"
+| extend assessmentKey = extract(".*assessments/(.+?)/.*",1,  id)
+| where assessmentKey == "c0b7cfc6-3172-465a-b378-53c7ff2cc0d5"
+| project Resource = tolower(extract(@'(?i)(.*?)/providers/Microsoft.Security/([^/]+)', 1, id)), ResourceType = tolower(split(id,"/").[6]), subscriptionId, severity = tostring(parse_json(properties).additionalData.vulnerabilityDetails.severity), status = tostring(parse_json(properties).status.code), VulnId = tostring(parse_json(properties).id), description = tostring(parse_json(properties).displayName), patchable = parse_json(properties.additionalData).softwareDetails.fixStatus, cve = parse_json(properties.additionalData).cve, imageURI = tostring(parse_json(properties.resourceDetails).id)
+| where status == 'Unhealthy'
+| extend Registry = tostring(split(Resource, "/").[-1]), Repo = tostring(split(imageURI, "/")[2])
+| summarize dcount(VulnId) by Resource, severity, VulnId, description, tostring(patchable), tostring(cve), Repo, Registry, imageURI
+| summarize Total = count(dcount_VulnId), sevCritical=countif(severity=='Critical'), sevHigh=countif(severity=='High'), sevMedium=countif(severity=='Medium'), sevLow=countif(severity=='Low'), patchAvailable = countif(patchable=='FixAvailable'), CVEcount =countif(cve!='[]') by Resource, Registry, Repo, imageURI
+| project-away Resource
+| order by sevCritical desc
+```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/f813a615-93bf-4866-9c75-ba8a02addf05)
+
+
+## ARG get list of CVE findings via repo and contains description (defender for container)
+```kusto
+securityresources
+| where type =~ "microsoft.security/assessments/subassessments"
+| extend assessmentKey=extract(@"(?i)providers/Microsoft.Security/assessments/([^/]*)", 1, id)
+| where assessmentKey == "c0b7cfc6-3172-465a-b378-53c7ff2cc0d5"
+| where properties.status.code == "Unhealthy"
+| extend parentResourceId = extract(@"(?i)(.*/Microsoft.ContainerRegistry/registries/[^/]*)", 1, id)
+| extend resourceId = tostring(properties.resourceDetails.id)
+| extend parsedAdditionalData = parse_json(properties.additionalData)
+| extend cveId = tostring(parsedAdditionalData.vulnerabilityDetails.cveId),
+        subAssessmentDescription=tostring(properties.description),
+        subAssessmentRemediation=tostring(properties.remediation),
+        subAssessmentCategory=tostring(parsedAdditionalData.softwareDetails.category),
+        severity = tostring(parsedAdditionalData.vulnerabilityDetails.severity),
+        status=tostring(properties.status.code)
+| extend CVELink = iif(isnotempty(parsedAdditionalData.vulnerabilityDetails.references), tostring(parsedAdditionalData.vulnerabilityDetails.references[0].link), ""),
+          registryHost = tostring(parsedAdditionalData.artifactDetails.registryHost),
+          repositoryName = tostring(parsedAdditionalData.artifactDetails.repositoryName),
+          fixReference = tostring(parsedAdditionalData.softwareDetails.fixReference)
+| summarize numOfResources=dcount(resourceId), timeGenerated=arg_max(todatetime(properties.timeGenerated), properties.additionalData) by assessmentKey, cveId, subAssessmentCategory, severity, status, subAssessmentDescription, subAssessmentRemediation, CVELink, registryHost, repositoryName, fixReference
+| extend critical = iff(severity == "Critical", 5,0),
+        high = iff(severity == "High", 4,0),
+        medium = iff(severity == "Medium", 3, 0),
+        low = iff(severity == "Low", 2 ,0),
+        unknown = iff(severity == "Unknown", 1, 0)
+| extend all = critical + high + medium + low + unknown
+| order by all desc, numOfResources desc
+| project cveId, registryHost, repositoryName, severity, status, subAssessmentDescription, subAssessmentRemediation, CVELink, fixReference
+| order by repositoryName
+```
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/25c378c3-6fb7-43b2-8e7e-9c3fcbfa87e6)
+
+
 ## Monitor protection status
 ```kusto
 ProtectionStatus
