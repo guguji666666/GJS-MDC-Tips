@@ -19,6 +19,11 @@ When enabling `Azure Monitoring Agent for SQL server on machines` in panel, rela
 ```
 "/providers/Microsoft.Authorization/policySetDefinitions/de01d381-bae9-4670-8870-786f89f49e26"
 ```
-
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/97c458a9-2a84-47f4-9075-a4c0ba43b299)
 
+
+#### Assign the intiative to subscription level manually
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/6d88bacf-d0a5-4716-9bac-57c2faa1a726)
+
+#### `Azure Monitoring Agent for SQL server on machines` is then be enabled and configured
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/ea9e6d9c-e35c-48cc-96f8-f46fc3789c39)
