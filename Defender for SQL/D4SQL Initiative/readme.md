@@ -11,7 +11,7 @@ URL
 ```
 https://management.azure.com/{scopeId}/providers/Microsoft.Security/pricings?api-version=2024-01-01
 ```
-Get user token to be used in postmam
+Powershell comamnds to get user token used in postmam
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 
