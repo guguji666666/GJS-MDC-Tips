@@ -2,7 +2,7 @@
 
 ## Before we start
 
-### List defender for cloud price tier [Pricings - List - REST API (Azure Defender for Cloud) | Microsoft Learn](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/list?view=rest-defenderforcloud-2024-01-01&tabs=HTTP)
+### [List defender for cloud price tier](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/list?view=rest-defenderforcloud-2024-01-01&tabs=HTTP)
 #### Sample output (i have enabled AMA auto-provisioning in D4SQL)
 Binding
 ```
@@ -243,13 +243,48 @@ https://management.azure.com/{scopeId}/providers/Microsoft.Security/pricings/{pr
 ```
 https://management.azure.com/subscriptions/<sub id>/providers/Microsoft.Security/pricings/SqlServerVirtualMachines?api-version=2024-01-01
 ```
+```json
+{
+    "id": "/subscriptions/77d5e475-228a-44bf-94a9-c3d511778610/providers/Microsoft.Security/pricings/SqlServerVirtualMachines",
+    "name": "SqlServerVirtualMachines",
+    "type": "Microsoft.Security/pricings",
+    "properties": {
+        "resourcesCoverageStatus": "FullyCovered",
+        "enablementTime": "2024-06-07T00:08:36.7684333Z",
+        "pricingTier": "Standard",
+        "freeTrialRemainingTime": "P27DT21H47M"
+    }
+}
+```
 
 ```
 https://management.azure.com/subscriptions/<sub id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2024-01-01
 ```
+```json
+{
+    "id": "/subscriptions/77d5e475-228a-44bf-94a9-c3d511778610/providers/Microsoft.Security/pricings/VirtualMachines",
+    "name": "VirtualMachines",
+    "type": "Microsoft.Security/pricings",
+    "properties": {
+        "resourcesCoverageStatus": "FullyCovered",
+        "extensions": [
+            {
+                "name": "MdeDesignatedSubscription",
+                "isEnabled": "False"
+            }
+        ],
+        "subPlan": "P1",
+        "pricingTier": "Standard",
+        "freeTrialRemainingTime": "PT0S"
+    }
+}
+```
+
+#### Conclusion
+According to the response from REST API, it seems that the AMA auto-provisioning for D4SQL couldn't be found under any price tier or extension, which means we can't enable it using the normal ARM template we used to enable other defender for cloud price tier.
 
 
-
+# Check D4SQL relating intiative and behavior in panel
 ## 1. Enable `Azure Monitoring Agent for SQL server on machines` in panel
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/ea4a6d04-ceb2-4b94-bf9d-6f0bd0060539)
 
