@@ -280,7 +280,7 @@ https://management.azure.com/subscriptions/<sub id>/providers/Microsoft.Security
 }
 ```
 
-#### Conclusion
+### Conclusion
 According to the response from REST API, it seems that the AMA auto-provisioning for D4SQL couldn't be found under any price tier or extension, which means we can't enable it using the normal ARM template we used to enable other defender for cloud price tier.
 
 
