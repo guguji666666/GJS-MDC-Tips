@@ -294,11 +294,13 @@ According to the response from REST API, it seems that the AMA auto-provisioning
 ### Remediation tasks automatically created
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/8293c4d4-3a22-4b8e-8fce-c88477882a74)
 
-#### Conclusion
+### Conclusion
 When enabling `Azure Monitoring Agent for SQL server on machines` in panel, relating polices are assgined automatically and so do remediation tasks
 
 
 ## 2. Assign initiative "Configure SQL VMs and Arc-enabled SQL Servers to install Microsoft Defender for SQL and AMA with a user-defined LA workspace"
+
+Before we start, make sure `Azure Monitoring Agent for SQL server on machines` is turned off.
 
 ### Initiative info
 ```
@@ -314,5 +316,5 @@ When enabling `Azure Monitoring Agent for SQL server on machines` in panel, rela
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/ea9e6d9c-e35c-48cc-96f8-f46fc3789c39)
 
 
-#### Conclusion
+### Conclusion
 When assigning initiative "Configure SQL VMs and Arc-enabled SQL Servers to install Microsoft Defender for SQL and AMA with a user-defined LA workspace" to the subscription level, although the poclices inside doesn't reach directly to price tier or extension below it, the function `Azure Monitoring Agent for SQL server on machines` will still be enabled, which looks like a backend behavior
