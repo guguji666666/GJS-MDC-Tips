@@ -295,7 +295,7 @@ According to the response from REST API, it seems that the AMA auto-provisioning
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/8293c4d4-3a22-4b8e-8fce-c88477882a74)
 
 ### Conclusion
-When enabling `Azure Monitoring Agent for SQL server on machines` in panel, relating polices are assgined automatically and so do remediation tasks
+When enabling `Azure Monitoring Agent for SQL server on machines` in panel, relating polices are assigned automatically and so do remediation tasks
 
 
 ## 2. Assign initiative "Configure SQL VMs and Arc-enabled SQL Servers to install Microsoft Defender for SQL and AMA with a user-defined LA workspace"
