@@ -1,5 +1,9 @@
 # D4SQL AMA auto-provisioning
 
+## Before we start
+### List defender for cloud price tier [Pricings - List - REST API (Azure Defender for Cloud) | Microsoft Learn](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/list?view=rest-defenderforcloud-2024-01-01&tabs=HTTP)
+
+
 ## 1. Enable `Azure Monitoring Agent for SQL server on machines` in panel
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/ea4a6d04-ceb2-4b94-bf9d-6f0bd0060539)
 
