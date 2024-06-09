@@ -318,3 +318,9 @@ Before we start, make sure `Azure Monitoring Agent for SQL server on machines` i
 
 ### Conclusion
 When assigning initiative "Configure SQL VMs and Arc-enabled SQL Servers to install Microsoft Defender for SQL and AMA with a user-defined LA workspace" to the subscription level, although the poclices inside doesn't reach directly to price tier or extension below it, the function `Azure Monitoring Agent for SQL server on machines` will still be enabled, which looks like a backend behavior
+
+
+### Other behavior detected
+If you already have the intiative `Configure SQL VMs and Arc-enabled SQL Servers to install Microsoft Defender for SQL and AMA with a user-defined LA workspace` assigned manually, when you turn off the switch of `Azure Monitoring Agent for SQL server on machines` in panel. the intiative assignment you manually created would be removed automatically.
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/fdbdf4df-e3d9-4eab-8180-43f1fc627483)
+
