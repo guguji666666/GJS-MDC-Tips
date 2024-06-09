@@ -11,6 +11,18 @@ URL
 ```
 https://management.azure.com/{scopeId}/providers/Microsoft.Security/pricings?api-version=2024-01-01
 ```
+Get user token to be used in postmam
+```powershell
+Set-ExecutionPolicy RemoteSigned
+
+Connect-AzAccount -TenantId <tenant id>
+
+Set-AzContext -Subscription <subscription id>
+
+$accessToken = (Get-AzAccessToken).Token
+
+$accessToken | Set-Clipboard
+```
 
 
 ## 1. Enable `Azure Monitoring Agent for SQL server on machines` in panel
