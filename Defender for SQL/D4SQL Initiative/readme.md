@@ -3,9 +3,11 @@
 ## Before we start
 ### List defender for cloud price tier [Pricings - List - REST API (Azure Defender for Cloud) | Microsoft Learn](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/pricings/list?view=rest-defenderforcloud-2024-01-01&tabs=HTTP)
 #### Sample output (i have enabled AMA auto-provisioning in D4SQL)
+Binding
 ```
 GET
 ```
+URL
 ```
 https://management.azure.com/{scopeId}/providers/Microsoft.Security/pricings?api-version=2024-01-01
 ```
