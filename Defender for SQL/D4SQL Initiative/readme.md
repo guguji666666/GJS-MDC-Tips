@@ -1,4 +1,4 @@
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/c8e5c28c-f897-42d4-ad5d-80a08908bb80)# D4SQL AMA auto-provisioning
+# D4SQL relating initiaive and panel behavior
 
 ## Before we start
 
