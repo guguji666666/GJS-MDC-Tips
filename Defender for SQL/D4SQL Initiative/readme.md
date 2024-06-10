@@ -1,4 +1,4 @@
-# D4SQL AMA auto-provisioning
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/c8e5c28c-f897-42d4-ad5d-80a08908bb80)# D4SQL AMA auto-provisioning
 
 ## Before we start
 
@@ -324,3 +324,137 @@ When assigning initiative "Configure SQL VMs and Arc-enabled SQL Servers to inst
 If you already have the intiative `Configure SQL VMs and Arc-enabled SQL Servers to install Microsoft Defender for SQL and AMA with a user-defined LA workspace` assigned manually, when you turn off the switch of `Azure Monitoring Agent for SQL server on machines` in panel. the intiative assignment you manually created would be removed automatically.
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/fdbdf4df-e3d9-4eab-8180-43f1fc627483)
 
+
+## ARM template to assign the initiative
+```json
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "policyInitiativeId": {
+      "type": "string",
+      "defaultValue": "/providers/Microsoft.Authorization/policySetDefinitions/de01d381-bae9-4670-8870-786f89f49e26",
+      "metadata": {
+        "description": "The resource ID of the policy initiative to be assigned."
+      }
+    },
+    "policyAssignmentName": {
+      "type": "string",
+      "defaultValue": "Define the assignment name here",
+      "metadata": {
+        "description": "The name of the policy assignment."
+      }
+    },
+    "userWorkspaceResourceId": {
+      "type": "string",
+      "metadata": {
+        "description": "Workspace resource Id of the Log Analytics workspace destination for the Data Collection Rule."
+      }
+    },
+    "workspaceRegion": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "Region of the Log Analytics workspace destination for the Data Collection Rule."
+      }
+    },
+    "userWorkspaceId": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "Workspace Id of the Log Analytics workspace destination for the Data Collection Rule."
+      }
+    },
+    "enableCollectionOfSqlQueriesForSecurityResearch": {
+      "type": "bool",
+      "defaultValue": false,
+      "allowedValues": [true, false],
+      "metadata": {
+        "description": "Enable or disable the collection of SQL queries for security research."
+      }
+    },
+    "builtInIdentityResourceGroupLocation": {
+      "type": "string",
+      "defaultValue": "eastus",
+      "metadata": {
+        "description": "The location of the resource group 'Built-In-Identity-RG' created by the policy."
+      }
+    },
+    "bringYourOwnUserAssignedManagedIdentity": {
+      "type": "bool",
+      "defaultValue": false,
+      "allowedValues": [true, false],
+      "metadata": {
+        "description": "Enable this to use your own user-assigned managed identity."
+      }
+    },
+    "userAssignedIdentityResourceId": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "The resource ID of the pre-created user-assigned managed identity."
+      }
+    },
+    "bringYourOwnDcr": {
+      "type": "bool",
+      "defaultValue": false,
+      "allowedValues": [true, false],
+      "metadata": {
+        "description": "Enable this to use your own Data Collection Rule."
+      }
+    },
+    "dcrResourceId": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "The resource ID of the user-defined Data Collection Rule."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "apiVersion": "2021-06-01",
+      "name": "[parameters('policyAssignmentName')]",
+      "location": "eastus",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "properties": {
+        "displayName": "[parameters('policyAssignmentName')]",
+        "policyDefinitionId": "[parameters('policyInitiativeId')]",
+        "scope": "[subscription().id]",
+        "parameters": {
+          "userWorkspaceResourceId": {
+            "value": "[parameters('userWorkspaceResourceId')]"
+          },
+          "workspaceRegion": {
+            "value": "[parameters('workspaceRegion')]"
+          },
+          "userWorkspaceId": {
+            "value": "[parameters('userWorkspaceId')]"
+          },
+          "enableCollectionOfSqlQueriesForSecurityResearch": {
+            "value": "[parameters('enableCollectionOfSqlQueriesForSecurityResearch')]"
+          },
+          "builtInIdentityResourceGroupLocation": {
+            "value": "[parameters('builtInIdentityResourceGroupLocation')]"
+          },
+          "bringYourOwnUserAssignedManagedIdentity": {
+            "value": "[parameters('bringYourOwnUserAssignedManagedIdentity')]"
+          },
+          "userAssignedIdentityResourceId": {
+            "value": "[parameters('userAssignedIdentityResourceId')]"
+          },
+          "bringYourOwnDcr": {
+            "value": "[parameters('bringYourOwnDcr')]"
+          },
+          "dcrResourceId": {
+            "value": "[parameters('dcrResourceId')]"
+          }
+        }
+      }
+    }
+  ]
+}
+```
