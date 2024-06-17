@@ -1,4 +1,5 @@
-## MDE integration with defender for cloud
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5d14cf77-95a0-4e94-89de-d3dc27dac0ec)## MDE integration with defender for cloud
+
 ## Exclusion tag
 
 To exclude VMs from MDE onboarding, apply this tag on the resource:
@@ -23,3 +24,20 @@ For the existing VM already onboared to MDE, apply the tag `will not offboard` t
 3. Offboard the machines using the local script downloaded from MDE panel
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/c33797b3-dcda-4f22-a7da-a092ae0eddd5)
 
+### Add exclusion tag using powershell commands
+
+[Apply tags with Azure PowerShell](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources-powershell)
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
+
+Connect-AzAccount -TenantId <tenant id>
+
+Set-AzContext -Subscription <subscription id>
+
+$tags = @{"ExcludeMdeAutoProvisioning"="True"}
+
+$resource = Get-AzResource -Name <Arc VM name> -ResourceGroup <RG that Arc VM locates>
+
+New-AzTag -ResourceId $resource.id -Tag $tags
+```
