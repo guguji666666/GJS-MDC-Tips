@@ -44,7 +44,7 @@ New-AzTag -ResourceId $resource.id -Tag $tags
 
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5d14cf77-95a0-4e94-89de-d3dc27dac0ec)
 
-## Add/Remove exclusion tag using Azure CLI
+## Add/Remove exclusion tag using Azure CLI (Arc VM)
 * [Apply tags with Azure CLI](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources-cli)
 * [Remove tags with Azure CLI ](https://learn.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest#az-tag-delete)
 
