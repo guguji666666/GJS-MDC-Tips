@@ -43,3 +43,32 @@ New-AzTag -ResourceId $resource.id -Tag $tags
 ```
 
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5d14cf77-95a0-4e94-89de-d3dc27dac0ec)
+
+## Add/Remove exclusion tag using Azure CLI
+* [Apply tags with Azure CLI](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources-cli)
+* [Remove tags with Azure CLI ](https://learn.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest#az-tag-delete)
+
+
+### Apply exclusion tag to Arc VM
+```powershell
+# Set the subscription context
+az account set --subscription <subscription id>
+
+# Find the resource ID of the Azure Arc-enabled VM
+$resource=$(az resource show -g <resource group name> -n <Arc VM name> --resource-type Microsoft.HybridCompute/machines --query "id" --output tsv)
+
+# Apply the MDE exclusion tag
+az tag create --resource-id $resource --tags ExcludeMdeAutoProvisioning=True
+```
+
+### Remove exclusion tag from Arc VM
+```powershell
+# Set the subscription context
+az account set --subscription <subscription id> 
+
+# Find the resource ID of the Azure Arc-enabled VM
+$resource=$(az resource show -g <resource group name> -n <Arc VM name> --resource-type Microsoft.HybridCompute/machines --query "id" --output tsv)
+
+# Remove MDE exclusion tag from Arc VM
+az tag delete --resource-id $resource -n ExcludeMdeAutoProvisioning -y
+```
