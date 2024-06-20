@@ -1,4 +1,4 @@
-![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5d14cf77-95a0-4e94-89de-d3dc27dac0ec)## MDE integration with defender for cloud
+# MDE integration with defender for cloud
 
 ## Exclusion tag
 
@@ -41,3 +41,5 @@ $resource = Get-AzResource -Name <Arc VM name> -ResourceGroup <RG that Arc VM lo
 
 New-AzTag -ResourceId $resource.id -Tag $tags
 ```
+
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/5d14cf77-95a0-4e94-89de-d3dc27dac0ec)
