@@ -1,6 +1,8 @@
 # Manually deploy MDE extension on Arc VM
 
-## Windows
+##　Powershell scripts
+
+### Windows
 
 ```powershell
 
@@ -33,7 +35,7 @@ New-AzConnectedMachineExtension -Name 'MDE.Windows' -ExtensionType 'MDE.Windows'
 ```
 
 
-## Linux
+### Linux
 ```powershell
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -63,3 +65,6 @@ $protectedSetting = @{
 # OS == Windows or Linux
 New-AzConnectedMachineExtension -Name 'MDE.Linux' -ExtensionType 'MDE.Linux' -ResourceGroupName $vm.ResourceGroupName -MachineName $vm.Name -Location $vm.Location -Publisher 'Microsoft.Azure.AzureDefenderForServers' -Settings $Setting -ProtectedSetting $protectedSetting -AutoUpgradeMinorVersion -TypeHandlerVersion '1.0'
 ```
+
+
+## API (Use postman)
