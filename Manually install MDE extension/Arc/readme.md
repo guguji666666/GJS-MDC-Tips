@@ -114,6 +114,21 @@ You will then find the `output.txt` under that path, `remove` the leading charac
 ##### 9. Copy the base64 code and paste it in the `<Base64EncodedPackage>` section  
 ##### 10. Send the request in the postman
 
+Get bearer token using the powershell script below
+```powershell
+Set-ExecutionPolicy RemoteSigned
+
+Connect-AzAccount -TenantId <your tenant id>
+
+Set-AzContext -Subscription <your subscription id>
+
+$accessToken = (Get-AzAccessToken).Token
+
+$accessToken | Set-Clipboard
+```
+The access token will be in your clipboard them, you can paste it directly to postman
+
+
 Binding
 ```
 PUT
@@ -148,5 +163,6 @@ Send the request to deploy MDE extension <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/fb0f3932-b13e-4430-b7b0-82814494393f)
 
 
-##### 11. Check the MDE extension in Azure VM
-![image](https://user-images.githubusercontent.com/96930989/224683242-4f7c0f47-2a56-4103-83e8-7857c0961f77.png)
+##### 11. Check the MDE extension in Arc VM
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/34f7e633-eb88-42a4-86bb-f42441ab430c)
+
