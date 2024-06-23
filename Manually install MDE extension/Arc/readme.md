@@ -1,6 +1,6 @@
 # Manually deploy MDE extension on Arc VM
 
-##　Powershell scripts
+## Powershell scripts
 
 ### Windows
 
