@@ -113,7 +113,40 @@ You will then find the `output.txt` under that path, `remove` the leading charac
   
 ##### 9. Copy the base64 code and paste it in the `<Base64EncodedPackage>` section  
 ##### 10. Send the request in the postman
-![image](https://user-images.githubusercontent.com/96930989/224683919-d03d871c-2c62-46dd-a1bb-e47b0b8661ae.png)
+
+Binding
+```
+PUT
+```
+
+Body
+```json
+{
+  "name": "MDE.Linux",
+  "id": "<Arc VM resource id>/extensions/MDE.Linux",
+  "type": "Microsoft.HybridCompute/machines/extensions",
+  "location": "<Arc vm location>",  // Chang to Arc VM location, for example southeastasia
+  "properties": {
+    "autoUpgradeMinorVersion": true,
+    "publisher": "Microsoft.Azure.AzureDefenderForServers",
+    "type": "MDE.Linux",
+    "typeHandlerVersion": "1.0",
+    "settings": {
+        "azureResourceId": "<Arc VM resource id>",
+        "{{0}}": "{{1}}",
+        "forceReOnboarding": true,
+        "provisionedBy": "Manual"
+    },
+    "protectedSettings": {
+      "defenderForEndpointOnboardingScript": "<Base64EncodedPackage>"  // see steps above
+    }
+  }
+}
+```
+
+Send the request to deploy MDE extension <br>
+![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/fb0f3932-b13e-4430-b7b0-82814494393f)
+
 
 ##### 11. Check the MDE extension in Azure VM
 ![image](https://user-images.githubusercontent.com/96930989/224683242-4f7c0f47-2a56-4103-83e8-7857c0961f77.png)
