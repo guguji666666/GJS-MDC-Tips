@@ -69,7 +69,7 @@ New-AzConnectedMachineExtension -Name 'MDE.Linux' -ExtensionType 'MDE.Linux' -Re
 
 # API (Use postman)
 
-## Linux VM
+## Linux Arc VM
 
 #### Get `<Base64EncodedPackage>` for Linux VM
 ##### 1. Navigate to [MDE portal](https://security.microsoft.com)
