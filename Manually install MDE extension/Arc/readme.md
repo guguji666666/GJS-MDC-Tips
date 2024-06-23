@@ -1,8 +1,8 @@
 # Manually deploy MDE extension on Arc VM
 
-## Powershell scripts
+# Powershell scripts
 
-### Windows
+## Windows
 
 ```powershell
 
@@ -35,7 +35,7 @@ New-AzConnectedMachineExtension -Name 'MDE.Windows' -ExtensionType 'MDE.Windows'
 ```
 
 
-### Linux
+## Linux
 ```powershell
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -67,9 +67,9 @@ New-AzConnectedMachineExtension -Name 'MDE.Linux' -ExtensionType 'MDE.Linux' -Re
 ```
 
 
-## API (Use postman)
+# API (Use postman)
 
-### Linux VM
+## Linux VM
 
 #### Get `<Base64EncodedPackage>` for Linux VM
 ##### 1. Navigate to [MDE portal](https://security.microsoft.com)
