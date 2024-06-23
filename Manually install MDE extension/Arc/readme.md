@@ -126,7 +126,7 @@ $accessToken = (Get-AzAccessToken).Token
 
 $accessToken | Set-Clipboard
 ```
-The access token will be in your clipboard them, you can paste it directly to postman
+The access token is now in your clipboard, you can paste it directly to postman
 
 
 Binding
