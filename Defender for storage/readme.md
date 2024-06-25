@@ -5,7 +5,7 @@
 ```kusto
 securityresources 
 | where type == "microsoft.security/pricings"
-| where subscriptionId == "d681dc2c-9d21-4b07-aa03-28016ca5dff4"
+| where subscriptionId == "<your subscription id>"
 | where ['id'] contains "storage"
 | project subscriptionId, id, properties.pricingTier, properties.subPlan
 ```
