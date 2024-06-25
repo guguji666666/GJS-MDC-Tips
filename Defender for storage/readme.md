@@ -27,7 +27,7 @@ Refer customer to Can I exclude specific storage accounts from protections in pe
 
 [Exclude an Azure Storage account protection on a subscription with per-transaction pricing](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-storage-classic-enable#exclude-an-azure-storage-account-protection-on-a-subscription-with-per-transaction-pricing)
 
-### Test mailware scanning
+### Test malware scanning
 
 Legacy per-transcation mode <br>
 ![image](https://github.com/guguji666666/GJS-MDC-Tips/assets/96930989/a5307e41-bf0c-4f53-a4ba-397286e94f75)
