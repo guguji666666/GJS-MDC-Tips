@@ -79,6 +79,21 @@ resources
 | project VM, Extension, Publisher = properties.publisher, Status = properties.provisioningState
 ```
 
+
+## List status of OMS/MMA and AMA status on VMs
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines/extensions"or type == "microsoft.compute/virtualmachines/extensions"
+| extend VM = tostring (split(id, "/")[8])
+| extend Extension = name
+| where Extension in ("MicrosoftMonitoringAgent","OmsAgentForLinux","AzureMonitorLinuxAgent","AzureMonitorWindowsAgent")
+| project id, VM, Extension, Publisher = properties.publisher, Status = properties.provisioningState
+| order by VM
+```
+
+![image](https://github.com/user-attachments/assets/91808aed-dcf0-46ed-9774-32167fa1c1fc)
+
+
 ## List defender plans status of each subscription
 
 ```kusto
@@ -390,3 +405,5 @@ ProtectionStatus
 | summarize LastCall = max(TimeGenerated) by Computer
 | order by LastCall asc 
 ```
+
+
