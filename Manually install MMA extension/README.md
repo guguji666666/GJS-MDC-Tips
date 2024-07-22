@@ -61,7 +61,7 @@ Make sure your Azure VM is in `running` state
 
 Using `Azure CLI`
 ```powershell
-az vm extension set --resource-group <name of the rg where VM belongs to> --vm-name <name of VM> --name OmsAgentForLinux --publisher Microsoft.EnterpriseCloud.Monitoring --protected-settings '{"workspaceKey":"myWorkspaceKey"}' --settings '{"workspaceId":"myWorkspaceId","skipDockerProviderInstall": true}' --version 1.13
+az vm extension set --resource-group <name of the rg where VM belongs to> --vm-name <name of VM> --name OmsAgentForLinux --publisher Microsoft.EnterpriseCloud.Monitoring --protected-settings '{"workspaceKey":"myWorkspaceKey"}' --settings '{"workspaceId":"myWorkspaceId","skipDockerProviderInstall": true}' --version 1.19
 ```
 Sample
 
@@ -79,7 +79,7 @@ If you remove the MMA extension from the VM, the MMA client will be removed from
 We can refer to the doc [Virtual machine extension management with Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions) <br>
 We can deploy the MMA agent using Azure CLI command folowing the steps in [Enable extension on Arc VM](https://learn.microsoft.com/en-us/azure/azure-arc/servers/manage-vm-extensions-cli#enable-extension)
 ```sh
-az connectedmachine extension create --machine-name "myMachineName" --name "MicrosoftMonitoringAgent" --location "regionName" --settings '{\"workspaceId\":\"myWorkspaceId\"}' --protected-settings '{\"workspaceKey\":\"myWorkspaceKey\"}' --resource-group "myResourceGroup" --type-handler-version "1.13" --type "OmsAgentForLinux or MicrosoftMonitoringAgent" --publisher "Microsoft.EnterpriseCloud.Monitoring"
+az connectedmachine extension create --machine-name "myMachineName" --name "MicrosoftMonitoringAgent" --location "regionName" --settings '{\"workspaceId\":\"myWorkspaceId\"}' --protected-settings '{\"workspaceKey\":\"myWorkspaceKey\"}' --resource-group "myResourceGroup" --type-handler-version "1.19" --type "OmsAgentForLinux or MicrosoftMonitoringAgent" --publisher "Microsoft.EnterpriseCloud.Monitoring"
 ```
 
 ### 2. Manually deploy MMA extension on Arc-enabled VM running `Linux`
