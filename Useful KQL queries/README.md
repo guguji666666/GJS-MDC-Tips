@@ -320,7 +320,7 @@ AzureDiagnostics | whereCategory == "DDoSMitigationFlowLogs"
 AzureDiagnostics | whereCategory == "DDoSMitigationReports"
 ```
 
-## Check VA results
+## Check Vulnerability findings
 ```kusto
 securityresources | where type =~ "microsoft.security/assessments/subassessments"
         | extend assessmentKey=extract(@"(?i)providers/Microsoft.Security/assessments/([^/]*)", 1, id), subAssessmentId=tostring(properties.id), parentResourceId= extract("(.+)/providers/Microsoft.Security", 1, id)
@@ -341,6 +341,20 @@ securityresources | where type =~ "microsoft.security/assessments/subassessments
         | extend high = iff(severity == "High", 3,0), medium = iff(severity == "Medium", 2, 0), low = iff(severity == "Low", 1 ,0)
         | extend all = high + medium + low
         | order by all desc, numOfResources desc
+```
+
+```kusto
+securityresources
+| where type == "microsoft.security/assessments/subassessments"
+| extend assessmentKey = extract(".*assessments/(.+?)/.*",1,  id)
+| where assessmentKey == "1195afff-c881-495e-9bc5-1486211ae03f"
+| project Resource = tolower(extract("([\\s\\S]*?)(/providers/Microsoft.Security.*)",1,id)), ResourceGroup = trim_end("/",extract(".*resourceGroups/(.+?)/",0,id)), ResourceType = tolower(split(id,"/").[6]), subscriptionId, Severity = tostring(parse_json(properties).status.severity), Status = tostring(parse_json(properties).status.code), VulnId = tostring(parse_json(properties).id), Description = tostring(parse_json(properties).displayName), Patchable = parse_json(properties.additionalData).patchable, CVE = properties.additionalData.cve, Category = tostring(properties.category), TimeGenerated = tostring(properties.timeGenerated), Remediation = tostring(properties.remediation), Impact = tostring(properties.impact), Threat = tostring(properties.additionalData.threat)
+| where Status == 'Unhealthy'
+//| where '{selectedServer}' == 'All' or Resource == '{selectedServer}'
+| project Severity, VulnId, Description, tostring(Patchable), Category, Resource, ResourceGroup, CVE, TimeGenerated, Remediation, Impact, Threat
+| mv-expand CveExpand = split (CVE, "},") to typeof(string)
+| parse CveExpand with * '"title":"' singleCve '"' *
+| summarize CVEs = tostring(make_list(singleCve)) by Severity, VulnId, Description, tostring(Patchable), Category, Resource, ResourceGroup, TimeGenerated, Threat, Impact, Remediation
 ```
 
 ## ARG Summarize the count of vulnerabilities at the repo level (defender for container)
