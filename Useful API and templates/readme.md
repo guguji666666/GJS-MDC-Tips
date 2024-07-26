@@ -1,6 +1,6 @@
 # Useful API and templates
 
-# MDVM
+# Microsoft Defender Vulnerability Management (MDVM)
 [Configure MDVM](https://learn.microsoft.com/en-us/azure/templates/microsoft.security/servervulnerabilityassessmentssettings?pivots=deployment-language-bicep)
 
 ### MDVM API
