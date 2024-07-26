@@ -1,8 +1,7 @@
 # Useful API and templates
 
 # MDVM
-
-## [Configure MDVM](https://learn.microsoft.com/en-us/azure/templates/microsoft.security/servervulnerabilityassessmentssettings?pivots=deployment-language-bicep)
+[Configure MDVM](https://learn.microsoft.com/en-us/azure/templates/microsoft.security/servervulnerabilityassessmentssettings?pivots=deployment-language-bicep)
 
 ### MDVM API
 [MDVM on resource level](https://learn.microsoft.com/en-us/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management#onboarding-your-machines-to-defender-vulnerability-management)
