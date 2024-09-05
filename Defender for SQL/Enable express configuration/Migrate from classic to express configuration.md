@@ -14,7 +14,7 @@
 ![image](https://github.com/user-attachments/assets/986a0603-2420-4dad-98f7-5fbb6ebaf6a2)
 
 
-### Scirpt
+### Scirpt(including migration)
 ```powershell
 # Requires -Modules @{ ModuleName="Az.Sql"; ModuleVersion="3.11.0" }
 # Requires -Modules @{ ModuleName="Az.Accounts"; ModuleVersion="2.9.1" }
@@ -664,3 +664,170 @@ else {
 
 Sample output <br>
 ![image](https://github.com/user-attachments/assets/19c93408-a20c-4143-8892-383c27c21429)
+
+### Script(enable express configuration directly)
+```powershell
+# Requires -Modules @{ ModuleName="Az.Sql"; ModuleVersion="3.11.0" }
+# Requires -Modules @{ ModuleName="Az.Accounts"; ModuleVersion="2.9.1" }
+# Requires -Version 5.1
+ 
+<#
+.SYNOPSIS
+    This script configures an Azure SQL Server to use the express configuration Vulnerability Assessment feature.
+ 
+.DESCRIPTION
+This script enables the express configuration Vulnerability Assessment feature by executing the following steps:
+- It checks if the express configuration is already enabled.
+- If not, it enables the express configuration for the specified SQL Server.
+ 
+.PARAMETER ServerSubscriptionId
+    The Subscription id that the server belongs to
+ 
+.PARAMETER ServerResourceGroupName
+    The Resource Group that the server belongs to
+ 
+.PARAMETER ServerName
+    The SQL server name that we want to apply the new SQL Vulnerability Assessment policy to.
+ 
+.PARAMETER TenantId
+    The Tenant ID for the Azure AD.
+ 
+.PARAMETER ClientId
+    The Client ID of the service principal.
+ 
+.PARAMETER ClientSecret
+    The Client Secret of the service principal.
+ 
+.EXAMPLE
+    .\EnableExpressConfiguration.ps1 -SubscriptionId "25b642fc-05c3-11ed-b939-0242ac120002" -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -TenantId "your-tenant-id" -ClientId "your-client-id" -ClientSecret "your-client-secret"
+#>
+ 
+param
+(
+    [Parameter(Mandatory = $True)]
+    [string]$SubscriptionId,
+ 
+    [Parameter(Mandatory = $True)]
+    [string]$ResourceGroupName,
+ 
+    [Parameter(Mandatory = $True)]
+    [string]$ServerName,
+ 
+    [Parameter(Mandatory = $True)]
+    [string]$TenantId,
+ 
+    [Parameter(Mandatory = $True)]
+    [string]$ClientId,
+ 
+    [Parameter(Mandatory = $True)]
+    [string]$ClientSecret
+)
+ 
+function GetSqlVulnerabilityAssessmentServerSetting($SubscriptionId, $ResourceGroupName, $ServerName) {
+    $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview"
+    return SendRestRequest -Method "Get" -Uri $Uri
+}
+ 
+function SetSqlVulnerabilityAssessmentServerSetting($SubscriptionId, $ResourceGroupName, $ServerName) {
+    $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview"
+    $Body = @{
+        properties = @{
+            state = "Enabled"
+        }
+    }
+ 
+    $Body = $Body | ConvertTo-Json
+    return SendRestRequest -Method "Put" -Uri $Uri -Body $Body
+}
+ 
+function SendRestRequest(
+    [Parameter(Mandatory = $True)]
+    [string] $Method,
+    [Parameter(Mandatory = $True)]
+    [string] $Uri,
+    [parameter( Mandatory = $false )]
+    [string] $Body = "DEFAULT") {
+        $Params = @{
+            Method       = $Method
+            Path         = $Uri
+        }
+        if (!($Body -eq "DEFAULT")) {
+            $Params = @{
+                Method       = $Method
+                Path         = $Uri
+                Payload      = $Body
+            }
+        }
+        Invoke-AzRestMethod @Params
+    }
+ 
+function LogMessage {
+    [CmdletBinding()]
+    Param
+    (
+        [Parameter(Mandatory=$true, Position=0)]
+        [string]$LogMessage
+    )
+ 
+    Write-Host ("{0} - {1}" -f (Get-Date), $LogMessage)
+}
+ 
+function LogError {
+    [CmdletBinding()]
+    Param
+    (
+        [Parameter(Mandatory=$true, Position=0)]
+        [string]$LogMessage
+    )
+ 
+    Write-Error ("{0} - {1}" -f (Get-Date), $LogMessage)
+}
+ 
+function HaveExpressConfigurationVulnerabilityAssessmentSetting($SubscriptionId, $ResourceGroupName, $ServerName) {
+    # Check if we have a server setting.
+    LogMessage -LogMessage "Check express configuration Vulnerability Assessment setting for '$($ServerName)' server"
+    $Response = GetSqlVulnerabilityAssessmentServerSetting -SubscriptionId $SubscriptionId -ResourceGroupName $ResourceGroupName -ServerName $ServerName
+    if ($Response.Content.Contains("Enabled")) {
+        return $true
+    }
+ 
+    return $false
+}
+ 
+# Authenticate using Service Principal
+$securePassword = ConvertTo-SecureString -String $ClientSecret -AsPlainText -Force
+$credential = New-Object -TypeName "System.Management.Automation.PSCredential" -ArgumentList $ClientId, $securePassword
+$subscription = Connect-AzAccount -ServicePrincipal -Tenant $TenantId -Credential $credential -Subscription $SubscriptionId
+ 
+if ([string]::IsNullOrEmpty($subscription))
+{
+    LogError "Failed to get the subscription. Migration cancelled. Fix errors and try again later."
+    return
+}
+ 
+$srv = Get-AzSqlServer -ResourceGroupName $ResourceGroupName -ServerName $ServerName
+if ([string]::IsNullOrEmpty($srv))
+{
+    LogError "The server was not found. Migration cancelled. Fix errors and try again later."
+    return
+}
+ 
+$haveExpressConfigurationVA = HaveExpressConfigurationVulnerabilityAssessmentSetting -SubscriptionId $SubscriptionId -ResourceGroupName $ResourceGroupName -ServerName $ServerName
+ 
+if ($haveExpressConfigurationVA) {
+    LogMessage -LogMessage "Express configuration vulnerability assessment setting is already exist on this server. Cancelling script."
+    return
+}
+ 
+# Set new SQL Vulnerability Assessment Setting
+LogMessage -LogMessage "Add express configuration Vulnerability Assessment feature setting for '$($ServerName)' server."
+$Response = SetSqlVulnerabilityAssessmentServerSetting -SubscriptionId $SubscriptionId -ResourceGroupName $ResourceGroupName -ServerName $ServerName
+$successStatusCodes = @(200, 201, 202)
+if ($Response.StatusCode -in $successStatusCodes) {
+    LogMessage -LogMessage "Congratulations, your server '$($ServerName)' server is set up with express configuration Vulnerability Assessment feature"
+}
+else {
+    LogMessage -LogMessage "There was a problem to enable express configuration Vulnerability Assessment feature on the '$($ServerName)' server. Error '$($Response.StatusCode)': '$($Response.Content)'"
+    return
+}
+```
