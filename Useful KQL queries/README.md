@@ -357,6 +357,33 @@ securityresources
 | summarize CVEs = tostring(make_list(singleCve)) by Severity, VulnId, Description, tostring(Patchable), Category, Resource, ResourceGroup, TimeGenerated, Threat, Impact, Remediation
 ```
 
+```kusto
+securityresources 
+| where type == "microsoft.security/assessments/subassessments"
+| extend assessmentKey = extract(@"assessments/([a-f0-9-]+)", 1, id),
+         machineName = extract(".*virtualMachines/(.+?)/.*", 1, id), 
+         Description = tostring(parse_json(properties).displayName),
+         Severity = tostring(parse_json(properties).status.severity)
+| join kind=inner ( 
+    securityresources  
+    | where type =~ "microsoft.security/assessments"
+    | extend assessmentKey = extract(@"assessments/([a-f0-9-]+)", 1, id),
+             resourceType = tolower(properties.resourceDetails.ResourceType),
+             status = tolower(tostring(properties.status.code)),
+             riskFactors = iff(type == "microsoft.security/assessments", 
+                               iff(isnull(properties.risk.riskFactors), dynamic([]), properties.risk.riskFactors), 
+                               dynamic(null))        
+    | where resourceType contains "microsoft.compute/virtualmachines"
+    | where status == "unhealthy"
+    | where set_has_element(riskFactors, "Vulnerabilities")
+    | project assessmentKey
+) on assessmentKey
+| extend TimeGenerated = properties.timeGenerated,
+         CVE = properties.additionalData.cve
+| project machineName, Description, CVE, properties, TimeGenerated
+```
+
+
 ## ARG Summarize the count of vulnerabilities at the repo level (defender for container)
 ```kusto
 securityresources
