@@ -1,8 +1,8 @@
 # Useful scripts in defender for cloud
 
-## Remove legacy agent MMA and OMS agent at subscription level
-# Login into your account 
+## 1.Remove legacy agent MMA and OMS agent at subscription level
 ``` powershell
+# Login into your account 
 # Connect-AzAccount
 # Subscription Id. The script run by each subscription
 $subscriptionId = "<sub id>"
