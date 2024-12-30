@@ -146,7 +146,15 @@ SecurityResources
 | project subscriptionId, current, max, percentage = ((current / max)*100)
 ```
 
-  
+## ARG list all initiatives in tenant
+```kusto
+policyresources
+| where type == "microsoft.authorization/policysetdefinitions"
+| project displayName = properties.displayName, policySetDefinitionId=name
+```
+![image](https://github.com/user-attachments/assets/588a7565-d1cf-4c1b-9289-0522d231bd04)
+
+
 ## ARG check relevant initiatives in subscription (basic)
 
 ```kusto
