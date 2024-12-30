@@ -193,8 +193,48 @@ policyresources
 | summarize statuses = make_set(status) by policySetDefinitionId
 ```
 
-## ARG compare results between Defender for cloud and Azure Policy
+## ARG check exemptions in MDC
+```kusto
+securityresources
+| where type == "microsoft.security/assessments"
+| where subscriptionId == "<your subscription id>"
+| extend initiatives = properties.statusPerInitiative
+| extend  RecommendationName = properties.displayName
+| extend  ResourceName = split(id, "/")[8]
+| mv-expand initiatives
+| extend initiativeName = initiatives.policyInitiativeName
+| extend statusInMdc = initiatives.assessmentStatus.code
+| where statusInMdc contains "NotApplicable"
+| extend reason = properties.status.cause
+| project initiativeName, statusInMdc, RecommendationName, ResourceName, reason
+| where initiativeName contains "Microsoft cloud security benchmark" or initiativeName contains "AWS Foundational Security Best Practices"
+| where reason contains "exempt"
+```
+![image](https://github.com/user-attachments/assets/e854c870-6ff3-483f-86c9-32ba984211f6)
 
+
+```kusto
+securityresources
+| where type == "microsoft.security/assessments"
+| where subscriptionId == "<sub id>"
+| extend initiatives = properties.statusPerInitiative
+| extend RecommendationName = properties.displayName
+| extend ResourceName = split(id, "/")[8]
+| mv-expand initiatives
+| extend initiativeName = initiatives.policyInitiativeName
+| extend statusInMdc = initiatives.assessmentStatus.code
+| where statusInMdc contains "NotApplicable"
+| extend reason = properties.status.cause
+| extend description = properties.status.description
+| project initiativeName, statusInMdc, RecommendationName, ResourceName, reason, description
+| where initiativeName contains "Microsoft cloud security benchmark" or initiativeName contains "ASC"
+| where reason contains "exempt"
+// | summarize count() by tostring(RecommendationName)
+```
+![image](https://github.com/user-attachments/assets/ebb418bd-22d7-4c13-9e2f-9e7085eb509b)
+
+
+## ARG compare results between Defender for cloud and Azure Policy
 ```kusto
 securityresources
 | where type == "microsoft.security/assessments"
