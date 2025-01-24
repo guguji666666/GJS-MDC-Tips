@@ -1,3 +1,51 @@
+# List all data connectors in defender for cloud (subscription level)
+```powershell
+# Define parameters for the tenant ID and subscription ID
+$tenantId = "<tenantid>" # input your tenant id
+$subscriptionId = "<subid>" # input your subscription id
+
+# Set the execution policy to RemoteSigned to allow this script to run
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
+
+# Log in to the Azure account using the specified tenant ID
+Connect-AzAccount -TenantId $tenantId
+
+# Set the Azure context to the specified subscription
+Set-AzContext -SubscriptionId $subscriptionId
+
+# Retrieve the Azure access token and store it in a variable
+$accessToken = (Get-AzAccessToken).Token
+
+# Construct the URL for retrieving security connectors
+$baseGetConnectorsUrl = "https://management.azure.com/subscriptions/$subscriptionId/providers/Microsoft.Security/securityConnectors"
+$getConnectorsUrl = "$baseGetConnectorsUrl`?api-version=2024-03-01-preview"
+
+# Send the GET request to retrieve the security connectors
+$headers = @{
+    Authorization = "Bearer $accessToken"
+}
+Write-Host "GET URL: $getConnectorsUrl"  # Debug output
+$response = Invoke-RestMethod -Method Get -Uri $getConnectorsUrl -Headers $headers
+
+# Define the path where you want to save the JSON file
+$outputPath = "C:\temp\MDFC_Connectors_$subscriptionId.json"
+
+# Convert the response to a well-formatted JSON string
+$formattedJson = $response | ConvertTo-Json -Depth 100
+
+# Write the formatted JSON to the file
+$formattedJson | Out-File -FilePath $outputPath -Encoding utf8
+
+Write-Host "Response has been exported to: $outputPath"
+
+# Optionally, display the response in the console (for verification)
+Write-Host "Response:"
+$formattedJson | ConvertFrom-Json | Format-List *
+```
+
+
+
+
 # List existing standards for specified AWS data connector
 ```powershell
 # Define parameters for the tenant ID, subscription ID, resource group, and AWS connector
