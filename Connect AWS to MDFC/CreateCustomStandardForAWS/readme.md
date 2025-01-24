@@ -102,7 +102,7 @@ $formattedJson | ConvertFrom-Json | Format-List *
 
 
 
-# 2. Create Custom standard for AWS resources
+# 3. Create Custom standard for AWS resources and enable it
 Since we need to create same standard for other AWS account, use the script below:
 
 ```powershell
