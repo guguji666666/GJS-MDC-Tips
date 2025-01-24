@@ -1,10 +1,10 @@
 # List existing custom standards for specified AWS data connector
 ```powershell
 # Define parameters for the tenant ID, subscription ID, resource group, and AWS connector
-$tenantId = "19126c63-95d4-487a-9748-49f9df8b651e"
-$subscriptionId = "24e13d8f-b834-46d1-b5a2-72ad3f10c7a4"
-$resourceGroup = "MDC-AWS"
-$awsConnector = "awsConnector"
+$tenantId = "<tenantid>"
+$subscriptionId = "<subid>"
+$resourceGroup = "<RG_AWS_Connector>"
+$awsConnector = "<AWS_Connector>"
 
 # Set the execution policy to RemoteSigned to allow this script to run
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
