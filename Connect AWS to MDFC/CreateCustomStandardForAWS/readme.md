@@ -1,4 +1,4 @@
-# List all data connectors in defender for cloud (subscription level)
+# 1. List all data connectors in defender for cloud (subscription level)
 ```powershell
 # Define parameters for the tenant ID and subscription ID
 $tenantId = "<tenantid>" # input your tenant id
@@ -42,7 +42,10 @@ Write-Host "Response has been exported to: $outputPath"
 Write-Host "Response:"
 $formattedJson | ConvertFrom-Json | Format-List *
 ```
-
+### Sample output (note the parts below)
+* Part 1 would be the resource group where the AWS data connector locates
+* Part 2 would be the name of the AWS data connector locates
+![image](https://github.com/user-attachments/assets/e90bc25a-2870-4b8f-b611-4735a20b8c16)
 
 
 
