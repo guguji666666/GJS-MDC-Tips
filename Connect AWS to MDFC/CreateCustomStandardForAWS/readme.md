@@ -7,8 +7,7 @@ $resourceGroup = "<RG_AWS_Connector>"
 $awsConnector = "<AWS_Connector>"
 
 # Set the execution policy to RemoteSigned to allow this script to run
-# Note: This setting might be restricted by organizational policies. Modify accordingly.
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
 
 # Log in to the Azure account using the specified tenant ID
 Connect-AzAccount -TenantId $tenantId
@@ -24,14 +23,16 @@ $accessToken | Set-Clipboard
 
 # Generate a new GUID for the custom security standard
 $newStandardId = [guid]::NewGuid().Guid
+$encodedStandardId = [System.Web.HttpUtility]::UrlEncode($newStandardId)
 
-# Define the URL for creating a new custom security standard for the AWS connector
-$standardUrl = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Security/securityConnectors/$awsConnector/providers/Microsoft.Security/securityStandards/$newStandardId?api-version=2024-08-01"
+# Construct the URL for creating a new custom security standard for the AWS connector
+$baseStandardUrl = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Security/securityConnectors/$awsConnector/providers/Microsoft.Security/securityStandards/$encodedStandardId"
+$standardUrl = "$baseStandardUrl`?api-version=2024-08-01"
 
 # Create the body for the PUT request to define the new custom security standard
 $standardBody = @{
     properties = @{
-        displayName    = "20250124 Test creating AWS custom standard using API gugugu"
+        displayName    = "20250124 GJS Test creating AWS custom standard using API gugugu"
         description    = ""
         standardType   = "Custom"
         assessments    = @(
@@ -41,16 +42,23 @@ $standardBody = @{
         )
         cloudProviders = @("AWS")
     }
-} | ConvertTo-Json
+} | ConvertTo-Json -Depth 3
 
 # Send the PUT request to create the custom security standard
-Invoke-RestMethod -Method Put -Uri $standardUrl -Headers @{ Authorization = "Bearer $accessToken" } -Body $standardBody -ContentType "application/json"
+$headers = @{
+    Authorization = "Bearer $accessToken"
+    "Content-Type" = "application/json"
+}
+Write-Host "Standard URL: $standardUrl"  # Debug output
+Invoke-RestMethod -Method Put -Uri $standardUrl -Headers $headers -Body $standardBody
 
 # Generate a new GUID for the security standard assignment
 $newStandardAssignmentId = [guid]::NewGuid().Guid
+$encodedAssignmentId = [System.Web.HttpUtility]::UrlEncode($newStandardAssignmentId)
 
-# Define the URL for creating a new custom security standard assignment for the AWS connector
-$assignmentUrl = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Security/securityConnectors/$awsConnector/providers/Microsoft.Security/standardAssignments/$newStandardAssignmentId?api-version=2024-08-01"
+# Construct the URL for creating a new custom security standard assignment for the AWS connector
+$baseAssignmentUrl = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Security/securityConnectors/$awsConnector/providers/Microsoft.Security/standardAssignments/$encodedAssignmentId"
+$assignmentUrl = "$baseAssignmentUrl`?api-version=2024-08-01"
 
 # Create the body for the PUT request to assign the new custom security standard
 $assignmentBody = @{
@@ -65,8 +73,9 @@ $assignmentBody = @{
         exemptionData    = $null
         attestationData  = $null
     }
-} | ConvertTo-Json
+} | ConvertTo-Json -Depth 3
 
 # Send the PUT request to create the security standard assignment
-Invoke-RestMethod -Method Put -Uri $assignmentUrl -Headers @{ Authorization = "Bearer $accessToken" } -Body $assignmentBody -ContentType "application/json"
+Write-Host "Assignment URL: $assignmentUrl"  # Debug output
+Invoke-RestMethod -Method Put -Uri $assignmentUrl -Headers $headers -Body $assignmentBody
 ```
