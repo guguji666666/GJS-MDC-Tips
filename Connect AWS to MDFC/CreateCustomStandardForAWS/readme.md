@@ -186,3 +186,9 @@ $assignmentBody = @{
 Write-Host "Assignment URL: $assignmentUrl"  # Debug output
 Invoke-RestMethod -Method Put -Uri $assignmentUrl -Headers $headers -Body $assignmentBody
 ```
+
+Go back to portal, we found:
+* The custom standard has been created
+* The custom standard has been enabled for the AWS account
+![image](https://github.com/user-attachments/assets/282742af-37b2-4b33-9040-1f35b37e0173)
+
