@@ -29,13 +29,25 @@ $headers = @{
 Write-Host "GET URL: $getStandardsUrl"  # Debug output
 $response = Invoke-RestMethod -Method Get -Uri $getStandardsUrl -Headers $headers
 
-# Display the response
+# Define the path where you want to save the JSON file
+$outputPath = "C:\temp\securityStandards_awsconnector_$awsConnector.json"
+
+# Convert the response to a well-formatted JSON string
+$formattedJson = $response | ConvertTo-Json -Depth 100
+
+# Write the formatted JSON to the file
+$formattedJson | Out-File -FilePath $outputPath -Encoding utf8
+
+Write-Host "Response has been exported to: $outputPath"
+
+# Optionally, display the response in the console (for verification)
 Write-Host "Response:"
-$response | Format-List *
+$formattedJson | ConvertFrom-Json | Format-List *
 ```
 
+
 # 2. Create Custom standard for AWS resources
-```powerhsell
+```powershell
 # Define parameters for the tenant ID, subscription ID, resource group, and AWS connector
 $tenantId = "<tenantid>"
 $subscriptionId = "<subid>"
