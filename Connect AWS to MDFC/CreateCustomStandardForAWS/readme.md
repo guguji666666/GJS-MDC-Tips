@@ -1,4 +1,40 @@
-# Create Custom standard for AWS resources
+# List existing custom standards for specified AWS data connector
+```powershell
+# Define parameters for the tenant ID, subscription ID, resource group, and AWS connector
+$tenantId = "19126c63-95d4-487a-9748-49f9df8b651e"
+$subscriptionId = "24e13d8f-b834-46d1-b5a2-72ad3f10c7a4"
+$resourceGroup = "MDC-AWS"
+$awsConnector = "awsConnector"
+
+# Set the execution policy to RemoteSigned to allow this script to run
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
+
+# Log in to the Azure account using the specified tenant ID
+Connect-AzAccount -TenantId $tenantId
+
+# Set the Azure context to the specified subscription
+Set-AzContext -SubscriptionId $subscriptionId
+
+# Retrieve the Azure access token and store it in a variable
+$accessToken = (Get-AzAccessToken).Token
+
+# Construct the URL for retrieving existing custom security standards
+$baseGetStandardsUrl = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Security/securityConnectors/$awsConnector/providers/Microsoft.Security/securityStandards"
+$getStandardsUrl = "$baseGetStandardsUrl`?api-version=2024-08-01"
+
+# Send the GET request to retrieve the custom security standards
+$headers = @{
+    Authorization = "Bearer $accessToken"
+}
+Write-Host "GET URL: $getStandardsUrl"  # Debug output
+$response = Invoke-RestMethod -Method Get -Uri $getStandardsUrl -Headers $headers
+
+# Display the response
+Write-Host "Response:"
+$response | Format-List *
+```
+
+# 2. Create Custom standard for AWS resources
 ```powerhsell
 # Define parameters for the tenant ID, subscription ID, resource group, and AWS connector
 $tenantId = "<tenantid>"
