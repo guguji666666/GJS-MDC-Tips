@@ -1,4 +1,4 @@
-# List existing custom standards for specified AWS data connector
+# List existing standards for specified AWS data connector
 ```powershell
 # Define parameters for the tenant ID, subscription ID, resource group, and AWS connector
 $tenantId = "<tenantid>"
