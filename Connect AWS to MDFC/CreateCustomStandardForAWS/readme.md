@@ -42,6 +42,7 @@ Write-Host "Response has been exported to: $outputPath"
 Write-Host "Response:"
 $formattedJson | ConvertFrom-Json | Format-List *
 ```
+
 ### Sample output (note the parts below)
 * Part 1 would be the resource group where the AWS data connector locates
 * Part 2 would be the name of the AWS data connector locates
@@ -49,7 +50,7 @@ $formattedJson | ConvertFrom-Json | Format-List *
 
 
 
-# List existing standards for specified AWS data connector
+# 2. List existing standards for specified AWS data connector
 ```powershell
 # Define parameters for the tenant ID, subscription ID, resource group, and AWS connector
 $tenantId = "<tenantid>"
@@ -96,8 +97,14 @@ Write-Host "Response:"
 $formattedJson | ConvertFrom-Json | Format-List *
 ```
 
+### Sample output (note the assessment keys in request body from the response)
+![image](https://github.com/user-attachments/assets/9f26fa67-2f06-46e7-a89d-0ee9929ab093)
+
+
 
 # 2. Create Custom standard for AWS resources
+Since we need to create same standard for other AWS account, use the script below:
+
 ```powershell
 # Define parameters for the tenant ID, subscription ID, resource group, and AWS connector
 $tenantId = "<tenantid>"
@@ -129,6 +136,7 @@ $baseStandardUrl = "https://management.azure.com/subscriptions/$subscriptionId/r
 $standardUrl = "$baseStandardUrl`?api-version=2024-08-01"
 
 # Create the body for the PUT request to define the new custom security standard
+# For the value inside assessmentKey, replace with the ones in request body we get from previous step
 $standardBody = @{
     properties = @{
         displayName    = "20250124 GJS Test creating AWS custom standard using API gugugu"
