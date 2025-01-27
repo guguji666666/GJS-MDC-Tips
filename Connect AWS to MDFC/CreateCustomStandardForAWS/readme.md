@@ -49,6 +49,72 @@ $formattedJson | ConvertFrom-Json | Format-List *
 ![image](https://github.com/user-attachments/assets/e90bc25a-2870-4b8f-b611-4735a20b8c16)
 
 
+## Filter securitydata connectors and outoput to json
+```powershell
+# Define parameters for the tenant ID and subscription ID
+$tenantId = "<tenantid>" # input your tenant id
+$subscriptionId = "<subid>" # input your subscription id
+
+# Set the execution policy to RemoteSigned to allow this script to run
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
+
+# Log in to the Azure account using the specified tenant ID
+Connect-AzAccount -TenantId $tenantId
+
+# Set the Azure context to the specified subscription
+Set-AzContext -SubscriptionId $subscriptionId
+
+# Retrieve the Azure access token and store it in a variable
+$accessToken = (Get-AzAccessToken).Token
+
+# Construct the URL for retrieving security connectors
+$baseGetConnectorsUrl = "https://management.azure.com/subscriptions/$subscriptionId/providers/Microsoft.Security/securityConnectors"
+$getConnectorsUrl = "$baseGetConnectorsUrl`?api-version=2024-03-01-preview"
+
+# Send the GET request to retrieve the security connectors
+$headers = @{
+    Authorization = "Bearer $accessToken"
+}
+Write-Host "GET URL: $getConnectorsUrl"  # Debug output
+$response = Invoke-RestMethod -Method Get -Uri $getConnectorsUrl -Headers $headers
+
+# Filter the response to only include entries with type "Microsoft.Security/securityconnectors"
+$filteredValue = $response.value | Where-Object { $_.type -eq 'Microsoft.Security/securityconnectors' }
+
+# Parse the resource group name and connector name from the ID
+$parsedResults = $filteredValue | ForEach-Object {
+    $idParts = $_.id -split "/"
+    $resourceGroupName = $idParts[4]  # Assuming the structure is always consistent
+    $connectorName = $idParts[-1]  # The last part of the ID should be the connector name
+
+    [PSCustomObject]@{
+        ResourceGroupName = $resourceGroupName
+        ConnectorName = $connectorName
+    }
+}
+
+# Convert the parsed results to a well-formatted JSON string
+$parsedJson = $parsedResults | ConvertTo-Json -Depth 100
+
+# Define the path where you want to save the JSON file
+$outputPath = "C:\temp\securitydataconnectors.json"
+
+# Write the formatted JSON to the file
+$parsedJson | Out-File -FilePath $outputPath -Encoding utf8
+
+Write-Host "Parsed resources have been exported to: $outputPath"
+
+# Optionally, display the parsed results in the console (for verification)
+Write-Host "Parsed Results:"
+$parsedResults | Format-List *
+```
+
+![image](https://github.com/user-attachments/assets/256d18a4-97df-4ba1-90a2-cb7e31d46edd)
+
+![image](https://github.com/user-attachments/assets/2b667f7d-5c38-413c-9c8e-d90aa4df2539)
+
+![image](https://github.com/user-attachments/assets/c12affdc-4ff1-470e-9217-a65a4a07e2d0)
+
 
 # 2. List existing standards for specified AWS data connector
 ```powershell
