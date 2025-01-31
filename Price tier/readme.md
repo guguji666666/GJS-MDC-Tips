@@ -112,7 +112,25 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "VirtualMachines",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
+        "extensions": [
+          {
+            "name": "MdeDesignatedSubscription",
+            "isEnabled": "False"
+          },
+          {
+            "name": "AgentlessVmScanning",
+            "isEnabled": "True",
+            "additionalExtensionProperties": {
+              "ExclusionTags": "[]"
+            }
+          },
+          {
+            "name": "FileIntegrityMonitoring",
+            "isEnabled": "False"
+          }
+        ],
+        "subPlan": "P2",
+        "pricingTier": "Standard",
         "freeTrialRemainingTime": "PT0S"
       }
     },
@@ -121,7 +139,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "SqlServers",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
+        "pricingTier": "Standard",
         "freeTrialRemainingTime": "PT0S"
       }
     },
@@ -130,7 +148,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "AppServices",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
+        "pricingTier": "Standard",
         "freeTrialRemainingTime": "PT0S"
       }
     },
@@ -139,7 +157,21 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "StorageAccounts",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
+        "extensions": [
+          {
+            "name": "OnUploadMalwareScanning",
+            "isEnabled": "True",
+            "additionalExtensionProperties": {
+              "CapGBPerMonthPerStorageAccount": "5000"
+            }
+          },
+          {
+            "name": "SensitiveDataDiscovery",
+            "isEnabled": "True"
+          }
+        ],
+        "subPlan": "DefenderForStorageV2",
+        "pricingTier": "Standard",
         "freeTrialRemainingTime": "PT0S"
       }
     },
@@ -148,7 +180,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "SqlServerVirtualMachines",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
+        "pricingTier": "Standard",
         "freeTrialRemainingTime": "PT0S"
       }
     },
@@ -158,7 +190,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "type": "Microsoft.Security/pricings",
       "properties": {
         "pricingTier": "Free",
-        "freeTrialRemainingTime": "PT0S",
+        "freeTrialRemainingTime": "P30D",
         "deprecated": true,
         "replacedBy": [
           "Containers"
@@ -171,7 +203,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "type": "Microsoft.Security/pricings",
       "properties": {
         "pricingTier": "Free",
-        "freeTrialRemainingTime": "PT0S",
+        "freeTrialRemainingTime": "P30D",
         "deprecated": true,
         "replacedBy": [
           "Containers"
@@ -183,7 +215,8 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "KeyVaults",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
+        "subPlan": "PerTransaction",
+        "pricingTier": "Standard",
         "freeTrialRemainingTime": "PT0S"
       }
     },
@@ -192,8 +225,9 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "Dns",
       "type": "Microsoft.Security/pricings",
       "properties": {
+        "enablementTime": "2025-01-04T09:23:03.5089706Z",
         "pricingTier": "Standard",
-        "freeTrialRemainingTime": "PT0S",
+        "freeTrialRemainingTime": "P3DT6H28M",
         "deprecated": true,
         "replacedBy": [
           "VirtualMachines"
@@ -215,7 +249,7 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "OpenSourceRelationalDatabases",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
+        "pricingTier": "Standard",
         "freeTrialRemainingTime": "PT0S"
       }
     },
@@ -224,7 +258,8 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "CosmosDbs",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
+        "enablementTime": "2024-09-24T15:38:19.4711898Z",
+        "pricingTier": "Standard",
         "freeTrialRemainingTime": "PT0S"
       }
     },
@@ -233,7 +268,29 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "Containers",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
+        "extensions": [
+          {
+            "name": "ContainerRegistriesVulnerabilityAssessments",
+            "isEnabled": "True"
+          },
+          {
+            "name": "AgentlessDiscoveryForKubernetes",
+            "isEnabled": "True"
+          },
+          {
+            "name": "AgentlessVmScanning",
+            "isEnabled": "True",
+            "additionalExtensionProperties": {
+              "ExclusionTags": "[]"
+            }
+          },
+          {
+            "name": "ContainerSensor",
+            "isEnabled": "False"
+          }
+        ],
+        "enablementTime": "2025-01-11T09:11:14.3378781Z",
+        "pricingTier": "Standard",
         "freeTrialRemainingTime": "PT0S"
       }
     },
@@ -242,7 +299,36 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "CloudPosture",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
+        "extensions": [
+          {
+            "name": "SensitiveDataDiscovery",
+            "isEnabled": "True"
+          },
+          {
+            "name": "ContainerRegistriesVulnerabilityAssessments",
+            "isEnabled": "True"
+          },
+          {
+            "name": "AgentlessDiscoveryForKubernetes",
+            "isEnabled": "True"
+          },
+          {
+            "name": "AgentlessVmScanning",
+            "isEnabled": "True",
+            "additionalExtensionProperties": {
+              "ExclusionTags": "[]"
+            }
+          },
+          {
+            "name": "EntraPermissionsManagement",
+            "isEnabled": "True"
+          },
+          {
+            "name": "ApiPosture",
+            "isEnabled": "True"
+          }
+        ],
+        "pricingTier": "Standard",
         "freeTrialRemainingTime": "PT0S"
       }
     },
@@ -251,8 +337,10 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
       "name": "Api",
       "type": "Microsoft.Security/pricings",
       "properties": {
-        "pricingTier": "Free",
-        "freeTrialRemainingTime": "PT0S"
+        "enablementTime": "2025-01-21T06:32:59.1232585Z",
+        "subPlan": "P1",
+        "pricingTier": "Standard",
+        "freeTrialRemainingTime": "P20DT3H37M"
       }
     }
   ]
