@@ -548,31 +548,6 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
 ```
 
 ### Body
-```json
-{
-  "properties": {
-          "pricingTier": "Standard",
-          "extensions": [
-            {
-              "name": "AgentlessVmScanning",
-              "isEnabled": "True"
-            },
-            {
-              "name": "AgentlessDiscoveryForKubernetes",
-              "isEnabled": "True"
-            },
-            {
-              "name": "SensitiveDataDiscovery",
-              "isEnabled": "True"
-            },
-            {
-              "name": "ContainerRegistriesVulnerabilityAssessments",
-              "isEnabled": "True"
-            }
-        ]
-       }
-  }
-```
 
 ```json
 {
