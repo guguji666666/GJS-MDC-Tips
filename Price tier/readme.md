@@ -573,3 +573,41 @@ https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.
        }
   }
 ```
+
+```json
+{
+    "properties": {
+        "pricingTier": "Standard",
+        "extensions": [
+            {
+                "name": "SensitiveDataDiscovery", // represents "Sensitive data discovery"
+                "isEnabled": "True"
+            },
+            {
+                "name": "ContainerRegistriesVulnerabilityAssessments", // represents "Registry access"
+                "isEnabled": "True"
+            },
+            {
+                "name": "AgentlessDiscoveryForKubernetes", // represents "K8S API access"
+                "isEnabled": "True"
+            },
+            {
+                "name": "AgentlessVmScanning", // represents "Agentless scanning for machines"
+                "isEnabled": "True",
+                "additionalExtensionProperties": {
+                    "ExclusionTags": "[]"
+                }
+            },
+            {
+                "name": "EntraPermissionsManagement", // represents "Permissions Management (CIEM)"
+                "isEnabled": "True"
+            },
+            {
+                "name": "ApiPosture", // represents "API Security Posture Management (Preview)"
+                "isEnabled": "True"
+            }
+        ]
+    }
+}
+```
+![image](https://github.com/user-attachments/assets/7380c7dc-66b3-4b04-813b-00d02a75146a)
