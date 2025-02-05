@@ -47,6 +47,41 @@ resources
 ![image](https://github.com/user-attachments/assets/f2a11240-b0cf-41ac-8bad-e96b6cff22c1)
 
 
+```kusto
+resources
+| where type == "microsoft.security/securityconnectors"
+| extend id = id  // Extracting id directly before packing
+| extend connector = 
+    iff(
+        type == "microsoft.security/securityconnectors", 
+        pack(
+            "id", id,
+            "location", location,
+            "type", type,
+            "name", name,
+            "tags", tags,
+            "kind", kind,
+            "properties", properties
+        ), 
+        dynamic(null)
+    )
+| extend connectorDisplayName = 
+    iff(
+        type == "microsoft.security/securityconnectors", 
+        strcat(tostring(properties.hierarchyIdentifier), " (", name, ")"), 
+        dynamic(null)
+    )
+| extend connector = pack("connector", connector, "displayName", connectorDisplayName)
+| extend 
+    environmentType = tostring(properties.environmentData.environmentType),  // Directly from properties
+    hierarchyIdentifier = tostring(properties.hierarchyIdentifier),  // Directly from properties
+    displayName = tostring(connector.displayName)
+| project subscriptionId, id, environmentType, hierarchyIdentifier, displayName
+| order by id
+```
+![image](https://github.com/user-attachments/assets/763d38c4-5471-4c11-b961-66f6dbf48849)
+
+
 ## List all VM extensions and provisioning status
 
 Azure VM
