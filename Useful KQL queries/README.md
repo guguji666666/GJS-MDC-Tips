@@ -39,6 +39,13 @@ resources
 ```
 ![image](https://github.com/user-attachments/assets/f85f3377-a65b-4b14-8512-c074acd4e5b4)
 
+```kusto
+resources 
+| where ['type'] =~ "microsoft.security/securityconnectors"
+| project ConnectorResourceID = id, ConnectorName = name, tenantId, EnvironmentType = properties.environmentData.environmentType, AccountID = properties.hierarchyIdentifier
+```
+![image](https://github.com/user-attachments/assets/f2a11240-b0cf-41ac-8bad-e96b6cff22c1)
+
 
 ## List all VM extensions and provisioning status
 
