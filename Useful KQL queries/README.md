@@ -31,6 +31,15 @@ resourcecontainers
 | sort by name asc
 ```
 
+## List all security connectors (AWS,GCP) connected to defender for cloud
+```kusto
+resources 
+| where ['type'] =~ "microsoft.security/securityconnectors"
+| project id, name, tenantId
+```
+![image](https://github.com/user-attachments/assets/f85f3377-a65b-4b14-8512-c074acd4e5b4)
+
+
 ## List all VM extensions and provisioning status
 
 Azure VM
