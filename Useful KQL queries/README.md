@@ -82,6 +82,17 @@ resources
 ![image](https://github.com/user-attachments/assets/763d38c4-5471-4c11-b961-66f6dbf48849)
 
 
+Count repos via source
+```kusto
+securityresources
+| where type startswith "microsoft.security/securityconnectors/devops/githubowners"
+| extend connectorId = tostring(split(id, "/devops/default/", 0)[0])
+| distinct connectorId, name,type
+| summarize totalResources = count() by connectorId
+```
+![image](https://github.com/user-attachments/assets/f2702109-e3c4-4bc1-8e78-08f16d41408a)
+
+
 ## List all VM extensions and provisioning status
 
 Azure VM
