@@ -1,4 +1,8 @@
 # Defender for keyvaults
+
+## Difference between legacy and new plan
+![image](https://github.com/user-attachments/assets/43825466-f3a6-4259-b6b8-030fecadc14b)
+
 ## ARM template (legacy Per-transaction model)
 ```json
 {
