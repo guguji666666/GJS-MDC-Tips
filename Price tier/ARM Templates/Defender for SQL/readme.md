@@ -1,5 +1,5 @@
 # Defender for SQL
-## Arm template
+## ARM template
 ```json
 {
     "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
