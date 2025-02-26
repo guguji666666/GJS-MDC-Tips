@@ -1,5 +1,6 @@
 # Defender for resource manager
 
+## Difference between legacy and new plan
 ![image](https://github.com/user-attachments/assets/b2d33489-4409-4d19-ba13-c3f62e544aed)
 
 ## ARM template (Legacy Per-API-call mode)
