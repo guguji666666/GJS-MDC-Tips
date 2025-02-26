@@ -34,7 +34,6 @@
         }
     ]
 }
-}
 ```
 
 ## API (recommended)
