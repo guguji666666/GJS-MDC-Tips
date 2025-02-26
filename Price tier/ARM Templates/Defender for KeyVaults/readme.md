@@ -30,7 +30,7 @@
             "name": "KeyVaults",
             "properties": {
                 "pricingTier": "Standard",
-                "subPlan": "PerTransaction"
+                "subPlan": "PerKeyVault"
             }
         }
     ]
