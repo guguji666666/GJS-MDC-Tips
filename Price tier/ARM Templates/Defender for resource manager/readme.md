@@ -21,4 +21,4 @@
 }
 ```
 
-## ARM template (Per-subscription-mode)
+## ARM template (Per-subscription plan)
