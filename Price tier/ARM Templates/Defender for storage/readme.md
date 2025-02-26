@@ -15,7 +15,7 @@
                         "name": "OnUploadMalwareScanning",
                         "isEnabled": "True",
                         "additionalExtensionProperties": {
-                            "CapGBPerMonthPerStorageAccount": "8000"
+                            "CapGBPerMonthPerStorageAccount": "8000" //You can customize the monthly cap here
                         }
                     },
                     {
