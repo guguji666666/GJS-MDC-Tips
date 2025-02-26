@@ -21,4 +21,4 @@
 }
 ```
 
-## ARM template (Per-API-call mode)
+## ARM template (Per-subscription-mode)
