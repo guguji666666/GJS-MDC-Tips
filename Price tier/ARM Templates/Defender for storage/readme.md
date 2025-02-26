@@ -24,7 +24,7 @@
                     }
                 ],
                 "pricingTier": "Standard",
-                "subPlan": "DefenderForStorageV2",
+                "subPlan": "DefenderForStorageV2"
             }
         }
     ]
