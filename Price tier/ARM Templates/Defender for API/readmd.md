@@ -12,7 +12,7 @@
             "name": "Api",
             "properties": {
                 "pricingTier": "Standard",
-                "subPlan": "P1"
+                "subPlan": "P1" // you can modify from P1 to P5
             }
         }
     ]
