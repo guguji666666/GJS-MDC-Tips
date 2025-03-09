@@ -100,8 +100,39 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
 ## 5.Defender for Container
 ### URL
 ```
-https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/Containers?api-version=2023-01-01
 ```
+
+### Request body
+```json
+{
+    "properties": {
+        "extensions": [
+            {
+                "name": "ContainerRegistriesVulnerabilityAssessments",
+                "isEnabled": "True"
+            },
+            {
+                "name": "AgentlessDiscoveryForKubernetes",
+                "isEnabled": "True"
+            },
+            {
+                "name": "AgentlessVmScanning",
+                "isEnabled": "True",
+                "additionalExtensionProperties": {
+                    "ExclusionTags": "[]"
+                }
+            },
+            {
+                "name": "ContainerSensor",
+                "isEnabled": "True"
+            }
+        ],
+        "pricingTier": "Standard"
+    }
+}
+```
+
 ## 6.Defender for Key Vault
 ### URL
 ```
