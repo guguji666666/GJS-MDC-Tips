@@ -195,6 +195,8 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/bdf92855-3043-4acd-851b-76b576660c30)
+
 
 ### Request body (New Per-subscription plan)
 ```json
@@ -206,6 +208,7 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/744f85df-15fb-4d68-a687-297ffa3c3365)
 
 
 ## 8.Defender for API
