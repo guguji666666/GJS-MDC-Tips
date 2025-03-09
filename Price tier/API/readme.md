@@ -48,19 +48,48 @@ Using GET for validation <br>
 ![image](https://github.com/user-attachments/assets/9f69433f-4952-48f3-bf1b-80497325281a)
 
 ## 2.Defender for APP Service
-
+### URL
+```
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/AppServices?api-version=2023-01-01
+```
+### Request body
+```json
+{
+    "properties": {
+        "pricingTier": "Standard"
+    }
+}
+```
 ## 3.Defender for SQL
-
+### URL
+```
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+```
 ## 4.Defender for Storage
-
+### URL
+```
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+```
 ## 5.Defender for Container
-
+### URL
+```
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+```
 ## 6.Defender for Key Vault
-
+### URL
+```
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+```
 ## 7.Defender for Resource Manager
-
+### URL
+```
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+```
 ## 8.Defender for API
-
+### URL
+```
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+```
 
 
 
