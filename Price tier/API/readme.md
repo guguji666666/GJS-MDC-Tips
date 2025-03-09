@@ -72,6 +72,31 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
 ```
 https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/StorageAccounts?api-version=2023-01-01
 ```
+### Request body
+```json
+{
+    "properties": {
+        "extensions": [
+            {
+                "name": "OnUploadMalwareScanning",
+                "isEnabled": "True",
+                "additionalExtensionProperties": {
+                    "CapGBPerMonthPerStorageAccount": "8000" //You can customize the monthly cap here
+                }
+            },
+            {
+                "name": "SensitiveDataDiscovery",
+                "isEnabled": "True"
+            }
+        ],
+        "pricingTier": "Standard",
+        "subPlan": "DefenderForStorageV2"
+    }
+}
+```
+![image](https://github.com/user-attachments/assets/c7932e56-e0b2-4036-b463-7e52c71ea50d)
+
+
 ## 5.Defender for Container
 ### URL
 ```
