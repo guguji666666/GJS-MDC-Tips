@@ -60,6 +60,8 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/00ff45f6-de4e-4ea0-a28a-cf9eb1bc8975)
+
 ## 3.Defender for SQL
 ### URL
 ```
