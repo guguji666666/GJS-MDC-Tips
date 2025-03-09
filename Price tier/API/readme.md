@@ -5,7 +5,7 @@
 PUT
 ```
 
-## Defender for server
+## 1.Defender for server
 ### URL
 ```
 https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
