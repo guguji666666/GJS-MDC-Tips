@@ -214,9 +214,17 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
 ## 8.Defender for API
 ### URL
 ```
-https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/Api?api-version=2023-01-01
 ```
-
+###
+```json
+{
+    "properties": {
+        "pricingTier": "Standard",
+        "subPlan": "P1" // you can modify from P1 to P5
+    }
+}
+```
 
 
 
