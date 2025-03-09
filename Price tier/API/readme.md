@@ -157,6 +157,10 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/b02de4de-58bb-4958-a02e-a822981d0456)
+
+![image](https://github.com/user-attachments/assets/fb82d860-b504-452c-b787-ef541ebb5588)
+
 
 ### Request body （new plan)
 ```json
@@ -168,12 +172,58 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/15829c46-7f4c-4b2b-bbf2-e7bb982fc1ff)
+
+![image](https://github.com/user-attachments/assets/2d453679-006f-4c20-9252-6c427d60ed1a)
+
 
 ## 7.Defender for Resource Manager
 ### URL
 ```
-https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/Arm?api-version=2023-01-01
 ```
+### Difference between legacy and new plan
+![image](https://github.com/user-attachments/assets/b2d33489-4409-4d19-ba13-c3f62e544aed)
+
+## ARM template (Legacy Per-API-call mode)
+```json
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+        {
+            "type": "Microsoft.Security/pricings",
+            "apiVersion": "2023-01-01",
+            "name": "Arm",
+            "properties": {
+                "pricingTier": "Standard",
+                "subPlan": "PerApiCall"
+            }
+        }
+    ]
+}
+```
+
+## ARM template (New Per-subscription plan)
+```json
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+        {
+            "type": "Microsoft.Security/pricings",
+            "apiVersion": "2023-01-01",
+            "name": "Arm",
+            "properties": {
+                "pricingTier": "Standard",
+                "subPlan": "PerSubscription"
+            }
+        }
+    ]
+}
+```
+
+
 ## 8.Defender for API
 ### URL
 ```
