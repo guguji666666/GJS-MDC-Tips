@@ -70,7 +70,7 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
 ## 4.Defender for Storage
 ### URL
 ```
-https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/StorageAccounts?api-version=2023-01-01
 ```
 ## 5.Defender for Container
 ### URL
