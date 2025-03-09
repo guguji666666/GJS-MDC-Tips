@@ -1,6 +1,6 @@
 # Defender for server
 
-## ARM template (will encounter error)
+## ARM template (only support limited extensions)
 ```json
 {
     "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
@@ -96,43 +96,5 @@
             }
         }
     ]
-}
-```
-
-## API (recommended)
-### Method
-```
-PUT
-```
-
-### URL
-```
-https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
-```
-
-### Request body
-```json
-{
-    "properties": {
-        "extensions": [
-            {
-                "name": "MdeDesignatedSubscription",
-                "isEnabled": "False"
-            },
-            {
-                "name": "AgentlessVmScanning",
-                "isEnabled": "True",
-                "additionalExtensionProperties": {
-                    "ExclusionTags": "[]"
-                }
-            },
-            {
-                "name": "FileIntegrityMonitoring",
-                "isEnabled": "False"
-            }
-        ],
-        "subPlan": "P2",
-        "pricingTier": "Standard"
-    }
 }
 ```
