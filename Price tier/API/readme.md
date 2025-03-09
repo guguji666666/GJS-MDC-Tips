@@ -142,8 +142,33 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
 ## 6.Defender for Key Vault
 ### URL
 ```
-https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
+https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/KeyVaults?api-version=2023-01-01
 ```
+### Difference between legacy and new plan
+![image](https://github.com/user-attachments/assets/43825466-f3a6-4259-b6b8-030fecadc14b)
+
+### Request body （legacy plan)
+```json
+{
+    "properties": {
+        //Legacy plan
+        "pricingTier": "Standard",
+        "subPlan": "PerTransaction"
+    }
+}
+```
+
+### Request body （new plan)
+```json
+{
+    "properties": {
+        //new plan
+        "pricingTier": "Standard",
+        "subPlan": "PerKeyVault"
+    }
+}
+```
+
 ## 7.Defender for Resource Manager
 ### URL
 ```
