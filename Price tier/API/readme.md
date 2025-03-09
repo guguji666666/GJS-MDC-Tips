@@ -63,10 +63,8 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
 ![image](https://github.com/user-attachments/assets/00ff45f6-de4e-4ea0-a28a-cf9eb1bc8975)
 
 ## 3.Defender for SQL
-### URL
-```
-https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01
-```
+### We support different types of database in defender for SQL, ARM template would be quicker to enable them all [ARM template to enable defender for SQL](https://github.com/guguji666666/GJS-MDC-Tips/tree/main/Price%20tier/ARM%20Templates/Defender%20for%20SQL)
+
 ## 4.Defender for Storage
 ### URL
 ```
