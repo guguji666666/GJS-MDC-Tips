@@ -47,5 +47,22 @@ Sample in Bruno <br>
 Using GET for validation <br>
 ![image](https://github.com/user-attachments/assets/9f69433f-4952-48f3-bf1b-80497325281a)
 
+## 2.Defender for APP Service
+
+## 3.Defender for SQL
+
+## 4.Defender for Storage
+
+## 5.Defender for Container
+
+## 6.Defender for Key Vault
+
+## 7.Defender for Resource Manager
+
+## 8.Defender for API
+
+
+
+
 
 
