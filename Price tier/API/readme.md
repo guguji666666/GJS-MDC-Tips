@@ -132,6 +132,8 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/6202943c-a390-47c3-8121-3d26be890de8)
+
 
 ## 6.Defender for Key Vault
 ### URL
