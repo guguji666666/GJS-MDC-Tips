@@ -112,6 +112,10 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
                 "name": "ContainerRegistriesVulnerabilityAssessments",
                 "isEnabled": "True"
             },
+            // {
+            //     "name": "ContainerIntegrityContribution",
+            //     "isEnabled": "True"
+            // },
             {
                 "name": "AgentlessDiscoveryForKubernetes",
                 "isEnabled": "True"
