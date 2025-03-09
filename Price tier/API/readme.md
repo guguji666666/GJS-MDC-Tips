@@ -41,4 +41,11 @@ https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft
     }
 }
 ```
+Sample in Bruno <br>
+![image](https://github.com/user-attachments/assets/e71b797b-504a-4c0f-b85a-10b5f72c2549)
+
+Using GET for validation <br>
+![image](https://github.com/user-attachments/assets/9f69433f-4952-48f3-bf1b-80497325281a)
+
+
 
