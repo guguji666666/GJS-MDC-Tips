@@ -47,6 +47,16 @@ Sample in Bruno <br>
 Using GET for validation <br>
 ![image](https://github.com/user-attachments/assets/9f69433f-4952-48f3-bf1b-80497325281a)
 
+## Enable defender for server using `Az powershell`
+```powershell
+az rest --method put --url https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01 --body @<path to your request body json> --headers 'Content-Type=application/json'
+```
+Sample 
+```powershell
+az rest --method put --url https://management.azure.com/subscriptions/<subscription id>/providers/Microsoft.Security/pricings/VirtualMachines?api-version=2023-01-01 --body @c:\temp\D4ServerFIM.json --headers 'Content-Type=application/json'
+```
+
+
 ## 2.Defender for APP Service
 ### URL
 ```
