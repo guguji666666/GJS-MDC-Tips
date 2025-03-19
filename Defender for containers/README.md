@@ -12,3 +12,4 @@ microsoft-defender-publisher-ds-* <br>
 [Remove defender profiles using REST API or Azure CLI](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-enable?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Ck8s-remove-cli&pivots=defender-for-container-aks#remove-the-defender-profile)
 
 ## 2. Check deployment history
+![image](https://github.com/user-attachments/assets/c9c3f0a5-4ea0-457c-99bf-efd57966a397)
