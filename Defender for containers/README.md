@@ -13,3 +13,9 @@ microsoft-defender-publisher-ds-* <br>
 
 ## 2. Check deployment history
 ![image](https://github.com/user-attachments/assets/c9c3f0a5-4ea0-457c-99bf-efd57966a397)
+
+## 3. List all pods in a table format with the columns: namespace, deployment name, replica set ID, and pod ID
+```sh
+kubectl get pods -o=custom-columns="Namespace:.metadata.namespace,Deployment:.metadata.ownerReferences[?(@.kind=='Deployment')].name,ReplicaSet:.metadata.ownerReferences[?(@.kind=='ReplicaSet')].name,Pod:.metadata.name" --all-namespaces
+```
+![image](https://github.com/user-attachments/assets/4d67ff97-b52b-4a9b-b2e3-927d8ce8008b)
