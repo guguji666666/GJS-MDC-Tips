@@ -44,9 +44,53 @@ foreach($vm in $vmList){
     }
 }
 ```
+## 2. Remove MDE extension from Azure VMs at the subsription level
+```powershell
+# Login into your account 
+# Connect-AzAccount
+# Subscription Id. The script run by each subscription
+$subscriptionId = "<sub id>"
+# The VM Name which you may not want to uninstall extension. Keep the first comma. 
+$excludeVMNameList = ,"<vm1>","<vm2>"
+# The extension Name which you want to uninstall extension. Keep the first comma.
+# Added "MDE.Windows" and "MDE.Linux" to the list
+$uninstallExtensionNameList = "MDE.Windows","MDE.Linux"
 
+Select-AzSubscription -SubscriptionId $subscriptionId
+$vmList = Get-AzVM
+foreach($vm in $vmList){
+    $vmName = $vm.Name
+    $vmLocation = $vm.Location
+    if($excludeVMNameList -icontains $vmName){
+        Write-Output "VM: $vmName is in the excludeVMNameList, skip"
+        Continue
+    }
+    $vmExtensions = (Get-AzVM -ResourceGroupName $vm.ResourceGroupName -Name $vmName -Status).Extensions
+    $isAnyExtensionProcessed = $false
+    if(($vmExtensions -ne $null) -and ($vmExtensions.Count -gt 0)) {
+        foreach($ext in $vmExtensions) {
+            if($uninstallExtensionNameList -icontains $ext.Name) {
+                $isAnyExtensionProcessed = $true
+                Write-Output "Removing Extension $($ext.Name) for VM: $vmName"
+                try{
+                    Remove-AzVMExtension -ResourceGroupName $vm.ResourceGroupName -Name $ext.Name -VMName $vmName -Force -ErrorAction SilentlyContinue
+                    Write-Output "Successfully removed Extension $($ext.Name) for VM: $vmName"
+                }catch{
+                    Write-Output "Failed to remove Extension $($ext.Name) for VM: $vmName"
+                    Write-Output $_
+                }
+            }
+        }
+        if($isAnyExtensionProcessed -eq $false){
+            Write-Output "VM: $vmName does not have any extension need to be uninstalled by the uninstallExtensionNameList, skip."
+        }
+    }else{
+        Write-Output "VM: $vmName does not have any extension or is not running, skip."
+    }
+}
+```
 
-## 2. List MDC assessments at subscription level
+## 3. List MDC assessments at subscription level
 ```powershell
 # Define your Azure AD tenant ID, subscription ID, and optionally the resource group or resource ID
 $tenantId = "<input your tenant id here>"
