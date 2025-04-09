@@ -320,6 +320,33 @@ Sample response <br>
 }
 ```
 Note the info below:
-* the guid behind standardAssignments, this would be standardAssignments id in `id`
+* the guid behind standardAssignments, this would be `standardAssignmentName` in `id`, we need it later
 
-### 3. 
+### 3. [Create exemption in existing standard assignment](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/standard-assignments/create?view=rest-defenderforcloud-2024-08-01&tabs=HTTP#put-exemption-standard-assignment)
+Sample <br>
+![image](https://github.com/user-attachments/assets/c89ceb2f-3cc3-4e70-9ce9-2d8b44675dd9)
+
+```
+PUT https://management.azure.com/{resourceId which you want apply exemption for}/providers/Microsoft.Security/standardAssignments/{standardAssignmentName}?api-version=2024-08-01
+```
+
+Request body
+```json
+{
+    "properties": {
+        "displayName": "Test exemption from bruno for AWS connector demo",
+        "description": "Exemption description 2",
+        "assignedStandard": {
+            "id": "/subscriptions/24e13d8f-b834-46d1-b5a2-72ad3f10c7a4/resourceGroups/MDC-AWS/providers/Microsoft.Security/securityConnectors/GJS-AWS/providers/Microsoft.Security/securityStandards/33e3fa64-3631-4e49-8148-d9c87623f126"
+        },
+        "effect": "Exempt",
+        "expiresOn": "2025-05-02T19:50:47.083633Z",
+        "exemptionData": {
+            "exemptionCategory": "waiver",
+            "assignedAssessment": {
+                "assessmentKey": "ad758f18-69df-4844-bd94-0b53ed4eac51"
+            }
+        }
+    }
+}
+```
