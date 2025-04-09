@@ -1,6 +1,7 @@
 # Create exemption in recommendation
 
 ## 1. Policy-based recommendation
+If the recommendation is based on policy evaluation results, then we could follow the doc [Policy Exemptions - Create Or Update](https://learn.microsoft.com/en-us/rest/api/policy/policy-exemptions/create-or-update?view=rest-policy-2022-07-01-preview&tabs=HTTP) to duplicate exemptions for other resources
 
 ## 2. Non policy-based recommendation
 ### 1. [List standards Rest API](https://learn.microsoft.com/en-us/rest/api/defenderforcloud/security-standards/list?view=rest-defenderforcloud-2024-08-01&tabs=HTTP)
