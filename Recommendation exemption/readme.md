@@ -42,3 +42,5 @@ For example
             "type": "Microsoft.Security/securityStandards"
         }
 ```
+* id : the standard id
+* assessmentkey: we can find it in recommendation > query
