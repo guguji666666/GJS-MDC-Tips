@@ -334,16 +334,20 @@ Request body
 ```json
 {
     "properties": {
-        "displayName": "Test exemption from bruno for AWS connector demo",
-        "description": "Exemption description 2",
+        // Exemption displayname
+        "displayName": "Test exemption from bruno for AWS connector",
+        // Exemption description
+        "description": "Exemption description 1",
         "assignedStandard": {
-            "id": "/subscriptions/24e13d8f-b834-46d1-b5a2-72ad3f10c7a4/resourceGroups/MDC-AWS/providers/Microsoft.Security/securityConnectors/GJS-AWS/providers/Microsoft.Security/securityStandards/33e3fa64-3631-4e49-8148-d9c87623f126"
+            "id": "<the standard id we get in step 1>"
         },
         "effect": "Exempt",
-        "expiresOn": "2025-05-02T19:50:47.083633Z",
+        // Set the expiration date for exemption
+        "expiresOn": "2025-05-01T19:50:47.083633Z",
         "exemptionData": {
             "exemptionCategory": "waiver",
             "assignedAssessment": {
+                // The assessmentKey we found in recommendation
                 "assessmentKey": "ad758f18-69df-4844-bd94-0b53ed4eac51"
             }
         }
