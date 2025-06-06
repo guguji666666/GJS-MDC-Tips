@@ -21,7 +21,7 @@ EASM (External Attack Surface Management) provides API access to query asset dat
 ## 1. Understanding Billable Assets
 
 As described in the official documentation:
-👉 [Understand billable assets - Microsoft Learn](https://learn.microsoft.com/en-us/defender-for-cloud/external-attack-surface-management/understand-billable-assets)
+👉 [Understand billable assets - Microsoft Learn](https://learn.microsoft.com/en-us/azure/external-attack-surface-management/understanding-billable-assets)
 
 The following assets are considered **billable**:
 
