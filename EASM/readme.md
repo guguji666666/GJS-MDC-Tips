@@ -60,6 +60,21 @@ Use the filter options to narrow down the inventory. Below is a sample:
 
 ---
 
+### 📡 Suggested API
+
+If you're looking to replicate the asset query via REST API, here is a sample request:
+
+**Method**: `GET`
+**Endpoint Format**:
+
+```
+https://{region}.easm.defender.microsoft.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/workspaces/{workspaceName}/assets?filter=state%20%3D%20%22confirmed%22%20and%20kind%20in%20%28%22domain%22%2C%20%22host%22%2C%20%22ipAddress%22%29&skip=0&maxpagesize=25&orderby=lastSeen%20desc&api-version=2024-03-01-preview
+```
+
+> ℹ️ This API call fetches confirmed domains, IPs, and hosts. While not officially documented for billing purposes, it can serve as a workaround for approximate asset extraction and mapping.
+
+---
+
 ### 2.4. Trace API Calls Using Browser Tools
 
 1. Press `F12` or open your browser’s **Developer Tools**
