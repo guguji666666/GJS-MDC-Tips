@@ -23,7 +23,7 @@ This means that the billable asset count is not limited to just approved domains
 ### 5. Run the search and capture the har tracing
 ![image](https://github.com/user-attachments/assets/094758e7-6c04-4b5d-837e-95639b60f1f1)
 
-Sample output for asset 'host' (带展开选项)
+#### Sample output for asset 'host' (带展开选项)
 ```json
         {
             "id": "host$$ssor.gjnsw.webproxy.id.hao123.com",
@@ -2886,12 +2886,11 @@ Sample output for asset 'host' (带展开选项)
             "reason": null
         }
 ```
-Sample output for asset 'Domain' (带展开选项)
+
+
+#### Sample output for asset 'Domain' (带展开选项)
 ```json
-{
-    "totalElements": 3,
-    "mark": null,
-    "value": [
+[
         {
             "id": "domain$$nic.baidu",
             "name": "nic.baidu",
@@ -4350,9 +4349,9 @@ Sample output for asset 'Domain' (带展开选项)
             "reason": null
         }
     ]
-}
 ```
-Sample output for asset 'IP address' (带展开选项)
+
+#### Sample output for asset 'IP address' (带展开选项)
 ```json
 {
 	"totalElements": 35,
