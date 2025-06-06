@@ -20,6 +20,8 @@ This means that the billable asset count is not limited to just approved domains
 ### 3. customize the query here (berlow is the sample)
 ![image](https://github.com/user-attachments/assets/b02fbcdd-23f9-4b79-82ca-2f96feccc61e)
 ### 4. press F12 or manually open developer tool in browser to get netwqork track so that we could check endpoint being called and token used in header
+### 5. Run the search and capture the har tracing
+![image](https://github.com/user-attachments/assets/094758e7-6c04-4b5d-837e-95639b60f1f1)
 
 
 
