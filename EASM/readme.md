@@ -8,12 +8,14 @@ EASM (External Attack Surface Management) provides API access to query asset dat
 ## 📚 Table of Contents
 
 1. [Understanding Billable Assets](#1-understanding-billable-assets)
+   
 2. [Steps to Query via EASM API](#2-steps-to-query-via-easm-api)
-   2.1. [Access the Azure Portal](#21-access-the-azure-portal)
-   2.2. [Navigate to EASM Inventory](#22-navigate-to-easm-inventory)
-   2.3. [Customize the Query](#23-customize-the-query)
-   2.4. [Trace API Calls Using Browser Tools](#24-trace-api-calls-using-browser-tools)
-   2.5. [Capture the HAR File](#25-capture-the-har-file)
+   * 2.1. [Access the Azure Portal](#21-access-the-azure-portal)
+   * 2.2. [Navigate to EASM Inventory](#22-navigate-to-easm-inventory)
+   * 2.3. [Customize the Query](#23-customize-the-query)
+   * 2.4. [Trace API Calls Using Browser Tools](#24-trace-api-calls-using-browser-tools)
+   * 2.5. [Capture the HAR File](#25-capture-the-har-file)
+  
 3. [Sample Outputs](#3-sample-outputs)
 
 ---
